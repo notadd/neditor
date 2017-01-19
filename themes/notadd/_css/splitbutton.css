@@ -9,47 +9,47 @@
 
 .edui-notadd .edui-toolbar .edui-splitbutton .edui-splitbutton-body,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-menubutton-body {
-    padding: 1px;
+    /*padding: 1px;*/
 }
 
 .edui-notadd .edui-toolbar .edui-splitborder {
-    width: 1px;
+    /*width: 1px;*/
     height: 20px;
 }
 
 .edui-notadd .edui-toolbar .edui-state-hover .edui-splitborder {
-    width: 1px;
-    border-left: 0px solid #dcac6c;
+    /*width: 1px;*/
+    /*border-left: 0px solid #dcac6c;*/
 }
 
 .edui-notadd .edui-toolbar .edui-state-active .edui-splitborder {
-    width: 0;
-    border-left: 1px solid gray;
+    /*width: 0;*/
+    /*border-left: 1px solid gray;*/
 }
 
 .edui-notadd .edui-toolbar .edui-state-opened .edui-splitborder {
-    width: 1px;
-    border: 0;
+    /*width: 1px;*/
+    /*border: 0;*/
 }
 
 .edui-notadd .edui-toolbar .edui-splitbutton .edui-state-hover .edui-splitbutton-body,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-hover .edui-menubutton-body {
     background-color: #fff5d4;
-    border: 1px solid #dcac6c;
+    /*border: 1px solid #dcac6c;*/
     padding: 0;
 }
 
 .edui-notadd .edui-toolbar .edui-splitbutton .edui-state-checked .edui-splitbutton-body,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-checked .edui-menubutton-body {
     background-color: #FFE69F;
-    border: 1px solid #DCAC6C;
+    /*border: 1px solid #DCAC6C;*/
     padding: 0;
 }
 
 .edui-notadd .edui-toolbar .edui-splitbutton .edui-state-active .edui-splitbutton-body,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-active .edui-menubutton-body {
     background-color: #ffffff;
-    border: 1px solid gray;
+    /*border: 1px solid gray;*/
     padding: 0;
 }
 
@@ -61,7 +61,7 @@
 .edui-notadd .edui-toolbar .edui-splitbutton .edui-state-opened .edui-splitbutton-body,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-opened .edui-menubutton-body {
     background-color: white;
-    border: 1px solid gray;
+    /*border: 1px solid gray;*/
     padding: 0;
 }
 
