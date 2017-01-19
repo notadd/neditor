@@ -34,7 +34,7 @@ div.edui-box {
     position: relative;
     display: -moz-inline-box !important;
     display: inline-block !important;
-    vertical-align: top;
+    vertical-align: middle;
 }
 
 .edui-notadd .edui-clearfix {

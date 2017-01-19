@@ -1,10 +1,10 @@
 
 @font-face {font-family: "edui-notadd";
-  src: url('../fonts/iconfont.eot?t=1484824554099'); /* IE9*/
-  src: url('../fonts/iconfont.eot?t=1484824554099#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/iconfont.woff?t=1484824554099') format('woff'), /* chrome, firefox */
-  url('../fonts/iconfont.ttf?t=1484824554099') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('../fonts/iconfont.svg?t=1484824554099#edui-notadd') format('svg'); /* iOS 4.1- */
+  src: url('../fonts/iconfont.eot?t=1484815906274'); /* IE9*/
+  src: url('../fonts/iconfont.eot?t=1484815906274#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/iconfont.woff?t=1484815906274') format('woff'), /* chrome, firefox */
+  url('../fonts/iconfont.ttf?t=1484815906274') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/iconfont.svg?t=1484815906274#edui-notadd') format('svg'); /* iOS 4.1- */
 }
 
 .edui-notadd {
@@ -23,7 +23,7 @@
 
 .edui-for-insertrownext .edui-icon:before { content: "\e658"; }
 
-.edui-for-insertparagraph .edui-icon:before { content: "\e62e"; }
+.edui-for-insertparagraphaftertable .edui-icon:before { content: "\e62e"; }
 
 .edui-for-inserttitlecol .edui-icon:before { content: "\e659"; }
 
@@ -38,8 +38,6 @@
 .edui-for-scaleboard .edui-icon:before { content: "\e632"; }
 
 .edui-for-brush .edui-icon:before { content: "\e633"; }
-
-.edui-for-background .edui-icon:before { content: "\e65d"; }
 
 .edui-for-strikethrough .edui-icon:before { content: "\e60c"; }
 
@@ -59,9 +57,9 @@
 
 .edui-for-underline .edui-icon:before { content: "\e605"; }
 
-.edui-for-removeformat .edui-icon:before { content: "\e60e"; }
+.edui-for-blockquote .edui-icon:before { content: "\e60e"; }
 
-.edui-for-blockquote .edui-icon:before { content: "\e60f"; }
+.edui-for-blockquote1 .edui-icon:before { content: "\e60f"; }
 
 .edui-for-anchor .edui-icon:before { content: "\e618"; }
 
@@ -97,9 +95,9 @@
 
 .edui-for-superscript .edui-icon:before { content: "\e612"; }
 
-.edui-for-forecolor .edui-icon:before { content: "\e63a"; }
+.edui-for-fontcolor .edui-icon:before { content: "\e655"; }
 
-.edui-for-backcolor .edui-icon:before { content: "\e655"; }
+.edui-for-filling .edui-icon:before { content: "\e63a"; }
 
 .edui-for-touppercase .edui-icon:before { content: "\e623"; }
 
@@ -118,8 +116,6 @@
 .edui-for-preview .edui-icon:before { content: "\e63b"; }
 
 .edui-for-print .edui-icon:before { content: "\e63c"; }
-
-.edui-for-searchreplace .edui-icon:before { content: "\e65e"; }
 
 .edui-for-selectall .edui-icon:before { content: "\e614"; }
 
@@ -159,7 +155,7 @@
 
 .edui-for-template .edui-icon:before { content: "\e648"; }
 
-.edui-for-insertparagrap .edui-icon:beforetable .edui-icon:before { content: "\e649"; }
+.edui-for-insertparagraphbeforetable .edui-icon:before { content: "\e649"; }
 
 .edui-for-closeerror .edui-icon:before { content: "\e639"; }
 
@@ -181,8 +177,6 @@
 
 .edui-for-wordimage .edui-icon:before { content: "\e652"; }
 
-.edui-for-autotypeset .edui-icon:before { content: "\e65f"; }
-
 .edui-for-edittd .edui-icon:before { content: "\e65a"; }
 
 .edui-for-lineheight .edui-icon:before { content: "\e62a"; }
@@ -193,15 +187,11 @@
 
 .edui-for-scrawl .edui-icon:before { content: "\e616"; }
 
-.edui-for-redo .edui-icon:before { content: "\e609"; }
+.edui-for-redo1 .edui-icon:before { content: "\e609"; }
 
-.edui-for-undo .edui-icon:before { content: "\e600"; }
-
-.edui-for-aligntd .edui-icon:before { content: "\e661"; }
+.edui-for-redo .edui-icon:before { content: "\e600"; }
 
 .edui-for-inserttitle .edui-icon:before { content: "\e65b"; }
-
-.edui-for-insertparagraphtrue .edui-icon:before { content: "\e660"; }
 
 .edui-for-splittocells .edui-icon:before { content: "\e653"; }
 
@@ -210,18 +200,4 @@
 .edui-for-insertcol .edui-icon:before { content: "\e60a"; }
 
 .edui-for-insertrow .edui-icon:before { content: "\e60b"; }
-
-.edui-for-aligntable .edui-icon:before { content: "\e662"; }
-
-.edui-for-table .edui-icon:before { content: "\e664"; }
-
-.edui-for-tablealignment-left .edui-icon:before { content: "\e663"; }
-
-.edui-for-tablealignment-center .edui-icon:before { content: "\e665"; }
-
-.edui-for-tablealignment-right .edui-icon:before { content: "\e666"; }
-
-.edui-for-paste .edui-icon:before { content: "\e667"; }
-
-.edui-for-map .edui-icon:before { content: "\e668"; }
 
