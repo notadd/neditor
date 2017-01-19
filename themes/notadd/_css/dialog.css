@@ -308,7 +308,11 @@
 
 /*music-dialog*/
 .edui-notadd .edui-for-music .edui-dialog-content {
-    width: 515px;
-    height: 360px;
+    width: 630px;
+    height: 449px;
+}
+.edui-dialog .edui-for-music .edui-dialog-body {
+    height: 560px !important;
+    width: 630px !important;
 }
 
