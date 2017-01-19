@@ -57,27 +57,27 @@
 }
 
 .edui-notadd .edui-dialog-titlebar {
-    height: 26px;
-    border-bottom: 1px solid #c6c6c6;
-    background: url(../images/dialog-title-bg.png) repeat-x bottom;
+    height: 50px;
+    border-bottom: 2px solid #ccc;
     position: relative;
     cursor: move;
 }
 .edui-notadd .edui-dialog-caption {
     font-weight: bold;
-    font-size: 12px;
-    line-height: 26px;
-    padding-left: 5px;
+    font-size: 16px;
+    line-height: 50px;
+    padding-left: 20px;
+    color: #444;
 }
 
 .edui-notadd .edui-dialog-draghandle {
-    height: 26px;
+    height: 50px;
 }
 
 .edui-notadd .edui-dialog-closebutton {
     position: absolute !important;
-    right: 5px;
-    top: 3px;
+    right: 20px;
+    top: 15px;
 }
 
 .edui-notadd .edui-dialog-closebutton .edui-button-body {
@@ -92,31 +92,43 @@
 }
 
 .edui-notadd .edui-dialog-foot {
-    height: 40px;
+    position: relative;
+    height: 56px;
+    border-top: 2px solid #ccc;
 }
 
 .edui-notadd .edui-dialog-buttons {
     position: absolute;
-    right: 0;
+    right: 10px;
+    bottom: 10px;
 }
 
 .edui-notadd .edui-dialog-buttons .edui-button {
     margin-right: 10px;
 }
 
-.edui-notadd .edui-dialog-buttons .edui-button .edui-button-body {
-    background: url("../images/icons-all.gif") no-repeat;
-    height: 24px;
-    width: 96px;
-    font-size: 12px;
-    line-height: 24px;
-    text-align: center;
-    cursor: default;
+.edui-notadd .edui-dialog-buttons .edui-okbutton {
+    background-color: #3498db;
+    border-radius: 5px;
+    color: #fff;
 }
 
-.edui-notadd .edui-dialog-buttons .edui-button .edui-state-hover .edui-button-body {
-    background: url("../images/icons-all.gif") no-repeat 0 -30px;
+.edui-notadd .edui-dialog-buttons .edui-cancelbutton {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    color: #898989;
 }
+
+.edui-notadd .edui-dialog-buttons .edui-button .edui-button-body {
+    height: 34px;
+    width: 94px;
+    font-size: 12px;
+    line-height: 34px;
+    text-align: center;
+    cursor: default;
+    border-radius: 5px;
+}
+
 
 .edui-notadd .edui-dialog iframe {
     border: 0;
@@ -177,9 +189,12 @@
 
 /*scrawl-dialog*/
 .edui-notadd .edui-for-scrawl .edui-dialog-content {
-    width: 515px;
-    *width: 506px;
-    height: 360px;
+    width: 640px;
+    height: 435px;
+}
+.edui-dialog .edui-for-scrawl .edui-dialog-body {
+    height: 545px !important;
+    width: 640px !important;
 }
 
 /*spechars-dialog*/
@@ -292,3 +307,4 @@
     width: 515px;
     height: 360px;
 }
+
