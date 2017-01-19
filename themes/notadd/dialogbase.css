@@ -47,7 +47,7 @@ table {
 */
 body {
     background-color: #fff;
-    font: 12px/1.5 sans-serif, "宋体", "Arial Narrow", HELVETICA;
+    font: 13px/1.5 Microsoft yahei,sans-serif, "宋体", "Arial Narrow", HELVETICA;
     color: #646464;
 }
 
@@ -59,27 +59,31 @@ body {
 
 .tabhead span {
     display: inline-block;
-    padding: 0 5px;
+    padding: 0 12px;
     height: 30px;
-    border: 1px solid #ccc;
-    background: url("images/dialog-title-bg.png") repeat-x;
+    /*border: 1px solid #ccc;*/
+    /*background: url("images/dialog-title-bg.png") repeat-x;*/
     text-align: center;
     line-height: 30px;
     cursor: pointer;
     *margin-right: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
 .tabhead span.focus {
-    height: 31px;
+    /*height: 31px;*/
     border-bottom: none;
-    background: #fff;
+    background: #3498db;
+    color:#fff;
 }
 
 .tabbody {
     position: relative;
     top: -1px;
     margin: 0 auto;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
 }
 
 /*button*/
