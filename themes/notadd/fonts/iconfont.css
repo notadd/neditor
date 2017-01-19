@@ -1,0 +1,187 @@
+
+@font-face {font-family: "notadd-edui-icon";
+  src: url('iconfont.eot?t=1484796116630'); /* IE9*/
+  src: url('iconfont.eot?t=1484796116630#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1484796116630') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1484796116630') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1484796116630#notadd-edui-icon') format('svg'); /* iOS 4.1- */
+}
+
+.notadd-edui-icon {
+  font-family:"notadd-edui-icon" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close:before { content: "\e654"; }
+
+.icon-italic:before { content: "\e62d"; }
+
+.icon-insertparagraphaftertable:before { content: "\e62e"; }
+
+.icon-insertimage:before { content: "\e617"; }
+
+.icon-date:before { content: "\e602"; }
+
+.icon-previousStep:before { content: "\e630"; }
+
+.icon-nextStep:before { content: "\e631"; }
+
+.icon-scaleboard:before { content: "\e632"; }
+
+.icon-brush:before { content: "\e633"; }
+
+.icon-strikethrough:before { content: "\e60c"; }
+
+.icon-spechars:before { content: "\e603"; }
+
+.icon-clearboard:before { content: "\e634"; }
+
+.icon-bold:before { content: "\e604"; }
+
+.icon-insertunorderedlist:before { content: "\e635"; }
+
+.icon-insertorderedlist:before { content: "\e636"; }
+
+.icon-formatmatch:before { content: "\e60d"; }
+
+.icon-underline:before { content: "\e605"; }
+
+.icon-blockquote:before { content: "\e60e"; }
+
+.icon-blockquote1:before { content: "\e60f"; }
+
+.icon-anchor:before { content: "\e618"; }
+
+.icon-source:before { content: "\e601"; }
+
+.icon-help:before { content: "\e619"; }
+
+.icon-copy:before { content: "\e637"; }
+
+.icon-horizontal:before { content: "\e638"; }
+
+.icon-simpleupload:before { content: "\e61a"; }
+
+.icon-indent:before { content: "\e61b"; }
+
+.icon-justifycenter:before { content: "\e61c"; }
+
+.icon-justifyleft:before { content: "\e61d"; }
+
+.icon-justifyjustify:before { content: "\e61e"; }
+
+.icon-justifyright:before { content: "\e61f"; }
+
+.icon-link:before { content: "\e620"; }
+
+.icon-cleardoc:before { content: "\e621"; }
+
+.icon-drafts:before { content: "\e610"; }
+
+.icon-subscript:before { content: "\e611"; }
+
+.icon-unlink:before { content: "\e622"; }
+
+.icon-superscript:before { content: "\e612"; }
+
+.icon-filling:before { content: "\e63a"; }
+
+.icon-touppercase:before { content: "\e623"; }
+
+.icon-tolowercase:before { content: "\e624"; }
+
+.icon-directionalityltr:before { content: "\e625"; }
+
+.icon-directionalityrtl:before { content: "\e626"; }
+
+.icon-insertvideo:before { content: "\e627"; }
+
+.icon-emotion:before { content: "\e606"; }
+
+.icon-pasteplain:before { content: "\e613"; }
+
+.icon-preview:before { content: "\e63b"; }
+
+.icon-print:before { content: "\e63c"; }
+
+.icon-selectall:before { content: "\e614"; }
+
+.icon-mergecells:before { content: "\e63d"; }
+
+.icon-deletecol:before { content: "\e63e"; }
+
+.icon-deleterow:before { content: "\e63f"; }
+
+.icon-deletetable:before { content: "\e607"; }
+
+.icon-inserttable:before { content: "\e608"; }
+
+.icon-attachment:before { content: "\e628"; }
+
+.icon-music:before { content: "\e640"; }
+
+.icon-mergeright:before { content: "\e641"; }
+
+.icon-mergedown:before { content: "\e642"; }
+
+.icon-splittocols:before { content: "\e643"; }
+
+.icon-splittorows:before { content: "\e644"; }
+
+.icon-fontborder:before { content: "\e615"; }
+
+.icon-gmap:before { content: "\e629"; }
+
+.icon-insertframe:before { content: "\e645"; }
+
+.icon-pdfformat:before { content: "\e62f"; }
+
+.icon-word:before { content: "\e646"; }
+
+.icon-excel:before { content: "\e647"; }
+
+.icon-template:before { content: "\e648"; }
+
+.icon-insertparagraphbeforetable:before { content: "\e649"; }
+
+.icon-closeerror:before { content: "\e639"; }
+
+.icon-time1:before { content: "\e64a"; }
+
+.icon-edittable:before { content: "\e64b"; }
+
+.icon-pagebreak:before { content: "\e64c"; }
+
+.icon-imagenone:before { content: "\e64d"; }
+
+.icon-imageleft:before { content: "\e64e"; }
+
+.icon-imageright:before { content: "\e64f"; }
+
+.icon-snapscreen:before { content: "\e650"; }
+
+.icon-imagecenter:before { content: "\e651"; }
+
+.icon-wordimage:before { content: "\e652"; }
+
+.icon-lineheight:before { content: "\e62a"; }
+
+.icon-rowspacingbottom:before { content: "\e62b"; }
+
+.icon-rowspacingtop:before { content: "\e62c"; }
+
+.icon-scrawl:before { content: "\e616"; }
+
+.icon-redo1:before { content: "\e609"; }
+
+.icon-redo:before { content: "\e600"; }
+
+.icon-splittocells:before { content: "\e653"; }
+
+.icon-insertcol:before { content: "\e60a"; }
+
+.icon-insertrow:before { content: "\e60b"; }
+
