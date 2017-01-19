@@ -23,12 +23,13 @@
 }
 
 .edui-notadd .edui-toolbar .edui-button .edui-state-checked .edui-button-wrap {
-    background-color: #ffe69f;
+    background-color: #666666;
+    color: #fff;
     padding: 0;
     /*border: 1px solid #dcac6c;*/
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
+    /*border-radius: 2px;*/
+    /*-webkit-border-radius: 2px;*/
+    /*-moz-border-radius: 2px;*/
 }
 
 .edui-notadd .edui-toolbar .edui-button .edui-state-active .edui-button-wrap {
