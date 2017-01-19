@@ -255,8 +255,12 @@
 
 /*video-dialog*/
 .edui-notadd .edui-for-insertvideo .edui-dialog-content {
-    width: 590px;
-    height: 390px;
+    width: 641px;
+    height: 450px;
+}
+.edui-dialog .edui-for-insertvideo .edui-dialog-body {
+    height: 560px !important;
+    width: 640px !important;
 }
 
 /*anchor-dialog*/
