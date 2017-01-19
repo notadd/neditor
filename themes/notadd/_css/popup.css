@@ -35,6 +35,7 @@
 .edui-notadd .edui-popup .edui-bordereraser {
     background-color: white;
     height: 3px;
+    display: none;
 }
 
 .edui-notadd .edui-menu .edui-bordereraser {
