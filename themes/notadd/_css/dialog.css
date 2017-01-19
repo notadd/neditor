@@ -182,9 +182,13 @@
 
 /*template-dialog*/
 .edui-notadd .edui-for-template .edui-dialog-content {
-    width: 630px;
-    height: 390px;
+    width: 682px;
+    height: 406px;
     overflow: hidden;
+}
+.edui-dialog .edui-for-template .edui-dialog-body {
+    height: 516px !important;
+    width: 682px !important;
 }
 
 /*scrawl-dialog*/
