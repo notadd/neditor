@@ -4,9 +4,9 @@
     background-color: white;
     position: relative;
     overflow: visible;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+    /*-webkit-border-radius: 4px;*/
+    /*-moz-border-radius: 4px;*/
+    /*border-radius: 4px;*/
 }
 .edui-editor div{
     width:auto;
@@ -43,7 +43,7 @@
 }
 
 .edui-notadd .edui-editor-toolbarboxinner {
-    padding: 2px;
+    /*padding: 2px;*/
 }
 
 .edui-notadd .edui-editor-iframeholder {

@@ -3,7 +3,7 @@
     cursor: default;
     -webkit-user-select: none;
     -moz-user-select: none;
-    padding: 1px;
+    /*padding: 1px;*/
     overflow: hidden; /*全屏下单独一行不占位*/
     zoom: 1;
     width:auto;
@@ -14,5 +14,5 @@
 .edui-notadd .edui-toolbar .edui-splitbutton,
 .edui-notadd .edui-toolbar .edui-menubutton,
 .edui-notadd .edui-toolbar .edui-combox {
-    margin: 1px;
+    /*margin: 1px;*/
 }
