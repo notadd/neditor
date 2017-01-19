@@ -41,14 +41,14 @@
 
 .edui-notadd .edui-toolbar .edui-splitbutton .edui-state-checked .edui-splitbutton-body,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-checked .edui-menubutton-body {
-    background-color: #FFE69F;
+    /*background-color: #FFE69F;*/
     /*border: 1px solid #DCAC6C;*/
     padding: 0;
 }
 
 .edui-notadd .edui-toolbar .edui-splitbutton .edui-state-active .edui-splitbutton-body,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-active .edui-menubutton-body {
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
     /*border: 1px solid gray;*/
     padding: 0;
 }
@@ -60,7 +60,7 @@
 
 .edui-notadd .edui-toolbar .edui-splitbutton .edui-state-opened .edui-splitbutton-body,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-opened .edui-menubutton-body {
-    background-color: white;
+    /*background-color: white;*/
     /*border: 1px solid gray;*/
     padding: 0;
 }
