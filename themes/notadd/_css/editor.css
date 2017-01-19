@@ -1,6 +1,6 @@
 /*UI工具栏、编辑区域、底部*/
 .edui-notadd .edui-editor {
-    border: 1px solid #d4d4d4;
+    border: 1px solid #e5e5e5;
     background-color: white;
     position: relative;
     overflow: visible;
@@ -15,31 +15,31 @@
 .edui-notadd .edui-editor-toolbarbox {
     position: relative;
     zoom: 1;
-    -webkit-box-shadow:0 1px 4px rgba(204, 204, 204, 0.6);
-    -moz-box-shadow:0 1px 4px rgba(204, 204, 204, 0.6);
-    box-shadow:0 1px 4px rgba(204, 204, 204, 0.6);
+    /*-webkit-box-shadow:0 1px 4px rgba(204, 204, 204, 0.6);*/
+    /*-moz-box-shadow:0 1px 4px rgba(204, 204, 204, 0.6);*/
+    /*box-shadow:0 1px 4px rgba(204, 204, 204, 0.6);*/
     border-top-left-radius:2px;
     border-top-right-radius:2px;
 }
 
 .edui-notadd .edui-editor-toolbarboxouter {
-    border-bottom: 1px solid #d4d4d4;
-    background-color: #fafafa;
-    background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));
-    background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
-    background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);
-    background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
-    background-repeat: repeat-x;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #f3f3f3;
+    /*background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);*/
+    /*background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));*/
+    /*background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);*/
+    /*background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);*/
+    /*background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);*/
+    /*background-repeat: repeat-x;*/
     /*border: 1px solid #d4d4d4;*/
-    -webkit-border-radius: 4px 4px 0 0;
-    -moz-border-radius: 4px 4px 0 0;
-    border-radius: 4px 4px 0 0;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
-    *zoom: 1;
-    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+    /*-webkit-border-radius: 4px 4px 0 0;*/
+    /*-moz-border-radius: 4px 4px 0 0;*/
+    /*border-radius: 4px 4px 0 0;*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);*/
+    /**zoom: 1;*/
+    /*-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);*/
+    /*-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);*/
+    /*box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);*/
 }
 
 .edui-notadd .edui-editor-toolbarboxinner {
