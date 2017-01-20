@@ -6,7 +6,7 @@
     width: 0
 }
 .edui-notadd .edui-toolbar .edui-for-inserttable  .edui-state-active .edui-splitborder{
-    border-left: 1px solid transparent;
+    /*border-left: 1px solid transparent;*/
 }
 .edui-notadd .edui-tablepicker .edui-infoarea {
     height: 14px;
