@@ -357,3 +357,7 @@
     font-weight: bold;
     color: #ccc;
 }
+
+.edui-dialog .edui-dialog-fullscreen-flag .edui-dialog-content {
+    padding: 20px;
+}
