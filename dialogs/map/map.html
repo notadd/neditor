@@ -6,14 +6,37 @@
     <script type="text/javascript" src="../internal.js"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.1&services=true"></script>
     <style type="text/css">
-        .content{width:530px; height: 350px;margin: 10px auto;}
+        .content{
+          width: 600px;
+          height: 415px;
+          margin: 20px;
+        }
         .content table{width: 100%}
         .content table td{vertical-align: middle;}
-        #city,#address{height:21px;background: #FFF;border:1px solid #d7d7d7; line-height: 21px;}
-        #city{width:60px}
-        #address{width:130px}
+        #city,#address{
+          height: 28px;
+          background: #FFF;
+          border: 1px solid #ccc;
+          line-height: 28px;
+          border-radius: 5px;
+        }
+        #city{width:76px}
+        #address{width:178px}
         #is_dynamic_label span{vertical-align:middle;margin: 3px 0px 3px 3px;}
         #is_dynamic_label input{vertical-align:middle;margin: 3px 3px 3px 50px;}
+        #search {
+          display: block;
+          text-align: center;
+          line-height: 30px;
+          text-decoration: none;
+          height: 30px;
+          width: 78px;
+          border: 0;
+          color: #838383;
+          background-color: #3498db;
+          border-radius: 5px;
+          color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -24,11 +47,11 @@
             <td><input id="city" type="text" /></td>
             <td><var id="lang_address"></var>:</td>
             <td><input id="address" type="text" value="" /></td>
-            <td><a href="javascript:doSearch()" class="button"><var id="lang_search"></var></a></td>
+            <td><a href="javascript:doSearch()" class="button" id="search"><var id="lang_search"></var></a></td>
             <td><label id="is_dynamic_label" for="is_dynamic"><input id="is_dynamic" type="checkbox" name="is_dynamic" /><span><var id="lang_dynamicmap"></var></span></label></td>
         </tr>
     </table>
-    <div style="width:100%;height:340px;margin:5px auto;border:1px solid gray" id="container"></div>
+    <div style="width:100%;height:363px;margin:20px auto;border:none" id="container"></div>
 
 </div>
 <script type="text/javascript">
