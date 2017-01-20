@@ -14,6 +14,7 @@
     content: "\e64f";
     padding: 10px 0;
     display: block;
+    /*padding-right: 10px;*/
 }
 
 .edui-notadd .edui-toolbar .edui-splitbutton .edui-splitbutton-body,
@@ -90,4 +91,9 @@
 .edui-notadd .edui-for-insertunorderedlist .edui-popup-body .edui-icon {
     /*background-position: 0 -40px;*/
     background-image: none  ;
+}
+
+.edui-notadd .edui-toolbar .edui-menubutton .edui-icon,
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-icon {
+    padding-right: 0;
 }
