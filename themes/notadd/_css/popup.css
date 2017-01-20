@@ -28,7 +28,7 @@
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box;
-    padding: 5px;
+    padding: 10px;
     background:#ffffff;
 }
 
@@ -71,4 +71,8 @@
 .edui-popup div{
     width:auto;
     height:auto;
+}
+
+.edui-notadd .edui-popup .edui-popup-body {
+
 }

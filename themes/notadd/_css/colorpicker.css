@@ -7,10 +7,11 @@
 
 .edui-notadd .edui-colorpicker-preview {
     height: 20px;
-    border: 1px inset black;
+    border: 1px solid #ccc;
     margin-left: 1px;
     width: 128px;
     float: left;
+    border-radius: 5px;
 }
 
 .edui-notadd .edui-colorpicker-nocolor {
@@ -19,9 +20,10 @@
     font-size: 12px;
     line-height: 14px;
     height: 14px;
-    border: 1px solid #333;
+    border: 1px solid #ccc;
     padding: 3px 5px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .edui-notadd .edui-colorpicker-tablefirstrow {
