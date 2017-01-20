@@ -7,13 +7,14 @@
 }
 
 .edui-notadd .edui-menu-body .edui-menuitem {
-    padding: 1px;
+    padding: 5px 10px;
 }
 
 .edui-notadd .edui-menuseparator {
     margin: 2px 0;
     height: 1px;
     overflow: hidden;
+    display: none;
 }
 
 .edui-notadd .edui-menuseparator-inner {

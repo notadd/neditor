@@ -4,16 +4,19 @@
 }
 
 .edui-notadd .edui-menu .edui-popup-content {
-    padding: 3px;
+    padding: 0;
+    overflow: hidden;
 }
 
 .edui-notadd .edui-menu-body {
     _width: 150px;
     min-width: 170px;
-    background: url("../images/sparator_v.png") repeat-y 25px;
+    /*background: url("../images/sparator_v.png") repeat-y 25px;*/
 }
 
 .edui-notadd .edui-menuitem-body {
+    font-size: 14px;
+    color: #666;
 }
 
 .edui-notadd .edui-menuitem {
@@ -23,10 +26,10 @@
 }
 
 .edui-notadd .edui-menuitem .edui-icon {
-    width: 20px !important;
-    height: 20px !important;
-    background: url(../images/icons.png) 0 -4000px;
-    background: url(../images/icons.gif) 0 -4000px\9;
+    /*width: 20px !important;*/
+    /*height: 20px !important;*/
+    /*background: url(../images/icons.png) 0 -4000px;*/
+    /*background: url(../images/icons.gif) 0 -4000px\9;*/
 }
 
 .edui-notadd .edui-menuitem .edui-label {
