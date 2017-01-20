@@ -117,6 +117,7 @@
             'ui/shortcutmenu.js',
             'ui/breakline.js',
             'ui/message.js',
+            'ui/iconfont.js',
             'adapter/editorui.js',
             'adapter/editor.js',
             'adapter/message.js',

@@ -7,9 +7,28 @@
     /*width: 20px !important;*/
     /*background-image: url(../images/icons.png);*/
     /*background-image: url(../images/icons.gif) \9;*/
-    font-size: 18px;
+    /*font-size: 18px;*/
     line-height: 1;
+    display: block;
+    height: 18px;
+    width: 18px;
 }
+
+.edui-notadd .edui-toolbar .edui-button .edui-icon::before,
+.edui-notadd .edui-toolbar .edui-menubutton .edui-icon::before,
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-icon::before { display: none; }
+
+.edui-notadd .edui-toolbar .edui-button .edui-state-hover .edui-icon::before,
+.edui-notadd .edui-toolbar .edui-menubutton .edui-state-hover .edui-icon::before,
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-hover .edui-icon::before { display: block; }
+
+.edui-notadd .edui-toolbar .edui-button .edui-state-checked .edui-icon::before,
+.edui-notadd .edui-toolbar .edui-menubutton .edui-state-checked .edui-icon::before,
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-checked .edui-icon::before { display: block; }
+
+.edui-notadd .edui-toolbar .edui-button .edui-state-active .edui-icon::before,
+.edui-notadd .edui-toolbar .edui-menubutton .edui-state-active .edui-icon::before,
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-active .edui-icon::before { display: block; }
 
 .edui-notadd .edui-toolbar .edui-button .edui-icon {
     color: #666;
