@@ -4,14 +4,14 @@
 }
 
 .edui-notadd .edui-listitem {
-    padding: 1px;
+    /*padding: 1px;*/
     white-space: nowrap;
 }
 
 .edui-notadd .edui-list .edui-state-hover {
     position: relative;
     background-color: #fff5d4;
-    border: 1px solid #dcac6c;
+    /*border: 1px solid #dcac6c;*/
     padding: 0;
 }
 
