@@ -4,10 +4,12 @@
     background-color: white;
     position: relative;
     overflow: visible;
-    /*-webkit-border-radius: 4px;*/
-    /*-moz-border-radius: 4px;*/
-    /*border-radius: 4px;*/
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
     font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+    /*border-radius: 10px;*/
+    /*overflow: hidden;*/
 }
 
 .edui-notadd .edui-dialog .edui-dialog-body {
@@ -74,6 +76,8 @@
 
 .edui-notadd .edui-editor-bottomContainer {
     overflow: hidden;
+    padding: 0 4px;
+    border-top: 1px solid #e5e5e5;
 }
 
 .edui-notadd .edui-editor-bottomContainer table {
@@ -85,7 +89,7 @@
 
 .edui-notadd .edui-editor-bottomContainer td {
     white-space: nowrap;
-    border-top: 1px solid #e5e5e5;
+    /*border-top: 1px solid #e5e5e5;*/
     line-height: 20px;
     font-size: 12px;
     font-family: Arial, Helvetica, Tahoma, Verdana, Sans-Serif;
@@ -113,7 +117,7 @@
 
 .edui-notadd .edui-editor-breadcrumb span {
     cursor: pointer;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
     color: blue;
 }
 
