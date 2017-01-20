@@ -25,7 +25,7 @@
     color: #ccc;margin-right: 5px;text-decoration: none;text-align:center;}
 
 .m-box{width:589px;}
-.m-m{float: left;line-height: 26px;height: 26px;}
+.m-m{float: left;line-height: 26px;height: 26px;display: flex;}
 .m-h{height:30px;line-height:30px;padding-left: 70px;background-color:#f3f3f3;font-weight: bold;font-size: 12px;color: #666;}
 .m-l{float:left;width:40px; margin-top: 8px; margin-left: 17px;margin-right: 10px;}
 .m-t{float:left;width:142px;}
@@ -35,7 +35,7 @@
 
 /*.m-try{float:left;width:20px;height:20px;background:url('http://static.tieba.baidu.com/tb/editor/images/try_music.gif') no-repeat ;}*/
 .m-try {
-    width: 30px;
+    width: 4px;
     display: flex;
     height: 0;
     border-top: 5px solid transparent;
