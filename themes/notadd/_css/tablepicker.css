@@ -22,7 +22,8 @@
 }
 
 .edui-notadd .edui-dialog-buttons .edui-label {
-    line-height: 24px;
+    line-height: 34px;
+    font-size: 14px;
 }
 
 .edui-notadd .edui-tablepicker .edui-infoarea .edui-clickable {

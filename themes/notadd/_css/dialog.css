@@ -84,11 +84,11 @@
     height: 20px;
     width: 20px;
     cursor: pointer;
-    background: url("../images/icons-all.gif") no-repeat 0 -59px;
+    /*background: url("../images/icons-all.gif") no-repeat 0 -59px;*/
 }
 
 .edui-notadd .edui-dialog-closebutton .edui-state-hover .edui-button-body {
-    background: url("../images/icons-all.gif") no-repeat 0 -89px;
+    /*background: url("../images/icons-all.gif") no-repeat 0 -89px;*/
 }
 
 .edui-notadd .edui-dialog-foot {
@@ -176,11 +176,11 @@
 /*background-dialog*/
 .edui-notadd .edui-for-background .edui-dialog-content {
     width: 465px;
-    height: 280px;
+    height: 287px;
     overflow: hidden;
 }
 .edui-dialog .edui-for-background .edui-dialog-body {
-    height: 392px !important;
+    height: 398px !important;
     width: 465px !important;
 }
 
@@ -341,3 +341,15 @@
     width: 630px !important;
 }
 
+.edui-dialog-body .edui-dialog-foot .edui-icon:before {
+    content: '';
+}
+.edui-dialog-body .edui-dialog-titlebar .edui-icon:before {
+    content: '';
+}
+.edui-dialog-body .edui-dialog-titlebar .edui-icon:after {
+    content: '\e654';
+    font-size: 18px;
+    font-weight: bold;
+    color: #ccc;
+}
