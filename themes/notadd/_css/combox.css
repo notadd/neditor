@@ -9,11 +9,21 @@
     margin: 0 3px 0 0;
 }
 
-.edui-notadd .edui-toolbar .edui-combox-body .edui-arrow {
-    background: url(../images/icons.png) -741px 0;
-    _background: url(../images/icons.gif) -741px 0;
-    height: 20px;
-    width: 9px;
+.edui-notadd .edui-toolbar .edui-combox-body .edui-arrow::after {
+    /*background: url(../images/icons.png) -741px 0;*/
+    /*_background: url(../images/icons.gif) -741px 0;*/
+    /*height: 20px;*/
+    /*width: 9px;*/
+
+    font-family:"edui-notadd" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e64f";
+    /*padding: 10px 0;*/
+    display: block;
 }
 
 .edui-notadd .edui-toolbar .edui-combox .edui-combox-body {
