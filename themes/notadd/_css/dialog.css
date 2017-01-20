@@ -175,9 +175,13 @@
 }
 /*background-dialog*/
 .edui-notadd .edui-for-background .edui-dialog-content {
-    width: 440px;
+    width: 465px;
     height: 280px;
     overflow: hidden;
+}
+.edui-dialog .edui-for-background .edui-dialog-body {
+    height: 392px !important;
+    width: 465px !important;
 }
 
 /*template-dialog*/
