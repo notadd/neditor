@@ -15,6 +15,8 @@
     padding: 10px 0;
     display: block;
     /*padding-right: 10px;*/
+    position: relative;
+    right: 5px;
 }
 
 .edui-notadd .edui-toolbar .edui-splitbutton .edui-splitbutton-body,
@@ -93,7 +95,7 @@
     background-image: none  ;
 }
 
-.edui-notadd .edui-toolbar .edui-menubutton .edui-icon,
-.edui-notadd .edui-toolbar .edui-splitbutton .edui-icon {
-    padding-right: 0;
-}
+/*.edui-notadd .edui-toolbar .edui-menubutton .edui-icon,*/
+/*.edui-notadd .edui-toolbar .edui-splitbutton .edui-icon {*/
+    /*padding-right: 0;*/
+/*}*/
