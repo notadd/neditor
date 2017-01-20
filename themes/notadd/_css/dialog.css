@@ -280,8 +280,13 @@
 
 /*searchreplace-dialog*/
 .edui-notadd .edui-for-searchreplace .edui-dialog-content {
-    width: 400px;
-    height: 220px;
+    width: 404px;
+    height: 310px;
+}
+
+.edui-dialog .edui-for-searchreplace .edui-dialog-body {
+    height: 364px !important;
+    width: 404px !important;
 }
 
 /*help-dialog*/
