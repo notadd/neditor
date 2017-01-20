@@ -140,9 +140,8 @@
 .edui-notadd .edui-dialog-modalmask {
     opacity: 0.3;
     filter: alpha(opacity = 30);
-    background-color: #ccc;
+    background-color: #000;
     position: absolute;
-    /*z-index: 1999;*/
 }
 
 .edui-notadd .edui-dialog-dragmask {
@@ -170,9 +169,14 @@
 /*link-dialog*/
 .edui-notadd .edui-for-link .edui-dialog-content {
     width: 420px;
-    height: 200px;
+    height: 257px;
     overflow: hidden;
 }
+.edui-dialog .edui-for-link .edui-dialog-body {
+    height: 368px !important;
+    width: 420px !important;
+}
+
 /*background-dialog*/
 .edui-notadd .edui-for-background .edui-dialog-content {
     width: 465px;
