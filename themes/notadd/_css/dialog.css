@@ -251,8 +251,12 @@
 
 /*map-dialog*/
 .edui-notadd .edui-for-map .edui-dialog-content {
-    width: 550px;
-    height: 400px;
+    width: 640px;
+    height: 455px;
+}
+.edui-dialog .edui-for-map .edui-dialog-body {
+    height: 560px !important;
+    width: 640px !important;
 }
 
 /*gmap-dialog*/
