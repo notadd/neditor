@@ -16,7 +16,7 @@ body{
 
 .wrapper .left {
     float: left;
-    margin-left: 10px;;
+    margin-left: 10px;
 }
 
 .wrapper .right {
@@ -48,11 +48,15 @@ body{
 
 .section li {
     float: left;
-    width: 120px;;
+    width: 120px;
 }
 
 .section .tone {
-    width: 80px;;
+    width: 80px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 24px;
+    margin-left: 5px;
 }
 
 .section .preview {
