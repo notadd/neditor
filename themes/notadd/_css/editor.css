@@ -126,9 +126,9 @@
 }
 
 .edui-notadd .edui-bubble .edui-popup-content {
-    border: 1px solid #DCAC6C;
-    background-color: #fff6d9;
-    padding: 5px;
+    border: 1px solid #e5e5e5;
+    background-color: #f3f3f3;
+    padding: 10px;
     font-size: 10pt;
     font-family: "宋体";
 }

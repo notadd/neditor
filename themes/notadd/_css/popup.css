@@ -73,6 +73,7 @@
     height:auto;
 }
 
-.edui-notadd .edui-popup .edui-popup-body {
-
+.edui-notadd .edui-bubble .edui-popup-body{
+    width: 355px !important;
+    height: 40px !important;
 }
