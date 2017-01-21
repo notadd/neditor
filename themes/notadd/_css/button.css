@@ -22,13 +22,26 @@
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-hover .edui-icon::before,
 .edui-notadd .edui-toolbar .edui-splitbutton .edui-state-hover .edui-icon::before { display: block; }
 
+.edui-notadd .edui-toolbar .edui-button .edui-state-hover .edui-icon svg,
+.edui-notadd .edui-toolbar .edui-menubutton .edui-state-hover .edui-icon svg,
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-hover .edui-icon svg { display: none; }
+
 .edui-notadd .edui-toolbar .edui-button .edui-state-checked .edui-icon::before,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-checked .edui-icon::before,
 .edui-notadd .edui-toolbar .edui-splitbutton .edui-state-checked .edui-icon::before { display: block; }
 
+.edui-notadd .edui-toolbar .edui-button .edui-state-checked .edui-icon svg,
+.edui-notadd .edui-toolbar .edui-menubutton .edui-state-checked .edui-icon svg,
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-checked .edui-icon svg { display: none; }
+
+
 .edui-notadd .edui-toolbar .edui-button .edui-state-active .edui-icon::before,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-active .edui-icon::before,
 .edui-notadd .edui-toolbar .edui-splitbutton .edui-state-active .edui-icon::before { display: block; }
+
+.edui-notadd .edui-toolbar .edui-button .edui-state-active .edui-icon svg,
+.edui-notadd .edui-toolbar .edui-menubutton .edui-state-active .edui-icon svg,
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-active .edui-icon svg { display: none; }
 
 .edui-notadd .edui-toolbar .edui-button .edui-icon {
     color: #666;
