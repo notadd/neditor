@@ -57,7 +57,7 @@
             return '<div id="##" class="edui-box %%">' +
                 '<div '+ (this.title ? 'title="' + this.title + '"' : '') +' id="##_state" stateful><div class="%%-body">' +
                 '<div id="##_button_body" class="edui-box edui-button-body" onclick="$$._onButtonClick(event, this);">' +
-                '<div class="edui-box edui-icon"></div>' +
+                '<div class="edui-box edui-icon"><svg class="edui-iconfont"><use xlink:href="#' + this.className + '"></use></svg></div>' +
                 '</div>' +
                 '<div class="edui-box edui-splitborder"></div>' +
                 '<div class="edui-box edui-arrow" onclick="$$._onArrowClick();"></div>' +
