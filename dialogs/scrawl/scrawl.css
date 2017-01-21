@@ -350,13 +350,15 @@ em {
     width: 16px;
     height: 16px;
     font-size: 16px;
+    margin-top: -5px;
 }
 
 .eraserIcon {
     display: inline-block;
     width: 16px;
     height: 16px;
-    font-size: 18px;
+    font-size: 20px !important;
+    margin-top: -16px;
 }
 
 .icon {
