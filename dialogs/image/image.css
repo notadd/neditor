@@ -50,13 +50,19 @@
     line-height: 20px;
 }
 
-.alignBar #alignIcon{
+.alignBar #alignIcon1,
+.alignBar #alignIcon2,
+.alignBar #alignIcon3,
+.alignBar #alignIcon4{
     zoom:1;
     _display: inline;
     display: inline-block;
     position: relative;
 }
-.alignBar #alignIcon span{
+.alignBar #alignIcon1 span,
+.alignBar #alignIcon2 span,
+.alignBar #alignIcon3 span,
+.alignBar #alignIcon4 span{
     float: left;
     cursor: pointer;
     display: block;
@@ -66,28 +72,28 @@
     margin-left: 3px;
     background-image: url(./images/alignicon.jpg);
 }
-.alignBar #alignIcon .none-align{
+.alignBar #alignIcon1 .none-align{
     background-position: 0 -18px;
 }
-.alignBar #alignIcon .left-align{
+.alignBar #alignIcon2 .left-align{
     background-position: -20px -18px;
 }
-.alignBar #alignIcon .right-align{
+.alignBar #alignIcon3 .right-align{
     background-position: -40px -18px;
 }
-.alignBar #alignIcon .center-align{
+.alignBar #alignIcon4 .center-align{
     background-position: -60px -18px;
 }
-.alignBar #alignIcon .none-align.focus{
+.alignBar #alignIcon1 .none-align.focus{
     background-position: 0 0;
 }
-.alignBar #alignIcon .left-align.focus{
+.alignBar #alignIcon2 .left-align.focus{
     background-position: -20px 0;
 }
-.alignBar #alignIcon .right-align.focus{
+.alignBar #alignIcon3 .right-align.focus{
     background-position: -40px 0;
 }
-.alignBar #alignIcon .center-align.focus{
+.alignBar #alignIcon4 .center-align.focus{
     background-position: -60px 0;
 }
 
