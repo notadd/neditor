@@ -349,15 +349,11 @@
     content: '';
 }
 .edui-dialog-body .edui-dialog-titlebar .edui-icon:before {
-    content: '';
-}
-.edui-dialog-body .edui-dialog-titlebar .edui-icon:after {
     content: '\e654';
     font-size: 18px;
     font-weight: bold;
     color: #ccc;
 }
-
 .edui-dialog .edui-dialog-fullscreen-flag .edui-dialog-content {
     padding: 20px;
 }
