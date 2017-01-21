@@ -44,12 +44,12 @@
 }
 
 .edui-notadd .edui-toolbar .edui-state-hover .edui-combox-body {
-    background-color: #fff5d4;
-    border: 1px solid #dcac6c;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
 }
 
 .edui-notadd .edui-toolbar .edui-state-hover .edui-combox-body .edui-arrow {
-    border-left: 1px solid #dcac6c;
+    border-left: 1px solid #ccc;
 }
 
 .edui-notadd .edui-toolbar .edui-state-checked .edui-combox-body {

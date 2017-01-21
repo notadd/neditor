@@ -46,14 +46,14 @@
 
 .edui-notadd .edui-toolbar .edui-splitbutton .edui-state-hover .edui-splitbutton-body,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-hover .edui-menubutton-body {
-    background-color: #fff5d4;
+    background-color: #e5e5e5;
     /*border: 1px solid #dcac6c;*/
     padding: 0;
 }
 
 .edui-notadd .edui-toolbar .edui-splitbutton .edui-state-checked .edui-splitbutton-body,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-checked .edui-menubutton-body {
-    /*background-color: #FFE69F;*/
+    background-color: #666;
     /*border: 1px solid #DCAC6C;*/
     padding: 0;
 }
