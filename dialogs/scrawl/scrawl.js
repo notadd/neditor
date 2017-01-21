@@ -152,7 +152,7 @@ var scrawl = function (options) {
                     context.clearRect(0, 0, context.canvas.width, context.canvas.height);
                     context.putImageData(drawStep[drawStepIndex - 1], 0, 0);
                     // me.btn2Highlight("J_nextStep");
-                    drawStepIndex == 1 && me.btn2disable("J_previousStep");
+                    // drawStepIndex == 1 && me.btn2disable("J_previousStep");
                 }
             });
             domUtils.on($G("J_nextStep"), "click", function () {
@@ -294,7 +294,7 @@ var scrawl = function (options) {
             var me = this;
             if (drawStep.length <= saveNum) {
                 if(drawStepIndex<drawStep.length){
-                    me.btn2disable("J_nextStep");
+                    // me.btn2disable("J_nextStep");
                     drawStep.splice(drawStepIndex);
                 }
                 drawStep.push(context.getImageData(0, 0, context.canvas.width, context.canvas.height));
@@ -604,7 +604,7 @@ function ue_callback(url, state) {
             var obj = new scrawl();
             // obj.btn2Highlight("J_removeImg");
             //trace 2457
-            obj.btn2Highlight("J_sacleBoard");
+            // obj.btn2Highlight("J_sacleBoard");
         };
         img.src = url;
     } else {

@@ -200,8 +200,14 @@ em {
     background-color: #fff;
     text-align: center;
     font-weight: bold;
-    line-height: 300px;
+    line-height: 410px;
     z-index: 1000;
+}
+
+.maskLayer input {
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    padding: 4px 12px;
 }
 
 /*btn state
