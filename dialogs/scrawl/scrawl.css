@@ -254,7 +254,7 @@ em {
     display: inline-block;
     width: 16px;
     height: 16px;
-    background-image: url('images/empty.png');
+    /*background-image: url('images/empty.png');*/
     cursor: default;
 }
 
@@ -267,7 +267,7 @@ em {
     display: inline-block;
     width: 16px;
     height: 16px;
-    background-image: url('images/empty.png');
+    /*background-image: url('images/empty.png');*/
     cursor: default;
 }
 
