@@ -16,32 +16,49 @@
 
 .edui-notadd .edui-toolbar .edui-button .edui-icon::before,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-icon::before,
-.edui-notadd .edui-toolbar .edui-splitbutton .edui-icon::before { display: none; }
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-icon::before {
+    display: none;
+}
 
 .edui-notadd .edui-toolbar .edui-button .edui-state-hover .edui-icon::before,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-hover .edui-icon::before,
-.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-hover .edui-icon::before { display: block; }
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-hover .edui-icon::before {
+    display: block;
+}
 
 .edui-notadd .edui-toolbar .edui-button .edui-state-hover .edui-icon svg,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-hover .edui-icon svg,
-.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-hover .edui-icon svg { display: none; }
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-hover .edui-icon svg {
+    display: none;
+}
 
 .edui-notadd .edui-toolbar .edui-button .edui-state-checked .edui-icon::before,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-checked .edui-icon::before,
-.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-checked .edui-icon::before { display: block; }
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-checked .edui-icon::before {
+    display: block;
+}
 
 .edui-notadd .edui-toolbar .edui-button .edui-state-checked .edui-icon svg,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-checked .edui-icon svg,
-.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-checked .edui-icon svg { display: none; }
-
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-checked .edui-icon svg {
+    display: none;
+}
 
 .edui-notadd .edui-toolbar .edui-button .edui-state-active .edui-icon::before,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-active .edui-icon::before,
-.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-active .edui-icon::before { display: block; }
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-active .edui-icon::before {
+    display: block;
+}
 
 .edui-notadd .edui-toolbar .edui-button .edui-state-active .edui-icon svg,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-active .edui-icon svg,
-.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-active .edui-icon svg { display: none; }
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-active .edui-icon svg {
+    display: none;
+}
+
+.edui-dialog-buttons .edui-icon svg {
+    display: none;
+}
 
 .edui-notadd .edui-toolbar .edui-button .edui-icon {
     color: #666;
@@ -76,10 +93,12 @@
     padding: 0;
     /*border: 1px solid gray;*/
 }
+
 .edui-notadd .edui-toolbar .edui-state-disabled .edui-label {
     color: #ccc;
 }
+
 .edui-notadd .edui-toolbar .edui-state-disabled .edui-icon {
     opacity: 0.3;
-    filter: alpha(opacity = 30);
+    filter: alpha(opacity=30);
 }
