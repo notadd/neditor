@@ -89,9 +89,13 @@
 }
 
 .edui-notadd .edui-toolbar .edui-button .edui-state-active .edui-button-wrap {
-    /*background-color: #ffffff;*/
+    background-color: #666666;
     padding: 0;
     /*border: 1px solid gray;*/
+}
+
+.edui-notadd .edui-toolbar .edui-button .edui-state-active .edui-icon {
+    color: #fff;
 }
 
 .edui-notadd .edui-toolbar .edui-state-disabled .edui-label {

@@ -44,6 +44,11 @@
     /*border: 0;*/
 }
 
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-checked .edui-icon,
+.edui-notadd .edui-toolbar .edui-menubutton .edui-state-checked .edui-icon {
+    color: #fff;
+}
+
 .edui-notadd .edui-toolbar .edui-splitbutton .edui-state-hover .edui-splitbutton-body,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-hover .edui-menubutton-body {
     background-color: #e5e5e5;
@@ -60,9 +65,14 @@
 
 .edui-notadd .edui-toolbar .edui-splitbutton .edui-state-active .edui-splitbutton-body,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-state-active .edui-menubutton-body {
-    /*background-color: #ffffff;*/
+    background-color: #666;
     /*border: 1px solid gray;*/
     padding: 0;
+}
+
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-active .edui-icon,
+.edui-notadd .edui-toolbar .edui-menubutton .edui-state-active .edui-icon {
+    color: #fff;
 }
 
 .edui-notadd .edui-state-disabled .edui-arrow {
