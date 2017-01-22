@@ -23,6 +23,10 @@
     background-position: 0 0;
 }
 
+/*.edui-notadd .edui-cellalignpicker-body .edui-left:before{*/
+    /*content: '\e651';*/
+/*}*/
+
 .edui-notadd .edui-cellalignpicker-body .edui-center{
     background-position: -25px 0;
 }
