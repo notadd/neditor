@@ -47,6 +47,6 @@
     color: gray;
 }
 
-.edui-notadd  .edui-for-setbordervisible {
-    margin-left: 15px;
+.edui-notadd .edui-menu-body .edui-menuitem.edui-for-setbordervisible {
+    padding-left: 25px;
 }

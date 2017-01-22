@@ -28,3 +28,11 @@
     background-color: #f3f3f3;
     /*border: 1px solid #dcac6c;*/
 }
+
+.edui-notadd .edui-menu-body .edui-for-tablesort {
+    padding-left: 25px;
+}
+
+.edui-notadd .edui-menu-body .edui-for-borderBack {
+    padding-left: 25px;
+}
