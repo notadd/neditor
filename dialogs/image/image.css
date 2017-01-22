@@ -249,9 +249,10 @@
 
 .tabbody #upload.panel.focus {
     width: 100%;
-    height: 346px;
+    height: 373px;
     display: block;
     clip: auto;
+    margin-top: 12px;
 }
 
 #upload .queueList {
@@ -279,17 +280,14 @@
 
 #upload .placeholder {
     margin: 10px;
-    border: 2px dashed #e6e6e6;
-    *border: 0px dashed #e6e6e6;
-    height: 172px;
+    height: 212px;
     padding-top: 150px;
     text-align: center;
-    background: url(./images/image.png) center 70px no-repeat;
+    background: url(./images/image.png) center 70px no-repeat #f3f3f3;
     color: #cccccc;
     font-size: 18px;
     position: relative;
-    top:0;
-    *top: 10px;
+    top: 0;
 }
 
 #upload .placeholder .webuploader-pick {
