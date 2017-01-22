@@ -1,15 +1,22 @@
 NotAdd Get Started
 ==================
+![image ](https://www.notadd.com/src/neditor-ie.svg)
 
-## ueditor富文本编辑器介绍
+## Neditor富文本编辑器介绍
 
-UEditor是由百度web前端研发部开发所见即所得富文本web编辑器，具有轻量，可定制，注重用户体验等特点，开源基于MIT协议，允许自由使用和修改代码。
+Neditor是我们团队基于Ueditor的一款富文本编辑器。
+不论从功能还是从其它各方面来讲，Ueditor都是一款无以替代的编辑器产品。
+只是已经不符合现代化样式的需求，于是我们修改它的样式，实现了这样的效果：
+
+![image](https://www.notadd.com/src/neditor.webp)
+
+demo:  https://neditor.notadd.com/demo/
 
 ## 入门部署和体验 ##
 
 ### 第一步：下载编辑器 ###
 
-到官网下载ueditor最新版：[[官网地址]](http://ueditor.baidu.com/website/download.html#ueditor "官网下载地址")
+下载Neditor最新版
 
 ### 第二步：创建demo文件 ###
 解压下载的包，在解压后的目录创建demo.html文件，填入下面的html代码
@@ -40,7 +47,7 @@ UEditor是由百度web前端研发部开发所见即所得富文本web编辑器�
 
 如果看到了下面这样的编辑器，恭喜你，初次部署成功！
 
-![部署成功](http://fex.baidu.com/ueditor/doc/images/demo.png)
+![部署成功](https://www.notadd.com/src/neditor-demo.webp)
 
 ### 自定义的参数
 
@@ -78,6 +85,8 @@ ueditor API 文档：[http://ueditor.baidu.com/doc](http://ueditor.baidu.com/doc
 
 ueditor github 地址：[http://github.com/fex-team/ueditor](http://github.com/fex-team/ueditor "ueditor github 地址")
 
+Neditor github 地址：[http://github.com/notadd/neditor](http://github.com/fex-team/ueditor "Neditor github 地址")
+
 ## 详细文档
 
 ueditor 文档：[http://fex.baidu.com/ueditor/](http://fex.baidu.com/ueditor/)
@@ -86,5 +95,5 @@ ueditor 文档：[http://fex.baidu.com/ueditor/](http://fex.baidu.com/ueditor/)
 
 ## 联系我们 ##
 
-email：[ueditor@baidu.com](mailto://email:ueditor@baidu.com "发邮件给ueditor开发组")
-issue：[github issue](http://github.com/fex-team/ueditor/issues "ueditor 论坛")
+QQ 群 ：  321735506
+issue：[github issue](http://github.com/notadd/neditor/issues "ueditor 论坛")
