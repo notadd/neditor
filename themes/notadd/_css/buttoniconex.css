@@ -7,7 +7,7 @@
   url('../fonts/iconfont.svg?t=1485076824937#edui-notadd') format('svg'); /* iOS 4.1- */
 }
 
-.edui-notadd {
+.edui-notadd .edui-icon{
   font-family:"edui-notadd" !important;
   font-size:16px;
   font-style:normal;

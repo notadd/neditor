@@ -845,6 +845,13 @@
     '<path d="M256 411.648h102.4v307.2H256zM460.8 565.248h102.4v153.6H460.8zM665.6 258.048h102.4v460.8h-102.4z" fill="" ></path>' +
     '' +
     '</symbol>' +
+    '<symbol id="edui-for-webapp" viewBox="0 0 1024 1024">' +
+    '' +
+    '<path d="M51.2 102.4v768h921.6V102.4z m870.4 716.8H102.4V153.6h819.2z" fill="" ></path>' +
+    '' +
+    '<path d="M256 411.648h102.4v307.2H256zM460.8 565.248h102.4v153.6H460.8zM665.6 258.048h102.4v460.8h-102.4z" fill="" ></path>' +
+    ''+
+    '</symbol>' +
     '' +
     '<symbol id="edui-for-closeerror" viewBox="0 0 1024 1024">' +
     '' +
