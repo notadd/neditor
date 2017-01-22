@@ -16,16 +16,25 @@
     height: 20px;
     width: 20px;
     padding: 1px;
-    background-image: url(../images/table-cell-align.png);
+    color: #666;
+    /*background-image: url(../images/table-cell-align.png);*/
 }
 
 .edui-notadd .edui-cellalignpicker-body .edui-left{
     background-position: 0 0;
 }
 
-/*.edui-notadd .edui-cellalignpicker-body .edui-left:before{*/
-    /*content: '\e651';*/
-/*}*/
+.edui-notadd .edui-cellalignpicker-body .edui-left:before{
+    content: '\e66c';
+}
+
+.edui-notadd .edui-cellalignpicker-body .edui-center:before{
+    content: '\e66e';
+}
+
+.edui-notadd .edui-cellalignpicker-body .edui-right:before{
+    content: '\e66d';
+}
 
 .edui-notadd .edui-cellalignpicker-body .edui-center{
     background-position: -25px 0;
