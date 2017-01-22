@@ -83,9 +83,9 @@
     border: 2px dashed #e6e6e6;
     *border: 0px dashed #e6e6e6;
     height: 172px;
-    padding-top: 150px;
+    padding-top: 160px;
     text-align: center;
-    background: url(./images/image.png) center 70px no-repeat;
+    background: url(./images/image.png) center 80px no-repeat;
     color: #cccccc;
     font-size: 18px;
     position: relative;

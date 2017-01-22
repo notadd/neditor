@@ -54,6 +54,10 @@
     /*padding: 2px;*/
 }
 
+.edui-notadd .edui-editor-iframeholder .view p {
+    overflow: hidden;
+}
+
 .edui-notadd .edui-editor-iframeholder {
     position: relative;
     /*for fix ie6 toolbarmsg under iframe bug. relative -> static */
@@ -65,6 +69,7 @@
     font-size: 12px;
     line-height: 18px;
 }
+
 
 .edui-notadd .edui-editor-bottombar {
     /*border-top: 1px solid #ccc;*/
@@ -184,3 +189,4 @@
     fill: currentColor;
     overflow: hidden;
 }
+

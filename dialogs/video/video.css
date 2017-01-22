@@ -6,7 +6,7 @@
     margin: 10px auto;
     zoom: 1;
     position: relative;}
-.tabbody{height: 385px;}
+.tabbody{height: 390px;}
 .tabbody .panel {
     position: absolute;
     width: 0;
@@ -104,13 +104,13 @@ span.view{display: inline-block;width: 30px;float: right;cursor: pointer;color: 
 }
 .tabbody #upload.panel.focus {
     width: 100%;
-    height: 388px;
+    height: 390px;
     display: block;
     clip: auto;
 }
 #upload_alignment div{cursor:pointer;opacity: 0.5;filter: alpha(opacity = 50);margin:9px;_margin:5px;width:38px;height:36px;float:left;}
 #upload_alignment .focus{opacity: 1;filter: alpha(opacity = 100)}
-#upload_left { width:443px; float:left; }
+#upload_left { width:440px; float:left; }
 #upload_left .controller { height: 30px; clear: both; }
 #uploadVideoInfo{margin-top:10px;float:right;padding-right:8px;}
 
@@ -200,7 +200,7 @@ span.view{display: inline-block;width: 30px;float: right;cursor: pointer;color: 
     overflow-x: hidden;
     overflow-y: auto;
     position: relative;
-    height: 285px;
+    height: 345px;
 }
 
 #upload .filelist:after {
@@ -213,8 +213,8 @@ span.view{display: inline-block;width: 30px;float: right;cursor: pointer;color: 
 }
 
 #upload .filelist li {
-    width: 113px;
-    height: 113px;
+    width: 118px;
+    height: 118px;
     background: url(./images/bg.png);
     text-align: center;
     margin: 15px 0 0 20px;
@@ -310,11 +310,11 @@ span.view{display: inline-block;width: 30px;float: right;cursor: pointer;color: 
 #upload .filelist li p.imgWrap {
     position: relative;
     z-index: 2;
-    line-height: 113px;
+    line-height: 118px;
     vertical-align: middle;
     overflow: hidden;
-    width: 113px;
-    height: 113px;
+    width: 118px;
+    height: 118px;
 
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
@@ -502,7 +502,7 @@ span.view{display: inline-block;width: 30px;float: right;cursor: pointer;color: 
     color: #565656;
     padding: 0 18px;
     display: inline-block;
-    border-radius: 3px;
+    border-radius: 5px;
     margin-left: 10px;
     cursor: pointer;
     font-size: 14px;
