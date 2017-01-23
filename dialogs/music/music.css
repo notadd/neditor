@@ -62,8 +62,22 @@
     position: absolute;
     content: " ";
 }
-.loading{width:95px;height:7px;font-size:7px;margin:60px auto;background:url(http://static.tieba.baidu.com/tb/editor/images/loading.gif) no-repeat}
-.empty{width:300px;height:40px;padding:2px;margin:50px auto;line-height:40px; color:#006699;text-align:center;}
+.loading{
+    width: 113px;
+    height: 95px;
+    font-size: 7px;
+    margin: 114px auto;
+    background: url(balls.svg) no-repeat;
+}
+.empty{
+    width: 300px;
+    height: 40px;
+    padding: 2px;
+    margin: 157px auto;
+    line-height: 40px;
+    color: #666;
+    text-align: center;
+}
 
 #J_searchName{
     height: 26px;
