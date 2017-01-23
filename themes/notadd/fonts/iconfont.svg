@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Sun Jan 22 17:20:24 2017
+Created by FontForge 20120731 at Mon Jan 23 11:25:39 2017
  By admin
 </metadata>
 <defs>
@@ -307,8 +307,6 @@ d="M51 794v-820h922v820h-922zM256 26h-154v204h154v-204zM256 282h-154v204h154v-20
 v204h154v-204z" />
     <glyph glyph-name="splittocells" unicode="&#xe64d;" 
 d="M466 186h359v-51h-359v51zM57 852v-922h921v922h-921zM108 545h205v-154h-205v154zM364 545h256v-154h-256v154zM108 340h205v-154h-205v154zM108 -18v153h205v-153h-205zM927 -18h-563v358h563v-358zM927 391h-256v154h256v-154zM927 596h-563v205h563v-205z" />
-    <glyph glyph-name="template" unicode="&#xe64e;" 
-d="M51 742v-716h922v716h-922zM922 77h-820v614h820v-614zM205 590h256v-153h-256v153zM563 590h256v-409h-256v409zM205 334h256v-153h-256v153z" />
     <glyph glyph-name="arrow" unicode="&#xe64f;" 
 d="M513 230l205 205h-410z" />
     <glyph glyph-name="aligntd" unicode="&#xe651;" 
@@ -356,5 +354,7 @@ M992 864v-960h-960v960h960zM992 896h-960q-13 0 -22.5 -9.5t-9.5 -22.5v-960q0 -13 
 d="M96 800h832v-32h-832v32zM96 704h832v-32h-832v32zM96 96h832v-32h-832v32zM96 0h399v-32h-399v32zM96 192h224v-32h-224v32zM96 288h224v-32h-224v32zM96 384h224v-32h-224v32zM96 480h224v-32h-224v32zM96 576h224v-32h-224v32zM512 416zM448 416q0 -26 19 -45t45 -19
 t45 19t19 45t-19 45t-45 19t-45 -19t-19 -45zM896 576h-512q-13 0 -22.5 -9.5t-9.5 -22.5v-352q0 -13 9.5 -22.5t22.5 -9.5h512q13 0 22.5 9.5t9.5 22.5v352q0 13 -9.5 22.5t-22.5 9.5zM896 324l-96 124l-162 -209l-78 94l-117 -141h-27q-13 0 -22.5 9.5t-9.5 22.5v288
 q0 13 9.5 22.5t22.5 9.5h448q13 0 22.5 -9.5t9.5 -22.5v-188zM992 864v-960h-960v960h960zM992 896h-960q-13 0 -22.5 -9.5t-9.5 -22.5v-960q0 -13 9.5 -22.5t22.5 -9.5h960q13 0 22.5 9.5t9.5 22.5v960q0 13 -9.5 22.5t-22.5 9.5z" />
+    <glyph glyph-name="template" unicode="&#xe64e;" 
+d="M0 832v-896h1024v896h-1024zM960 0h-896v768h896v-768zM192 640h320v-192h-320v192zM640 640h192v-512h-192v512zM192 320h320v-192h-320v192z" />
   </font>
 </defs></svg>
