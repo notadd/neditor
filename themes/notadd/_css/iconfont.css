@@ -1,0 +1,265 @@
+
+@font-face {font-family: "edui-notadd";
+  src: url('iconfont.eot?t=1485268123947'); /* IE9*/
+  src: url('iconfont.eot?t=1485268123947#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1485268123947') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1485268123947') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1485268123947#edui-notadd') format('svg'); /* iOS 4.1- */
+}
+
+.edui-notadd {
+  font-family:"edui-notadd" !important;
+  font-size:18px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.edui-for-close:before { content: "\e654"; }
+
+.edui-for-italic:before { content: "\e62d"; }
+
+.edui-for-insertcaption:before { content: "\e657"; }
+
+.edui-for-insertparagraph:before { content: "\e62e"; }
+
+.edui-for-inserttitlecol:before { content: "\e659"; }
+
+.edui-for-insertimage:before { content: "\e617"; }
+
+.edui-for-previousstep:before { content: "\e630"; }
+
+.edui-for-nextstep:before { content: "\e631"; }
+
+.edui-for-scaleboard:before { content: "\e632"; }
+
+.edui-for-brush:before { content: "\e633"; }
+
+.edui-for-background:before { content: "\e65d"; }
+
+.edui-for-strikethrough:before { content: "\e60c"; }
+
+.edui-for-spechars:before { content: "\e603"; }
+
+.edui-for-clearboard:before { content: "\e634"; }
+
+.edui-for-bold:before { content: "\e604"; }
+
+.edui-for-fullscreen:before { content: "\e656"; }
+
+.edui-for-formatmatch:before { content: "\e60d"; }
+
+.edui-for-underline:before { content: "\e605"; }
+
+.edui-for-removeformat:before { content: "\e60e"; }
+
+.edui-for-blockquote:before { content: "\e60f"; }
+
+.edui-for-anchor:before { content: "\e618"; }
+
+.edui-for-help:before { content: "\e619"; }
+
+.edui-for-horizontal:before { content: "\e638"; }
+
+.edui-for-simpleupload:before { content: "\e61a"; }
+
+.edui-for-indent:before { content: "\e61b"; }
+
+.edui-for-justifycenter:before { content: "\e61c"; }
+
+.edui-for-justifyleft:before { content: "\e61d"; }
+
+.edui-for-justifyjustify:before { content: "\e61e"; }
+
+.edui-for-justifyright:before { content: "\e61f"; }
+
+.edui-for-link:before { content: "\e620"; }
+
+.edui-for-cleardoc:before { content: "\e621"; }
+
+.edui-for-drafts:before { content: "\e610"; }
+
+.edui-for-subscript:before { content: "\e611"; }
+
+.edui-for-unlink:before { content: "\e622"; }
+
+.edui-for-superscript:before { content: "\e612"; }
+
+.edui-for-forecolor:before { content: "\e63a"; }
+
+.edui-for-backcolor:before { content: "\e655"; }
+
+.edui-for-touppercase:before { content: "\e623"; }
+
+.edui-for-tolowercase:before { content: "\e624"; }
+
+.edui-for-insertvideo:before { content: "\e627"; }
+
+.edui-for-emotion:before { content: "\e606"; }
+
+.edui-for-pasteplain:before { content: "\e613"; }
+
+.edui-for-preview:before { content: "\e63b"; }
+
+.edui-for-print:before { content: "\e63c"; }
+
+.edui-for-searchreplace:before { content: "\e65e"; }
+
+.edui-for-selectall:before { content: "\e614"; }
+
+.edui-for-mergecells:before { content: "\e63d"; }
+
+.edui-for-deletecol:before { content: "\e63e"; }
+
+.edui-for-deleterow:before { content: "\e63f"; }
+
+.edui-for-attachment:before { content: "\e628"; }
+
+.edui-for-music:before { content: "\e640"; }
+
+.edui-for-gmap:before { content: "\e629"; }
+
+.edui-for-insertframe:before { content: "\e645"; }
+
+.edui-for-pdfformat:before { content: "\e62f"; }
+
+.edui-for-word:before { content: "\e646"; }
+
+.edui-for-excel:before { content: "\e647"; }
+
+.edui-for-time:before { content: "\e64a"; }
+
+.edui-for-snapscreen:before { content: "\e650"; }
+
+.edui-for-wordimage:before { content: "\e652"; }
+
+.edui-for-edittd:before { content: "\e65a"; }
+
+.edui-for-lineheight:before { content: "\e62a"; }
+
+.edui-for-rowspacingbottom:before { content: "\e62b"; }
+
+.edui-for-rowspacingtop:before { content: "\e62c"; }
+
+.edui-for-scrawl:before { content: "\e616"; }
+
+.edui-for-redo:before { content: "\e609"; }
+
+.edui-for-undo:before { content: "\e600"; }
+
+.edui-for-inserttitle:before { content: "\e65b"; }
+
+.edui-for-insertparagraphtrue:before { content: "\e660"; }
+
+.edui-for-aligntable:before { content: "\e662"; }
+
+.edui-for-table:before { content: "\e664"; }
+
+.edui-for-tablealignment-left:before { content: "\e663"; }
+
+.edui-for-tablealignment-center:before { content: "\e665"; }
+
+.edui-for-tablealignment-right:before { content: "\e666"; }
+
+.edui-for-paste:before { content: "\e667"; }
+
+.edui-for-map:before { content: "\e668"; }
+
+.edui-for-directionalityrtl:before { content: "\e601"; }
+
+.edui-for-imagecenter:before { content: "\e602"; }
+
+.edui-for-imagenone:before { content: "\e607"; }
+
+.edui-for-fontborder:before { content: "\e608"; }
+
+.edui-for-edittable:before { content: "\e60a"; }
+
+.edui-for-imageleft:before { content: "\e60b"; }
+
+.edui-for-imageright:before { content: "\e615"; }
+
+.edui-for-insertcol:before { content: "\e625"; }
+
+.edui-for-insertcolnext:before { content: "\e626"; }
+
+.edui-for-insertorderedlist:before { content: "\e635"; }
+
+.edui-for-insertparagraphbeforetable:before { content: "\e636"; }
+
+.edui-for-insertrow:before { content: "\e637"; }
+
+.edui-for-insertrownext:before { content: "\e639"; }
+
+.edui-for-insertunorderedlist:before { content: "\e641"; }
+
+.edui-for-mergeright:before { content: "\e642"; }
+
+.edui-for-mergedown:before { content: "\e643"; }
+
+.edui-for-inserttable:before { content: "\e644"; }
+
+.edui-for-pagebreak:before { content: "\e648"; }
+
+.edui-for-source:before { content: "\e649"; }
+
+.edui-for-splittorows:before { content: "\e64b"; }
+
+.edui-for-splittocols:before { content: "\e64c"; }
+
+.edui-for-splittocells:before { content: "\e64d"; }
+
+.edui-for-arrow:before { content: "\e64f"; }
+
+.edui-for-aligntd:before { content: "\e651"; }
+
+.edui-for-autotypeset:before { content: "\e653"; }
+
+.edui-for-charts:before { content: "\e658"; }
+
+.edui-for-closeerror:before { content: "\e65c"; }
+
+.edui-for-copy:before { content: "\e65f"; }
+
+.edui-for-date:before { content: "\e661"; }
+
+.edui-for-deletetable:before { content: "\e669"; }
+
+.edui-for-directionalityltr:before { content: "\e66a"; }
+
+.edui-for-arrowright:before { content: "\e66b"; }
+
+.edui-for-tableleft:before { content: "\e66c"; }
+
+.edui-for-tableright:before { content: "\e66d"; }
+
+.edui-for-tablecenter:before { content: "\e66e"; }
+
+.edui-for-videoleft:before { content: "\e66f"; }
+
+.edui-for-videocenter:before { content: "\e670"; }
+
+.edui-for-videonone:before { content: "\e671"; }
+
+.edui-for-videoright:before { content: "\e672"; }
+
+.edui-for-template:before { content: "\e64e"; }
+
+.edui-for-addfile:before { content: "\e673"; }
+
+.edui-for-selected:before { content: "\e674"; }
+
+.edui-for-pickarea:before { content: "\e675"; }
+
+.edui-for-overlay:before { content: "\e676"; }
+
+.edui-for-preitem:before { content: "\e677"; }
+
+.edui-for-preitem1:before { content: "\e678"; }
+
+.edui-for-preitem2:before { content: "\e679"; }
+
+.edui-for-preitem3:before { content: "\e67a"; }
+
+.edui-for-preitem4:before { content: "\e67b"; }
+

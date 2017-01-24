@@ -245,4 +245,21 @@
 
 .edui-for-template .edui-icon:before { content: "\e64e"; }
 
-.edui-for-webapp .edui-icon:before { content: "\e658"; }
+.edui-for-addfile .edui-icon:before { content: "\e673"; }
+
+.edui-for-selected .edui-icon:before { content: "\e674"; }
+
+.edui-for-pickarea .edui-icon:before { content: "\e675"; }
+
+.edui-for-overlay .edui-icon:before { content: "\e676"; }
+
+.edui-for-preitem .edui-icon:before { content: "\e677"; }
+
+.edui-for-preitem1 .edui-icon:before { content: "\e678"; }
+
+.edui-for-preitem2 .edui-icon:before { content: "\e679"; }
+
+.edui-for-preitem3 .edui-icon:before { content: "\e67a"; }
+
+.edui-for-preitem4 .edui-icon:before { content: "\e67b"; }
+
