@@ -1,4 +1,4 @@
-NotAdd Get Started
+Get Started
 ==================
 ![image ](https://www.notadd.com/src/neditor-ie.svg)
 
