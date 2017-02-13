@@ -41,7 +41,7 @@ grunt notadd
 	<!-- 加载编辑器的容器 -->
 	<script id="container" name="content" type="text/plain">这里写你的初始化内容</script>
 	<!-- 配置文件 -->
-	<script type="text/javascript" src="ueditor.config.js"></script>
+	<script type="text/javascript" src="neditor.config.js"></script>
 	<!-- 编辑器源码文件 -->
 	<script type="text/javascript" src="ueditor.all.js"></script>
 	<!-- 实例化编辑器 -->
@@ -68,7 +68,7 @@ var ue = UE.getEditor('container', {
 });
 ```
 
-配置项也可以通过 ueditor.config.js 文件修改，具体的配置方法请看[前端配置项说明](http://fex.baidu.com/ueditor/#start-config1.4 前端配置项说明.md)
+配置项也可以通过 neditor.config.js 文件修改，具体的配置方法请看[前端配置项说明](http://fex.baidu.com/ueditor/#start-config1.4 前端配置项说明.md)
 
 ### 设置和读取编辑器的内容
 

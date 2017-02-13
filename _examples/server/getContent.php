@@ -1,5 +1,5 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-<script src="../../ueditor.parse.js" type="text/javascript"></script>
+<script src="../../neditor.parse.js" type="text/javascript"></script>
 <script>
     uParse('.content',{
         'rootPath': '../'

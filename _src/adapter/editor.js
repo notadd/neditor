@@ -708,7 +708,7 @@
         var editor = new UE.Editor(options);
         editor.options.editor = editor;
         utils.loadFile(document, {
-            href:editor.options.themePath + editor.options.theme + "/_css/ueditor.css",
+            href:editor.options.themePath + editor.options.theme + "/_css/neditor.css",
             tag:"link",
             type:"text/css",
             rel:"stylesheet"

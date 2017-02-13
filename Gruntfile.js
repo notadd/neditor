@@ -24,7 +24,7 @@ module.exports = function (grunt) {
 
             fetchStyles: function () {
 
-                var sources = fs.readFileSync(this.cssBasePath + "ueditor.css"),
+                var sources = fs.readFileSync(this.cssBasePath + "neditor.css"),
                     filepath = null,
                     pattern = /@import\s+([^;]+)*;/g,
                     src = [];
@@ -42,7 +42,7 @@ module.exports = function (grunt) {
         server = grunt.option('server') || 'php',
         encode = grunt.option('encode') || 'utf8',
         disDir = "dist/",
-        banner = '/*!\n * UEditor\n * version: ' + packageJson.name + '\n * build: <%= new Date() %>\n */\n\n';
+        banner = '/*!\n * NEditor\n * version: ' + packageJson.name + '\n * build: <%= new Date() %>\n */\n\n';
 
     //init
     (function () {
@@ -74,12 +74,12 @@ module.exports = function (grunt) {
                     banner: banner + '(function(){\n\n',
                     footer: '\n\n})();\n'
                 },
-                src: Util.fetchScripts("ueditor.parse.js", Util.parseBasePath),
+                src: Util.fetchScripts("neditor.parse.js", Util.parseBasePath),
                 dest: disDir + packageJson.name + '.parse.js'
             },
             css: {
                 src: Util.fetchStyles(),
-                dest: disDir + 'themes/notadd/css/ueditor.css'
+                dest: disDir + 'themes/notadd/css/neditor.css'
             }
         },
         cssmin: {
@@ -224,7 +224,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-transcoding');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
-    grunt.registerTask('notadd', 'UEditor build', function () {
+    grunt.registerTask('notadd', 'NEditor build', function () {
 
         var tasks = [ 'concat', 'cssmin', 'uglify', 'copy:base', 'copy:' + server, 'copy:demo', 'replace:demo', 'clean' ];
 
@@ -247,7 +247,7 @@ module.exports = function (grunt) {
 
     function updateConfigFile() {
 
-        var filename = 'ueditor.config.js',
+        var filename = 'neditor.config.js',
             file = grunt.file.read(filename),
             path = server + "/",
             suffix = server === "net" ? ".ashx" : "." + server;
