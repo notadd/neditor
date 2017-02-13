@@ -5,8 +5,7 @@
  * Time: 下午6:25
  * To change this template use File | Settings | File Templates.
  */
-;
-(function () {
+;(function () {
     var UT = UE.UETable,
         getTableItemsByRange = function (editor) {
             return UT.getTableItemsByRange(editor);

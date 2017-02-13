@@ -1,6 +1,6 @@
 ///import core
 ///import uicore
-(function () {
+;(function () {
     var utils = baidu.editor.utils,
         uiUtils = baidu.editor.ui.uiUtils,
         domUtils = baidu.editor.dom.domUtils,

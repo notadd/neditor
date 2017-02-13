@@ -12,7 +12,7 @@
  * @module UE
  */
 
-(function () {
+;(function () {
 
     /**
      * 编辑器模拟的节点类

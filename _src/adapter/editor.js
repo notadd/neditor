@@ -2,7 +2,7 @@
 ///commands 全屏
 ///commandsName FullScreen
 ///commandsTitle  全屏
-(function () {
+;(function () {
     var utils = baidu.editor.utils,
         uiUtils = baidu.editor.ui.uiUtils,
         UIBase = baidu.editor.ui.UIBase,
