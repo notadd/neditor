@@ -112,7 +112,7 @@ module.exports = function (grunt) {
                 files: [
                     {
 
-                        src: [ '*.html', 'themes/iframe.css', 'themes/notadd/dialogbase.css', 'themes/notadd/images/**', 'dialogs/**', 'lang/**', 'third-party/**' ],
+                        src: [ '*.html', 'themes/iframe.css', 'themes/notadd/dialogbase.css', 'themes/notadd/images/**', 'themes/notadd/fonts/**', 'dialogs/**', 'lang/**', 'third-party/**' ],
                         dest: disDir
 
                     }
