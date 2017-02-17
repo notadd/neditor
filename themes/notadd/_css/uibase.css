@@ -1,6 +1,9 @@
 /*基础UI构建
 */
 /* common layer */
+.edui-notadd * {
+    box-sizing: content-box;
+}
 .edui-notadd .edui-box {
     border: none;
     padding: 0;

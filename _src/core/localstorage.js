@@ -100,7 +100,7 @@ var LocalStorage = UE.LocalStorage = (function () {
 
 })();
 
-(function () {
+;(function () {
 
     var ROOTKEY = 'ueditor_preference';
 

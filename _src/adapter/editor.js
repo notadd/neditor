@@ -2,7 +2,7 @@
 ///commands 全屏
 ///commandsName FullScreen
 ///commandsTitle  全屏
-(function () {
+;(function () {
     var utils = baidu.editor.utils,
         uiUtils = baidu.editor.ui.uiUtils,
         UIBase = baidu.editor.ui.UIBase,
@@ -708,7 +708,7 @@
         var editor = new UE.Editor(options);
         editor.options.editor = editor;
         utils.loadFile(document, {
-            href:editor.options.themePath + editor.options.theme + "/_css/ueditor.css",
+            href:editor.options.themePath + editor.options.theme + "/_css/neditor.min.css",
             tag:"link",
             type:"text/css",
             rel:"stylesheet"

@@ -86,7 +86,7 @@ class Kiss
         print '<script type="text/javascript" src="js/tools.js"></script>' . "\n";
       
         print '<script type="text/javascript" charset="utf-8" src="../../../third-party/SyntaxHighlighter/shCore.js"></script>' . "\n";        //                print '<script type="text/javascript" charset="utf-8" src="../../ueditor.config_src.js"></script>' . "\n";
-        print '<script type="text/javascript" charset="utf-8" src="../../../ueditor.config.js"></script>' . "\n";
+        print '<script type="text/javascript" charset="utf-8" src="../../../neditor.config.js"></script>' . "\n";
 
 
         /* load case source*/
@@ -119,7 +119,7 @@ class Kiss
 
         print '<script type="text/javascript" charset="utf-8" src="../../../third-party/SyntaxHighlighter/shCore.js"></script>' . "\n";
 
-        print '<script type="text/javascript" charset="utf-8" src="../../../ueditor/ueditor.config.js"></script>' . "\n";
+        print '<script type="text/javascript" charset="utf-8" src="../../../ueditor/neditor.config.js"></script>' . "\n";
 
 
         /* load case source*/
