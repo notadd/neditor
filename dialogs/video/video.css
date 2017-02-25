@@ -371,7 +371,7 @@ span.view{display: inline-block;width: 30px;float: right;cursor: pointer;color: 
 #upload .filelist li.filePickerBlock {
     width: 113px;
     height: 113px;
-    background: url(./images/image.png) no-repeat center 12px;
+    background: url(../fonts/images/addfile.svg) no-repeat center;
     border: 1px solid #eeeeee;
     border-radius: 0;
 }
