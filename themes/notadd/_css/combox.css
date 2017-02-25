@@ -34,6 +34,7 @@
     -moz-border-radius: 2px;
     margin: 0 10px;
     height: 26px;
+    line-height: 26px;
 }
 
 .edui-notadd .edui-toolbar .edui-combox-body .edui-splitborder {
