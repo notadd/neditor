@@ -79,7 +79,7 @@ module.exports = function (grunt) {
             },
             css: {
                 src: Util.fetchStyles(),
-                dest: disDir + 'themes/notadd/css/neditor.css'
+                dest: disDir + 'themes/notadd/css/neditor.min.css'
             }
         },
         cssmin: {

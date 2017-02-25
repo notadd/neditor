@@ -12,7 +12,7 @@
     -moz-osx-font-smoothing: grayscale;
 
     content: "\e64f";
-    padding: 10px 0;
+    /*padding: 10px 0;*/
     display: block;
     /*padding-right: 10px;*/
     position: relative;

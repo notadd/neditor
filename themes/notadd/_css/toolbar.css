@@ -16,4 +16,5 @@
 .edui-notadd .edui-toolbar .edui-menubutton,
 .edui-notadd .edui-toolbar .edui-combox {
     /*margin: 1px;*/
+    padding: 4px 0;
 }
