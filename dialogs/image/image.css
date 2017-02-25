@@ -498,7 +498,6 @@
     width: 100%;
     z-index: 200;
     background: url(../fonts/images/selected.svg) no-repeat right bottom;
-    /*background: url(./images/success.gif) no-repeat right bottom \9;*/
 }
 
 #upload .filelist li.filePickerBlock {

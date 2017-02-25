@@ -20,9 +20,13 @@ input,label{vertical-align:middle}
 .wrapcolor{height: 19px;}
 div.color{float: left;margin: 0;}
 #colorPicker{width: 17px;height: 17px;border: 1px solid #CCC;display: inline-block;border-radius: 3px;box-shadow: 2px 2px 5px #D3D6DA;margin: 0 0 0 10px;float: left;}
-div.alignment,#custom{margin-left: 23px;margin-left: 28px\9;}
+div.alignment,#custom{margin-left: 23px;margin-left: 28px\9; margin-top: 10px;}
 #custom input{height: 15px;min-height: 15px;width:20px;}
-#repeatType{width:100px;}
+#repeatType{
+    width: 100px;
+    margin-left: 10px;
+    border-radius: 4px;
+    height: 23px;}
 
 
 /* 图片管理样式 */
