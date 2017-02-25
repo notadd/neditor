@@ -24,7 +24,7 @@ module.exports = function (grunt) {
 
             fetchStyles: function () {
 
-                var sources = fs.readFileSync(this.cssBasePath + "neditor.min.css"),
+                var sources = fs.readFileSync(this.cssBasePath + "neditor.css"),
                     filepath = null,
                     pattern = /@import\s+([^;]+)*;/g,
                     src = [];
@@ -79,7 +79,7 @@ module.exports = function (grunt) {
             },
             css: {
                 src: Util.fetchStyles(),
-                dest: disDir + 'themes/notadd/css/neditor.min.css'
+                dest: disDir + 'themes/notadd/css/neditor.css'
             }
         },
         cssmin: {
