@@ -283,7 +283,8 @@
     height: 212px;
     padding-top: 160px;
     text-align: center;
-    background: url(./images/image.png) center 130px no-repeat #f3f3f3;
+    /*background: url(./images/image.png) center 130px no-repeat #f3f3f3;*/
+    background-color: #f3f3f3;
     color: #cccccc;
     font-size: 18px;
     position: relative;
@@ -356,12 +357,11 @@
 }
 
 #upload .filelist li {
-    width: 113px;
-    height: 113px;
+    width: 135px;
+    height: 135px;
     background: url(./images/bg.png);
     text-align: center;
     margin: 9px 0 0 9px;
-    *margin: 6px 0 0 6px;
     position: relative;
     display: block;
     float: left;
@@ -453,11 +453,11 @@
 #upload .filelist li p.imgWrap {
     position: relative;
     z-index: 2;
-    line-height: 113px;
+    line-height: 135px;
     vertical-align: middle;
     overflow: hidden;
-    width: 113px;
-    height: 113px;
+    width: 135px;
+    height: 135px;
 
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
@@ -497,14 +497,14 @@
     height: 40px;
     width: 100%;
     z-index: 200;
-    background: url(./images/success.png) no-repeat right bottom;
-    background: url(./images/success.gif) no-repeat right bottom \9;
+    background: url(../fonts/images/selected.svg) no-repeat right bottom;
+    /*background: url(./images/success.gif) no-repeat right bottom \9;*/
 }
 
 #upload .filelist li.filePickerBlock {
-    width: 113px;
-    height: 113px;
-    background: url(./images/image.png) no-repeat center 12px;
+    width: 135px;
+    height: 135px;
+    background: url(../fonts/images/addfile.svg) no-repeat center;
     border: 1px solid #eeeeee;
     border-radius: 0;
 }
