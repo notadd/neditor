@@ -24,7 +24,7 @@ module.exports = function (grunt) {
 
             fetchStyles: function () {
 
-                var sources = fs.readFileSync(this.cssBasePath + "neditor.css"),
+                var sources = fs.readFileSync(this.cssBasePath + "neditor.min.css"),
                     filepath = null,
                     pattern = /@import\s+([^;]+)*;/g,
                     src = [];
