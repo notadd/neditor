@@ -1,3 +1,6 @@
+![Packagist](https://img.shields.io/packagist/v/notadd/neditor.svg) 
+![Downloads](https://img.shields.io/packagist/dt/notadd/neditor.svg)
+
 Get Started
 ==================
 ![image ](https://www.notadd.com/src/neditor-ie.svg)
