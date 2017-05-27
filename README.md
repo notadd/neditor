@@ -3,7 +3,6 @@
 
 Get Started
 ==================
-![image ](https://www.notadd.com/src/neditor-ie.svg)
 
 ## Neditor富文本编辑器介绍
 
