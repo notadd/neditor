@@ -2,15 +2,15 @@
     "name": "neditor",
     "title": "neditor",
     "description": "UEditor富文本web编辑器",
-    "version": "1.4.3",
-    "homepage": "http://ueditor.baidu.com/",
+    "version": "1.4.4",
+    "homepage": "https://neditor.notadd.com/demo/",
     "author": {
-        "name": "f-cube @ FEX",
-        "url": "http://fex.baidu.com"
+        "name": "twilroad",
+        "url": "http://github.com/twilroad"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/fex-team/ueditor.git"
+        "url": "https://github.com/notadd/neditor.git"
     },
     "keywords": [
         "neditor",
@@ -18,7 +18,7 @@
         "javascript"
     ],
     "bugs": {
-        "url": "https://github.com/fex-team/ueditor/issues"
+        "url": "https://github.com/notadd/neditor/issues"
     },
     "dependencies": {
         "grunt": "~0.4.1",
