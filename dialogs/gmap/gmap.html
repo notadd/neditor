@@ -6,10 +6,27 @@
     <title></title>
     <script type="text/javascript" src="../internal.js"></script>
     <style type="text/css">
-        .content{width:530px; height: 350px;margin: 10px auto;}
+        .content{
+            width: 600px;
+            height: 412px;
+            margin: 20px;
+        }
         .content table{width: 100%}
         .content table td{vertical-align: middle;}
-        #address{width:220px;height:21px;background: #FFF;border:1px solid #d7d7d7; line-height: 21px;}
+        #address{width:405px;height:28px;background: #FFF;border:1px solid #ccc; line-height: 28px;border-radius: 5px;margin-left: 10px;}
+        #container {margin-top: 10px;}
+        #doSearch {
+            display: block;
+            text-align: center;
+            line-height: 30px;
+            text-decoration: none;
+            height: 30px;
+            width: 78px;
+            border: 0;
+            background-color: #3498db;
+            border-radius: 5px;
+            color: #fff;
+        }
     </style>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 </head>
@@ -22,7 +39,7 @@
             <td><a id="doSearch" href="javascript:void(0)" class="button"><var id="lang_input_search"></var></a></td>
         </tr>
     </table>
-    <div id="container" style="width: 100%; height: 340px;margin: 5px auto; border: 1px solid gray;"></div>
+    <div id="container" style="width: 100%; height: 362px;margin-top: 20px;"></div>
 </div>
 <script type="text/javascript">
     domUtils.on(window,"load",function(){
