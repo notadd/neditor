@@ -1,0 +1,69 @@
+/*自动排版弹出菜单*/
+.edui-notadd .edui-cellalignpicker .edui-cellalignpicker-body {
+    width: 70px;
+    font-size: 12px;
+    cursor: default;
+}
+
+.edui-notadd .edui-cellalignpicker-body table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.edui-notadd .edui-cellalignpicker-body td{
+    padding: 1px;
+}
+.edui-notadd .edui-cellalignpicker-body .edui-icon{
+    height: 20px;
+    width: 20px;
+    padding: 1px;
+    color: #666;
+    /*background-image: url(../images/table-cell-align.png);*/
+}
+
+.edui-notadd .edui-cellalignpicker-body .edui-left{
+    background-position: 0 0;
+}
+
+.edui-notadd .edui-cellalignpicker-body .edui-left:before{
+    content: '\e66c';
+}
+
+.edui-notadd .edui-cellalignpicker-body .edui-center:before{
+    content: '\e66e';
+}
+
+.edui-notadd .edui-cellalignpicker-body .edui-right:before{
+    content: '\e66d';
+}
+
+.edui-notadd .edui-cellalignpicker-body .edui-center{
+    background-position: -25px 0;
+}
+.edui-notadd .edui-cellalignpicker-body .edui-right{
+    background-position: -51px 0;
+}
+
+.edui-notadd .edui-cellalignpicker-body td.edui-state-hover .edui-left{
+    background-position: -73px 0;
+}
+
+.edui-notadd .edui-cellalignpicker-body td.edui-state-hover .edui-center{
+    background-position: -98px 0;
+}
+
+.edui-notadd .edui-cellalignpicker-body td.edui-state-hover .edui-right{
+    background-position: -124px 0;
+}
+
+.edui-notadd .edui-cellalignpicker-body td.edui-cellalign-selected .edui-left {
+    background-position: -146px 0;
+    background-color: #f1f4f5;
+}
+
+.edui-notadd .edui-cellalignpicker-body td.edui-cellalign-selected .edui-center {
+    background-position: -245px 0;
+}
+
+.edui-notadd .edui-cellalignpicker-body td.edui-cellalign-selected .edui-right {
+    background-position: -271px 0;
+}

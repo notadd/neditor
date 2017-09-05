@@ -1,0 +1,108 @@
+/*普通按钮样式及状态*/
+.edui-notadd .edui-toolbar .edui-button .edui-icon,
+.edui-notadd .edui-toolbar .edui-menubutton .edui-icon,
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-icon {
+    padding: 6px;
+    /*height: 20px !important;*/
+    /*width: 20px !important;*/
+    /*background-image: url(../images/icons.png);*/
+    /*background-image: url(../images/icons.gif) \9;*/
+    /*font-size: 18px;*/
+    /*line-height: 1;*/
+    display: block;
+    height: 14px;
+    width: 14px;
+}
+
+.edui-notadd .edui-toolbar .edui-button .edui-icon::before,
+.edui-notadd .edui-toolbar .edui-menubutton .edui-icon::before,
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-icon::before {
+    display: none;
+}
+
+.edui-notadd .edui-toolbar .edui-button .edui-state-hover .edui-icon::before,
+.edui-notadd .edui-toolbar .edui-menubutton .edui-state-hover .edui-icon::before,
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-hover .edui-icon::before {
+    display: block;
+}
+
+.edui-notadd .edui-toolbar .edui-button .edui-state-hover .edui-icon svg,
+.edui-notadd .edui-toolbar .edui-menubutton .edui-state-hover .edui-icon svg,
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-hover .edui-icon svg {
+    display: none;
+}
+
+.edui-notadd .edui-toolbar .edui-button .edui-state-checked .edui-icon::before,
+.edui-notadd .edui-toolbar .edui-menubutton .edui-state-checked .edui-icon::before,
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-checked .edui-icon::before {
+    display: block;
+}
+
+.edui-notadd .edui-toolbar .edui-button .edui-state-checked .edui-icon svg,
+.edui-notadd .edui-toolbar .edui-menubutton .edui-state-checked .edui-icon svg,
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-checked .edui-icon svg {
+    display: none;
+}
+
+.edui-notadd .edui-toolbar .edui-button .edui-state-active .edui-icon::before,
+.edui-notadd .edui-toolbar .edui-menubutton .edui-state-active .edui-icon::before,
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-active .edui-icon::before {
+    display: block;
+}
+
+.edui-notadd .edui-toolbar .edui-button .edui-state-active .edui-icon svg,
+.edui-notadd .edui-toolbar .edui-menubutton .edui-state-active .edui-icon svg,
+.edui-notadd .edui-toolbar .edui-splitbutton .edui-state-active .edui-icon svg {
+    display: none;
+}
+
+.edui-dialog-buttons .edui-icon svg {
+    display: none;
+}
+
+.edui-notadd .edui-toolbar .edui-button .edui-icon {
+    color: #666;
+}
+
+.edui-notadd .edui-toolbar .edui-button .edui-state-checked .edui-icon {
+    color: #fff;
+}
+
+.edui-notadd .edui-toolbar .edui-button .edui-button-wrap {
+    /*padding: 1px;*/
+    position: relative;
+}
+
+.edui-notadd .edui-toolbar .edui-button .edui-state-hover .edui-button-wrap {
+    background-color: #e5e5e5;
+    padding: 0;
+    /*border: 1px solid #dcac6c;*/
+}
+
+.edui-notadd .edui-toolbar .edui-button .edui-state-checked .edui-button-wrap {
+    background-color: #666666;
+    padding: 0;
+    /*border: 1px solid #dcac6c;*/
+    /*border-radius: 2px;*/
+    /*-webkit-border-radius: 2px;*/
+    /*-moz-border-radius: 2px;*/
+}
+
+.edui-notadd .edui-toolbar .edui-button .edui-state-active .edui-button-wrap {
+    background-color: #666666;
+    padding: 0;
+    /*border: 1px solid gray;*/
+}
+
+.edui-notadd .edui-toolbar .edui-button .edui-state-active .edui-icon {
+    color: #fff;
+}
+
+.edui-notadd .edui-toolbar .edui-state-disabled .edui-label {
+    color: #ccc;
+}
+
+.edui-notadd .edui-toolbar .edui-state-disabled .edui-icon {
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}

@@ -1,0 +1,50 @@
+/*contextmenu*/
+.edui-notadd .edui-hassubmenu .edui-arrow {
+    height: 20px;
+    width: 20px;
+    float: right;
+    /*background: url("../images/icons-all.gif") no-repeat 10px -233px;*/
+}
+
+.edui-notadd .edui-hassubmenu .edui-arrow::after {
+    font-family: "edui-notadd" !important;
+    font-size: 20px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: '\e66b';
+    line-height: 1;
+    display: block;
+}
+
+.edui-notadd .edui-menu-body .edui-menuitem {
+    padding: 5px 10px;
+}
+
+.edui-notadd .edui-menuseparator {
+    margin: 2px 0;
+    height: 1px;
+    overflow: hidden;
+    display: none;
+}
+
+.edui-notadd .edui-menuseparator-inner {
+    border-bottom: 1px solid #e2e3e3;
+    margin-left: 29px;
+    margin-right: 1px;
+}
+
+.edui-notadd .edui-menu-body .edui-state-hover {
+    /*padding: 0 !important;*/
+    background-color: #f3f3f3;
+    /*border: 1px solid #dcac6c;*/
+}
+
+.edui-notadd .edui-menu-body .edui-for-tablesort {
+    padding-left: 25px;
+}
+
+.edui-notadd .edui-menu-body .edui-for-borderBack {
+    padding-left: 25px;
+}

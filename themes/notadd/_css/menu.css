@@ -1,0 +1,53 @@
+/* 可选中按钮弹出菜单*/
+.edui-notadd .edui-menu {
+    z-index: 3000;
+}
+
+.edui-notadd .edui-menu .edui-popup-content {
+    padding: 0;
+    overflow: hidden;
+}
+
+.edui-notadd .edui-menu-body {
+    _width: 150px;
+    min-width: 170px;
+}
+
+.edui-notadd .edui-menuitem-body {
+    font-size: 14px;
+    color: #666;
+}
+
+.edui-notadd .edui-menuitem {
+    height: 20px;
+    cursor: default;
+    vertical-align: top;
+}
+
+.edui-notadd .edui-menuitem .edui-icon {
+    /*width: 20px !important;*/
+    /*height: 20px !important;*/
+    /*background: url(../images/icons.png) 0 -4000px;*/
+    /*background: url(../images/icons.gif) 0 -4000px\9;*/
+    line-height: 1.3;
+}
+
+.edui-notadd .edui-menuitem .edui-label {
+    font-size: 12px;
+    line-height: 20px;
+    height: 20px;
+    padding-left: 10px;
+}
+
+.edui-notadd .edui-state-checked .edui-menuitem-body {
+    background: url("../images/icons-all.gif") no-repeat 6px -205px;
+}
+
+.edui-notadd .edui-state-disabled .edui-menuitem-label {
+    color: gray;
+}
+
+.edui-notadd .edui-menu-body .edui-menuitem.edui-for-setbordervisible {
+    padding-left: 25px;
+}
+
