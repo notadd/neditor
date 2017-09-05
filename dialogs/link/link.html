@@ -7,8 +7,11 @@
     <script type="text/javascript" src="../internal.js"></script>
     <style type="text/css">
         *{margin:0;padding:0;color: #838383;}
-        table{font-size: 12px;margin: 10px;line-height: 30px}
-        .txt{width:300px;height:21px;line-height:21px;border:1px solid #d7d7d7;}
+        table{font-size: 12px;margin: 13px 23px 0px;line-height: 30px}
+        tr{height:50px}
+        tr.tr-txt{height: 40px;}
+        td{width: 170px}
+        .txt{width:290px;height:30px;line-height:21px;border:1px solid #d7d7d7;margin-left: 4px;border-radius: 5px;}
     </style>
 </head>
 <body>
@@ -25,7 +28,7 @@
             <td><label for="title"> <var id="lang_input_title"></var></label></td>
             <td><input class="txt" id="title" type="text"/></td>
         </tr>
-        <tr>
+        <tr class="tr-txt">
              <td colspan="2">
                  <label for="target"><var id="lang_input_target"></var></label>
                  <input id="target" type="checkbox"/>
