@@ -23,7 +23,7 @@
         currentTmp = tmp;
         clearItem();
         domUtils.setStyles( preitem.childNodes[n - 1], {
-            "background-color":"lemonChiffon",
+            "background-color":"#f3f3f3",
             "border":"#ccc 1px solid"
         } );
         preview.innerHTML = tmp.preHtml ? tmp.preHtml : "";
