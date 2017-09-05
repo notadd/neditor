@@ -1,68 +1,66 @@
-Get Started
-=====
 
-> 鉴于目前 ISSUE 较多而维护时间较少，且在进行后续的版本更新，目前暂时关闭 ISSUE，若社区有人跟进，欢迎和我们联系。重复的问题，请参阅常见问题的 [FAQ Wiki](https://github.com/fex-team/neditor/wiki/FAQ)。
+## Neditor富文本编辑器介绍
 
-## neditor富文本编辑器介绍
+## 当前版本基于 Ueditor 1.5.0 
 
-UEditor是由百度web前端研发部开发所见即所得富文本web编辑器，具有轻量，可定制，注重用户体验等特点，开源基于MIT协议，允许自由使用和修改代码。
+Neditor 是我们团队基于 Ueditor 的一款富文本编辑器。
+不论从功能还是从其它各方面来讲， Ueditor 都是一款无以替代的编辑器产品。
+只是已经不符合现代化样式的需求，于是我们修改它的样式，实现了这样的效果：
 
-## 1 入门部署和体验
+![image](https://www.notadd.com/src/neditor.webp)
 
-### 1.1 下载编辑器
+Demo:  https://neditor.notadd.com/demo/
 
-1. `git clone ` 仓库
-2. `npm install` 安装依赖（如果没有安装 grunt , 请先在全局安装 grunt）
-3. 在终端执行 `grunt default`
+## 入门部署和体验 ##
 
-### 1.2 创建demo文件
-解压下载的包，在解压后的目录创建demo.html文件，填入下面的html代码
+### 第一步：下载编辑器并用 Grunt 进行项目构建 ###
 
-```html
-<!DOCTYPE HTML>
-<html lang="en-US">
-<head>
-	<meta charset="UTF-8">
-	<title>neditor demo</title>
-</head>
-<body>
-	<!-- 加载编辑器的容器 -->
-	<script id="container" name="content" type="text/plain">这里写你的初始化内容</script>
-	<!-- 配置文件 -->
-	<script type="text/javascript" src="neditor.config.js"></script>
-	<!-- 编辑器源码文件 -->
-	<script type="text/javascript" src="neditor.all.js"></script>
-	<!-- 实例化编辑器 -->
-	<script type="text/javascript">
-	    var ue = UE.getEditor('container');
-	</script>
-</body>
-</html>
+请确保已安装 grunt-cli 库。
+
+```shell
+git clone 仓库地址
+npm install
+grunt notadd
 ```
 
-### 1.3 在浏览器打开demo.html
+### 第二步：在浏览器打开 index.html ###
+
+进入到目录 dist/utf8-php , 使用浏览器打开文件 index.html 。
 
 如果看到了下面这样的编辑器，恭喜你，初次部署成功！
 
-![部署成功](http://fex.baidu.com/neditor/doc/images/demo.png)
+![部署成功](https://www.notadd.com/src/neditor-demo.webp)
 
-### 1.4 传入自定义的参数
+### 编译其他语言为服务端的版本
+
+Neditor 默认以 PHP 为后端语言，但是同时也支持其他的后端语言，例如 jsp，.net。
+
+编译其他后端语言的方法为，为 grunt 命令添加 server 参数，例如，编译 jsp 为后端语言的版本的命令为：
+
+```bash
+grunt notadd --server=jsp
+```
+
+执行该命令后，则会在目录 dist 中生成对应的目录 utf8-jsp，目录包含了对应版本的文件。
+
+### 自定义的参数
 
 编辑器有很多可自定义的参数项，在实例化的时候可以传入给编辑器：
+
 ```javascript
 var ue = UE.getEditor('container', {
     autoHeight: false
 });
 ```
 
-配置项也可以通过neditor.config.js文件修改，具体的配置方法请看[前端配置项说明](http://fex.baidu.com/neditor/#start-config1.4 前端配置项说明.md)
+配置项也可以通过 neditor.config.js 文件修改，具体的配置方法请看[前端配置项说明](http://fex.baidu.com/ueditor/#start-config1.4 前端配置项说明.md)
 
-### 1.5 设置和读取编辑器的内容
+### 设置和读取编辑器的内容
 
-通getContent和setContent方法可以设置和读取编辑器的内容
+通 getContent 和 setContent 方法可以设置和读取编辑器的内容
+
 ```javascript
-var ue = UE.getEditor();
-//对编辑器的操作最好在编辑器ready之后再做
+var ue = UE.getContent();
 ue.ready(function(){
     //设置编辑器的内容
     ue.setContent('hello');
@@ -73,26 +71,37 @@ ue.ready(function(){
 });
 ```
 
-neditor的更多API请看[API 文档](http://neditor.baidu.com/doc "neditor API 文档")
+Ueditor 的更多API请看[API 文档](http://ueditor.baidu.com/doc "ueditor API 文档")
 
-## 2 详细文档
+## 相关链接 ##
 
-neditor 官网：[http://neditor.baidu.com](http://neditor.baidu.com "neditor 官网")
+Ueditor 官网：[http://ueditor.baidu.com](http://ueditor.baidu.com "ueditor 官网")
 
-neditor API 文档：[http://neditor.baidu.com/doc](http://neditor.baidu.com/doc "neditor API 文档")
+Ueditor API 文档：[http://ueditor.baidu.com/doc](http://ueditor.baidu.com/doc "ueditor API 文档")
 
-neditor github 地址：[http://github.com/fex-team/neditor](http://github.com/fex-team/neditor "neditor github 地址")
+Ueditor github 地址：[http://github.com/fex-team/ueditor](http://github.com/fex-team/ueditor "ueditor github 地址")
 
-neditor 第三方插件贡献 wiki : [第三方插件贡献规范](http://neditor.baidu.com/website/thirdproject.html)
+Neditor github 地址：[http://github.com/notadd/neditor](http://github.com/fex-team/ueditor "Neditor github 地址")
 
-neditor 贡献代码规范（javascript）： [javascript规范](https://github.com/fex-team/styleguide/blob/master/javascript.md)
+## 详细文档
 
-## 3 第三方贡献
+Ueditor 文档：[http://fex.baidu.com/ueditor/](http://fex.baidu.com/ueditor/)
 
-neditor for nodejs 参考[https://github.com/netpi/neditor](https://github.com/netpi/neditor)
+注: 对IE8以下版本不再承诺兼容
 
-## 4 联系我们
+## 联系我们 ##
 
-email：[neditor@baidu.com](mailto://email:neditor@baidu.com "发邮件给neditor开发组")
+QQ 群： 321735506
 
-issue：[github issue](http://github.com/fex-team/neditor/issues "neditor 论坛")
+[issue](http://github.com/notadd/neditor/issues)
+
+[论坛交流](https://bbs.notadd.com/category/13 "Neditor 论坛")
+
+## 捐赠 
+
+
+[捐赠](https://git.oschina.net/notadd/notadd?donate=true)
+ 
+## Notadd 主项目
+
+https://github.com/notadd/notadd
