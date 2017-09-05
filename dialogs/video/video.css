@@ -1,6 +1,13 @@
 @charset "utf-8";
-.wrapper{ width: 570px;_width:575px;margin: 10px auto; zoom:1;position: relative}
-.tabbody{height: 335px;}
+.wrapper{
+    width: 600px;
+    padding: 0 20px;
+    _width: 575px;
+    margin: 10px auto;
+    zoom: 1;
+    position: relative;
+}
+.tabbody{height: 390px;}
 .tabbody .panel {
     position: absolute;
     width: 0;
@@ -11,18 +18,19 @@
 }
 .tabbody .panel.focus {
     width: 100%;
-    height: 335px;
+    height: 406px;
     display: block;
 }
 
 .tabbody .panel table td{vertical-align: middle;}
 #videoUrl {
-    width: 490px;
-    height: 21px;
-    line-height: 21px;
-    margin: 8px 5px;
+    width: 520px;
+    height: 28px;
+    line-height: 28px;
+    margin: 18px 0 18px 15px;
     background: #FFF;
     border: 1px solid #d7d7d7;
+    border-radius: 4px;
 }
 #videoSearchTxt{margin-left:15px;background: #FFF;width:200px;height:21px;line-height:21px;border: 1px solid #d7d7d7;}
 #searchList{width: 570px;overflow: auto;zoom:1;height: 270px;}
@@ -47,7 +55,7 @@
 
 
 
-#preview{position: relative;width: 420px;padding:0;overflow: hidden; margin-left: 10px; _margin-left:5px; height: 280px;background-color: #ddd;float: left}
+#preview{position: relative;width: 432px;padding:0;overflow: hidden; margin-left: 10px; _margin-left:5px; height: 320px;background-color: #ddd;float: left}
 #preview .previewMsg {position:absolute;top:0;margin:0;padding:0;height:280px;width:100%;background-color: #666;}
 #preview .previewMsg span{display:block;margin: 125px auto 0 auto;text-align:center;font-size:18px;color:#fff;}
 #preview .previewVideo {position:absolute;top:0;margin:0;padding:0;height:280px;width:100%;}
@@ -59,7 +67,7 @@
     width: 115px;
 }
 
-#videoInfo {width: 120px;float: left;margin-left: 10px;_margin-left:7px;}
+#videoInfo {width: 120px;float: left;margin-left: 27px;}
 fieldset{
     border: 1px solid #ddd;
     padding-left: 5px;
@@ -77,7 +85,7 @@ fieldset input.txt{
     background: #FFF;
     border: 1px solid #d7d7d7;
 }
-label.url{font-weight: bold;margin-left: 5px;color: #06c;}
+label.url{font-weight: bold;margin-left: 5px;color: #666;}
 #videoFloat div{cursor:pointer;opacity: 0.5;filter: alpha(opacity = 50);margin:9px;_margin:5px;width:38px;height:36px;float:left;}
 #videoFloat .focus{opacity: 1;filter: alpha(opacity = 100)}
 span.view{display: inline-block;width: 30px;float: right;cursor: pointer;color: blue}
@@ -97,7 +105,7 @@ span.view{display: inline-block;width: 30px;float: right;cursor: pointer;color: 
 }
 .tabbody #upload.panel.focus {
     width: 100%;
-    height: 335px;
+    height: 390px;
     display: block;
     clip: auto;
 }
@@ -127,16 +135,14 @@ span.view{display: inline-block;width: 30px;float: right;cursor: pointer;color: 
 }
 
 #upload .placeholder {
-    margin: 10px;
-    margin-right:0;
-    border: 2px dashed #e6e6e6;
-    *border: 0px dashed #e6e6e6;
-    height: 161px;
+    margin-top: 20px;
+    margin-right: 0;
+    height: 220px;
     padding-top: 150px;
     text-align: center;
-    width: 97%;
+    width: 100%;
     float: left;
-    background: url(./images/image.png) center 70px no-repeat;
+    background: url(./images/image.png) center 70px no-repeat #f3f3f3;
     color: #cccccc;
     font-size: 18px;
     position: relative;

@@ -22,7 +22,7 @@
             <span class="tab" data-content-id="remote"><var id="lang_tab_remote"></var></span>
             <span class="tab focus" data-content-id="upload"><var id="lang_tab_upload"></var></span>
             <span class="tab" data-content-id="online"><var id="lang_tab_online"></var></span>
-            <span class="tab" data-content-id="search"><var id="lang_tab_search"></var></span>
+            <!--<span class="tab" data-content-id="search"><var id="lang_tab_search"></var></span>-->
         </div>
         <div class="alignBar">
             <label class="algnLabel"><var id="lang_input_align"></var></label>
@@ -43,14 +43,14 @@
                         <label for="url"><var id="lang_input_url"></var></label>
                         <span><input class="text" id="url" type="text"/></span>
                     </div>
-                </div>
-                <div class="left">
                     <div class="row">
                         <label><var id="lang_input_size"></var></label>
                         <span><var id="lang_input_width">&nbsp;&nbsp;</var><input class="text" type="text" id="width"/>px </span>
                         <span><var id="lang_input_height">&nbsp;&nbsp;</var><input class="text" type="text" id="height"/>px </span>
                         <span><input id="lock" type="checkbox" disabled="disabled"><span id="lockicon"></span></span>
                     </div>
+                </div>
+                <div class="left">
                     <div class="row">
                         <label><var id="lang_input_border"></var></label>
                         <span><input class="text" type="text" id="border"/>px </span>
@@ -61,7 +61,7 @@
                     </div>
                     <div class="row">
                         <label><var id="lang_input_title"></var></label>
-                        <span><input class="text" type="text" id="title"/></span>
+                        <span><textarea class="text" id="title" cols="30" rows="3"></textarea></span>
                     </div>
                 </div>
                 <div class="right"><div id="preview"></div></div>
