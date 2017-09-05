@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     Util = {
       jsBasePath: "_src/",
       parseBasePath: "_parse/",
-      cssBasePath: "themes/default/_css/",
+      cssBasePath: "themes/notadd/_css/",
 
       fetchScripts: function(readFile, basePath) {
         var sources = fs.readFileSync(readFile);
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
       },
 
       fetchStyles: function() {
-        var sources = fs.readFileSync(this.cssBasePath + "ueditor.css"),
+        var sources = fs.readFileSync(this.cssBasePath + "neditor.css"),
           filepath = null,
           pattern = /@import\s+([^;]+)*;/g,
           src = [];
@@ -85,12 +85,12 @@ module.exports = function(grunt) {
             "(function(){\n\n",
           footer: "\n\n})();\n"
         },
-        src: Util.fetchScripts("ueditor.parse.js", Util.parseBasePath),
+        src: Util.fetchScripts("neditor.parse.js", Util.parseBasePath),
         dest: disDir + packageJson.name + ".parse.js"
       },
       css: {
         src: Util.fetchStyles(),
-        dest: disDir + "themes/default/css/ueditor.css"
+        dest: disDir + "themes/notadd/css/neditor.css"
       }
     },
     cssmin: {
@@ -99,9 +99,9 @@ module.exports = function(grunt) {
       },
       files: {
         expand: true,
-        cwd: disDir + "themes/default/css/",
+        cwd: disDir + "themes/notadd/css/",
         src: ["*.css", "!*.min.css"],
-        dest: disDir + "themes/default/css/",
+        dest: disDir + "themes/notadd/css/",
         ext: ".min.css"
       }
     },
@@ -136,8 +136,9 @@ module.exports = function(grunt) {
             src: [
               "*.html",
               "themes/iframe.css",
-              "themes/default/dialogbase.css",
-              "themes/default/images/**",
+              "themes/notadd/dialogbase.css",
+              "themes/notadd/images/**",
+              "themes/notadd/fonts/**",
               "dialogs/**",
               "lang/**",
               "third-party/**"
@@ -254,7 +255,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-transcoding");
   grunt.loadNpmTasks("grunt-contrib-clean");
 
-  grunt.registerTask("default", "UEditor build", function() {
+  grunt.registerTask("notadd", "UEditor build", function() {
     var tasks = [
       "concat",
       "cssmin",
@@ -282,7 +283,7 @@ module.exports = function(grunt) {
   });
 
   function updateConfigFile() {
-    var filename = "ueditor.config.js",
+    var filename = "neditor.config.js",
       file = grunt.file.read(filename),
       path = server + "/",
       suffix = server === "net" ? ".ashx" : "." + server;
