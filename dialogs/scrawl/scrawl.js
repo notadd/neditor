@@ -151,8 +151,8 @@ var scrawl = function (options) {
                     drawStepIndex -= 1;
                     context.clearRect(0, 0, context.canvas.width, context.canvas.height);
                     context.putImageData(drawStep[drawStepIndex - 1], 0, 0);
-                    me.btn2Highlight("J_nextStep");
-                    drawStepIndex == 1 && me.btn2disable("J_previousStep");
+                    // me.btn2Highlight("J_nextStep");
+                    // drawStepIndex == 1 && me.btn2disable("J_previousStep");
                 }
             });
             domUtils.on($G("J_nextStep"), "click", function () {
@@ -160,8 +160,8 @@ var scrawl = function (options) {
                     context.clearRect(0, 0, context.canvas.width, context.canvas.height);
                     context.putImageData(drawStep[drawStepIndex], 0, 0);
                     drawStepIndex += 1;
-                    me.btn2Highlight("J_previousStep");
-                    drawStepIndex == drawStep.length && me.btn2disable("J_nextStep");
+                    // me.btn2Highlight("J_previousStep");
+                    // drawStepIndex == drawStep.length && me.btn2disable("J_nextStep");
                 }
             });
             domUtils.on($G("J_clearBoard"), "click", function () {
@@ -170,9 +170,9 @@ var scrawl = function (options) {
                 me._saveOPerate(saveNum);
                 drawStepIndex = 1;
                 me.isScrawl = false;
-                me.btn2disable("J_previousStep");
-                me.btn2disable("J_nextStep");
-                me.btn2disable("J_clearBoard");
+                // me.btn2disable("J_previousStep");
+                // me.btn2disable("J_nextStep");
+                // me.btn2disable("J_clearBoard");
             });
         },
         _addColorBarListener:function () {
@@ -244,8 +244,8 @@ var scrawl = function (options) {
             var me = this;
             domUtils.on($G("J_removeImg"), "click", function () {
                 $G("J_picBoard").innerHTML = "";
-                me.btn2disable("J_removeImg");
-                me.btn2disable("J_sacleBoard");
+                // me.btn2disable("J_removeImg");
+                // me.btn2disable("J_sacleBoard");
             });
         },
         _addScalePicListenter:function () {
@@ -294,7 +294,7 @@ var scrawl = function (options) {
             var me = this;
             if (drawStep.length <= saveNum) {
                 if(drawStepIndex<drawStep.length){
-                    me.btn2disable("J_nextStep");
+                    // me.btn2disable("J_nextStep");
                     drawStep.splice(drawStepIndex);
                 }
                 drawStep.push(context.getImageData(0, 0, context.canvas.width, context.canvas.height));
@@ -304,8 +304,8 @@ var scrawl = function (options) {
                 drawStep.push(context.getImageData(0, 0, context.canvas.width, context.canvas.height));
                 drawStepIndex = drawStep.length;
             }
-            me.btn2Highlight("J_previousStep");
-            me.btn2Highlight("J_clearBoard");
+            // me.btn2Highlight("J_previousStep");
+            // me.btn2Highlight("J_clearBoard");
         },
 
         _originalColorSelect:function (title) {
@@ -397,14 +397,14 @@ var scrawl = function (options) {
                 return "";
             }
         },
-        btn2Highlight:function (id) {
-            var cur = $G(id);
-            cur.className.indexOf("H") == -1 && (cur.className += "H");
-        },
-        btn2disable:function (id) {
-            var cur = $G(id);
-            cur.className.indexOf("H") != -1 && (cur.className = cur.className.replace("H", ""));
-        },
+        // btn2Highlight:function (id) {
+        //     var cur = $G(id);
+        //     cur.className.indexOf("H") == -1 && (cur.className += "H");
+        // },
+        // btn2disable:function (id) {
+        //     var cur = $G(id);
+        //     cur.className.indexOf("H") != -1 && (cur.className = cur.className.replace("H", ""));
+        // },
         getTarget:function (evt) {
             return evt.target || evt.srcElement;
         }
@@ -602,9 +602,9 @@ function ue_callback(url, state) {
             picBorard.appendChild(img);
 
             var obj = new scrawl();
-            obj.btn2Highlight("J_removeImg");
+            // obj.btn2Highlight("J_removeImg");
             //trace 2457
-            obj.btn2Highlight("J_sacleBoard");
+            // obj.btn2Highlight("J_sacleBoard");
         };
         img.src = url;
     } else {
