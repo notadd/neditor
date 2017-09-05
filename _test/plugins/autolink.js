@@ -160,13 +160,13 @@ test('你好htp://ww.baidu.com  后面回车', function () {
         stop();
     }
 });
-//<p>欢迎<strong>使用</strong>ueditor!</p>
+//<p>欢迎<strong>使用</strong>neditor!</p>
 test('trace 2121', function () {
     if (!UE.browser.ie) {
         var editor = te.obj[0];
         var range = te.obj[1];
         var body = editor.body;
-        editor.setContent('<p><span style="color:#ff0000;">欢迎<strong>使用</strong></span>ueditor!www.baidu.com</p>');
+        editor.setContent('<p><span style="color:#ff0000;">欢迎<strong>使用</strong></span>neditor!www.baidu.com</p>');
         stop();
         setTimeout(function () {
             range.setStart(body.firstChild.lastChild, body.firstChild.lastChild.length).collapse(1).select();
@@ -179,7 +179,7 @@ test('trace 2121', function () {
                 ok(a && $(a).attr('_src').indexOf('http://www.baidu.com') != -1, '检查a的_src');
                 }else{
                     var p = body.firstChild.innerHTML;
-                    equal(p,'<span style="color:#ff0000;">欢迎<strong>使用</strong></span>ueditor!www.baidu.com','内容未改变');
+                    equal(p,'<span style="color:#ff0000;">欢迎<strong>使用</strong></span>neditor!www.baidu.com','内容未改变');
                 }
                 start();
             }, 20);

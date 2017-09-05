@@ -19,7 +19,7 @@
 
 
                                     <p class="MsoNormal">
-                                        欢迎使用<span lang="EN-US">ueditor!
+                                        欢迎使用<span lang="EN-US">neditor!
                                             <o:p>
                                             </o:p></span>
                                     </p>
@@ -106,7 +106,7 @@
 
 
                         <p class="MsoNormal">
-                            欢迎使用<span lang="EN-US">ueditor!
+                            欢迎使用<span lang="EN-US">neditor!
                                 <o:p>
                                 </o:p></span>
                         </p>

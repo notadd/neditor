@@ -1,4 +1,4 @@
-package com.baidu.ueditor;
+package com.baidu.neditor;
 
 public class Encoder {
 

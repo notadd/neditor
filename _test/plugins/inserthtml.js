@@ -123,16 +123,16 @@ test( 'trace 3297：notSerialize', function() {
     editor.setContent( '<p><br></p>' );
     setTimeout(function(){
         range.setStart( body.firstChild, 0 ).collapse( 1 ).select();
-        editor.execCommand( 'inserthtml', '<p>b</p>_ueditor_page_break_tag_' ,false);
+        editor.execCommand( 'inserthtml', '<p>b</p>_neditor_page_break_tag_' ,false);
         equal( editor.body.childNodes.length, 3, 'notSerialize=false 插入分页符' );
         equal( editor.body.childNodes[1].tagName.toLowerCase(), 'hr', '插入分页符 hr class=\"pagebreak\"  ' );
         equal( editor.body.childNodes[1].className.toLowerCase(), "pagebreak", '插入分页符 hr class=\"pagebreak\"  ' );
         editor.setContent( '<p><br></p>' );
         setTimeout(function(){
             range.setStart( body.firstChild, 0 ).collapse( 1 ).select();
-            editor.execCommand( 'inserthtml', '<p>b</p>_ueditor_page_break_tag_' ,true);
+            editor.execCommand( 'inserthtml', '<p>b</p>_neditor_page_break_tag_' ,true);
             equal( editor.body.childNodes.length, 3, 'notSerialize=true 插入分页符' );
-            equal( editor.body.childNodes[1].innerHTML , '_ueditor_page_break_tag_', '插入分页符');
+            equal( editor.body.childNodes[1].innerHTML , '_neditor_page_break_tag_', '插入分页符');
             start();
         },50);
     },50);

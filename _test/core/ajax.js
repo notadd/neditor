@@ -17,10 +17,10 @@ test("post请求，无数据", function () {
 });
 
 test("get请求，无数据,url中有数据", function () {
-    UE.ajax.request(ajax_request_baseurl + "?get1=ueditor&get2=baidu", {
+    UE.ajax.request(ajax_request_baseurl + "?get1=neditor&get2=baidu", {
         method: 'GET',
         onsuccess: function (xhr) {
-            equals(xhr.responseText, "get1='ueditor'&get2='baidu'", "post请求，数据放在url中传递");
+            equals(xhr.responseText, "get1='neditor'&get2='baidu'", "post请求，数据放在url中传递");
             start();
         },
         onerror: function () {
@@ -33,11 +33,11 @@ test("get请求，无数据,url中有数据", function () {
 
 
 test("get请求,有数据,url中有数据", function () {
-    UE.ajax.request(ajax_request_baseurl + "?get1=ueditor&get2=baidu", {
+    UE.ajax.request(ajax_request_baseurl + "?get1=neditor&get2=baidu", {
         method: 'GET',
-        content: "img1=http://www.baidu.com&img2=http://ueditor.baidu.com",
+        content: "img1=http://www.baidu.com&img2=http://neditor.baidu.com",
         onsuccess: function (xhr) {
-            equals(xhr.responseText, "get1='ueditor'&get2='baidu'&img1=http://www.baidu.com&img2=http://ueditor.baidu.com", "post请求，数据放在url中传递");
+            equals(xhr.responseText, "get1='neditor'&get2='baidu'&img1=http://www.baidu.com&img2=http://neditor.baidu.com", "post请求，数据放在url中传递");
             start();
         },
         onerror: function () {
@@ -49,13 +49,13 @@ test("get请求,有数据,url中有数据", function () {
 });
 
 test("get请求，有data字段，无数据,url中有数据", function () {
-    UE.ajax.request(ajax_request_baseurl + "?get1=ueditor&get2=baidu", {
+    UE.ajax.request(ajax_request_baseurl + "?get1=neditor&get2=baidu", {
         method: 'GET',
         data: {
             img1: 'http://www.baidu.com', img2: 'http://www.google.com'
         },
         onsuccess: function (xhr) {
-            equals(xhr.responseText, "get1='ueditor'&get2='baidu'&img1='http://www.baidu.com'&img2='http://www.google.com'", "post请求，数据放在url中传递");
+            equals(xhr.responseText, "get1='neditor'&get2='baidu'&img1='http://www.baidu.com'&img2='http://www.google.com'", "post请求，数据放在url中传递");
             start();
         },
         onerror: function () {
@@ -85,9 +85,9 @@ test("post请求，有data字段", function () {
 
 test("post请求，没有data字段，有其他数据", function () {
     UE.ajax.request(ajax_request_baseurl, {
-        content: "img1=http://www.baidu.com&img2=http://ueditor.baidu.com",
+        content: "img1=http://www.baidu.com&img2=http://neditor.baidu.com",
         onsuccess: function (xhr) {
-            equals(xhr.responseText, "img1=http://www.baidu.com&img2=http://ueditor.baidu.com", "没有data字段，有其他数据");
+            equals(xhr.responseText, "img1=http://www.baidu.com&img2=http://neditor.baidu.com", "没有data字段，有其他数据");
             start();
         },
         onerror: function () {
@@ -103,9 +103,9 @@ test("post请求，有data字段，有其他数据", function () {
         data: {
             img1: 'http://www.baidu.com', img2: 'http://www.google.com'
         },
-        content: "i1=http://www.baidu.com&i2=http://ueditor.baidu.com",
+        content: "i1=http://www.baidu.com&i2=http://neditor.baidu.com",
         onsuccess: function (xhr) {
-            equals(xhr.responseText, "img1='http://www.baidu.com'&img2='http://www.google.com'&i1=http://www.baidu.com&i2=http://ueditor.baidu.com", "有data字段，有其他数据");
+            equals(xhr.responseText, "img1='http://www.baidu.com'&img2='http://www.google.com'&i1=http://www.baidu.com&i2=http://neditor.baidu.com", "有data字段，有其他数据");
             start();
         },
         onerror: function () {
@@ -122,9 +122,9 @@ test("get请求，有data字段，有其他数据", function () {
         data: {
             get1: 'http://www.baidu.com', get2: 'http://www.google.com'
         },
-        content: "i1=http://www.baidu.com&i2=http://ueditor.baidu.com",
+        content: "i1=http://www.baidu.com&i2=http://neditor.baidu.com",
         onsuccess: function (xhr) {
-            equals(xhr.responseText, "get1='http://www.baidu.com'&get2='http://www.google.com'&i1=http://www.baidu.com&i2=http://ueditor.baidu.com", "有data字段，有其他数据");
+            equals(xhr.responseText, "get1='http://www.baidu.com'&get2='http://www.google.com'&i1=http://www.baidu.com&i2=http://neditor.baidu.com", "有data字段，有其他数据");
             start();
         },
         onerror: function () {
@@ -140,11 +140,11 @@ test("并发多个post请求", function () {
 
     UE.ajax.request(ajax_request_baseurl, {
         data: {
-            img1: 'http://ueditor.baidu.com', img2: 'http://www.google.com'
+            img1: 'http://neditor.baidu.com', img2: 'http://www.google.com'
         },
-        content: "i1=http://www.baidu.com&i2=http://ueditor.baidu.com",
+        content: "i1=http://www.baidu.com&i2=http://neditor.baidu.com",
         onsuccess: function (xhr) {
-            equals(xhr.responseText, "img1='http://ueditor.baidu.com'&img2='http://www.google.com'&i1=http://www.baidu.com&i2=http://ueditor.baidu.com", "有data字段，有其他数据");
+            equals(xhr.responseText, "img1='http://neditor.baidu.com'&img2='http://www.google.com'&i1=http://www.baidu.com&i2=http://neditor.baidu.com", "有data字段，有其他数据");
         },
         onerror: function () {
             ok(false, 'fail to send ajax request');
@@ -155,9 +155,9 @@ test("并发多个post请求", function () {
         data: {
             img1: 'http://map.baidu.com', img2: 'http://www.google.com'
         },
-        content: "p1=http://www.baidu.com&p2=http://ueditor.baidu.com",
+        content: "p1=http://www.baidu.com&p2=http://neditor.baidu.com",
         onsuccess: function (xhr) {
-            equals(xhr.responseText, "img1='http://map.baidu.com'&img2='http://www.google.com'&p1=http://www.baidu.com&p2=http://ueditor.baidu.com", "有data字段，有其他数据");
+            equals(xhr.responseText, "img1='http://map.baidu.com'&img2='http://www.google.com'&p1=http://www.baidu.com&p2=http://neditor.baidu.com", "有data字段，有其他数据");
             start();
         },
         onerror: function () {

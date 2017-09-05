@@ -80,7 +80,7 @@ var LocalStorage = (UE.LocalStorage = (function() {
 })());
 
 (function() {
-  var ROOTKEY = "ueditor_preference";
+  var ROOTKEY = "neditor_preference";
 
   UE.Editor.prototype.setPreferences = function(key, value) {
     var obj = {};

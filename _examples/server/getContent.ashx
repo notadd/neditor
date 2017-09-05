@@ -22,7 +22,7 @@ public class getContent : IHttpHandler {
         //-------------
 
         //显示
-        context.Response.Write("<script src='../ueditor.parse.js' type='text/javascript'></script>");
+        context.Response.Write("<script src='../neditor.parse.js' type='text/javascript'></script>");
         context.Response.Write(
 
             "<script>uParse('.content',{"+

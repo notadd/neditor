@@ -1,25 +1,25 @@
 {
-    "name": "ueditor",
-    "title": "ueditor",
+    "name": "neditor",
+    "title": "neditor",
     "description": "UEditor富文本web编辑器",
     "version": "2.0.0",
-    "homepage": "http://ueditor.baidu.com/",
+    "homepage": "http://neditor.baidu.com/",
     "author": {
         "name": "f-cube @ FEX",
         "url": "http://fex.baidu.com"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/fex-team/ueditor.git"
+        "url": "https://github.com/fex-team/neditor.git"
     },
     "keywords": [
-        "ueditor",
+        "neditor",
         "web editor",
         "javascript",
         "rich editor"
     ],
     "bugs": {
-        "url": "https://github.com/fex-team/ueditor/issues"
+        "url": "https://github.com/fex-team/neditor/issues"
     },
     "dependencies": {
         "grunt": "~0.4.1",

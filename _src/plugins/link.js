@@ -13,8 +13,8 @@
  * @example
  * ```javascript
  * editor.execCommand( 'link', '{
- *     url:'ueditor.baidu.com',
- *     title:'ueditor',
+ *     url:'neditor.baidu.com',
+ *     title:'neditor',
  *     target:'_blank'
  * }' );
  * ```

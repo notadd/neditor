@@ -1,5 +1,5 @@
 /**
- * ueditor完整配置项
+ * neditor完整配置项
  * 可以在这里配置整个编辑器的特性
  */
 /**************************提示********************************
@@ -13,7 +13,7 @@
   /**
      * 编辑器资源文件根路径。它所表示的含义是：以编辑器实例化页面为当前路径，指向编辑器资源文件（即dialog等文件夹）的路径。
      * 鉴于很多同学在使用编辑器的时候出现的种种路径问题，此处强烈建议大家使用"相对于网站根目录的相对路径"进行配置。
-     * "相对于网站根目录的相对路径"也就是以斜杠开头的形如"/myProject/ueditor/"这样的路径。
+     * "相对于网站根目录的相对路径"也就是以斜杠开头的形如"/myProject/neditor/"这样的路径。
      * 如果站点中有多个不在同一层级的页面需要实例化编辑器，且引用了同一UEditor的时候，此处的URL可能不适用于每个页面的编辑器。
      * 因此，UEditor提供了针对不同页面的编辑器可单独配置的根路径，具体来说，在需要实例化编辑器的页面最顶部写上如下代码即可。当然，需要令此处的URL等于对应的配置。
      * window.UEDITOR_HOME_URL = "/xxxx/xxxx/";
@@ -146,10 +146,10 @@
 
     //主题配置项,默认是default。有需要的话也可以使用如下这样的方式来自动多主题切换，当然，前提条件是themes文件夹下存在对应的主题文件：
     //现有如下皮肤:default
-    //,theme:'default'
+    ,theme:'notadd'
     //,themePath:URL +"themes/"
 
-    //,zIndex : 900     //编辑器层级的基数,默认是900
+    ,zIndex : 1100     //编辑器层级的基数,默认是900
 
     //针对getAllHtml方法，会在对应的head标签中增加该编码设置。
     //,charset:"utf-8"
@@ -162,7 +162,7 @@
 
     //,textarea:'editorValue' // 提交表单时，服务器获取编辑器提交内容的所用的参数，多实例时可以给容器name属性，会将name给定的值最为每个实例的键值，不用每次实例化的时候都设置这个值
 
-    //,initialContent:'欢迎使用ueditor!'    //初始化编辑器的内容,也可以通过textarea/script给值，看官网例子
+    //,initialContent:'欢迎使用neditor!'    //初始化编辑器的内容,也可以通过textarea/script给值，看官网例子
 
     //,autoClearinitialContent:true //是否自动清除编辑器初始内容，注意：如果focus属性设置为true,这个也为真，那么编辑器一上来就会触发导致初始化的内容看不到了
 
@@ -394,8 +394,8 @@
     //,catchRemoteImageEnable: true //设置是否抓取远程图片
 
     //pageBreakTag
-    //分页标识符,默认是_ueditor_page_break_tag_
-    //,pageBreakTag:'_ueditor_page_break_tag_'
+    //分页标识符,默认是_neditor_page_break_tag_
+    //,pageBreakTag:'_neditor_page_break_tag_'
 
     //autotypeset
     //自动排版参数
@@ -449,6 +449,79 @@
     //,disabledTableInTable:true  //禁止表格嵌套
     //,allowDivTransToP:true      //允许进入编辑器的div标签自动变成p标签
     //,rgb2Hex:true               //默认产出的数据中的color自动从rgb格式变成16进制格式
+
+      // xss 过滤是否开启,inserthtml等操作
+      ,xssFilterRules: true
+      //input xss过滤
+      ,inputXssFilter: true
+      //output xss过滤
+      ,outputXssFilter: true
+      // xss过滤白名单 名单来源: https://raw.githubusercontent.com/leizongmin/js-xss/master/lib/default.js
+      ,whitList: {
+          a:      ['target', 'href', 'title', 'class', 'style'],
+          abbr:   ['title', 'class', 'style'],
+          address: ['class', 'style'],
+          area:   ['shape', 'coords', 'href', 'alt'],
+          article: [],
+          aside:  [],
+          audio:  ['autoplay', 'controls', 'loop', 'preload', 'src', 'class', 'style'],
+          b:      ['class', 'style'],
+          bdi:    ['dir'],
+          bdo:    ['dir'],
+          big:    [],
+          blockquote: ['cite', 'class', 'style'],
+          br:     [],
+          caption: ['class', 'style'],
+          center: [],
+          cite:   [],
+          code:   ['class', 'style'],
+          col:    ['align', 'valign', 'span', 'width', 'class', 'style'],
+          colgroup: ['align', 'valign', 'span', 'width', 'class', 'style'],
+          dd:     ['class', 'style'],
+          del:    ['datetime'],
+          details: ['open'],
+          div:    ['class', 'style'],
+          dl:     ['class', 'style'],
+          dt:     ['class', 'style'],
+          em:     ['class', 'style'],
+          font:   ['color', 'size', 'face'],
+          footer: [],
+          h1:     ['class', 'style'],
+          h2:     ['class', 'style'],
+          h3:     ['class', 'style'],
+          h4:     ['class', 'style'],
+          h5:     ['class', 'style'],
+          h6:     ['class', 'style'],
+          header: [],
+          hr:     [],
+          i:      ['class', 'style'],
+          img:    ['src', 'alt', 'title', 'width', 'height', 'id', '_src', 'loadingclass', 'class', 'data-latex'],
+          ins:    ['datetime'],
+          li:     ['class', 'style'],
+          mark:   [],
+          nav:    [],
+          ol:     ['class', 'style'],
+          p:      ['class', 'style'],
+          pre:    ['class', 'style'],
+          s:      [],
+          section:[],
+          small:  [],
+          span:   ['class', 'style'],
+          sub:    ['class', 'style'],
+          sup:    ['class', 'style'],
+          strong: ['class', 'style'],
+          table:  ['width', 'border', 'align', 'valign', 'class', 'style'],
+          tbody:  ['align', 'valign', 'class', 'style'],
+          td:     ['width', 'rowspan', 'colspan', 'align', 'valign', 'class', 'style'],
+          tfoot:  ['align', 'valign', 'class', 'style'],
+          th:     ['width', 'rowspan', 'colspan', 'align', 'valign', 'class', 'style'],
+          thead:  ['align', 'valign', 'class', 'style'],
+          tr:     ['rowspan', 'align', 'valign', 'class', 'style'],
+          tt:     [],
+          u:      [],
+          ul:     ['class', 'style'],
+          video:  ['autoplay', 'controls', 'loop', 'preload', 'src', 'height', 'width', 'class', 'style']
+      }
   };
 
   function getUEBasePath(docUrl, confUrl) {

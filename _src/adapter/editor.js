@@ -226,7 +226,7 @@
         },
         _updateIframe: function() {
           var frame = (editor._iframe = popup.anchorEl);
-          if (domUtils.hasClass(frame, "ueditor_baidumap")) {
+          if (domUtils.hasClass(frame, "neditor_baidumap")) {
             editor.selection.getRange().selectNode(frame).select();
             editor.ui._dialogs.mapDialog.open();
             popup.hide();
@@ -848,7 +848,7 @@
     editor.options.editor = editor;
     utils.loadFile(document, {
       href:
-        editor.options.themePath + editor.options.theme + "/_css/ueditor.css",
+        editor.options.themePath + editor.options.theme + "/_css/neditor.css",
       tag: "link",
       type: "text/css",
       rel: "stylesheet"

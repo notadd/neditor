@@ -1,4 +1,4 @@
-package com.baidu.ueditor.hunter;
+package com.baidu.neditor.hunter;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -6,13 +6,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import com.baidu.ueditor.PathFormat;
-import com.baidu.ueditor.define.AppInfo;
-import com.baidu.ueditor.define.BaseState;
-import com.baidu.ueditor.define.MIMEType;
-import com.baidu.ueditor.define.MultiState;
-import com.baidu.ueditor.define.State;
-import com.baidu.ueditor.upload.StorageManager;
+import com.baidu.neditor.PathFormat;
+import com.baidu.neditor.define.AppInfo;
+import com.baidu.neditor.define.BaseState;
+import com.baidu.neditor.define.MIMEType;
+import com.baidu.neditor.define.MultiState;
+import com.baidu.neditor.define.State;
+import com.baidu.neditor.upload.StorageManager;
 
 /**
  * 图片抓取器

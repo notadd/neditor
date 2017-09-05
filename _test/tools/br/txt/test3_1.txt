@@ -71,20 +71,20 @@ table.MsoTableGrid
 <![endif]-->
 
 <p class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
-mso-hansi-font-family:&quot;Times New Roman&quot;">欢迎使用</span><span lang="EN-US">ueditor!</span></p>
+mso-hansi-font-family:&quot;Times New Roman&quot;">欢迎使用</span><span lang="EN-US">neditor!</span></p>
 
 <p class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
 mso-hansi-font-family:&quot;Times New Roman&quot;;color:red;background:yellow;mso-highlight:
 yellow">欢迎使用</span><span style="color:red;background:yellow;
-mso-highlight:yellow" lang="EN-US">ueditor!</span><span style="color:red" lang="EN-US"></span></p>
+mso-highlight:yellow" lang="EN-US">neditor!</span><span style="color:red" lang="EN-US"></span></p>
 
 <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
 
 <p class="MsoNormal" style="text-align:center" align="center"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
-&quot;Times New Roman&quot;">欢迎使用</span><span lang="EN-US">ueditor!</span></p>
+&quot;Times New Roman&quot;">欢迎使用</span><span lang="EN-US">neditor!</span></p>
 
 <p class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
-mso-hansi-font-family:&quot;Times New Roman&quot;">欢迎使用</span><span lang="EN-US">ueditor!</span></p>
+mso-hansi-font-family:&quot;Times New Roman&quot;">欢迎使用</span><span lang="EN-US">neditor!</span></p>
 
 <table class="MsoTableGrid" style="border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
@@ -93,7 +93,7 @@ mso-hansi-font-family:&quot;Times New Roman&quot;">欢迎使用</span><span lang
   <td style="width:142.0pt;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" valign="top" width="189">
   <p class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
-  mso-hansi-font-family:&quot;Times New Roman&quot;">欢迎使用</span><span lang="EN-US">ueditor!</span></p>
+  mso-hansi-font-family:&quot;Times New Roman&quot;">欢迎使用</span><span lang="EN-US">neditor!</span></p>
   </td>
   <td style="width:142.05pt;border:solid windowtext 1.0pt;
   border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
@@ -123,7 +123,7 @@ mso-hansi-font-family:&quot;Times New Roman&quot;">欢迎使用</span><span lang
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:45.95pt" valign="top" width="189">
   <p class="MsoNormal"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
-  mso-hansi-font-family:&quot;Times New Roman&quot;">欢迎使用</span><span lang="EN-US">ueditor!</span></p>
+  mso-hansi-font-family:&quot;Times New Roman&quot;">欢迎使用</span><span lang="EN-US">neditor!</span></p>
   </td>
  </tr>
 </tbody></table>

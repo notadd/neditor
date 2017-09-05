@@ -24,7 +24,7 @@ module( 'plugins.enterkey' );
 //    $( div2 ).css( 'width', '500px' ).css( 'height', '500px' ).css( 'border', '1px solid #ccc' );
 //    te.dom.push(div2);
 //    baidu.editor.plugins.table = function(){};
-//    var editor = new baidu.editor.Editor({'initialContent':'<p>欢迎使用ueditor</p>','autoFloatEnabled':false,'enterTag':'br'});
+//    var editor = new baidu.editor.Editor({'initialContent':'<p>欢迎使用neditor</p>','autoFloatEnabled':false,'enterTag':'br'});
 //    te.obj.push(editor);
 //    editor.render(div2);
 //    var range = new baidu.editor.dom.Range( editor.document );
@@ -47,7 +47,7 @@ module( 'plugins.enterkey' );
 //    $( div2 ).css( 'width', '500px' ).css( 'height', '500px' ).css( 'border', '1px solid #ccc' );
 //    te.dom.push(div2);
 //    baidu.editor.plugins.table = function(){};
-//    var editor = new baidu.editor.Editor({'initialContent':'<p>欢迎使用ueditor</p>','autoFloatEnabled':false,'enterTag':'br'});
+//    var editor = new baidu.editor.Editor({'initialContent':'<p>欢迎使用neditor</p>','autoFloatEnabled':false,'enterTag':'br'});
 //    te.obj.push(editor);
 //    editor.render(div2);
 //    stop();
@@ -76,7 +76,7 @@ test( 'br做回车,选区非闭合', function () {
     $( div2 ).css( 'width', '500px' ).css( 'height', '500px' ).css( 'border', '1px solid #ccc' );
     te.dom.push(div2);
     baidu.editor.plugins.table = function(){};
-    var editor = new baidu.editor.Editor({'initialContent':'<p>欢迎使用ueditor</p>','autoFloatEnabled':false,'enterTag':'br'});
+    var editor = new baidu.editor.Editor({'initialContent':'<p>欢迎使用neditor</p>','autoFloatEnabled':false,'enterTag':'br'});
     te.obj.push(editor);
     editor.render(div2);
     stop();
@@ -134,7 +134,7 @@ test( 'br做回车，选区闭合', function () {
     $( div2 ).css( 'width', '500px' ).css( 'height', '500px' ).css( 'border', '1px solid #ccc' );
     te.dom.push(div2);
     baidu.editor.plugins.table = function(){};
-    var editor = new baidu.editor.Editor({'initialContent':'<p>欢迎使用ueditor</p>','autoFloatEnabled':false,'enterTag':'br'});
+    var editor = new baidu.editor.Editor({'initialContent':'<p>欢迎使用neditor</p>','autoFloatEnabled':false,'enterTag':'br'});
     te.obj.push(editor);
     editor.render(div2);
     stop();
@@ -164,7 +164,7 @@ test( 'br做回车，选区闭合,在节点尾部输入回车，要插入2个br'
     te.dom.push(div2);
     baidu.editor.plugins.table = function () {
     };
-    var editor = new baidu.editor.Editor({'initialContent':'<p>欢迎使用ueditor</p>', 'autoFloatEnabled':false, 'enterTag':'br'});
+    var editor = new baidu.editor.Editor({'initialContent':'<p>欢迎使用neditor</p>', 'autoFloatEnabled':false, 'enterTag':'br'});
     te.obj.push(editor);
     editor.render(div2);
     stop();
@@ -332,7 +332,7 @@ test( '跨td不删', function () {
 //    var div2 = document.body.appendChild( document.createElement( 'div' ) );
 //    $( div2 ).css( 'width', '500px' ).css( 'height', '500px' ).css( 'border', '1px solid #ccc' );
 //    baidu.editor.plugins.table = function(){};
-//    var editor = new baidu.editor.Editor({'initialContent':'<p>欢迎使用ueditor</p>','autoFloatEnabled':false});
+//    var editor = new baidu.editor.Editor({'initialContent':'<p>欢迎使用neditor</p>','autoFloatEnabled':false});
 //    editor.render(div2);
 //    stop();
 //    setTimeout(function(){

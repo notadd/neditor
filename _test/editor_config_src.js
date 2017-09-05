@@ -1,9 +1,9 @@
 /**
- *  ueditor完整配置项
+ *  neditor完整配置项
  *  可以在这里配置整个编辑器的特性
  */
 var UEDITOR_CONFIG = {
-    UEDITOR_HOME_URL: '../', //这里你可以配置成ueditor目录在您网站的绝对路径
+    UEDITOR_HOME_URL: '../', //这里你可以配置成neditor目录在您网站的绝对路径
     toolbars: [
         ['FullScreen','Source','|','Undo','Redo','|',
          'Bold','Italic','Underline','StrikeThrough','Superscript','Subscript','RemoveFormat','FormatMatch','|',

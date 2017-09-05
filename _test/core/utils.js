@@ -440,17 +440,17 @@ test('isCrossDomainUrl', function () {
     ok(!utils.isCrossDomainUrl(location.href), 'location.href 不跨域');
 
     if (l.port == '') {
-        ok(!utils.isCrossDomainUrl(l.protocol + '//' + l.hostname + ':80/ueditor/'), '本地没端口,80端口不跨域');
+        ok(!utils.isCrossDomainUrl(l.protocol + '//' + l.hostname + ':80/neditor/'), '本地没端口,80端口不跨域');
     }
 
     if (l.port == '80') {
-        ok(!utils.isCrossDomainUrl(l.protocol + '//' + l.hostname + '/ueditor/'), '本地没80端口,无端口不跨域');
+        ok(!utils.isCrossDomainUrl(l.protocol + '//' + l.hostname + '/neditor/'), '本地没80端口,无端口不跨域');
     }
 
     if (l.protocol == 'http:') {
-        ok(utils.isCrossDomainUrl('https://' + l.host + '/ueditor/'), '本地http协议,https协议跨域');
+        ok(utils.isCrossDomainUrl('https://' + l.host + '/neditor/'), '本地http协议,https协议跨域');
     } else {
-        ok(utils.isCrossDomainUrl('http://' + l.host + '/ueditor/'), '本地不是http协议,http协议跨域');
+        ok(utils.isCrossDomainUrl('http://' + l.host + '/neditor/'), '本地不是http协议,http协议跨域');
     }
 
     ok(utils.isCrossDomainUrl(l.protocol + '//www.baidu.com' + ':' + l.port), '域名不一致跨域');

@@ -69,7 +69,7 @@
     function init(){
         var mapNode = editor.selection.getRange().getClosedNode(),
             isMapImg = mapNode && /api[.]map[.]baidu[.]com/ig.test(mapNode.getAttribute("src")),
-            isMapIframe = mapNode && domUtils.hasClass(mapNode, 'ueditor_baidumap');
+            isMapIframe = mapNode && domUtils.hasClass(mapNode, 'neditor_baidumap');
         if(isMapImg || isMapIframe){
             var url, centerPos, markerPos;
             if(isMapIframe) {
@@ -120,7 +120,7 @@
                     '&height=' + mapHeight,
                     '&markers=' + point.lng + ',' + point.lat,
                     '&markerStyles=' + 'l,A'].join('');
-            editor.execCommand('inserthtml', '<iframe class="ueditor_baidumap" src="' + url + '"' + (styleStr ? ' style="' + styleStr + '"' :'') + ' frameborder="0" width="' + (mapWidth+4) + '" height="' + (mapHeight+4) + '"></iframe>');
+            editor.execCommand('inserthtml', '<iframe class="neditor_baidumap" src="' + url + '"' + (styleStr ? ' style="' + styleStr + '"' :'') + ' frameborder="0" width="' + (mapWidth+4) + '" height="' + (mapHeight+4) + '"></iframe>');
         } else {
             var url = "http://api.map.baidu.com/staticimage?center=" + center.lng + ',' + center.lat +
                     "&zoom=" + zoom + "&width=" + size.width + '&height=' + size.height + "&markers=" + point.lng + ',' + point.lat;

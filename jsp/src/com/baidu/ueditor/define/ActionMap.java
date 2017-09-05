@@ -1,4 +1,4 @@
-package com.baidu.ueditor.define;
+package com.baidu.neditor.define;
 
 import java.util.Map;
 import java.util.HashMap;

@@ -733,9 +733,9 @@ test( 'isSameElement--img的属性比较', function() {
     var domUtils = te.obj[3];
 //    var editor = new baidu.editor.Editor();
 //    editor.render(div);
-    div.innerHTML = '<img  style="width: 200px;height: 200px" src="http://ueditor.baidu.com/img/logo.png">hello';
+    div.innerHTML = '<img  style="width: 200px;height: 200px" src="http://neditor.baidu.com/img/logo.png">hello';
     var div1 = document.createElement( 'div' );
-    var html = '<img  src="http://ueditor.baidu.com/img/logo.png" style="width: 200px;height: 200px" >';
+    var html = '<img  src="http://neditor.baidu.com/img/logo.png" style="width: 200px;height: 200px" >';
     div1.innerHTML = html;
     ok( domUtils.isSameElement( div.firstChild, div1.firstChild ), '属性一致' )
 } );

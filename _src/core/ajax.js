@@ -225,7 +225,7 @@ UE.ajax = (function() {
          *
          *     //请求携带的数据。如果请求为GET请求， data会经过stringify后附加到请求url之后。
          *     data: {
-         *         name: 'ueditor'
+         *         name: 'neditor'
          *     },
          *
          *     //请求成功后的回调， 该回调接受当前的XMLHttpRequest对象作为参数。

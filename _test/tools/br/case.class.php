@@ -82,11 +82,11 @@ class Kiss
         print '<script type="text/javascript" src="js/ext_qunit.js"></script>' . "\n";
         print '<script type="text/javascript" src="js/UserAction.js"></script>' . "\n";
         print '<link media="screen" href="css/qunit.css" type="text/css" rel="stylesheet" />' . "\n";
-        print '<link  href="../../../themes/default/_css/ueditor.css" type="text/css" rel="stylesheet" />' . "\n";
+        print '<link  href="../../../themes/default/_css/neditor.css" type="text/css" rel="stylesheet" />' . "\n";
         print '<script type="text/javascript" src="js/tools.js"></script>' . "\n";
       
-        print '<script type="text/javascript" charset="utf-8" src="../../../third-party/SyntaxHighlighter/shCore.js"></script>' . "\n";        //                print '<script type="text/javascript" charset="utf-8" src="../../ueditor.config_src.js"></script>' . "\n";
-        print '<script type="text/javascript" charset="utf-8" src="../../../ueditor.config.js"></script>' . "\n";
+        print '<script type="text/javascript" charset="utf-8" src="../../../third-party/SyntaxHighlighter/shCore.js"></script>' . "\n";        //                print '<script type="text/javascript" charset="utf-8" src="../../neditor.config_src.js"></script>' . "\n";
+        print '<script type="text/javascript" charset="utf-8" src="../../../neditor.config.js"></script>' . "\n";
 
 
         /* load case source*/
@@ -114,16 +114,16 @@ class Kiss
         print '<script type="text/javascript" src="js/ext_qunit.js"></script>' . "\n";
         print '<script type="text/javascript" src="js/UserAction.js"></script>' . "\n";
         print '<link media="screen" href="css/qunit.css" type="text/css" rel="stylesheet" />' . "\n";
-        print '<link  href="../../../themes/default/_css/ueditor.css" type="text/css" rel="stylesheet" />' . "\n";
+        print '<link  href="../../../themes/default/_css/neditor.css" type="text/css" rel="stylesheet" />' . "\n";
         print '<script type="text/javascript" src="js/tools.js"></script>' . "\n";
 
         print '<script type="text/javascript" charset="utf-8" src="../../../third-party/SyntaxHighlighter/shCore.js"></script>' . "\n";
 
-        print '<script type="text/javascript" charset="utf-8" src="../../../ueditor/ueditor.config.js"></script>' . "\n";
+        print '<script type="text/javascript" charset="utf-8" src="../../../neditor/neditor.config.js"></script>' . "\n";
 
 
         /* load case source*/
-        $importurl = "{$this->projroot}ueditor/ueditor.all.min.js";
+        $importurl = "{$this->projroot}neditor/neditor.all.min.js";
         print "<script type='text/javascript' src='".$importurl."' ></script>\n";
 
         /* load case and case dependents*/

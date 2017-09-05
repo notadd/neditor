@@ -650,7 +650,7 @@ var utils = (UE.utils = {
         throw Error(
           "The load " +
             (obj.href || obj.src) +
-            " fails,check the url settings of file ueditor.config.js "
+            " fails,check the url settings of file neditor.config.js "
         );
       };
       doc.getElementsByTagName("head")[0].appendChild(element);

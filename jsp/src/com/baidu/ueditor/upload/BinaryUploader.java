@@ -1,11 +1,11 @@
-package com.baidu.ueditor.upload;
+package com.baidu.neditor.upload;
 
-import com.baidu.ueditor.ConfigManager;
-import com.baidu.ueditor.PathFormat;
-import com.baidu.ueditor.define.AppInfo;
-import com.baidu.ueditor.define.BaseState;
-import com.baidu.ueditor.define.FileType;
-import com.baidu.ueditor.define.State;
+import com.baidu.neditor.ConfigManager;
+import com.baidu.neditor.PathFormat;
+import com.baidu.neditor.define.AppInfo;
+import com.baidu.neditor.define.BaseState;
+import com.baidu.neditor.define.FileType;
+import com.baidu.neditor.define.State;
 
 import java.io.IOException;
 import java.io.InputStream;

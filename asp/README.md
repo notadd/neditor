@@ -23,7 +23,7 @@ Classic ASP 一般在 IIS 上运行。其它 ASP 服务器不介绍部署方式�
 
 #### 版本低于 1.4.0 的配置
 
-对于 v1.4.0 之前的版本，需要修改 `ueditor.config.js`。最简单的方法，就是把文件中的 php 都替换成 asp。要修改的配置包括：
+对于 v1.4.0 之前的版本，需要修改 `neditor.config.js`。最简单的方法，就是把文件中的 php 都替换成 asp。要修改的配置包括：
 
 ```javascript
 {
@@ -52,7 +52,7 @@ UEditor v1.4.0 后进行了后端的统一配置，后端相关的配置文件�
 
 ```javascript
 {
-    "{tpl}UrlPrefix": "/ueditor/asp/",
+    "{tpl}UrlPrefix": "/neditor/asp/",
     "{tpl}PathFormat": "upload/{tpl}/{yyyy}{mm}{dd}/{time}{rand:6}"
 }
 ```
@@ -61,11 +61,11 @@ UEditor v1.4.0 后进行了后端的统一配置，后端相关的配置文件�
 
 `{tpl}UrlPrefix` 是资源定位的基本路径，在 ASP 后台中一般设置成 ASP 的目录。
 
-比如，IIS 中运行的 UEditor ASP 的目录为 `C:\iis_pub\wwwroot\mysite\ueditor\asp`，而网站的访问地址为 `http://localhost/mysite/`，那么你可以这样修改这两类配置项：
+比如，IIS 中运行的 UEditor ASP 的目录为 `C:\iis_pub\wwwroot\mysite\neditor\asp`，而网站的访问地址为 `http://localhost/mysite/`，那么你可以这样修改这两类配置项：
 
 ```javascript
 {
-    "{tpl}UrlPrefix": "/mysite/ueditor/asp/",
+    "{tpl}UrlPrefix": "/mysite/neditor/asp/",
     "{tpl}PathFormat": "upload/{tpl}/{yyyy}{mm}{dd}/{time}{rand:6}"
 }
 ```

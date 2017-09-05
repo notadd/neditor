@@ -27,7 +27,7 @@ if ( !$quirk ) {
     <h1>Ueditor Test Index Page</h1>
 
     <p>
-        <a href="http://ueditor.baidu.com">ueditor</a>
+        <a href="http://neditor.baidu.com">neditor</a>
     </p>
 </div>
 

@@ -102,7 +102,7 @@ test( '在段落中间闭合插入分页符', function () {
         equal( ua.getChildHTML( body.firstChild ), '你好' );
         equal( body.firstChild.tagName.toLowerCase(), 'p', '第一个孩子是p' );
         equal( $( body.firstChild.nextSibling ).attr( 'class' ), 'pagebreak' );
-        equal( ua.getChildHTML( body.lastChild ), 'ueditor' );
+        equal( ua.getChildHTML( body.lastChild ), 'neditor' );
         equal( body.lastChild.tagName.toLowerCase(), 'p', '第二个孩子是p' );
         setTimeout( function () {
                 start();

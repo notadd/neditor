@@ -2,7 +2,7 @@
  <tbody><tr>
   <td width="189" valign="top" style="width:142.0pt;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal">欢迎使用<span lang="EN-US">ueditor!</span><o:p></o:p></p>
+  <p class="MsoNormal">欢迎使用<span lang="EN-US">neditor!</span><o:p></o:p></p>
   </td>
   <td width="189" valign="top" style="width:142.05pt;border:solid windowtext 1.0pt;
   border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
@@ -31,7 +31,7 @@
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal">欢迎使用<span lang="EN-US">ueditor!</span><o:p></o:p></p>
+  <p class="MsoNormal">欢迎使用<span lang="EN-US">neditor!</span><o:p></o:p></p>
   </td>
  </tr>
 </tbody></table>

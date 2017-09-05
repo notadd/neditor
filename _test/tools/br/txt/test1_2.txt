@@ -3,7 +3,7 @@
         <span lang="EN-US"> </span>
     </p>
     <p class="MsoNormal" style="mso-para-;margin-left:1.0gd;">
-        欢迎使用<span lang="EN-US">ueditor!</span>
+        欢迎使用<span lang="EN-US">neditor!</span>
         <o:p>
         </o:p>
     </p>
@@ -11,27 +11,27 @@
         <span lang="EN-US"> </span>
     </p>
     <p class="MsoNormal" style="line-height:250%">
-        欢迎使用<span lang="EN-US">ueditor!</span>
+        欢迎使用<span lang="EN-US">neditor!</span>
         <o:p>
         </o:p>
     </p>
     <p class="MsoNormal" style="line-height:250%">
-        欢迎使用<span lang="EN-US">ueditor!</span>
+        欢迎使用<span lang="EN-US">neditor!</span>
         <o:p>
         </o:p>
     </p>
     <p class="MsoNormal" style="line-height:250%">
-        欢迎使用<span lang="EN-US">ueditor!</span>
+        欢迎使用<span lang="EN-US">neditor!</span>
         <o:p>
         </o:p>
     </p>
     <p class="MsoNormal" style="text-align:justify;text-justify:distribute-all-lines">
-        欢迎使用<span lang="EN-US">ueditor!</span>
+        欢迎使用<span lang="EN-US">neditor!</span>
         <o:p>
         </o:p>
     </p>
     <p class="MsoNormal">
-        <span class="MsoIntenseReference">欢迎使用<span lang="EN-US">ueditor!
+        <span class="MsoIntenseReference">欢迎使用<span lang="EN-US">neditor!
                 <o:p>
                 </o:p></span></span>
     </p>

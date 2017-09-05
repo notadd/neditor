@@ -305,13 +305,13 @@ test('trace 743 合并单元格后,删除列,再撤销', function () {
 //    if(ua.browser.opera)
 //        return;
 //    var editor = te.obj[0];
-//    editor.setContent('欢迎使用ueditor');
+//    editor.setContent('欢迎使用neditor');
 //    editor.execCommand( 'searchreplace', {searchStr:'欢迎', replaceStr:'welcom'} );
 //    ua.manualDeleteFillData(editor.body);
-//    equal( editor.body.firstChild.innerHTML, 'welcom使用ueditor', '查找替换' );
+//    equal( editor.body.firstChild.innerHTML, 'welcom使用neditor', '查找替换' );
 //    editor.execCommand( 'Undo' );
 //    ua.manualDeleteFillData( editor.body );
-//    equal( editor.body.firstChild.innerHTML, '欢迎使用ueditor', '撤销' );
+//    equal( editor.body.firstChild.innerHTML, '欢迎使用neditor', '撤销' );
 //} );
 
 /*trace 942*/

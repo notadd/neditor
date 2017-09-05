@@ -428,7 +428,7 @@ UE.I18N['en'] = {
     },
     'webapp':{
         'tip1':"This function provided by Baidu APP,please apply for baidu APPKey webmaster first!",
-        'tip2':"And then open the file ueditor.config.js to set it! ",
+        'tip2':"And then open the file neditor.config.js to set it! ",
         'applyFor':"APPLY FOR",
         'anthorApi':"Baidu API"
     },

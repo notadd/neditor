@@ -11,7 +11,7 @@ test( 'getAllHtml能取到背景', function() {
     editor.ready(function(){
         equal( editor.queryCommandState( 'background' ), 0, 'check background state' );
         this.body.style.backgroundColor = "#d7e3bc";
-//        this.body.style.backgroundImage = '/ueditor/php/upload//8721363160868.gif';
+//        this.body.style.backgroundImage = '/neditor/php/upload//8721363160868.gif';
         setTimeout(function(){
             var headHtml = [];
             editor.fireEvent('getAllHtml',headHtml);
