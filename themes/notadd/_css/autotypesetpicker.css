@@ -4,7 +4,12 @@
     margin-bottom: 3px;
     clear: both;
 }
-
+.edui-notadd .edui-autotypesetpicker .edui-autotypesetpicker-body tr:last-child td:last-child button {
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    padding: 2px 8px;
+    background-color: #f3f3f3;
+}
 .edui-notadd .edui-autotypesetpicker-body table {
     border-collapse: separate;
     border-spacing: 2px;
