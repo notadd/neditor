@@ -55,10 +55,10 @@
 
 
 
-#preview{position: relative;width: 432px;padding:0;overflow: hidden; margin-left: 10px; _margin-left:5px; height: 320px;background-color: #ddd;float: left}
-#preview .previewMsg {position:absolute;top:0;margin:0;padding:0;height:280px;width:100%;background-color: #666;}
+#preview{position: relative;width: 432px;padding:0;overflow: hidden; margin-left: 10px; height: 320px;background-color: #f3f3f3;float: left}
+#preview .previewMsg {position:absolute;top:0;margin:0;padding:0;height:304px;width:100%;background-color: #ccc;padding-top: 14px}
 #preview .previewMsg span{display:block;margin: 125px auto 0 auto;text-align:center;font-size:18px;color:#fff;}
-#preview .previewVideo {position:absolute;top:0;margin:0;padding:0;height:280px;width:100%;}
+#preview .previewVideo {position:absolute;top:0;margin:0;padding:0;height:320px;width:100%;}
 .edui-video-wrapper fieldset{
     border: 1px solid #ddd;
     padding-left: 5px;
@@ -153,21 +153,22 @@ span.view{display: inline-block;width: 30px;float: right;cursor: pointer;color: 
 }
 
 #upload .placeholder .webuploader-pick {
-    font-size: 18px;
-    background: #00b7ee;
+    font-size: 16px;
+    background: #f3f3f3;
     border-radius: 3px;
     line-height: 44px;
     padding: 0 30px;
-    *width: 120px;
-    color: #fff;
+    color: #646464;
     display: inline-block;
     margin: 0 auto 20px auto;
     cursor: pointer;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); */
+    border: 1px solid #ccc;
 }
 
 #upload .placeholder .webuploader-pick-hover {
-    background: #00a2d4;
+    border: 1px solid #00a2d4;
+    color: #00a2d4;
 }
 
 
@@ -466,6 +467,7 @@ span.view{display: inline-block;width: 30px;float: right;cursor: pointer;color: 
     line-height: 18px;
     color: #6dbfff;
     margin: 0 10px 0 0;
+    border-radius: 2px;
 }
 #upload .statusBar .progress span.percentage {
     width: 0;

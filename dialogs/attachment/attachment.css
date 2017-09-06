@@ -80,8 +80,7 @@
 
 #upload .placeholder {
     margin: 10px;
-    border: 2px dashed #e6e6e6;
-    *border: 0px dashed #e6e6e6;
+    /*border: 2px dashed #e6e6e6;*/
     height: 172px;
     padding-top: 150px;
     text-align: center;
@@ -95,21 +94,22 @@
 }
 
 #upload .placeholder .webuploader-pick {
-    font-size: 18px;
-    background: #00b7ee;
+    font-size: 16px;
+    background: #f3f3f3;
     border-radius: 3px;
     line-height: 44px;
     padding: 0 30px;
-    *width: 120px;
-    color: #fff;
+    color: #646464;
     display: inline-block;
     margin: 0 auto 20px auto;
     cursor: pointer;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); */
+    border: 1px solid #ccc;
 }
 
 #upload .placeholder .webuploader-pick-hover {
-    background: #00a2d4;
+    border: 1px solid #00a2d4;
+    color: #00a2d4;
 }
 
 

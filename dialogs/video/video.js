@@ -277,6 +277,12 @@
             ' height="' + 280  + '"' +
             ' wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" >' +
         '</embed>';
+        // '<video class="previewVideo"' +
+        // ' src="' + conUrl + '"' +
+        // ' width="' + 420  + '"' +
+        // ' height="' + 280  + '"' +
+        // ' wmode="transparent" play="true" loop="false" menu="false" >' +
+        // '</video>';
     }
 
 
