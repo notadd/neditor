@@ -56,7 +56,7 @@
 
 
 #preview{position: relative;width: 432px;padding:0;overflow: hidden; margin-left: 10px; height: 320px;background-color: #f3f3f3;float: left}
-#preview .previewMsg {position:absolute;top:0;margin:0;padding:0;height:304px;width:100%;background-color: #ccc;padding-top: 14px}
+#preview .previewMsg {position:absolute;top:0;margin:0;padding:0;height:304px;width:100%;background-color: #ddd;padding-top: 14px}
 #preview .previewMsg span{display:block;margin: 125px auto 0 auto;text-align:center;font-size:18px;color:#fff;}
 #preview .previewVideo {position:absolute;top:0;margin:0;padding:0;height:320px;width:100%;}
 .edui-video-wrapper fieldset{
