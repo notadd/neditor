@@ -85,7 +85,8 @@
     height: 172px;
     padding-top: 150px;
     text-align: center;
-    background: url(./images/image.png) center 70px no-repeat;
+    /*background: url(./images/image.png) center 70px no-repeat;*/
+    background-color: #f3f3f3;
     color: #cccccc;
     font-size: 18px;
     position: relative;
@@ -315,7 +316,7 @@
 #upload .filelist li.filePickerBlock {
     width: 113px;
     height: 113px;
-    background: url(./images/image.png) no-repeat center 12px;
+    background: url(../fonts/images/addfile.svg) no-repeat center;
     border: 1px solid #eeeeee;
     border-radius: 0;
 }

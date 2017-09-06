@@ -708,6 +708,9 @@
 }
 #online li img {
     cursor: pointer;
+    width: 135px !important;
+    height: 135px !important;
+    margin-top: 0px !important;
 }
 #online li .icon {
     cursor: pointer;
@@ -721,20 +724,20 @@
     background-repeat: no-repeat;
 }
 #online li .icon:hover {
-    width: 107px;
-    height: 107px;
+    width: 129px;
+    height: 129px;
     border: 3px solid #1094fa;
 }
 #online li.selected .icon {
     background-image: url(images/success.png);
     background-image: url(images/success.gif)\9;
-    background-position: 75px 75px;
+    background-position: 95px 95px;
 }
 #online li.selected .icon:hover {
-    width: 107px;
-    height: 107px;
+    width: 129px;
+    height: 129px;
     border: 3px solid #1094fa;
-    background-position: 72px 72px;
+    background-position: 92px 92px;
 }
 
 
