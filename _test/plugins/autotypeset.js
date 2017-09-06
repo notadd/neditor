@@ -61,7 +61,7 @@ test('合并空行',function(){
 
 test('带有图片表情',function(){
     var editor = te.obj[0];
-    editor.setContent('<p>欢迎使用neditor!<img src="http://img.baidu.com/hi/jx2/j_0015.gif" /></p>');
+    editor.setContent('<p>欢迎使用neditor!<img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0015.gif" /></p>');
     editor.execCommand('autotypeset');
     equal($(editor.body.lastChild).css('text-align'),'center','图片居中');
     editor.options.autotypeset.imageBlockLine = 'left';
@@ -102,11 +102,11 @@ test('首行缩进',function(){
 /*trace 2650*/
 test( 'trace 3277：图像对齐', function () {
     var editor = te.obj[0];
-    editor.setContent( '<p><img src="http://img.baidu.com/hi/jx2/j_0001.gif" width="50" height="51" _src="http://img.baidu.com/hi/jx2/j_0001.gif"></p>' );
+    editor.setContent( '<p><img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif" width="50" height="51" _src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif"></p>' );
     setTimeout(function(){
         editor.options.autotypeset.imageBlockLine = 'center';
         delete editor.options.autotypeset.textAlign;//imageBlockLine
-        var html= '<p style="text-align:center"><img src="http://img.baidu.com/hi/jx2/j_0001.gif" width="50" height="51" _src="http://img.baidu.com/hi/jx2/j_0001.gif"/></p>';
+        var html= '<p style="text-align:center"><img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif" width="50" height="51" _src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif"/></p>';
         editor.execCommand('autotypeset');
         ua.checkHTMLSameStyle(html ,editor.document,editor.body,'图像对齐');
         start();
@@ -145,11 +145,11 @@ test('粘贴过滤',function(){
     editor.options.autotypeset.removeEmptyline = true;
     delete editor.options.autotypeset.textAlign;
     editor.execCommand('autotypeset');
-    var html ={html:'<img src="http://img.baidu.com/hi/jx2/j_0015.gif" />hello1'};
+    var html ={html:'<img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0015.gif" />hello1'};
     editor.fireEvent('beforepaste',html);
     editor.execCommand( 'insertHtml',html.html,true);
     editor.fireEvent("afterpaste");
-    var txt='<p style="text-align:center;"><img src="http://img.baidu.com/hi/jx2/j_0015.gif"></p>hello1';
+    var txt='<p style="text-align:center;"><img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0015.gif"></p>hello1';
     ua.checkHTMLSameStyle(txt, editor.document, editor.body, '文字左对齐，表情居中');
 
     editor.setContent('');
@@ -158,11 +158,11 @@ test('粘贴过滤',function(){
     editor.options.autotypeset.removeEmptyline = true;
     editor.options.autotypeset.pasteFilter = true;
     editor.execCommand('autotypeset');
-    html ={html:'<p>hello1</p><p style="text-align:center;"><img src="http://img.baidu.com/hi/jx2/j_0001.gif"/></p><p>hello2</p>'};
+    html ={html:'<p>hello1</p><p style="text-align:center;"><img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif"/></p><p>hello2</p>'};
     editor.fireEvent('beforepaste',html);
     editor.execCommand( 'insertHtml',html.html,true);
     editor.fireEvent("afterpaste");
-    txt='<p style="text-align:center;">hello1<img src="http://img.baidu.com/hi/jx2/j_0001.gif" style="float: none;">hello2</p>';
+    txt='<p style="text-align:center;">hello1<img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif" style="float: none;">hello2</p>';
     ua.checkHTMLSameStyle(txt, editor.document, editor.body, '文字居中，表情居左');
 });
 

@@ -161,18 +161,18 @@ test( '列表中插入img', function() {
     editor.setContent('<ol><li><p></p></li></ol>');
     var lis = editor.body.getElementsByTagName('li');
     range.setStart( lis[0], 0 ).collapse(true).select();
-    editor.execCommand( 'insertimage', {src:'http://img.baidu.com/hi/jx2/j_0001.gif', width:50, height:51} );
+    editor.execCommand( 'insertimage', {src:'//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif', width:50, height:51} );
     stop();
     setTimeout(function(){
         equal(lis.length,1,'列表长度没有变化');
         ua.manualDeleteFillData(lis[0]);
         if(ua.browser.ie){
             equal(lis[0].firstChild.firstChild.tagName.toLowerCase(),'img','列表中插入img');
-            equal(lis[0].firstChild.firstChild.attributes['src'].nodeValue,'http://img.baidu.com/hi/jx2/j_0001.gif','列表中插入img');
+            equal(lis[0].firstChild.firstChild.attributes['src'].nodeValue,'//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif','列表中插入img');
         }
         else{
             equal(lis[0].firstChild.tagName.toLowerCase(),'img','列表中插入img');
-            equal(lis[0].firstChild.attributes['src'].nodeValue,'http://img.baidu.com/hi/jx2/j_0001.gif','列表中插入img');
+            equal(lis[0].firstChild.attributes['src'].nodeValue,'//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif','列表中插入img');
         }
         start();
     },50);

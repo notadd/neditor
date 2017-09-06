@@ -119,7 +119,7 @@ test('列表复制粘贴', function () {
 //test('剪切列表',function(){
 //    var editor = te.obj[0];
 //    var range = te.obj[1];
-//    editor.setContent('<ol><li><p><img src="http://img.baidu.com/hi/jx2/j_0015.gif"/><br/></p></li><li></li></ol>');
+//    editor.setContent('<ol><li><p><img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0015.gif"/><br/></p></li><li></li></ol>');
 //    range.setStart(editor.body.firstChild.lastChild,0).collapse(true).select();
 //    ua.cut(editor.body);
 //    stop();
@@ -127,13 +127,13 @@ test('列表复制粘贴', function () {
 //        ua.manualDeleteFillData(editor.body);
 //        var br = ua.browser.ie?'':'<br>';
 //       equal(editor.body.innerHTML,'<p>'+br+'</p>','编辑器清空');
-//        editor.setContent('<ol><li><p><img src="http://img.baidu.com/hi/jx2/j_0015.gif"/><br/></p></li><li></li></ol><p>asdf</p>');
+//        editor.setContent('<ol><li><p><img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0015.gif"/><br/></p></li><li></li></ol><p>asdf</p>');
 //        range.setStart(editor.body.firstChild.lastChild,0).collapse(true).select();
 //        ua.cut(editor.body);
 //        setTimeout(function(){
 //            ua.manualDeleteFillData(editor.body);
 //            equal(editor.body.innerHTML,'<p>asdf</p>','列表删除');
-//            editor.setContent('<a href="http://www.baidu.com">www.baidu.com</a><ol><li><p><img src="http://img.baidu.com/hi/jx2/j_0015.gif"/><br/></p></li><li></li></ol>');
+//            editor.setContent('<a href="http://www.baidu.com">www.baidu.com</a><ol><li><p><img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0015.gif"/><br/></p></li><li></li></ol>');
 //            range.setStart(editor.body.firstChild.nextSibling.lastChild,0).collapse(true).select();
 //            ua.cut(editor.body);
 //            setTimeout(function(){

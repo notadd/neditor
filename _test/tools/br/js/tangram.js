@@ -9369,7 +9369,7 @@
 	 * @remark
 	 *  //串行实例
 	 *  baidu.page.load([
-	 *      { url : "http://img.baidu.com/js/tangram-1.3.2.js" },
+	 *      { url : "//imgbaidu.b0.upaiyun.com/js/tangram-1.3.2.js" },
 	 *      {url : "http://xxx.baidu.com/xpath/logicRequire.js",
 	 *          onload : fnOnRequireLoaded
 	 *      },

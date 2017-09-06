@@ -26,7 +26,7 @@ test('trace 583,1726 插入表格、表情,撤销', function () {
     editor.setContent('<p></p>');
     range.setStart(editor.body.firstChild, 0).collapse(true).select();
     editor.execCommand('inserttable', {numCols: 2, numRows: 2});
-    editor.execCommand('insertimage', {src: 'http://img.baidu.com/hi/jx2/j_0001.gif', width: 50, height: 50});
+    editor.execCommand('insertimage', {src: '//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif', width: 50, height: 50});
     editor.execCommand('undo');
     editor.execCommand('undo');
     editor.execCommand('undo');//需要3次undo，已经和RD确认过，暂时不改
@@ -93,11 +93,11 @@ test('trace 599 插入表格、表情、超链接、表情,撤销2次', function
     range.setStart(editor.body, 0).collapse(true).select();
     editor.execCommand('inserttable', {numCols: 2, numRows: 2});        //插入表格
     range.setStart(editor.body.lastChild, 0).collapse(true).select();
-    editor.execCommand('insertimage', {src: 'http://img.baidu.com/hi/jx2/j_0001.gif', width: 50, height: 50});    //插入表情
+    editor.execCommand('insertimage', {src: '//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif', width: 50, height: 50});    //插入表情
     range.setStartAfter(editor.body.lastChild).collapse(true).select();
     editor.execCommand('link', {href: 'http://www.baidu.com/'});       //插入超链接
     range.setStartAfter(editor.body.lastChild).collapse(true).select();
-    editor.execCommand('insertimage', {src: 'http://img.baidu.com/hi/jx2/j_0001.gif', width: 50, height: 50});   //插入表情
+    editor.execCommand('insertimage', {src: '//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif', width: 50, height: 50});   //插入表情
 
     editor.execCommand('Undo');
     editor.execCommand('Undo');
@@ -391,11 +391,11 @@ test('trace 1068 默认样式的图片刷左浮动图片，撤销，左浮动图
     var body = editor.body;
     editor.setContent('<p><br></p>');
     range.setStart(body.firstChild, 0).collapse(1).select();
-    editor.execCommand('insertimage', {src: 'http://img.baidu.com/hi/jx2/j_0001.gif', width: 50, height: 51});
+    editor.execCommand('insertimage', {src: '//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif', width: 50, height: 51});
     range.selectNode(editor.body.getElementsByTagName('img')[0]).select();
     editor.execCommand('imagefloat', 'none');
     range.setStart(body.firstChild, 0).collapse(1).select();
-    editor.execCommand('insertimage', {src: 'http://img.baidu.com/hi/jx2/j_0002.gif', width: 50, height: 51});
+    editor.execCommand('insertimage', {src: '//imgbaidu.b0.upaiyun.com/hi/jx2/j_0002.gif', width: 50, height: 51});
     range.selectNode(editor.body.getElementsByTagName('img')[0]).select();
     editor.execCommand('imagefloat', 'left');
     // equal(ua.getFloatStyle(body.getElementsByTagName( 'img' )[0]), "left", '左浮动' );

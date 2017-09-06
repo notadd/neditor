@@ -693,10 +693,10 @@ test( 'isSameElement--tagName不一样', function() {
 test( 'isSameElement--img的src和宽高比较', function() {
     var div = te.dom[2];
     var domUtils = te.obj[3];
-    div.innerHTML = '<span src="http://img.baidu.com/hi/jx2/j_0001.gif" width="50" height="51"></span>';
+    div.innerHTML = '<span src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif" width="50" height="51"></span>';
 
     var span = document.createElement( 'span' );
-    span.setAttribute( 'src', 'http://img.baidu.com/hi/jx2/j_0001.gif' );
+    span.setAttribute( 'src', '//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif' );
     span.setAttribute( 'height', '51' );
     span.setAttribute( 'width', '50' );
     div.appendChild( span );

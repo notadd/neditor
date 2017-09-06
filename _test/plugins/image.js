@@ -38,10 +38,10 @@ test( '插入新图像', function () {
     var body = editor.body;
     editor.setContent( '<p><br></p>' );
     range.setStart( body.firstChild, 0 ).collapse( 1 ).select();
-    editor.execCommand( 'insertimage', {src:'http://img.baidu.com/hi/jx2/j_0001.gif', width:50, height:51} );
+    editor.execCommand( 'insertimage', {src:'//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif', width:50, height:51} );
     ua.manualDeleteFillData( editor.body );
     var img = body.getElementsByTagName( 'img' )[0];
-    equal( img.getAttribute( 'src' ), 'http://img.baidu.com/hi/jx2/j_0001.gif', '比较src' );
+    equal( img.getAttribute( 'src' ), '//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif', '比较src' );
     equal( img.getAttribute( 'width' ), '50', '比较width' );
     equal( img.getAttribute( 'height' ), '51', '比较height' );
 } );
@@ -53,10 +53,10 @@ test( 'trace 1490 不设宽高，插入图片', function () {
     var body = editor.body;
     editor.setContent( '<p><br></p>' );
     range.setStart( body.firstChild, 0 ).collapse( 1 ).select();
-    editor.execCommand( 'insertimage', {src:'http://img.baidu.com/hi/jx2/j_0001.gif'} );
+    editor.execCommand( 'insertimage', {src:'//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif'} );
     ua.manualDeleteFillData( editor.body );
     var img = body.getElementsByTagName( 'img' )[0];
-    equal( img.getAttribute( 'src' ), 'http://img.baidu.com/hi/jx2/j_0001.gif', '比较src' );
+    equal( img.getAttribute( 'src' ), '//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif', '比较src' );
 } );
 
 test( '插入对齐方式为居中对齐的图像，新建一个p，在p上设置居中对齐', function () {
@@ -65,7 +65,7 @@ test( '插入对齐方式为居中对齐的图像，新建一个p，在p上设�
     var body = editor.body;
     editor.setContent( '<p>hello</p>' );
     range.setStart( body.firstChild, 0 ).collapse( 1 ).select();
-    editor.execCommand( 'insertimage', {src:'http://img.baidu.com/hi/jx2/j_0001.gif', width:50, height:51, floatStyle:'center'} );
+    editor.execCommand( 'insertimage', {src:'//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif', width:50, height:51, floatStyle:'center'} );
     ua.manualDeleteFillData( editor.body );
 
     var img = body.getElementsByTagName( 'img' )[0];
@@ -77,7 +77,7 @@ test( '插入对齐方式为居中对齐的图像，新建一个p，在p上设�
             equal( img.style['styleFloat'], '', 'float为空' );
     else
             equal( img.style['cssFloat'], '', 'float为空' );
-    equal( img.getAttribute( 'src' ), 'http://img.baidu.com/hi/jx2/j_0001.gif', '比较src' );
+    equal( img.getAttribute( 'src' ), '//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif', '比较src' );
     equal( img.getAttribute( 'width' ), '50', '比较width' );
     equal( img.getAttribute( 'height' ), '51', '比较height' );
 } );
@@ -86,10 +86,10 @@ test( '修改已有图片的属性', function () {
     var editor = te.obj[0];
     var range = te.obj[1];
     var body = editor.body;
-    editor.setContent( '<p><img src="http://img.baidu.com/hi/jx2/j_0004.gif" >hello<img src="http://img.baidu.com/hi/jx2/j_0053.gif" ></p>' );
+    editor.setContent( '<p><img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0004.gif" >hello<img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0053.gif" ></p>' );
     range.selectNode( body.firstChild.firstChild ).select();
-    editor.execCommand( 'insertimage', {src:'http://img.baidu.com/hi/jx2/j_0018.gif'} );
-    equal( ua.getChildHTML( body.firstChild ), '<img src="http://img.baidu.com/hi/jx2/j_0018.gif" _src=\"http://img.baidu.com/hi/jx2/j_0004.gif\">hello<img src="http://img.baidu.com/hi/jx2/j_0053.gif" _src=\"http://img.baidu.com/hi/jx2/j_0053.gif\">', '检查插入的图像地址' );
+    editor.execCommand( 'insertimage', {src:'//imgbaidu.b0.upaiyun.com/hi/jx2/j_0018.gif'} );
+    equal( ua.getChildHTML( body.firstChild ), '<img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0018.gif" _src=\"//imgbaidu.b0.upaiyun.com/hi/jx2/j_0004.gif\">hello<img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0053.gif" _src=\"//imgbaidu.b0.upaiyun.com/hi/jx2/j_0053.gif\">', '检查插入的图像地址' );
     equal( body.firstChild.childNodes.length, 3, '2个img孩子' );
 } );
 
@@ -98,15 +98,15 @@ test( '选区不闭合插入图像', function () {
     var editor = te.obj[0];
     var range = te.obj[1];
     var body = editor.body;
-    editor.setContent( '<p>hello1</p><p>hello2<img src="http://img.baidu.com/hi/jx2/j_0004.gif"></p>' );
+    editor.setContent( '<p>hello1</p><p>hello2<img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0004.gif"></p>' );
     setTimeout(function(){
         range.setStart( body.firstChild.firstChild, 2 ).setEnd( body.lastChild, 2 ).select();
-        editor.execCommand( 'insertimage', {src:'http://img.baidu.com/hi/jx2/j_0016.gif', width:'100', height:'100'} );
+        editor.execCommand( 'insertimage', {src:'//imgbaidu.b0.upaiyun.com/hi/jx2/j_0016.gif', width:'100', height:'100'} );
         ua.manualDeleteFillData( editor.body );
         equal( body.childNodes.length, 1, '只有一个p' );
         ua.clearWhiteNode(body.firstChild);
         var img = body.firstChild.lastChild;
-        equal( img.getAttribute( 'src' ), 'http://img.baidu.com/hi/jx2/j_0016.gif', '比较src' );
+        equal( img.getAttribute( 'src' ), '//imgbaidu.b0.upaiyun.com/hi/jx2/j_0016.gif', '比较src' );
         equal( img.getAttribute( 'width' ), '100', '比较width' );
         equal( img.getAttribute( 'height' ), '100', '比较height' );
         start();
@@ -118,7 +118,7 @@ test( '图像设置左右浮动', function () {
     var editor = te.obj[0];
     var range = te.obj[1];
     var body = editor.body;
-    editor.setContent( '<p>hello1</p><p>hello2<img src="http://img.baidu.com/hi/jx2/j_0004.gif"></p>' );
+    editor.setContent( '<p>hello1</p><p>hello2<img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0004.gif"></p>' );
     range.selectNode( body.lastChild.lastChild ).select();
     editor.execCommand( 'imagefloat', 'left' );
     equal( body.getElementsByTagName( 'img' )[0].style['cssFloat'] || body.getElementsByTagName( 'img' )[0].style['styleFloat'], 'left', '左浮动' );
@@ -141,7 +141,7 @@ test( '左浮动变为默认的样式和居中', function () {
     var editor = te.obj[0];
     var range = te.obj[1];
     var body = editor.body;
-    editor.setContent( '<p>hello1</p><p>hello2<img src="http://img.baidu.com/hi/jx2/j_0004.gif" style="float:left"></p>' );
+    editor.setContent( '<p>hello1</p><p>hello2<img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0004.gif" style="float:left"></p>' );
     range.selectNode( body.lastChild.lastChild ).select();
     editor.execCommand( 'imagefloat', 'none' );
     equal( ua.getFloatStyle( body.getElementsByTagName( 'img' )[0] ), '', '没有浮动方式' );
@@ -162,7 +162,7 @@ test( ' 带有超链接的图片', function () {
     var editor = te.obj[0];
     var range = te.obj[1];
     var body = editor.body;
-    editor.setContent( '<p>hello1</p><p>hello2<a href="www.baidu.com"><img src="http://img.baidu.com/hi/jx2/j_0004.gif" style="float:left"></a></p>' );
+    editor.setContent( '<p>hello1</p><p>hello2<a href="www.baidu.com"><img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0004.gif" style="float:left"></a></p>' );
     range.selectNode( body.lastChild.lastChild ).select();
     editor.execCommand( 'imagefloat', 'center' );
     var p = body.childNodes[2];
@@ -183,7 +183,7 @@ test( ' 默认样式切换到居中再切换回默认，会把居中导致的3�
     var editor = te.obj[0];
     var range = te.obj[1];
     var body = editor.body;
-    editor.setContent( '<p>hello2<a href="www.baidu.com"><img src="http://img.baidu.com/hi/jx2/j_0004.gif" style="float:left"></a>hello3</p>' );
+    editor.setContent( '<p>hello2<a href="www.baidu.com"><img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0004.gif" style="float:left"></a>hello3</p>' );
     setTimeout( function () {
         range.selectNode( body.getElementsByTagName( 'a' )[0] ).select();
         editor.execCommand( 'imagefloat', 'center' );

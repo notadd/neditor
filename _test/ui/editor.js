@@ -7,7 +7,7 @@ module( 'ui.editor' );
 //    ue1.render(div);
 //    stop();
 //    ue1.ready(function(){
-//        editor.execCommand( 'insertimage', {src:'http://img.baidu.com/hi/jx2/j_0001.gif', width:50, height:51} );
+//        editor.execCommand( 'insertimage', {src:'//imgbaidu.b0.upaiyun.com/hi/jx2/j_0001.gif', width:50, height:51} );
 //    });
 //});
 

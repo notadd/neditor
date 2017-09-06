@@ -9,7 +9,7 @@ module( "plugins.keystrokes" );
 
 test('trace 3714跨节点输入tab键',function(){
     var editor = te.obj[0];
-    editor.setContent( '<h1>hello<br></h1><p>he<img src="http://img.baidu.com/hi/jx2/j_0015.gif" />oll</p>' );
+    editor.setContent( '<h1>hello<br></h1><p>he<img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0015.gif" />oll</p>' );
     var range = te.obj[1];
     setTimeout(function(){
         range.setStart( editor.body.lastChild.firstChild,0 ).setEnd(editor.body.lastChild.firstChild.nextSibling,1).select();
@@ -27,7 +27,7 @@ test('trace 3714跨节点输入tab键',function(){
 
 test('删除块元素，块元素在后',function(){
     var editor = te.obj[0];
-    editor.setContent( '<h1>hello<br></h1><h2><img src="http://img.baidu.com/hi/jx2/j_0015.gif" /></h2>' );
+    editor.setContent( '<h1>hello<br></h1><h2><img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0015.gif" /></h2>' );
     var range = te.obj[1];
     setTimeout(function(){
         range.setStart( editor.body.lastChild.lastChild,0 ).setEnd(editor.body.lastChild.lastChild,1).select();
@@ -46,7 +46,7 @@ test('删除块元素，块元素在后',function(){
 
 test('删除块元素，块元素在前',function(){
     var editor = te.obj[0];
-    editor.setContent( '<h2><img src="http://img.baidu.com/hi/jx2/j_0015.gif" /></h2><h1>hello<br></h1>' );
+    editor.setContent( '<h2><img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0015.gif" /></h2><h1>hello<br></h1>' );
     var range = te.obj[1];
     setTimeout(function(){
         range.setStart( editor.body.firstChild,0 ).setEnd(editor.body.firstChild,1).select();
@@ -64,7 +64,7 @@ test('删除块元素，块元素在前',function(){
 
 test('trace 2747 普通情况,选中一个节点，输入tab键',function(){
     var editor = te.obj[0];
-    editor.setContent( '<h1>hello<br></h1><p>he<img src="http://img.baidu.com/hi/jx2/j_0015.gif" />oll</p>' );
+    editor.setContent( '<h1>hello<br></h1><p>he<img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0015.gif" />oll</p>' );
     var range = te.obj[1];
     setTimeout(function(){
         range.setStart( editor.body.lastChild,1 ).setEnd(editor.body.lastChild,2).select();
@@ -82,7 +82,7 @@ test('trace 2747 普通情况,选中一个节点，输入tab键',function(){
 
 test('trace 2746 删除自闭合标签',function(){
     var editor = te.obj[0];
-    editor.setContent( '<h1>hello<br></h1><p>he<img src="http://img.baidu.com/hi/jx2/j_0015.gif" />oll</p>' );
+    editor.setContent( '<h1>hello<br></h1><p>he<img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0015.gif" />oll</p>' );
     var range = te.obj[1];
     setTimeout(function(){
         range.setStart( editor.body.lastChild,1 ).setEnd(editor.body.lastChild,2).select();

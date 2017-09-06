@@ -90,28 +90,28 @@ test( 'br做回车,选区非闭合', function () {
             ua.manualDeleteFillData(te.obj[3].body);
             var html = 'h<br>lo';
             equal(ua.getChildHTML(te.obj[3].body.firstChild),html,'<br>做回车');
-            editor.setContent('<h1>hello<br></h1><p><img src="http://img.baidu.com/hi/jx2/j_0015.gif" /><a href="http://www.baidu.com"></a></p>' );
+            editor.setContent('<h1>hello<br></h1><p><img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0015.gif" /><a href="http://www.baidu.com"></a></p>' );
             te.obj[4].setStart( editor.body.lastChild,0 ).setEnd(editor.body.lastChild,1).select();
             ua.keydown(editor.body,{'keyCode':13});
             setTimeout(function(){
                 ua.manualDeleteFillData(te.obj[3].body);
                 var html = 'hello<br>';
                 equal(ua.getChildHTML(te.obj[3].body.firstChild),html,'<br>做回车');
-                editor.setContent('<h1>hello<br></h1><p>he<img src="http://img.baidu.com/hi/jx2/j_0015.gif" />oll</p>' );
+                editor.setContent('<h1>hello<br></h1><p>he<img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0015.gif" />oll</p>' );
                 te.obj[4].setStart( editor.body.lastChild,1 ).setEnd(editor.body.lastChild,2).select();
                 ua.keydown(editor.body,{'keyCode':13});
                 setTimeout(function(){
                     ua.manualDeleteFillData(te.obj[3].body);
                     var html = 'hello<br>';
                     equal(ua.getChildHTML(te.obj[3].body.firstChild),html,'<br>做回车');
-                    editor.setContent('<h1>hello<br></h1><p><img src="http://img.baidu.com/hi/jx2/j_0015.gif" /><br></p>' );
+                    editor.setContent('<h1>hello<br></h1><p><img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0015.gif" /><br></p>' );
                     te.obj[4].setStart( editor.body.lastChild,0 ).setEnd(editor.body.lastChild,1).select();
                     ua.keydown(editor.body,{'keyCode':13});
                     setTimeout(function(){
                         ua.manualDeleteFillData(te.obj[3].body);
                         var html = 'hello<br>';
                         equal(ua.getChildHTML(te.obj[3].body.firstChild),html,'<br>做回车');
-                        editor.setContent('<h1>hello<br></h1><p><img src="http://img.baidu.com/hi/jx2/j_0015.gif" /><a href="http://www.baidu.com">www.baidu.com</a></p>' );
+                        editor.setContent('<h1>hello<br></h1><p><img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0015.gif" /><a href="http://www.baidu.com">www.baidu.com</a></p>' );
                         te.obj[4].setStart( editor.body.lastChild,0 ).setEnd(editor.body.lastChild,1).select();
                         ua.keydown(editor.body,{'keyCode':13});
                         setTimeout(function(){

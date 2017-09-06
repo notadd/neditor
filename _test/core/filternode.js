@@ -90,7 +90,7 @@ test( '标签替换过滤', function() {
     });
     equals(node.toHtml().replace(/[ ]+>/g,'>'),'<div id="aa"><p style="color:#ccc"><p>sdfssdfs</p></p>sdfasdf</div>','tr替换为p，过滤掉td');
 
-    node.innerHTML('<img src="http://img.baidu.com/hi/jx2/j_0020.gif" height="10px"/><table><caption>aldkfj</caption><tbody><tr style="background-color: #ccc;"><th>adf</th></tr><tr><td>lkj</td></tbody></table>');
+    node.innerHTML('<img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0020.gif" height="10px"/><table><caption>aldkfj</caption><tbody><tr style="background-color: #ccc;"><th>adf</th></tr><tr><td>lkj</td></tbody></table>');
     UE.filterNode(node,{
         'img':{$:{
             src:['']
@@ -107,7 +107,7 @@ test( '标签替换过滤', function() {
             node.parentNode.removeChild(node,node.innerText())
         }
     });
-    ua.checkSameHtml(node.toHtml().replace(/[ ]+>/g,'>'),'<div id="aa"><img src="http://img.baidu.com/hi/jx2/j_0020.gif" /><table>aldkfj<tbody><tr>adf &nbsp; &nbsp;</tr><tr><td>lkj</td></tr></tbody></table></div>','th按文本内容替换，保留img部分属性');
+    ua.checkSameHtml(node.toHtml().replace(/[ ]+>/g,'>'),'<div id="aa"><img src="//imgbaidu.b0.upaiyun.com/hi/jx2/j_0020.gif" /><table>aldkfj<tbody><tr>adf &nbsp; &nbsp;</tr><tr><td>lkj</td></tr></tbody></table></div>','th按文本内容替换，保留img部分属性');
 });
 
 test( '保留标签全部属性', function() {
