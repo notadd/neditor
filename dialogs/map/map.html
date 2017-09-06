@@ -57,6 +57,17 @@
 </div>
 <script type="text/javascript">
     var map = new BMap.Map("container"),marker,point,styleStr;
+    var point = new BMap.Point(116.404, 39.915);
+    var myIcon = new BMap.Icon("https://api.map.baidu.com/mapCard/img/location.gif",
+            new BMap.Size(14, 23), {
+                // 指定定位位置。
+                // 当标注显示在地图上时，其所指向的地理位置距离图标左上
+                // 角各偏移7像素和25像素。您可以看到在本例中该位置即是
+                // 图标中央下端的尖角位置。
+                anchor: new BMap.Size(7, 25),
+            });
+    var marker = new BMap.Marker(point, {icon: myIcon});
+    map.addOverlay(marker);
     map.enableScrollWheelZoom();
     map.enableContinuousZoom();
     function doSearch(){
@@ -77,7 +88,7 @@
                         map.centerAndZoom(points[0], 13);
                     }
                     point = map.getCenter();
-                    marker.setPoint(point);
+//                    marker.setPoint(point);
                 } else {
                     alert(lang.errorMsg);
                 }
@@ -106,7 +117,7 @@
             }
 
             centerPos = getPars(url,"center").split(",");
-            markerPos = getPars(url, "markers").split(",");
+            markerPos = getPars(url, "mMarkerarkers").split(",");
             point = new BMap.Point(Number(centerPos[0]),Number(centerPos[1]));
             marker = new BMap.Marker(new BMap.Point(Number(markerPos[0]), Number(markerPos[1])));
             map.addControl(new BMap.NavigationControl());
