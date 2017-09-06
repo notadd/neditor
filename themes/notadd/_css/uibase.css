@@ -2,7 +2,7 @@
 */
 /* common layer */
 .edui-notadd * {
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 .edui-notadd .edui-box {
     border: none;

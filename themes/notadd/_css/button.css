@@ -2,7 +2,7 @@
 .edui-notadd .edui-toolbar .edui-button .edui-icon,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-icon,
 .edui-notadd .edui-toolbar .edui-splitbutton .edui-icon {
-    padding: 6px;
+    padding: 5px;
     /*height: 20px !important;*/
     /*width: 20px !important;*/
     /*background-image: url(../images/icons.png);*/
@@ -10,8 +10,8 @@
     /*font-size: 18px;*/
     /*line-height: 1;*/
     display: block;
-    height: 14px;
-    width: 14px;
+    height: 26px;
+    width: 26px;
 }
 
 .edui-notadd .edui-toolbar .edui-button .edui-icon::before,

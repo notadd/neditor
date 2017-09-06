@@ -20,8 +20,9 @@
 }
 
 .edui-notadd .edui-dialog-body {
+    box-sizing: content-box;
     position: relative;
-    padding:2px 0 0 2px;
+    padding:2px;
     _zoom: 1;
 }
 
@@ -262,7 +263,7 @@
     height: 455px;
 }
 .edui-dialog .edui-for-map .edui-dialog-body {
-    height: 560px !important;
+    height: 562px !important;
     width: 640px !important;
 }
 
