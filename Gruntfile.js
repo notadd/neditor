@@ -255,7 +255,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-transcoding");
   grunt.loadNpmTasks("grunt-contrib-clean");
 
-  grunt.registerTask("notadd", "UEditor build", function() {
+  grunt.registerTask("neditor", "UEditor build", function() {
     var tasks = [
       "concat",
       "cssmin",
