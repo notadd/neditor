@@ -20,7 +20,7 @@ Demo:  https://neditor.notadd.com/demo/
 ```shell
 git clone 仓库地址
 npm install
-grunt notadd
+grunt neditor
 ```
 
 ### 第二步：在浏览器打开 index.html ###
@@ -38,7 +38,7 @@ Neditor 默认以 PHP 为后端语言，但是同时也支持其他的后端语�
 编译其他后端语言的方法为，为 grunt 命令添加 server 参数，例如，编译 jsp 为后端语言的版本的命令为：
 
 ```bash
-grunt notadd --server=jsp
+grunt neditor --server=jsp
 ```
 
 执行该命令后，则会在目录 dist 中生成对应的目录 utf8-jsp，目录包含了对应版本的文件。
