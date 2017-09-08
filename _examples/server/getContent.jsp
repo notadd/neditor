@@ -1,6 +1,6 @@
     <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-<script src="../../neditor.parse.js" type="text/javascript"></script>
+<script src="../../ueditor.parse.js" type="text/javascript"></script>
 <script>
         uParse('.content',{
             'rootPath': '../'

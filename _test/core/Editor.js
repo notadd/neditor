@@ -203,7 +203,7 @@ test("setDisabled,setEnabled", function () {
     $(container).css('width', '500px').css('height', '500px').css('border', '1px solid #ccc');
     editor.render(container);
     editor.ready(function () {
-        editor.setContent('<p>欢迎使用neditor!</p>');
+        editor.setContent('<p>欢迎使用ueditor!</p>');
         editor.focus();
         setTimeout(function () {
             var startContainer = editor.selection.getRange().startContainer.outerHTML;
@@ -219,7 +219,7 @@ test("setDisabled,setEnabled", function () {
                 editor.setEnabled();
                 setTimeout(function () {
                     equal(editor.body.contentEditable, 'true', 'setEnabled');
-                    equal(ua.getChildHTML(editor.body), '<p>欢迎使用neditor!</p>', '内容恢复');
+                    equal(ua.getChildHTML(editor.body), '<p>欢迎使用ueditor!</p>', '内容恢复');
                     if (!ua.browser.ie || ua.browser.ie < 9) {// ie9,10改range 之后，ie9,10这里的前后range不一致，focus时是text，setEnabled后是p
                         equal(editor.selection.getRange().startContainer.outerHTML, startContainer, '检查range');
                     }
@@ -238,7 +238,7 @@ test("render-- element", function () {
     equal(div.innerHTML, "", "before render");
     editor.render(div);
     equal(div.firstChild.tagName.toLocaleLowerCase(), 'iframe', 'check iframe');
-    ok(/neditor_/.test(div.firstChild.id), 'check iframe id');
+    ok(/ueditor_/.test(div.firstChild.id), 'check iframe id');
     te.dom.push(div);
 });
 
@@ -247,7 +247,7 @@ test("render-- elementid", function () {
     var div = te.dom[0];
     editor.render(div.id);
     equal(div.firstChild.tagName.toLocaleLowerCase(), 'iframe', 'check iframe');
-    ok(/neditor_/.test(div.firstChild.id), 'check iframe id');
+    ok(/ueditor_/.test(div.firstChild.id), 'check iframe id');
 });
 
 test("render-- options", function () {
@@ -777,14 +777,14 @@ test('2个实例采用2个配置文件', function () {
     head.appendChild(script);
     expect(6);
     stop();
-    /*动态加载js需要时间，用这个neditor.config.js覆盖默认的配置文件*/
+    /*动态加载js需要时间，用这个ueditor.config.js覆盖默认的配置文件*/
     setTimeout(function () {
         var div1 = document.body.appendChild(document.createElement('div'));
         div1.id = 'div1';
         div1.style.height = '200px';
         var div2 = document.body.appendChild(document.createElement('div'));
         div2.id = 'div2';
-        var editor1 = UE.getEditor('div1', {'UEDITOR_HOME_URL': '../../../', 'initialContent': '欢迎使用neditor', 'autoFloatEnabled': false});
+        var editor1 = UE.getEditor('div1', {'UEDITOR_HOME_URL': '../../../', 'initialContent': '欢迎使用ueditor', 'autoFloatEnabled': false});
         editor1.ready(function () {
             var editor2 = UE.getEditor('div2', UEDITOR_CONFIG2);
             editor2.ready(function () {
@@ -794,8 +794,8 @@ test('2个实例采用2个配置文件', function () {
                 var html = UEDITOR_CONFIG2.initialContent;
                 ua.checkHTMLSameStyle(html, editor2.document, editor2.body.firstChild, '初始内容为自定制的');
                 equal(editor2.options.enterTag, 'br', 'enterTag is br');
-                html = '欢迎使用neditor';
-                equal(html, editor1.body.firstChild.innerHTML, '内容和neditor.config一致');
+                html = '欢迎使用ueditor';
+                equal(html, editor1.body.firstChild.innerHTML, '内容和ueditor.config一致');
                 equal(editor1.options.enterTag, 'p', 'enterTag is p');
                 setTimeout(function () {
                     UE.delEditor('div1');

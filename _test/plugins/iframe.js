@@ -18,7 +18,7 @@ test( '检查高亮和清除_iframe', function() {
             var iframe = document.createElement('iframe');
             $(iframe).attr('src','www.baidu.com');
             this._iframe = iframe;
-            this.setContent('<p>欢迎使用neditor!</p>');
+            this.setContent('<p>欢迎使用ueditor!</p>');
             ok(te.obj[2]._iframe,'加入_iframe');
             setTimeout(function(){
                 ok(!te.obj[2]._iframe,'检查selectionchanged会触发去掉_iframe');

@@ -2,9 +2,9 @@
 <%
     action = Request.Item("action")
 
-    Session.Contents.Remove("neditor_asp_uploadTemplateName")
-    Session.Contents.Remove("neditor_asp_base64Upload")
-    Session.Contents.Remove("neditor_asp_listTemplateName")
+    Session.Contents.Remove("ueditor_asp_uploadTemplateName")
+    Session.Contents.Remove("ueditor_asp_base64Upload")
+    Session.Contents.Remove("ueditor_asp_listTemplateName")
 
 
     Select Case action
@@ -13,28 +13,28 @@
             Server.Execute("action_config.asp")
 
         Case "uploadimage"
-            Session.Value("neditor_asp_uploadTemplateName") = "image"
+            Session.Value("ueditor_asp_uploadTemplateName") = "image"
             Server.Execute("action_upload.asp")
 
         Case "uploadscrawl"
-            Session.Value("neditor_asp_uploadTemplateName") = "scrawl"
+            Session.Value("ueditor_asp_uploadTemplateName") = "scrawl"
             Session.Value("base64Upload") = "scrawl.png"
             Server.Execute("action_upload.asp")
 
         Case "uploadvideo"
-            Session.Value("neditor_asp_uploadTemplateName") = "video"
+            Session.Value("ueditor_asp_uploadTemplateName") = "video"
             Server.Execute("action_upload.asp")
 
         Case "uploadfile"
-            Session.Value("neditor_asp_uploadTemplateName") = "file"
+            Session.Value("ueditor_asp_uploadTemplateName") = "file"
             Server.Execute("action_upload.asp")
 
         Case "listimage"
-            Session.Value("neditor_asp_listTemplateName") = "image"
+            Session.Value("ueditor_asp_listTemplateName") = "image"
             Server.Execute("action_list.asp")
 
         Case "listfile"
-            Session.Value("neditor_asp_listTemplateName") = "file"
+            Session.Value("ueditor_asp_listTemplateName") = "file"
             Server.Execute("action_list.asp")
 
         Case "catchimage"

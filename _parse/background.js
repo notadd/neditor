@@ -14,7 +14,7 @@ UE.parse.register("background", function(utils) {
   //追加默认的表格样式
   styles &&
     utils.cssRule(
-      "neditor_background",
+      "ueditor_background",
       me.selector + "{" + styles + "}",
       document
     );

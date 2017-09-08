@@ -17,10 +17,10 @@ test("post请求，无数据", function () {
 });
 
 test("get请求，无数据,url中有数据", function () {
-    UE.ajax.request(ajax_request_baseurl + "?get1=neditor&get2=baidu", {
+    UE.ajax.request(ajax_request_baseurl + "?get1=ueditor&get2=baidu", {
         method: 'GET',
         onsuccess: function (xhr) {
-            equals(xhr.responseText, "get1='neditor'&get2='baidu'", "post请求，数据放在url中传递");
+            equals(xhr.responseText, "get1='ueditor'&get2='baidu'", "post请求，数据放在url中传递");
             start();
         },
         onerror: function () {
@@ -33,11 +33,11 @@ test("get请求，无数据,url中有数据", function () {
 
 
 test("get请求,有数据,url中有数据", function () {
-    UE.ajax.request(ajax_request_baseurl + "?get1=neditor&get2=baidu", {
+    UE.ajax.request(ajax_request_baseurl + "?get1=ueditor&get2=baidu", {
         method: 'GET',
         content: "img1=https://www.baidu.com&img2=http://ueditor.baidu.com",
         onsuccess: function (xhr) {
-            equals(xhr.responseText, "get1='neditor'&get2='baidu'&img1=https://www.baidu.com&img2=http://ueditor.baidu.com", "post请求，数据放在url中传递");
+            equals(xhr.responseText, "get1='ueditor'&get2='baidu'&img1=https://www.baidu.com&img2=http://ueditor.baidu.com", "post请求，数据放在url中传递");
             start();
         },
         onerror: function () {
@@ -49,13 +49,13 @@ test("get请求,有数据,url中有数据", function () {
 });
 
 test("get请求，有data字段，无数据,url中有数据", function () {
-    UE.ajax.request(ajax_request_baseurl + "?get1=neditor&get2=baidu", {
+    UE.ajax.request(ajax_request_baseurl + "?get1=ueditor&get2=baidu", {
         method: 'GET',
         data: {
             img1: 'https://www.baidu.com', img2: 'https://www.google.com'
         },
         onsuccess: function (xhr) {
-            equals(xhr.responseText, "get1='neditor'&get2='baidu'&img1='https://www.baidu.com'&img2='https://www.google.com'", "post请求，数据放在url中传递");
+            equals(xhr.responseText, "get1='ueditor'&get2='baidu'&img1='https://www.baidu.com'&img2='https://www.google.com'", "post请求，数据放在url中传递");
             start();
         },
         onerror: function () {

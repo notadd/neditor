@@ -38,7 +38,7 @@
           (ti = tis[i++]);
 
         ) {
-          if (ti.id == "neditor_textarea_" + editor.options.textarea) {
+          if (ti.id == "ueditor_textarea_" + editor.options.textarea) {
             textarea = ti;
             break;
           }
@@ -51,7 +51,7 @@
       form.appendChild(
         (textarea = domUtils.createElement(document, "textarea", {
           name: editor.options.textarea,
-          id: "neditor_textarea_" + editor.options.textarea,
+          id: "ueditor_textarea_" + editor.options.textarea,
           style: "display:none"
         }))
       );
@@ -274,7 +274,7 @@
       );
     }
 
-    UE.instants["neditorInstant" + me.uid] = me;
+    UE.instants["ueditorInstant" + me.uid] = me;
   });
   Editor.prototype = {
     registerCommand: function(name, obj) {
@@ -453,7 +453,7 @@
           "<script type='text/javascript' " +
           (ie ? "defer='defer'" : "") +
           " id='_initialScript'>" +
-          "setTimeout(function(){editor = window.parent.UE.instants['neditorInstant" +
+          "setTimeout(function(){editor = window.parent.UE.instants['ueditorInstant" +
           me.uid +
           "'];editor._setup(document);},0);" +
           "var _tmpScript = document.getElementById('_initialScript');_tmpScript.parentNode.removeChild(_tmpScript);" +
@@ -467,7 +467,7 @@
 
         container.appendChild(
           domUtils.createElement(document, "iframe", {
-            id: "neditor_" + me.uid,
+            id: "ueditor_" + me.uid,
             width: "100%",
             height: "100%",
             frameborder: "0",
@@ -1633,10 +1633,10 @@
          * @param { String } action action名称
          * @example
          * ```javascript
-         * editor.getActionUrl('config'); //返回 "/neditor/php/controller.php?action=config"
-         * editor.getActionUrl('image'); //返回 "/neditor/php/controller.php?action=uplaodimage"
-         * editor.getActionUrl('scrawl'); //返回 "/neditor/php/controller.php?action=uplaodscrawl"
-         * editor.getActionUrl('imageManager'); //返回 "/neditor/php/controller.php?action=listimage"
+         * editor.getActionUrl('config'); //返回 "/ueditor/php/controller.php?action=config"
+         * editor.getActionUrl('image'); //返回 "/ueditor/php/controller.php?action=uplaodimage"
+         * editor.getActionUrl('scrawl'); //返回 "/ueditor/php/controller.php?action=uplaodscrawl"
+         * editor.getActionUrl('imageManager'); //返回 "/ueditor/php/controller.php?action=listimage"
          * ```
          */
     getActionUrl: function(action) {

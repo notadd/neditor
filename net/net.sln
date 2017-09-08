@@ -8,20 +8,20 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "net", "http://localhost:795
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_7957"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\prj\neditor\net\"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\prj\ueditor\net\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7957\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_7957"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\prj\neditor\net\"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\prj\ueditor\net\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7957\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "..\..\..\..\prj\neditor\net\"
+		SlnRelativePath = "..\..\..\..\prj\ueditor\net\"
 	EndProjectSection
 EndProject
 Global

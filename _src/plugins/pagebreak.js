@@ -6,7 +6,7 @@
 UE.plugins["pagebreak"] = function() {
   var me = this,
     notBreakTags = ["td"];
-  me.setOpt("pageBreakTag", "_neditor_page_break_tag_");
+  me.setOpt("pageBreakTag", "_ueditor_page_break_tag_");
 
   function fillNode(node) {
     if (domUtils.isEmptyBlock(node)) {
@@ -69,7 +69,7 @@ UE.plugins["pagebreak"] = function() {
      * @method execCommand
      * @param { String } cmd 命令字符串
      * @remind 在表格中插入分页符会把表格切分成两部分
-     * @remind 获取编辑器内的数据时， 编辑器会把分页符转换成“_neditor_page_break_tag_”字符串，
+     * @remind 获取编辑器内的数据时， 编辑器会把分页符转换成“_ueditor_page_break_tag_”字符串，
      *          以便于提交数据到服务器端后处理分页。
      * @example
      * ```javascript

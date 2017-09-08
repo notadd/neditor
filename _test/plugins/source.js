@@ -199,7 +199,7 @@ test('插入分页符,源码中显示：_baidu_page_break_tag_', function () {
             }
             ua.manualDeleteFillData(editor.body);
 //        var br = baidu.editor.browser.ie ? '&nbsp;' : '<br />';
-            ok(editor.getContent().indexOf('_neditor_page_break_tag_') >= 0, 'pagebreak被解析');
+            ok(editor.getContent().indexOf('_ueditor_page_break_tag_') >= 0, 'pagebreak被解析');
 //        equal( editor.getContent(), '<p>' + br + '</p>_baidu_page_break_tag_<p>' + br + '</p>' );
             start();
         }, 200);

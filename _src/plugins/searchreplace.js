@@ -117,7 +117,7 @@ UE.plugin.register("searchreplace", function() {
       startBlockNode,
       searchStr = opt.searchStr,
       span = me.document.createElement("span");
-    span.innerHTML = "$$neditor_searchreplace_key$$";
+    span.innerHTML = "$$ueditor_searchreplace_key$$";
 
     rng.shrinkBoundary(true);
 
@@ -145,7 +145,7 @@ UE.plugin.register("searchreplace", function() {
     rng.enlargeToBlockElm(true);
     startBlockNode = rng.startContainer;
     var currentIndex = getText(startBlockNode).indexOf(
-      "$$neditor_searchreplace_key$$"
+      "$$ueditor_searchreplace_key$$"
     );
     rng.setStartBefore(span);
     domUtils.remove(span);

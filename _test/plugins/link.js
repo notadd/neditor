@@ -40,10 +40,10 @@ test( '在超链接前加一个超链接', function () {
 test( '给图片添加超链接', function () {
     var editor = te.obj[0];
     var range = te.obj[1];
-    editor.setContent( '<p><img  style="width: 200px;height: 200px" src="http://neditor.baidu.com/img/logo.png">hello</p>' );
+    editor.setContent( '<p><img  style="width: 200px;height: 200px" src="http://ueditor.baidu.com/img/logo.png">hello</p>' );
     range.selectNode( editor.body.firstChild.firstChild ).select();
     editor.execCommand( 'link', {href:'http://www.baidu.com/'} );
-    var html = '<a  href="http://www.baidu.com/" ><img  src="http://neditor.baidu.com/img/logo.png" _src=\"http://neditor.baidu.com/img/logo.png" style="width: 200px;height: 200px" ></a>hello';
+    var html = '<a  href="http://www.baidu.com/" ><img  src="http://ueditor.baidu.com/img/logo.png" _src=\"http://ueditor.baidu.com/img/logo.png" style="width: 200px;height: 200px" ></a>hello';
     ua.checkHTMLSameStyle( html, editor.document, editor.body.firstChild, '给图片添加超链接' );
 //    equal(html,editor.body.firstChild.innerHTML);
 } );
@@ -199,10 +199,10 @@ test( '对现有的超链接修改超链接地址', function () {
     var a1 = body.firstChild.firstChild;
     range.selectNode( a1 ).select();
 
-    editor.execCommand( 'link', {href:'neditor.baidu.com'} );
+    editor.execCommand( 'link', {href:'ueditor.baidu.com'} );
     a1 = body.firstChild.firstChild;
-    equal( a1.getAttribute( 'href' ), 'neditor.baidu.com', 'check href' );
-    equal( a1.innerHTML, 'neditor.baidu.com', 'innerHTML也相应变化' );
+    equal( a1.getAttribute( 'href' ), 'ueditor.baidu.com', 'check href' );
+    equal( a1.innerHTML, 'ueditor.baidu.com', 'innerHTML也相应变化' );
 
     var a2 = body.firstChild.getElementsByTagName( 'a' )[1];
     range.selectNode( a2 ).select();

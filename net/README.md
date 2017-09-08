@@ -32,7 +32,7 @@ C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis -i
 
 代码要求以应用程序的形式来运行（可以方便加入库依赖和组织代码）。需要把 `net` 目录转换为应用程序。
 
-1. 在 IIS 中，展开到 `neditor/net` 目录，在目录上右击，点击「转换为应用程序」。
+1. 在 IIS 中，展开到 `ueditor/net` 目录，在目录上右击，点击「转换为应用程序」。
 
    ![转换为应用程序](../_doc/images/net-publish-2.png)
 
@@ -52,7 +52,7 @@ C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis -i
 
 在浏览器中运行 `net/controller.ashx`，如果返回 "`{"state":"action 参数为空或者 action 不被支持。"}`"，则表示应用程序运行成功。
 
-如果你确认上述步骤已经执行，但是依然有问题，请给我们[提 Issue](https://github.com/fex-team/neditor/issues/new?labels=NET%E5%90%8E%E5%8F%B0)，我们会尽快答复解决。
+如果你确认上述步骤已经执行，但是依然有问题，请给我们[提 Issue](https://github.com/fex-team/ueditor/issues/new?labels=NET%E5%90%8E%E5%8F%B0)，我们会尽快答复解决。
 
 ## 2. 配置说明
 
@@ -66,7 +66,7 @@ C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis -i
 {
     "{tpl}FieldName": "upfile",
     "{tpl}PathFormat": "upload/{tpl}/{yyyy}{mm}{dd}/{time}{rand:6}",
-    "{tpl}UrlPrefix": "/neditor/net/",
+    "{tpl}UrlPrefix": "/ueditor/net/",
     "{tpl}AllowFiles": [".png", ".jpg", ".jpeg", ".gif", ".bmp"],
     "{tpl}MaxSize": 2048000
 }
@@ -78,14 +78,14 @@ C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis -i
 
 "{tpl}UrlPrefix" 表示上传文件访问的 URL 前缀。注意，这里应该给出应用程序的 URL 路径，否则上传的文件不能正确定位。
 
-> 举个例子，如果你的 UEditor 的位置在 `http://www.mydomain.com/myapp/neditor`，对应的本地路径是 `C:\iis_pub\www\myapp\neditor`，那么 .NET 应用程序的位置在 `http://www.mydomain.com/myapp/neditor/net`，对应的本地路径是 `C:\iis_pub\www\myapp\neditor\net`。图片上传配置项应该如下：
+> 举个例子，如果你的 UEditor 的位置在 `http://www.mydomain.com/myapp/ueditor`，对应的本地路径是 `C:\iis_pub\www\myapp\ueditor`，那么 .NET 应用程序的位置在 `http://www.mydomain.com/myapp/ueditor/net`，对应的本地路径是 `C:\iis_pub\www\myapp\ueditor\net`。图片上传配置项应该如下：
 > 
 > { 
 >    "imagePathFormat": "upload/image/{yyyy}{mm}{dd}/{time}{rand:6}",
->    "imageUrlPrefix": "/myapp/neditor/net/",
+>    "imageUrlPrefix": "/myapp/ueditor/net/",
 > }
 >
-> 上传的文件会保存在 `C:\iis_pub\www\myapp\neditor\net\upload\image\{日期}\{文件名}`
+> 上传的文件会保存在 `C:\iis_pub\www\myapp\ueditor\net\upload\image\{日期}\{文件名}`
 
 "{tpl}AllowFiles" 限制文件上传的类型，注意要有 "."。
 

@@ -1,6 +1,6 @@
-package com.baidu.neditor.upload;
+package com.baidu.ueditor.upload;
 
-import com.baidu.neditor.define.State;
+import com.baidu.ueditor.define.State;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 

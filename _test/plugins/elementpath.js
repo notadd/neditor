@@ -13,7 +13,7 @@ module('plugins.elementpath');
 test('表格', function () {
     var div = document.body.appendChild(document.createElement('div'));
     div.id = 'ue';
-    var editor = UE.getEditor('ue', {'initialContent': '<p>欢迎使用neditor</p>', 'elementPathEnabled': true, 'autoFloatEnabled': false});
+    var editor = UE.getEditor('ue', {'initialContent': '<p>欢迎使用ueditor</p>', 'elementPathEnabled': true, 'autoFloatEnabled': false});
     editor.ready(function () {
         var range = new baidu.editor.dom.Range(editor.document);
         editor.setContent('<table><tbody><tr><td>hello1</td><td><strong>strongText</strong>hello2<span style="text-decoration: underline">spanText</span></td></tr></tbody></table>');
@@ -119,7 +119,7 @@ test(' 通过选区路径取range', function () {
 
 test('trace 1539:列表', function () {
     var div = document.body.appendChild(document.createElement('div'));
-    var editor = new baidu.editor.Editor({'initialContent': '<p>欢迎使用neditor</p>', 'elementPathEnabled': true, 'autoFloatEnabled': false});
+    var editor = new baidu.editor.Editor({'initialContent': '<p>欢迎使用ueditor</p>', 'elementPathEnabled': true, 'autoFloatEnabled': false});
     stop();
     setTimeout(function () {
         editor.render(div);
@@ -146,7 +146,7 @@ test('trace 1539:列表', function () {
 });
 test('文本和超链接', function () {
     var div = document.body.appendChild(document.createElement('div'));
-    var editor = new baidu.editor.Editor({'initialContent': '<p>欢迎使用neditor</p>', 'elementPathEnabled': true, 'autoFloatEnabled': false});
+    var editor = new baidu.editor.Editor({'initialContent': '<p>欢迎使用ueditor</p>', 'elementPathEnabled': true, 'autoFloatEnabled': false});
     editor.render(div);
     stop();
     editor.ready(function () {
@@ -171,7 +171,7 @@ test('图片', function () {
     if(ua.browser.ie>8)return;//todo 1.3.6 #3847
     var div = document.body.appendChild(document.createElement('div'));
     div.id = "ue";
-    var editor = UE.getEditor("ue",{'initialContent': '<p>欢迎使用neditor</p>', 'elementPathEnabled': true, 'autoFloatEnabled': false});
+    var editor = UE.getEditor("ue",{'initialContent': '<p>欢迎使用ueditor</p>', 'elementPathEnabled': true, 'autoFloatEnabled': false});
     stop();
     editor.ready(function () {
         var range = new baidu.editor.dom.Range(editor.document);
@@ -195,7 +195,7 @@ test('图片', function () {
 test('锚点', function () {
     if(ua.browser.ie>8)return;//todo 1.3.6 #3847
     var div = document.body.appendChild(document.createElement('div'));
-    var editor = new baidu.editor.Editor({'initialContent': '<p>欢迎使用neditor</p>', 'elementPathEnabled': true, 'autoFloatEnabled': false});
+    var editor = new baidu.editor.Editor({'initialContent': '<p>欢迎使用ueditor</p>', 'elementPathEnabled': true, 'autoFloatEnabled': false});
     editor.render(div);
     stop();
     editor.ready(function () {
@@ -214,7 +214,7 @@ test('锚点', function () {
 });
 test('文本', function () {
     var div = document.body.appendChild(document.createElement('div'));
-    var editor = new baidu.editor.Editor({'initialContent': '<p>欢迎使用neditor</p>', 'elementPathEnabled': true, 'autoFloatEnabled': false});
+    var editor = new baidu.editor.Editor({'initialContent': '<p>欢迎使用ueditor</p>', 'elementPathEnabled': true, 'autoFloatEnabled': false});
     editor.render(div);
     stop();
     editor.ready(function () {
@@ -236,7 +236,7 @@ test('trace 3995表格和文本', function () {
     if(ua.browser.ie==11)return;//todo dev1.4.0
 
     var div = document.body.appendChild(document.createElement('div'));
-    var editor = new baidu.editor.Editor({'initialContent': '<p>欢迎使用neditor</p>', 'elementPathEnabled': true, 'autoFloatEnabled': false});
+    var editor = new baidu.editor.Editor({'initialContent': '<p>欢迎使用ueditor</p>', 'elementPathEnabled': true, 'autoFloatEnabled': false});
     editor.render(div);
     stop();
     editor.ready(function () {

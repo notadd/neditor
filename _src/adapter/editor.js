@@ -226,7 +226,7 @@
         },
         _updateIframe: function() {
           var frame = (editor._iframe = popup.anchorEl);
-          if (domUtils.hasClass(frame, "neditor_baidumap")) {
+          if (domUtils.hasClass(frame, "ueditor_baidumap")) {
             editor.selection.getRange().selectNode(frame).select();
             editor.ui._dialogs.mapDialog.open();
             popup.hide();

@@ -1,16 +1,16 @@
-package com.baidu.neditor;
+package com.baidu.ueditor;
 
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.baidu.neditor.define.ActionMap;
-import com.baidu.neditor.define.AppInfo;
-import com.baidu.neditor.define.BaseState;
-import com.baidu.neditor.define.State;
-import com.baidu.neditor.hunter.FileManager;
-import com.baidu.neditor.hunter.ImageHunter;
-import com.baidu.neditor.upload.Uploader;
+import com.baidu.ueditor.define.ActionMap;
+import com.baidu.ueditor.define.AppInfo;
+import com.baidu.ueditor.define.BaseState;
+import com.baidu.ueditor.define.State;
+import com.baidu.ueditor.hunter.FileManager;
+import com.baidu.ueditor.hunter.ImageHunter;
+import com.baidu.ueditor.upload.Uploader;
 
 public class ActionEnter {
 	

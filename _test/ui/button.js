@@ -20,7 +20,7 @@ test( "工具栏国际化", function () {
     div.id = "editor1";
     div.style.cssText = "width:1px;height:1px;";
     document.body.appendChild( div );
-    var editor = top.neditor = new baidu.editor.ui.Editor( {
+    var editor = top.ueditor = new baidu.editor.ui.Editor( {
         lang:"en"
     } );
     editor.render( "editor1" );

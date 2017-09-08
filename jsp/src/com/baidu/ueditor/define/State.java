@@ -1,4 +1,4 @@
-package com.baidu.neditor.define;
+package com.baidu.ueditor.define;
 
 /**
  * 处理状态接口

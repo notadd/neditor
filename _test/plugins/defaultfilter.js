@@ -190,8 +190,8 @@ test("getContent--转换空格，nbsp与空格相间显示", function() {
 test( '转换script标签', function () {
     var editor = te.obj[0];
     var br = ua.browser.ie?'<p>&nbsp;</p>':('<p><br></p>');
-    editor.setContent( '<script type="text/javascript">neditor</script>' );
-    var html = br+'<div type="text/javascript" cdata_tag=\"script\"  cdata_data=\"neditor\" _ue_custom_node_=\"true\"></div>';
+    editor.setContent( '<script type="text/javascript">ueditor</script>' );
+    var html = br+'<div type="text/javascript" cdata_tag=\"script\"  cdata_data=\"ueditor\" _ue_custom_node_=\"true\"></div>';
     ua.checkSameHtml(editor.body.innerHTML,html,'转换script标签');
 } );
 test( 'trace 3698 1.3.0 版本修复: script(style)标签里面的内容不转码', function () {
@@ -220,8 +220,8 @@ test( '转换style标签:style data不空', function () {
 } );
 test( 'div出编辑器转换', function () {
     var editor = te.obj[0];
-    var str =  '<script type="text/javascript">neditor</script>' ;
-    var html = '<div type="text/javascript" cdata_tag=\"script\" >neditor</div>';
+    var str =  '<script type="text/javascript">ueditor</script>' ;
+    var html = '<div type="text/javascript" cdata_tag=\"script\" >ueditor</div>';
     editor.body.innerHTML = html;
     editor.execCommand( 'source' );
     stop();

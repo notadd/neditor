@@ -330,7 +330,7 @@ test( 'block的元素-样式的反复转换：内联-块；包含的选取方式
 } );
 test( 'block的元素-样式的反复转换：内联-内联；包含的选取方式：闭合，非闭合，多段', function () {
         var div = document.body.appendChild( document.createElement( 'div' ) );
-        var editor = new baidu.editor.Editor({'initialContent':'<p>欢迎使用neditor</p>','elementPathEnabled' : true,'autoFloatEnabled':false});
+        var editor = new baidu.editor.Editor({'initialContent':'<p>欢迎使用ueditor</p>','elementPathEnabled' : true,'autoFloatEnabled':false});
 
         stop();
     setTimeout(function(){
