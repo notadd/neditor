@@ -1,15 +1,29 @@
+## 更新内容
 
-## Neditor富文本编辑器介绍
+* 合并 ueditor 1.5.0-dev 的所有更新
+* 增加 HTTPS 支持
+* 去除 视频上传 flash ，改用video
+* 其他细节调整
 
-## 当前版本基于 Ueditor 1.5.0 
+## Neditor 富文本编辑器介绍
 
+抱歉，由于项目原因，最近未能修正已存在的BUG，目前 1.5.0 已经发布，后期会尽量抽时间维护，后续打算加入 ajax 提交，无需编译。
+
+### 关于 HTTPS
+
+ueditor 是不支持 https 的，我们也做了不少修改，由于百度表情，音乐不支持https 接口，所以使用了 [又拍云CDN](https://console.upyun.com/register/?invite=r17EYO3BW) 给大家提供服务，（希望大家能够从此链接注册认证，延长CDN使用时间）
+如果有需要，也可将下面域名改成自己的。
+```
+imgbaidu.b0.upaiyun.com
+tingapi.b0.upaiyun.com
+```
 Neditor 是我们团队基于 Ueditor 的一款富文本编辑器。
 不论从功能还是从其它各方面来讲， Ueditor 都是一款无以替代的编辑器产品。
 只是已经不符合现代化样式的需求，于是我们修改它的样式，实现了这样的效果：
 
 ![image](https://www.notadd.com/src/neditor.webp)
 
-Demo:  https://neditor.notadd.com/demo/
+Demo:  https://demo.neditor.notadd.com/
 
 ## 入门部署和体验 ##
 
@@ -73,7 +87,13 @@ ue.ready(function(){
 
 Ueditor 的更多API请看[API 文档](http://ueditor.baidu.com/doc "ueditor API 文档")
 
-## 相关链接 ##
+##  下载地址
+
+Neditor 码云： [http://gitee.com/notadd/neditor](http://gitee.com/notadd/neditor "Neditor github 地址")
+
+Neditor github 地址：[http://github.com/notadd/neditor](http://github.com/notadd/neditor "Neditor github 地址")
+
+## 相关链接 
 
 Ueditor 官网：[http://ueditor.baidu.com](http://ueditor.baidu.com "ueditor 官网")
 
@@ -81,7 +101,7 @@ Ueditor API 文档：[http://ueditor.baidu.com/doc](http://ueditor.baidu.com/doc
 
 Ueditor github 地址：[http://github.com/fex-team/ueditor](http://github.com/fex-team/ueditor "ueditor github 地址")
 
-Neditor github 地址：[http://github.com/notadd/neditor](http://github.com/fex-team/ueditor "Neditor github 地址")
+
 
 ## 详细文档
 
@@ -102,6 +122,6 @@ QQ 群： 321735506
 
 [捐赠](https://git.oschina.net/notadd/notadd?donate=true)
  
-## Notadd 主项目
+## 其他项目：Notadd
 
 https://github.com/notadd/notadd
