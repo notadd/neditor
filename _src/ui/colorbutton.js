@@ -3,7 +3,7 @@
 ///import ui/colorpicker.js
 ///import ui/popup.js
 ///import ui/splitbutton.js
-(function() {
+;(function() {
   var utils = baidu.editor.utils,
     uiUtils = baidu.editor.ui.uiUtils,
     ColorPicker = baidu.editor.ui.ColorPicker,

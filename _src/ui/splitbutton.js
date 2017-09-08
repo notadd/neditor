@@ -1,7 +1,7 @@
 ///import core
 ///import uicore
 ///import ui/stateful.js
-(function() {
+;(function() {
   var utils = baidu.editor.utils,
     uiUtils = baidu.editor.ui.uiUtils,
     domUtils = baidu.editor.dom.domUtils,

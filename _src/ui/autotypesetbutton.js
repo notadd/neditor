@@ -3,7 +3,7 @@
 ///import ui/popup.js
 ///import ui/autotypesetpicker.js
 ///import ui/splitbutton.js
-(function() {
+;(function() {
   var utils = baidu.editor.utils,
     Popup = baidu.editor.ui.Popup,
     AutoTypeSetPicker = baidu.editor.ui.AutoTypeSetPicker,

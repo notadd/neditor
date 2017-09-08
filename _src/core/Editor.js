@@ -19,7 +19,7 @@
  * @class Editor
  */
 
-(function() {
+;(function() {
   var uid = 0,
     _selectionChangeTimer;
 

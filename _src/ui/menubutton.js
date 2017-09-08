@@ -2,7 +2,7 @@
 ///import uicore
 ///import ui/menu.js
 ///import ui/splitbutton.js
-(function() {
+;(function() {
   var utils = baidu.editor.utils,
     Menu = baidu.editor.ui.Menu,
     SplitButton = baidu.editor.ui.SplitButton,

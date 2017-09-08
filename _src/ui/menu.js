@@ -2,7 +2,7 @@
 ///import uicore
 ///import ui\popup.js
 ///import ui\stateful.js
-(function() {
+;(function() {
   var utils = baidu.editor.utils,
     domUtils = baidu.editor.dom.domUtils,
     uiUtils = baidu.editor.ui.uiUtils,

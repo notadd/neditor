@@ -1,4 +1,4 @@
-(function() {
+;(function() {
   var utils = baidu.editor.utils,
     UIBase = baidu.editor.ui.UIBase,
     Separator = (baidu.editor.ui.Separator = function(options) {

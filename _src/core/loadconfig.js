@@ -1,4 +1,4 @@
-(function() {
+;(function() {
   UE.Editor.prototype.loadServerConfig = function() {
     var me = this;
     setTimeout(function() {

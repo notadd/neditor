@@ -1,6 +1,6 @@
 ///import core
 ///import uicore
-(function() {
+;(function() {
   var utils = baidu.editor.utils,
     UIBase = baidu.editor.ui.UIBase,
     ColorPicker = (baidu.editor.ui.ColorPicker = function(options) {

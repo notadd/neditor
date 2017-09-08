@@ -1,7 +1,7 @@
 ///import core
 ///import uicore
 ///commands 表情
-(function() {
+;(function() {
   var utils = baidu.editor.utils,
     Popup = baidu.editor.ui.Popup,
     SplitButton = baidu.editor.ui.SplitButton,

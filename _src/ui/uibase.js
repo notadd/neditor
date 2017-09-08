@@ -1,4 +1,4 @@
-(function() {
+;(function() {
   var utils = baidu.editor.utils,
     uiUtils = baidu.editor.ui.uiUtils,
     EventBase = baidu.editor.EventBase,

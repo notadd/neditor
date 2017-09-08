@@ -4,7 +4,7 @@
  * @since 1.2.6.1
  */
 
-(function() {
+;(function() {
   var sourceEditors = {
     textarea: function(editor, holder) {
       var textarea = holder.ownerDocument.createElement("textarea");

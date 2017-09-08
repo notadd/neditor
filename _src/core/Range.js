@@ -19,7 +19,7 @@
  * @class Range
  */
 
-(function() {
+;(function() {
   var guid = 0,
     fillChar = domUtils.fillChar,
     fillData;

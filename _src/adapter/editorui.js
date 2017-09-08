@@ -1,7 +1,7 @@
 //ui跟编辑器的适配層
 //那个按钮弹出是dialog，是下拉筐等都是在这个js中配置
 //自己写的ui也要在这里配置，放到baidu.editor.ui下边，当编辑器实例化的时候会根据neditor.config中的toolbars找到相应的进行实例化
-(function() {
+;(function() {
   var utils = baidu.editor.utils;
   var editorui = baidu.editor.ui;
   var _Dialog = editorui.Dialog;

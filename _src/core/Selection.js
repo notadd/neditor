@@ -12,7 +12,7 @@
  * @module UE.dom
  * @class Selection
  */
-(function() {
+;(function() {
   function getBoundaryInformation(range, start) {
     var getIndex = domUtils.getNodeIndex;
     range = range.duplicate();

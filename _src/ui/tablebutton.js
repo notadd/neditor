@@ -3,7 +3,7 @@
 ///import ui/popup.js
 ///import ui/tablepicker.js
 ///import ui/splitbutton.js
-(function() {
+;(function() {
   var utils = baidu.editor.utils,
     Popup = baidu.editor.ui.Popup,
     TablePicker = baidu.editor.ui.TablePicker,

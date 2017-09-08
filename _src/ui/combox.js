@@ -2,7 +2,7 @@
 ///import uicore
 ///import ui/menu.js
 ///import ui/splitbutton.js
-(function() {
+;(function() {
   // todo: menu和item提成通用list
   var utils = baidu.editor.utils,
     uiUtils = baidu.editor.ui.uiUtils,

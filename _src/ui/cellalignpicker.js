@@ -1,6 +1,6 @@
 ///import core
 ///import uicore
-(function() {
+;(function() {
   var utils = baidu.editor.utils,
     Popup = baidu.editor.ui.Popup,
     Stateful = baidu.editor.ui.Stateful,

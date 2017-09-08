@@ -1,4 +1,4 @@
-(function() {
+;(function() {
   var utils = baidu.editor.utils,
     UIBase = baidu.editor.ui.UIBase,
     Breakline = (baidu.editor.ui.Breakline = function(options) {

@@ -10,7 +10,7 @@
  * @param table
  * @constructor
  */
-(function() {
+;(function() {
   var UETable = (UE.UETable = function(table) {
     this.table = table;
     this.indexTable = [];

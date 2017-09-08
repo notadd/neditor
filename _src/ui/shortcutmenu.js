@@ -1,4 +1,4 @@
-(function() {
+;(function() {
   var UI = baidu.editor.ui,
     UIBase = UI.UIBase,
     uiUtils = UI.uiUtils,

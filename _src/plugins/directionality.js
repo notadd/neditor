@@ -3,7 +3,7 @@
  * @file
  * @since 1.2.6.1
  */
-(function() {
+;(function() {
   var block = domUtils.isBlockElm,
     getObj = function(editor) {
       //            var startNode = editor.selection.getStart(),
