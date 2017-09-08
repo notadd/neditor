@@ -281,7 +281,7 @@
         ' src="' + conUrl + '"' +
         ' width="' + 420  + '"' +
         ' height="' + 280  + '"' +
-        ' wmode="transparent" play="true" loop="false" menu="false" >' +
+        ' wmode="transparent" play="true" loop="false" menu="false" controls preload="auto">' +
         '</video>';
     }
 
