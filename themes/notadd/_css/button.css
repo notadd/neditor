@@ -2,16 +2,11 @@
 .edui-notadd .edui-toolbar .edui-button .edui-icon,
 .edui-notadd .edui-toolbar .edui-menubutton .edui-icon,
 .edui-notadd .edui-toolbar .edui-splitbutton .edui-icon {
-    padding: 5px;
-    /*height: 20px !important;*/
-    /*width: 20px !important;*/
-    /*background-image: url(../images/icons.png);*/
-    /*background-image: url(../images/icons.gif) \9;*/
-    /*font-size: 18px;*/
-    /*line-height: 1;*/
+    padding: 5px !important;
     display: block;
-    height: 26px;
-    width: 26px;
+    height: 26px !important;
+    width: 26px !important;
+    line-height: 1 !important;
 }
 
 .edui-notadd .edui-toolbar .edui-button .edui-icon::before,
@@ -69,29 +64,22 @@
 }
 
 .edui-notadd .edui-toolbar .edui-button .edui-button-wrap {
-    /*padding: 1px;*/
     position: relative;
 }
 
 .edui-notadd .edui-toolbar .edui-button .edui-state-hover .edui-button-wrap {
     background-color: #e5e5e5;
     padding: 0;
-    /*border: 1px solid #dcac6c;*/
 }
 
 .edui-notadd .edui-toolbar .edui-button .edui-state-checked .edui-button-wrap {
     background-color: #666666;
     padding: 0;
-    /*border: 1px solid #dcac6c;*/
-    /*border-radius: 2px;*/
-    /*-webkit-border-radius: 2px;*/
-    /*-moz-border-radius: 2px;*/
 }
 
 .edui-notadd .edui-toolbar .edui-button .edui-state-active .edui-button-wrap {
     background-color: #666666;
     padding: 0;
-    /*border: 1px solid gray;*/
 }
 
 .edui-notadd .edui-toolbar .edui-button .edui-state-active .edui-icon {
