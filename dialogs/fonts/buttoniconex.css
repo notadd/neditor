@@ -14,7 +14,13 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+.edui-iconfont {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
 .edui-for-close .edui-icon:before { content: "\e654"; }
 
 .edui-for-italic .edui-icon:before { content: "\e62d"; }

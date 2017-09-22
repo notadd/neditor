@@ -3,7 +3,7 @@
     width: 60px;
     font-size: 12px;
     height: 20px;
-    line-height: 20px;
+    line-height: 20px !important;
     padding-left: 5px;
     white-space: nowrap;
     margin: 0 3px 0 0;
