@@ -10,10 +10,7 @@
 }
 
 .edui-notadd .edui-toolbar .edui-combox-body .edui-arrow::after {
-    /*background: url(../images/icons.png) -741px 0;*/
-    /*_background: url(../images/icons.gif) -741px 0;*/
-    height: 26px;
-    /*width: 9px;*/
+    height: 25px;
 
     font-family:"edui-notadd" !important;
     font-size: 26px;
