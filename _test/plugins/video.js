@@ -20,13 +20,13 @@ test( '插入优酷视频', function () {
         equal(img.length,1,'插入img');
         equal(img[0].width,"500");
         equal(img[0].height,"400");
-        equal(img[0].src,editor.options.UEDITOR_HOME_URL+'themes/default/images/spacer.gif');
+        equal(img[0].src,editor.options.UEDITOR_HOME_URL+'themes/notadd/images/spacer.gif');
         if(ua.browser.gecko||ua.browser.ie>8){
-            ok(img[0].style.background.indexOf('url(\"'+editor.options.UEDITOR_HOME_URL+'themes/default/images/videologo.gif\")') > -1, '占位符背景图是否正常');
+            ok(img[0].style.background.indexOf('url(\"'+editor.options.UEDITOR_HOME_URL+'themes/notadd/images/videologo.gif\")') > -1, '占位符背景图是否正常');
         }
         else
         {
-            ok(img[0].style.background.indexOf("url("+editor.options.UEDITOR_HOME_URL+"themes/default/images/videologo.gif)") > -1, '占位符背景图是否正常');
+            ok(img[0].style.background.indexOf("url("+editor.options.UEDITOR_HOME_URL+"themes/notadd/images/videologo.gif)") > -1, '占位符背景图是否正常');
         }
         var html = editor.getContent();
         ok(html.toLowerCase().indexOf('<embed') != -1, '转换为embed标签');
@@ -48,7 +48,7 @@ test( '插入上传视频', function () {
         equal(img[0].width,"500");
         equal(img[0].height,"400");
         ok(img[0].className && img[0].className.indexOf('edui-upload-video') != -1, 'okey:有edui-upload-video的class标记');
-        equal(img[0].src,editor.options.UEDITOR_HOME_URL+'themes/default/images/spacer.gif');
+        equal(img[0].src,editor.options.UEDITOR_HOME_URL+'themes/notadd/images/spacer.gif');
         if(ua.browser.gecko||ua.browser.ie>8){
             ok(img[0].style.background.indexOf('url(\"'+editor.options.UEDITOR_HOME_URL+'themes/default/images/videologo.gif\")') > -1, '占位符背景图是否正常');
         }

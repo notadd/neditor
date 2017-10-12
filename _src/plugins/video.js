@@ -34,9 +34,9 @@ UE.plugins["video"] = function() {
           '"' +
           ' src="' +
           me.options.UEDITOR_HOME_URL +
-          'themes/default/images/spacer.gif" style="background:url(' +
+          'themes/notadd/images/spacer.gif" style="background:url(' +
           me.options.UEDITOR_HOME_URL +
-          "themes/default/images/videologo.gif) no-repeat center center; border:1px solid gray;" +
+          "themes/notadd/images/videologo.gif) no-repeat center center; border:1px solid gray;" +
           (align ? "float:" + align + ";" : "") +
           '" />';
         break;
@@ -56,6 +56,7 @@ UE.plugins["video"] = function() {
           ' wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" >';
         break;
       case "video":
+        console.log(url);
         var ext = url.substr(url.lastIndexOf(".") + 1);
         if (ext == "ogv") ext = "ogg";
         str =
