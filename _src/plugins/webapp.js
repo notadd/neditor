@@ -83,7 +83,7 @@ UE.plugin.register("webapp", function() {
           '"' +
           ' src="' +
           me.options.UEDITOR_HOME_URL +
-          'themes/default/images/spacer.gif" _logo_url="' +
+          'themes/notadd/images/spacer.gif" _logo_url="' +
           obj.logo +
           '" style="background:url(' +
           obj.logo +
