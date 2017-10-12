@@ -90,7 +90,7 @@ UE.commands["imagefloat"] = {
             break;
           case "center":
             if (me.queryCommandValue("imagefloat") != "center") {
-              pN = img.parentNode;
+              var pN = img.parentNode;
               domUtils.setStyle(img, "float", "");
               domUtils.removeAttributes(img, "align");
               tmpNode = img;
