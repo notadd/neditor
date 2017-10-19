@@ -56,7 +56,6 @@ UE.plugins["video"] = function() {
           ' wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" >';
         break;
       case "video":
-        console.log(url);
         var ext = url.substr(url.lastIndexOf(".") + 1);
         if (ext == "ogv") ext = "ogg";
         str =
