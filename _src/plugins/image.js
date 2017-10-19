@@ -90,7 +90,7 @@ UE.commands["imagefloat"] = {
             break;
           case "center":
             if (me.queryCommandValue("imagefloat") != "center") {
-              pN = img.parentNode;
+              var pN = img.parentNode;
               domUtils.setStyle(img, "float", "");
               domUtils.removeAttributes(img, "align");
               tmpNode = img;
@@ -111,13 +111,13 @@ UE.commands["imagefloat"] = {
 
               me.execCommand(
                 "insertHtml",
-                '<p id="_img_parent_tmp" style="text-align:center">' +
+                '<p class="_img_parent_tmp" style="text-align:center">' +
                   pN.innerHTML +
                   "</p>"
               );
 
-              tmpNode = me.document.getElementById("_img_parent_tmp");
-              tmpNode.removeAttribute("id");
+              tmpNode = me.document.getElementsByClassName("_img_parent_tmp")[0];
+              tmpNode.removeAttribute("class");
               tmpNode = tmpNode.firstChild;
               range.selectNode(tmpNode).select();
               //去掉后边多余的元素

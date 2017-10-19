@@ -1211,9 +1211,9 @@
          */
     execCommand: function(cmdName) {
       cmdName = cmdName.toLowerCase();
-      var me = this,
-        result,
-        cmd = me.commands[cmdName] || UE.commands[cmdName];
+      var me = this;
+      var result;
+      var cmd = me.commands[cmdName] || UE.commands[cmdName];
       if (!cmd || !cmd.execCommand) {
         return null;
       }
