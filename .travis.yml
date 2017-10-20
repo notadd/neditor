@@ -3,14 +3,14 @@ sudo: false
 language: node_js
 
 node_js:
-    - 8
-        env: FOR=php
-    - 8
-        env: FOR=asp
-    - 8
-        env: FOR=net
-    - 8
-        env: FOR=jsp
+    - node
+      env: FOR=php
+    - node
+      env: FOR=asp
+    - node
+      env: FOR=net
+    - node
+      env: FOR=jsp
 
 matrix:
     fast_finish: true
