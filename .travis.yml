@@ -26,10 +26,7 @@ install:
     #- sh -c "if [ '$FOR' = 'jsp' ]; then grunt neditor --server=jsp;  fi"
     #- sh -c "if [ '$FOR' = 'net' ]; then grunt neditor --server=.net;  fi"
     #- sh -c "if [ '$FOR' = 'asp' ]; then grunt neditor --server=asp;  fi"
-    
-script:
-   
-    - sh -c "tar -cvf neditor.tar --exclude=.git ./dist"
+    - tar -cvf neditor.tar --exclude=.git dist
     - sh -c "xz -z9 neditor.tar"
 
 after_success:
