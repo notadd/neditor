@@ -2,19 +2,21 @@ sudo: false
 
 language: node_js
 
-node_js:
-    - node
-      env: FOR=php
-    - node
-      env: FOR=asp
-    - node
-      env: FOR=net
-    - node
-      env: FOR=jsp
 
 matrix:
     fast_finish: true
-    
+    include:
+        node_js:
+            - node
+              env: FOR=php
+            - node
+              env: FOR=asp
+            - node
+              env: FOR=net
+            - node
+              env: FOR=jsp
+
+  
 before_install:
     - npm install grunt -g
     # - sh -c "if [ '$DB' = 'postgres' ]; then psql -c 'create database notadd;' -U postgres; echo "$DB"; fi"
