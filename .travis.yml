@@ -12,7 +12,7 @@ before_install:
 
 install:    
     - npm install
-    - npm install grunt -g
+    - grunt neditor
 
 script:
     - vendor/bin/phpunit --verbose
