@@ -29,7 +29,7 @@ install:
     
 script:
    
-    - sh -c "tar -cvf neditor.tar --exclude=.git ../neditor"
+    - sh -c "tar -cvf neditor.tar --exclude=.git ./dist"
     - sh -c "xz -z9 neditor.tar"
 
 after_success:
