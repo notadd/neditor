@@ -42,7 +42,10 @@ Demo:  https://demo.neditor.notadd.com/
 * [ASP](https://www.notadd.com/download/neditor/Nediotr-asp-master.tar.xz)
 
 Node 版本会在后期加入，如有会开发的童鞋，欢迎通过 ISSUES 联系我们。
-UPYUN 版本，官方已经承诺在后期加入。
+
+[UPYUN](https://console.upyun.com/register/?invite=r17EYO3BW) 版本，官方已经承诺在后期加入。
+
+**感谢[UPYUN](https://console.upyun.com/register/?invite=r17EYO3BW)提供CDN赞助**
 
 ## 编译安装 ##
 
