@@ -30,10 +30,10 @@ install:
     - xz -z9 neditor.tar
 
 script:
-    - sh -c "if [ '$FOR' = '.net' ]; then curl -T notadd.tar.xz http://v0.api.upyun.com/notadd/download/neditor/Nediotr-net-master.tar.xz -u "$UPYUN" -v;  fi"
-    - sh -c "if [ '$FOR' = 'asp' ]; then curl -T notadd.tar.xz http://v0.api.upyun.com/notadd/download/neditor/Nediotr-asp-master.tar.xz -u "$UPYUN" -v;  fi"
-    - sh -c "if [ '$FOR' = 'php' ]; then curl -T notadd.tar.xz http://v0.api.upyun.com/notadd/download/neditor/Nediotr-php-master.tar.xz -u "$UPYUN" -v;  fi"
-    - sh -c "if [ '$FOR' = 'jsp' ]; then curl -T notadd.tar.xz http://v0.api.upyun.com/notadd/download/neditor/Nediotr-jsp-master.tar.xz -u "$UPYUN" -v;  fi"
+    - sh -c "if [ '$FOR' = '.net' ]; then curl -T neditor.tar.xz http://v0.api.upyun.com/notadd/download/neditor/Nediotr-net-master.tar.xz -u "$UPYUN" -v;  fi"
+    - sh -c "if [ '$FOR' = 'asp' ]; then curl -T neditor.tar.xz http://v0.api.upyun.com/notadd/download/neditor/Nediotr-asp-master.tar.xz -u "$UPYUN" -v;  fi"
+    - sh -c "if [ '$FOR' = 'php' ]; then curl -T neditor.tar.xz http://v0.api.upyun.com/notadd/download/neditor/Nediotr-php-master.tar.xz -u "$UPYUN" -v;  fi"
+    - sh -c "if [ '$FOR' = 'jsp' ]; then curl -T neditor.tar.xz http://v0.api.upyun.com/notadd/download/neditor/Nediotr-jsp-master.tar.xz -u "$UPYUN" -v;  fi"
     
 notifications:
     webhooks:
