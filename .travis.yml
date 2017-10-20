@@ -7,13 +7,13 @@ matrix:
     fast_finish: true
     include:
         - node_js: node
+          env: FOR=php
         - node_js: node
-          env: DB=postgres
+          env: FOR=jsp
         - node_js: node
+          env: FOR=.net
         - node_js: node
-          env:
-            - archive=yes
-            - DB=postgres
+          env: FOR=asp
 
   
 before_install:
@@ -25,7 +25,7 @@ install:
     - npm install
     - sh -c "if [ '$FOR' = 'php' ]; then grunt neditor  fi"
     - sh -c "if [ '$FOR' = 'jsp' ]; then grunt neditor --server=jsp  fi"
-    - sh -c "if [ '$FOR' = 'net' ]; then grunt neditor --server=.net  fi"
+    - sh -c "if [ '$FOR' = '.net' ]; then grunt neditor --server=.net  fi"
     - sh -c "if [ '$FOR' = 'asp' ]; then grunt neditor --server=asp  fi"
     
 script:
