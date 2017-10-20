@@ -18,22 +18,26 @@ matrix:
   
 before_install:
     - npm install grunt -g
-    # - sh -c "if [ '$DB' = 'postgres' ]; then psql -c 'create database notadd;' -U postgres; echo "$DB"; fi"
-    # - sh -c "if [ '$DB' = 'mysql' ]; then mysql -e 'CREATE DATABASE IF NOT EXISTS notadd;'; echo "$DB"; fi"
 
 install:    
     - npm install
+    - grunt neditor --server="$FOR"
     - sh -c "if [ '$FOR' = 'php' ]; then grunt neditor;  fi"
     - sh -c "if [ '$FOR' = 'jsp' ]; then grunt neditor --server=jsp;  fi"
     - sh -c "if [ '$FOR' = 'net' ]; then grunt neditor --server=.net;  fi"
     - sh -c "if [ '$FOR' = 'asp' ]; then grunt neditor --server=asp;  fi"
     
 script:
-    - tar -cvf $FOR.tar --exclude=.git ../neditor
-    - xz -z9 $FOR.tar
+   
+    - tar -cvf neditor.tar --exclude=.git ../neditor
+    - xz -z9 neditor.tar
 
 after_success:
-    - curl -T notadd.tar.xz http://v0.api.upyun.com/notadd/download/neditor/$FOR-master.tar.xz -u "$UPYUN" -v; fi"
+    - sh -c "if [ '$FOR' = 'php' ]; then tar -cvf php.tar --exclude=.git ../neditor;  fi"
+    - sh -c "if [ '$FOR' = 'jsp' ]; then grunt neditor --server=jsp;  fi"
+    - sh -c "if [ '$FOR' = 'net' ]; then grunt neditor --server=.net;  fi"
+    - sh -c "if [ '$FOR' = 'asp' ]; then grunt neditor --server=asp;  fi"
+    - ; fi"
    
 notifications:
     webhooks:
