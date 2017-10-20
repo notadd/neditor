@@ -11,7 +11,7 @@ matrix:
         - node_js: node
           env: FOR=jsp
         - node_js: node
-          env: FOR=net
+          env: FOR=.net
         - node_js: node
           env: FOR=asp
 
@@ -22,22 +22,19 @@ before_install:
 install:    
     - npm install
     - grunt neditor --server="$FOR"
-    - sh -c "if [ '$FOR' = 'php' ]; then grunt neditor;  fi"
-    - sh -c "if [ '$FOR' = 'jsp' ]; then grunt neditor --server=jsp;  fi"
-    - sh -c "if [ '$FOR' = 'net' ]; then grunt neditor --server=.net;  fi"
-    - sh -c "if [ '$FOR' = 'asp' ]; then grunt neditor --server=asp;  fi"
+    # - sh -c "if [ '$FOR' = 'php' ]; then grunt neditor;  fi"
+    #- sh -c "if [ '$FOR' = 'jsp' ]; then grunt neditor --server=jsp;  fi"
+    #- sh -c "if [ '$FOR' = 'net' ]; then grunt neditor --server=.net;  fi"
+    #- sh -c "if [ '$FOR' = 'asp' ]; then grunt neditor --server=asp;  fi"
     
 script:
    
-    - tar -cvf neditor.tar --exclude=.git ../neditor
-    - xz -z9 neditor.tar
+    - tar -cvf "$FOR".tar --exclude=.git ../neditor
+    - xz -z9 "$FOR".tar
 
 after_success:
-    - sh -c "if [ '$FOR' = 'php' ]; then tar -cvf php.tar --exclude=.git ../neditor;  fi"
-    - sh -c "if [ '$FOR' = 'jsp' ]; then grunt neditor --server=jsp;  fi"
-    - sh -c "if [ '$FOR' = 'net' ]; then grunt neditor --server=.net;  fi"
-    - sh -c "if [ '$FOR' = 'asp' ]; then grunt neditor --server=asp;  fi"
-    - ; fi"
+    - sh -c "if [ '$FOR' = '.net' ]; then curl -T notadd.tar.xz http://v0.api.upyun.com/notadd/download/neditor/net-master.tar.xz -u "$UPYUN" -v;  fi"
+    - curl -T notadd.tar.xz http://v0.api.upyun.com/notadd/download/neditor/"FOR"-master.tar.xz -u "$UPYUN" -v
    
 notifications:
     webhooks:
