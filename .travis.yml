@@ -8,7 +8,7 @@ node_js:
     - 8
         env: FOR=asp
     - 8
-        env: FOR=.net
+        env: FOR=net
     - 8
         env: FOR=jsp
 
@@ -24,7 +24,7 @@ install:
     - npm install
     - sh -c "if [ '$FOR' = 'php' ]; then grunt neditor  fi"
     - sh -c "if [ '$FOR' = 'jsp' ]; then grunt neditor --server=jsp  fi"
-    - sh -c "if [ '$FOR' = '.net' ]; then grunt neditor --server=.net  fi"
+    - sh -c "if [ '$FOR' = 'net' ]; then grunt neditor --server=.net  fi"
     - sh -c "if [ '$FOR' = 'asp' ]; then grunt neditor --server=asp  fi"
     
 script:
