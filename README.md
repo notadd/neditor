@@ -29,7 +29,17 @@ Neditor 是我们团队基于 Ueditor 的一款富文本编辑器。
 
 Demo:  https://demo.neditor.notadd.com/
 
-## 入门部署和体验 ##
+## 完整安装包 （无需编译） ##
+
+* [PHP](https://www.notadd.com/download/neditor/Nediotr-php-master.tar.xz)
+* [JSP](https://www.notadd.com/download/neditor/Nediotr-jsp-master.tar.xz)
+* [.NET](https://www.notadd.com/download/neditor/Nediotr-net-master.tar.xz)
+* [ASP](https://www.notadd.com/download/neditor/Nediotr-asp-master.tar.xz)
+
+Node 版本会在后期加入，如有会开发的童鞋，欢迎通过 ISSUES 联系我们。
+UPYUN 版本，官方已经承诺在后期加入。
+
+## 编译安装 ##
 
 ### 第一步：下载编辑器并用 Grunt 进行项目构建 ###
 
