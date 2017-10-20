@@ -1,13 +1,15 @@
 sudo: false
 
-language: 
-    - node
+language: node_js
+
+node_js:
+    - 8
         env: FOR=php
-    - node
+    - 8
         env: FOR=asp
-    - node
+    - 8
         env: FOR=.net
-    - node
+    - 8
         env: FOR=jsp
 
 matrix:
