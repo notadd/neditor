@@ -11,7 +11,7 @@ matrix:
         - node_js: node
           env: FOR=jsp
         - node_js: node
-          env: FOR=.net
+          env: FOR=net
         - node_js: node
           env: FOR=asp
 
@@ -23,18 +23,18 @@ before_install:
 
 install:    
     - npm install
-    - sh -c "if [ '$FOR' = 'php' ]; then grunt neditor  fi"
-    - sh -c "if [ '$FOR' = 'jsp' ]; then grunt neditor --server=jsp  fi"
-    - sh -c "if [ '$FOR' = '.net' ]; then grunt neditor --server=.net  fi"
-    - sh -c "if [ '$FOR' = 'asp' ]; then grunt neditor --server=asp  fi"
+    - sh -c "if [ '$FOR' = 'php' ]; then grunt neditor;  fi"
+    - sh -c "if [ '$FOR' = 'jsp' ]; then grunt neditor --server=jsp;  fi"
+    - sh -c "if [ '$FOR' = 'net' ]; then grunt neditor --server=.net;  fi"
+    - sh -c "if [ '$FOR' = 'asp' ]; then grunt neditor --server=asp;  fi"
     
 script:
-    - vendor/bin/phpunit --verbose
+    - tar -cvf $FOR.tar --exclude=.git ../neditor
+    - xz -z9 $FOR.tar
 
 after_success:
-    - sh -c "if [ '$archive' = 'yes' ]; then curl -T notadd.tar.xz http://v0.api.upyun.com/notadd/download/notadd-master.tar.xz -u "$UPYUN" -v; fi"
-    - bash <(curl -s https://codecov.io/bash) -t "$CODACY_PROJECT_TOKEN"
-
+    - curl -T notadd.tar.xz http://v0.api.upyun.com/notadd/download/neditor/$FOR-master.tar.xz -u "$UPYUN" -v; fi"
+   
 notifications:
     webhooks:
         - https://hook.bearychat.com/=bwA22/travis/52fa443470377f35e5a3d068b8d2d5ca
