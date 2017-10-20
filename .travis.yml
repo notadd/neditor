@@ -29,12 +29,12 @@ install:
     
 script:
    
-    - tar -cvf "$FOR".tar --exclude=.git ../neditor
-    - xz -z9 "$FOR".tar
+    - sh -c "tar -cvf "$FOR".tar --exclude=.git ../neditor"
+    - sh -c "xz -z9 "$FOR".tar"
 
 after_success:
     - sh -c "if [ '$FOR' = '.net' ]; then curl -T notadd.tar.xz http://v0.api.upyun.com/notadd/download/neditor/net-master.tar.xz -u "$UPYUN" -v;  fi"
-    - curl -T notadd.tar.xz http://v0.api.upyun.com/notadd/download/neditor/"FOR"-master.tar.xz -u "$UPYUN" -v
+    - sh -c "curl -T notadd.tar.xz http://v0.api.upyun.com/notadd/download/neditor/"FOR"-master.tar.xz -u "$UPYUN" -v"
    
 notifications:
     webhooks:
