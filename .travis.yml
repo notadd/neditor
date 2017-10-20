@@ -1,6 +1,14 @@
 sudo: false
 
-language: node
+language: 
+    - node
+        env: FOR=php
+    - node
+        env: FOR=asp
+    - node
+        env: FOR=.net
+    - node
+        env: FOR=jsp
 
 matrix:
     fast_finish: true
@@ -12,8 +20,11 @@ before_install:
 
 install:    
     - npm install
-    - grunt neditor
-
+    - sh -c "if [ '$FOR' = 'php' ]; then grunt neditor  fi"
+    - sh -c "if [ '$FOR' = 'jsp' ]; then grunt neditor --server=jsp  fi"
+    - sh -c "if [ '$FOR' = '.net' ]; then grunt neditor --server=.net  fi"
+    - sh -c "if [ '$FOR' = 'asp' ]; then grunt neditor --server=asp  fi"
+    
 script:
     - vendor/bin/phpunit --verbose
 
