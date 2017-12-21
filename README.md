@@ -4,19 +4,6 @@
 <a href="https://travis-ci.org/notadd/notadd" title="Build Status"><img src="https://travis-ci.org/notadd/notadd.svg?branch=master"></a>
 </p>
 
-## 更新内容
-
-* 修复上传时图片不能收缩的 BUG
-
-* 增加 php 自动编译版本
-
-* 增加 jsp 自动编译版本
-
-* 增加 asp 自动编译版本
-
-* 增加 .net 自动编译版本
-
-* 修复其他 BUG
 
 ### 关于 HTTPS
 
@@ -40,6 +27,7 @@ Demo:  https://demo.neditor.notadd.com/
 * [JSP](https://www.notadd.com/download/neditor/Nediotr-jsp-master.tar.xz)
 * [.NET](https://www.notadd.com/download/neditor/Nediotr-net-master.tar.xz)
 * [ASP](https://www.notadd.com/download/neditor/Nediotr-asp-master.tar.xz)
+* [Node.js 即将推出](#)
 
 Node 版本会在后期加入，如有会开发的童鞋，欢迎通过 ISSUES 联系我们。
 
