@@ -172,7 +172,10 @@ class Uploader
     {
         $imgUrl = htmlspecialchars($this->fileField);
         $imgUrl = str_replace("&amp;", "&", $imgUrl);
-
+       //获取带有GET参数的真实图片url路径
+        $pathRes     = parse_url($imgUrl);
+        $queryString = isset($pathRes['query']) ? $pathRes['query'] : '';
+        $imgUrl      = str_replace('?' . $queryString, '', $imgUrl);
         //http开头验证
         if (strpos($imgUrl, "http") !== 0) {
             $this->stateInfo = $this->getStateInfo("ERROR_HTTP_LINK");
@@ -198,7 +201,7 @@ class Uploader
                 'follow_location' => false // don't follow redirects
             ))
         );
-        readfile($imgUrl, false, $context);
+        readfile($imgUrl . '?' . $queryString, false, $context);
         $img = ob_get_contents();
         ob_end_clean();
         preg_match("/[\/]([^\/]*)[\.]?[^\.\/]*$/", $imgUrl, $m);
