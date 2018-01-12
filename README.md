@@ -1,7 +1,7 @@
 
 <p align="center">
 <a href="https://jq.qq.com/?_wv=1027&k=5qVzRh4" title="Notadd 官方技术交流群"><img src="https://img.shields.io/badge/QQ%20Group-321735506-6782d6.svg?style=flat-square"></a>
-<a href="https://travis-ci.org/notadd/neditor" title="Build Status"><img src="https://travis-ci.org/notadd/notadd.svg?branch=master"></a>
+<a href="https://travis-ci.org/notadd/neditor" title="Build Status"><img src="https://img.shields.io/travis/notadd/neditor/master.svg?style=flat-square"></a>
 </p>
 
 
