@@ -18,7 +18,7 @@ UE.Editor.defaultOptions = function(editor) {
     enterTag: "p",
     customDomain: false,
     lang: "zh-cn",
-    langPath: _url + "lang/",
+    langPath: _url + "i18n/",
     theme: "default",
     themePath: _url + "themes/",
     allHtmlEnabled: false,
