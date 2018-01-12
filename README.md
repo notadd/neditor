@@ -39,12 +39,10 @@ Node 版本会在后期加入，如有会开发的童鞋，欢迎通过 ISSUES �
 
 ### 第一步：下载编辑器并用 Grunt 进行项目构建 ###
 
-请确保已安装 grunt-cli 库。
-
 ```shell
 git clone 仓库地址
 npm install
-grunt neditor
+npm run build
 ```
 
 ### 第二步：在浏览器打开 index.html ###
@@ -57,12 +55,12 @@ grunt neditor
 
 ### 编译其他语言为服务端的版本
 
-Neditor 默认以 PHP 为后端语言，但是同时也支持其他的后端语言，例如 jsp，.net。
+Neditor 默认以 PHP 为后端语言，但是同时也支持其他的后端语言：`php`、`jsp`、`net` 和 `asp` 。
 
-编译其他后端语言的方法为，为 grunt 命令添加 server 参数，例如，编译 jsp 为后端语言的版本的命令为：
+编译其他后端语言的方法为，使用 `build-*` 修改 `*` 语言版本，以 `jsp` 为例：
 
 ```bash
-grunt neditor --server=jsp
+npm run build-jsp
 ```
 
 执行该命令后，则会在目录 dist 中生成对应的目录 utf8-jsp，目录包含了对应版本的文件。

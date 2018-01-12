@@ -15,17 +15,9 @@ matrix:
         - node_js: node
           env: FOR=asp
 
-  
-before_install:
-    - npm install grunt -g
-
 install:    
     - npm install
-    - grunt neditor --server="$FOR"
-    # - sh -c "if [ '$FOR' = 'php' ]; then grunt neditor;  fi"
-    #- sh -c "if [ '$FOR' = 'jsp' ]; then grunt neditor --server=jsp;  fi"
-    #- sh -c "if [ '$FOR' = 'net' ]; then grunt neditor --server=.net;  fi"
-    #- sh -c "if [ '$FOR' = 'asp' ]; then grunt neditor --server=asp;  fi"
+    - npm run build --server="$FOR"
     - tar -cvf neditor.tar --exclude=.git dist
     - xz -z9 neditor.tar
 

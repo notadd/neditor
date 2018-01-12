@@ -32,6 +32,14 @@
         "grunt-transcoding": "~0.1.1"
     },
     "devDependencies": {
-        "grunt": "~0.4.1"
+        "grunt": "~0.4.1",
+        "grunt-cli": "^1.2.0"
+    },
+    "scripts": {
+        "build": "grunt neditor",
+        "build-php": "npm run build -- --server=php",
+        "build-jsp": "npm run build -- --server=jsp",
+        "build-net": "npm run build -- --server=net",
+        "build-asp": "npm run build -- --server=asp"
     }
 }
