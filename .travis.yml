@@ -17,7 +17,7 @@ matrix:
 
 install:    
     - npm install
-    - npm run build --server="$FOR"
+    - npm run build -- --server="$FOR"
     - tar -cvf neditor.tar --exclude=.git dist
     - xz -z9 neditor.tar
 
