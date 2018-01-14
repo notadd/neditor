@@ -140,7 +140,7 @@ module.exports = function(grunt) {
               "themes/notadd/images/**",
               "themes/notadd/fonts/**",
               "dialogs/**",
-              "lang/**",
+              "i18n/**",
               "third-party/**"
             ],
             dest: disDir
