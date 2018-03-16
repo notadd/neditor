@@ -27,6 +27,7 @@ Demo:  https://demo.neditor.notadd.com/
 * [JSP](https://www.notadd.com/download/neditor/Nediotr-jsp-master.tar.xz)
 * [.NET](https://www.notadd.com/download/neditor/Nediotr-net-master.tar.xz)
 * [ASP](https://www.notadd.com/download/neditor/Nediotr-asp-master.tar.xz)
+* [.NET Core文件上传服务](https://github.com/baiyunchen/neditor)
 * [Node.js 即将推出](#)
 
 Node 版本会在后期加入，如有会开发的童鞋，欢迎通过 ISSUES 联系我们。
@@ -101,7 +102,7 @@ Neditor 码云： [http://gitee.com/notadd/neditor](http://gitee.com/notadd/nedi
 
 Neditor github 地址：[http://github.com/notadd/neditor](http://github.com/notadd/neditor "Neditor github 地址")
 
-## 相关链接 
+## 相关链接
 
 Ueditor 官网：[http://ueditor.baidu.com](http://ueditor.baidu.com "ueditor 官网")
 
@@ -125,11 +126,11 @@ QQ 群： 321735506
 
 [论坛交流](https://bbs.notadd.com/category/13 "Neditor 论坛")
 
-## 捐赠 
+## 捐赠
 
 
 [捐赠](https://git.oschina.net/notadd/notadd?donate=true)
- 
+
 ## 其他项目：Notadd
 
 https://github.com/notadd/notadd
