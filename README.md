@@ -27,7 +27,7 @@ Demo:  https://demo.neditor.notadd.com/
 * [JSP](https://www.notadd.com/download/neditor/Nediotr-jsp-master.tar.xz)
 * [.NET](https://www.notadd.com/download/neditor/Nediotr-net-master.tar.xz)
 * [ASP](https://www.notadd.com/download/neditor/Nediotr-asp-master.tar.xz)
-* [.NET Core文件上传服务](https://github.com/baiyunchen/neditor)
+* [.NET Core文件上传服务](https://github.com/baiyunchen/UEditor.Core)
 * [Node.js 即将推出](#)
 
 Node 版本会在后期加入，如有会开发的童鞋，欢迎通过 ISSUES 联系我们。
