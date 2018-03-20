@@ -253,20 +253,21 @@ UE.plugins["fiximgclick"] = (function() {
           iframePos = domUtils.getXY(me.editor.iframe),
           editorPos = domUtils.getXY(resizer.parentNode);
 
+        var doc = me.editor.document;
         domUtils.setStyles(resizer, {
           width: target.width + "px",
           height: target.height + "px",
           left:
             iframePos.x +
               imgPos.x -
-              me.editor.document.body.scrollLeft -
+              (doc.documentElement.scrollLeft || doc.body.scrollLeft || 0) -
               editorPos.x -
               parseInt(resizer.style.borderLeftWidth) +
               "px",
           top:
             iframePos.y +
               imgPos.y -
-              me.editor.document.body.scrollTop -
+              (doc.documentElement.scrollTop || doc.body.scrollTop || 0) -
               editorPos.y -
               parseInt(resizer.style.borderTopWidth) +
               "px"
