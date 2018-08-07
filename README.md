@@ -19,7 +19,6 @@ Neditor 是我们团队基于 Ueditor 的一款富文本编辑器。
 
 ![image](https://www.notadd.com/src/neditor.webp)
 
-Demo:  https://demo.neditor.notadd.com/
 
 ## 完整安装包 （无需编译） ##
 
@@ -129,7 +128,7 @@ QQ 群： 321735506
 ## 捐赠
 
 
-[捐赠](https://git.oschina.net/notadd/notadd?donate=true)
+[捐赠](https://git.oschina.net/notadd/neditor?donate=true)
 
 ## 其他项目：Notadd
 
