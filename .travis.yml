@@ -7,25 +7,15 @@ matrix:
     fast_finish: true
     include:
         - node_js: node
-          env: FOR=php
-        - node_js: node
-          env: FOR=jsp
-        - node_js: node
-          env: FOR=net
-        - node_js: node
-          env: FOR=asp
 
 install:    
     - npm install
-    - npm run build -- --server="$FOR"
+    - npm run build
     - tar -cvf neditor.tar --exclude=.git dist
     - xz -z9 neditor.tar
 
 script:
-    - sh -c "if [ '$FOR' = 'net' ]; then curl -T neditor.tar.xz http://v0.api.upyun.com/notadd/download/neditor/Nediotr-net-master.tar.xz -u "$UPYUN" -v;  fi"
-    - sh -c "if [ '$FOR' = 'asp' ]; then curl -T neditor.tar.xz http://v0.api.upyun.com/notadd/download/neditor/Nediotr-asp-master.tar.xz -u "$UPYUN" -v;  fi"
-    - sh -c "if [ '$FOR' = 'php' ]; then curl -T neditor.tar.xz http://v0.api.upyun.com/notadd/download/neditor/Nediotr-php-master.tar.xz -u "$UPYUN" -v;  fi"
-    - sh -c "if [ '$FOR' = 'jsp' ]; then curl -T neditor.tar.xz http://v0.api.upyun.com/notadd/download/neditor/Nediotr-jsp-master.tar.xz -u "$UPYUN" -v;  fi"
+    - sh -c "curl -T neditor.tar.xz http://v0.api.upyun.com/notadd/download/neditor/Neditor-next-master.tar.xz -u "$UPYUN" -v;  fi"
     
 notifications:
     webhooks:
