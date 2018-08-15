@@ -4,6 +4,9 @@
 <a href="https://travis-ci.org/notadd/neditor" title="Build Status"><img src="https://img.shields.io/travis/notadd/neditor/master.svg?style=flat-square"></a>
 </p>
 
+## 新版发布
+
+2.0 发布，此次版本移除了后端相关代码，纯 ajax 提交，请配置 `neditor.config.js` ，默认配置支持又拍云，可自行修改支持其他后端或者云存储。
 
 ### 关于 HTTPS
 
@@ -22,16 +25,8 @@ Neditor 是我们团队基于 Ueditor 的一款富文本编辑器。
 
 ## 完整安装包 （无需编译） ##
 
-* [PHP](https://www.notadd.com/download/neditor/Nediotr-php-master.tar.xz)
-* [JSP](https://www.notadd.com/download/neditor/Nediotr-jsp-master.tar.xz)
-* [.NET](https://www.notadd.com/download/neditor/Nediotr-net-master.tar.xz)
-* [ASP](https://www.notadd.com/download/neditor/Nediotr-asp-master.tar.xz)
-* [.NET Core文件上传服务](https://github.com/baiyunchen/UEditor.Core)
-* [Node.js 即将推出](#)
+* [Next](https://www.notadd.com/download/neditor/Neditor-next-master.tar.xz)
 
-Node 版本会在后期加入，如有会开发的童鞋，欢迎通过 ISSUES 联系我们。
-
-[UPYUN](https://console.upyun.com/register/?invite=r17EYO3BW) 版本，官方已经承诺在后期加入。
 
 **感谢[UPYUN](https://console.upyun.com/register/?invite=r17EYO3BW)提供CDN赞助**
 
@@ -52,18 +47,6 @@ npm run build
 如果看到了下面这样的编辑器，恭喜你，初次部署成功！
 
 ![部署成功](https://www.notadd.com/src/neditor-demo.webp)
-
-### 编译其他语言为服务端的版本
-
-Neditor 默认以 PHP 为后端语言，但是同时也支持其他的后端语言：`php`、`jsp`、`net` 和 `asp` 。
-
-编译其他后端语言的方法为，使用 `build-*` 修改 `*` 语言版本，以 `jsp` 为例：
-
-```bash
-npm run build-jsp
-```
-
-执行该命令后，则会在目录 dist 中生成对应的目录 utf8-jsp，目录包含了对应版本的文件。
 
 ### 自定义的参数
 
