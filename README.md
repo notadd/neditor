@@ -43,7 +43,7 @@ npm run build
 
 ### 第二步：在浏览器打开 index.html ###
 
-进入到目录 dist/utf8-php , 使用浏览器打开文件 index.html 。
+进入到目录 dist , 使用浏览器打开文件 index.html 。
 
 如果看到了下面这样的编辑器，恭喜你，初次部署成功！
 
