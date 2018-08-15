@@ -1635,11 +1635,13 @@
                         case 'change':
                             files = me.exec('getFiles');
                             me.trigger( 'select', $.map( files, function( file ) {
-                                file = new File( me.getRuid(), file );
-    
+                                newFile = new File( me.getRuid(), file );
                                 // 记录来源。
-                                file._refer = opts.container;
-                                return file;
+                                newFile._refer = opts.container;
+
+                                // 原始file对象
+                                newFile.raw = file;
+                                return newFile;
                             }), opts.container );
                             break;
                     }
@@ -2723,23 +2725,23 @@
     
             _addFile: function( file ) {
                 var me = this;
-    
-                file = me._wrapFile( file );
+                var rawFile = file.raw;
+                wuFile = me._wrapFile( file );
+                wuFile.raw = rawFile;
     
                 // 不过类型判断允许不允许，先派送 `beforeFileQueued`
-                if ( !me.owner.trigger( 'beforeFileQueued', file ) ) {
+                if ( !me.owner.trigger( 'beforeFileQueued', wuFile ) ) {
                     return;
                 }
     
                 // 类型不匹配，则派送错误事件，并返回。
-                if ( !me.acceptFile( file ) ) {
-                    me.owner.trigger( 'error', 'Q_TYPE_DENIED', file );
+                if ( !me.acceptFile( wuFile ) ) {
+                    me.owner.trigger( 'error', 'Q_TYPE_DENIED', wuFile );
                     return;
                 }
-    
-                me.queue.append( file );
-                me.owner.trigger( 'fileQueued', file );
-                return file;
+                me.queue.append( wuFile );
+                me.owner.trigger( 'fileQueued', wuFile );
+                return wuFile;
             },
     
             getFile: function( fileId ) {
@@ -4386,7 +4388,7 @@
                         clone;
     
                     me.files = e.target.files;
-    
+                    me.jsFiles = e.target.files;
                     // reset input
                     clone = this.cloneNode( true );
                     this.parentNode.replaceChild( clone, this );

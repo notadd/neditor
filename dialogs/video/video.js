@@ -289,14 +289,14 @@
     /* 插入上传视频 */
     function insertUpload(){
         var videoObjs=[],
-            uploadDir = editor.getOpt('videoUrlPrefix'),
+            prefix = editor.getOpt('videoUrlPrefix'),
             width = $G('upload_width').value || 420,
             height = $G('upload_height').value || 280,
             align = findFocus("upload_alignment","name") || 'none';
         for(var key in uploadVideoList) {
             var file = uploadVideoList[key];
             videoObjs.push({
-                url: uploadDir + file.url,
+                url: prefix + file.url,
                 width:width,
                 height:height,
                 align:align
@@ -380,7 +380,7 @@
                 uploader,
                 actionUrl = editor.getActionUrl(editor.getOpt('videoActionName')),
                 fileMaxSize = editor.getOpt('videoMaxSize'),
-                acceptExtensions = (editor.getOpt('videoAllowFiles') || []).join('').replace(/\./g, ',').replace(/^[,]/, '');;
+                acceptExtensions = (editor.getOpt('videoAllowFiles') || [".mp4", ".webm", ".flv", ".ogg", ".f4v"]).join('').replace(/\./g, ',').replace(/^[,]/, '');;
 
             if (!WebUploader.Uploader.support()) {
                 $('#filePickerReady').after($('<div>').html(lang.errorNotSupport)).hide();
@@ -674,6 +674,7 @@
             }
 
             uploader.on('fileQueued', function (file) {
+                _this.addFormData(actionUrl, file);
                 fileCount++;
                 fileSize += file.size;
 
@@ -707,9 +708,7 @@
                         break;
                     case 'startUpload':
                         /* 添加额外的GET参数 */
-                        var params = utils.serializeParam(editor.queryCommandValue('serverparam')) || '',
-                            url = utils.formatUrl(actionUrl + (actionUrl.indexOf('?') == -1 ? '?':'&') + 'encode=utf-8&' + params);
-                        uploader.option('server', url);
+                        uploader.option('server', _this.uploadInfo.url);
                         setState('uploading', files);
                         break;
                     case 'stopUpload':
@@ -720,8 +719,9 @@
 
             uploader.on('uploadBeforeSend', function (file, data, header) {
                 //这里可以通过data对象添加POST参数
-                if (actionUrl.toLowerCase().indexOf('jsp') != -1) {
-                    header['X_Requested_With'] = 'XMLHttpRequest';
+                if (file.file.formData) {
+                    data.policy = file.file.formData.policy;
+                    data.authorization = file.file.formData.authorization;
                 }
             });
 
@@ -734,20 +734,18 @@
                 updateTotalProgress();
             });
 
-            uploader.on('uploadSuccess', function (file, ret) {
+            uploader.on('uploadSuccess', function (file, res) {
                 var $file = $('#' + file.id);
                 try {
-                    var responseText = (ret._raw || ret),
-                        json = utils.str2json(responseText);
-                    if (json.state == 'SUCCESS') {
+                    if (res.code == 200) {
                         uploadVideoList.push({
-                            'url': json.url,
-                            'type': json.type,
-                            'original':json.original
+                            'url': res.url,
+                            'type': res.mimetype,
+                            'original':res.original || ''
                         });
                         $file.append('<span class="success"></span>');
                     } else {
-                        $file.find('.error').text(json.state).show();
+                        $file.find('.error').text(res.message).show();
                     }
                 } catch (e) {
                     $file.find('.error').text(lang.errorServerUpload).show();
@@ -770,9 +768,13 @@
                 }
 
                 if (state === 'ready') {
-                    uploader.upload();
+                    window.setTimeout(function() {
+                        uploader.upload();
+                    }, 500);
                 } else if (state === 'paused') {
-                    uploader.upload();
+                    window.setTimeout(function() {
+                        uploader.upload();
+                    }, 500);
                 } else if (state === 'uploading') {
                     uploader.stop();
                 }
@@ -791,6 +793,28 @@
         },
         refresh: function(){
             this.uploader.refresh();
+        },
+        /* 添加formData参数 */
+        addFormData: function(url, file) {
+            var _this = this;
+            browserMD5File(file.raw, function (err, md5) {
+                $.post(url, {
+                    query: utils.renderTplstr(editor.getOpt("uploadGql"), {
+                        bucketName: editor.getOpt('bucketName'),
+                        md5: md5,
+                        contentName: file.name
+                    })
+                })
+                .then(function(res) {
+                    _this.uploadInfo = res.data.uploadProcess;
+                    if (_this.uploadInfo.code == 200) {
+                        file.formData = {
+                            policy: _this.uploadInfo.form.policy,
+                            authorization: _this.uploadInfo.form.authorization
+                        };
+                    }
+                });
+            });
         }
     };
 

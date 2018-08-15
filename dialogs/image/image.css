@@ -782,9 +782,15 @@
     float: left;
     dislay: block;
 }
+#search .pagination{
+    margin-top: 5px;
+}
+#search input.num{
+    width: 80px;
+}
 
 #search .searchType {
-    width: 65px;
+    width: 95px;
     height: 28px;
     padding:0;
     line-height: 28px;

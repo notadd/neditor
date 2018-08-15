@@ -346,10 +346,9 @@
             // WebUploader实例
                 uploader,
                 actionUrl = editor.getActionUrl(editor.getOpt('imageActionName')),
-                acceptExtensions = (editor.getOpt('imageAllowFiles') || []).join('').replace(/\./g, ',').replace(/^[,]/, ''),
+                acceptExtensions = (editor.getOpt('imageAllowFiles') || [".png", ".jpg", ".jpeg", ".gif", ".bmp"]).join('').replace(/\./g, ',').replace(/^[,]/, ''),
                 imageMaxSize = editor.getOpt('imageMaxSize'),
                 imageCompressBorder = editor.getOpt('imageCompressBorder');
-
             if (!WebUploader.Uploader.support()) {
                 $('#filePickerReady').after($('<div>').html(lang.errorNotSupport)).hide();
                 return;
@@ -358,6 +357,7 @@
                 return;
             }
 
+            /* 上传插件 */
             uploader = _this.uploader = WebUploader.create({
                 pick: {
                     id: '#filePickerReady',
@@ -369,22 +369,11 @@
                     mimeTypes: 'image/jpeg,image/png,image/svg,image/webp,image/gif'
                 },
                 swf: '../../third-party/webuploader/Uploader.swf',
-                server: actionUrl,
+                //server: actionUrl,
                 fileVal: editor.getOpt('imageFieldName'),
                 duplicate: true,
                 fileSingleSizeLimit: imageMaxSize,    // 默认 2 M
-                compress: editor.getOpt('imageCompressEnable') ? {
-                    width: imageCompressBorder,
-                    height: imageCompressBorder,
-                    // 图片质量，只有type为`image/jpeg`的时候才有效。
-                    quality: 90,
-                    // 是否允许放大，如果想要生成小图的时候不失真，此选项应该设置为false.
-                    allowMagnify: false,
-                    // 是否允许裁剪。
-                    crop: false,
-                    // 是否保留头部meta信息。
-                    preserveHeaders: true
-                }:false
+                compress: false
             });
             uploader.addButton({
                 id: '#filePickerBlock'
@@ -411,7 +400,6 @@
                     $prgress = $li.find('p.progress span'),
                     $wrap = $li.find('p.imgWrap'),
                     $info = $('<p class="error"></p>').hide().appendTo($li),
-
                     showError = function (code) {
                         switch (code) {
                             case 'exceed_size':
@@ -432,7 +420,6 @@
                         }
                         $info.text(text).show();
                     };
-
                 if (file.getStatus() === 'invalid') {
                     showError(file.statusText);
                 } else {
@@ -653,6 +640,7 @@
             }
 
             uploader.on('fileQueued', function (file) {
+                _this.addFormData(actionUrl, file);
                 fileCount++;
                 fileSize += file.size;
 
@@ -660,7 +648,6 @@
                     $placeHolder.addClass('element-invisible');
                     $statusBar.show();
                 }
-
                 addFile(file);
             });
 
@@ -688,9 +675,7 @@
                         break;
                     case 'startUpload':
                         /* 添加额外的GET参数 */
-                        var params = utils.serializeParam(editor.queryCommandValue('serverparam')) || '',
-                            url = utils.formatUrl(actionUrl + (actionUrl.indexOf('?') == -1 ? '?':'&') + 'encode=utf-8&' + params);
-                        uploader.option('server', url);
+                        uploader.option('server', _this.uploadInfo.url);
                         setState('uploading', files);
                         break;
                     case 'stopUpload':
@@ -701,8 +686,9 @@
 
             uploader.on('uploadBeforeSend', function (file, data, header) {
                 //这里可以通过data对象添加POST参数
-                if (actionUrl.toLowerCase().indexOf('jsp') != -1) {
-                    header['X-Requested-With'] = 'XMLHttpRequest';
+                if (file.file.formData) {
+                    data.policy = file.file.formData.policy;
+                    data.authorization = file.file.formData.authorization;
                 }
             });
 
@@ -715,16 +701,14 @@
                 updateTotalProgress();
             });
 
-            uploader.on('uploadSuccess', function (file, ret) {
+            uploader.on('uploadSuccess', function (file, res) {
                 var $file = $('#' + file.id);
                 try {
-                    var responseText = (ret._raw || ret),
-                        json = utils.str2json(responseText);
-                    if (json.state == 'SUCCESS') {
-                        _this.imageList.push(json);
+                    if (res.code == 200) {
+                        _this.imageList.push(res);
                         $file.append('<span class="success"></span>');
                     } else {
-                        $file.find('.error').text(json.state).show();
+                        $file.find('.error').text(res.message).show();
                     }
                 } catch (e) {
                     $file.find('.error').text(lang.errorServerUpload).show();
@@ -741,15 +725,20 @@
             uploader.on('uploadComplete', function (file, ret) {
             });
 
+            /* 上传按钮 */
             $upload.on('click', function () {
                 if ($(this).hasClass('disabled')) {
                     return false;
                 }
 
                 if (state === 'ready') {
-                    uploader.upload();
+                    window.setTimeout(function() {
+                        uploader.upload();
+                    }, 500);
                 } else if (state === 'paused') {
-                    uploader.upload();
+                    window.setTimeout(function() {
+                        uploader.upload();
+                    }, 500);
                 } else if (state === 'uploading') {
                     uploader.stop();
                 }
@@ -783,6 +772,29 @@
                 });
             }
             return list;
+        },
+        /* 添加formData参数 */
+        addFormData: function(url, file) {
+            var _this = this;
+            
+            browserMD5File(file.raw, function (err, md5) {
+                $.post(url, {
+                    query: utils.renderTplstr(editor.getOpt("uploadGql"), {
+                        bucketName: editor.getOpt('bucketName'),
+                        md5: md5,
+                        contentName: file.name
+                    })
+                })
+                .then(function(res) {
+                    _this.uploadInfo = res.data.uploadProcess;
+                    if (_this.uploadInfo.code == 200) {
+                        file.formData = {
+                            policy: _this.uploadInfo.form.policy,
+                            authorization: _this.uploadInfo.form.authorization
+                        };
+                    }
+                });
+            });
         }
     };
 
@@ -1039,12 +1051,12 @@
                 key = $G('searchTxt').value,
                 type = $G('searchType').value,
                 keepOriginName = editor.options.keepOriginName ? "1" : "0",
-                url = "http://image.baidu.com/i?ct=201326592&cl=2&lm=-1&st=-1&tn=baiduimagejson&istype=2&rn=32&fm=index&pv=&word=" + key + type + "&ie=utf-8&oe=utf-8&keeporiginname=" + keepOriginName + "&" + +new Date;
+                pageNum = $G('pageNum').value,
+                url = "https://image.baidu.com/search/acjson?tn=resultjson_com&ipn=rj&ct=201326592&is=&fp=result&queryWord=" + key + "&cl=2" + type + "&ie=utf-8&oe=utf-8&adpicid=&z=&ic=0&word=" + key + "&se=&tab=&width=&height=&istype=2&qc=&nc=1&fr=&pn=60&rn=" + pageNum + "&gsm=78&" + new Date() + "=";
 
             $G('searchListUl').innerHTML = lang.searchLoading;
             ajax.request(url, {
                 'dataType': 'jsonp',
-                'charset': 'GB18030',
                 'onsuccess':function(json){
                     var list = [];
                     if(json && json.data) {
@@ -1052,8 +1064,8 @@
                             if(json.data[i].objURL) {
                                 list.push({
                                     title: json.data[i].fromPageTitleEnc,
-                                    src: json.data[i].objURL,
-                                    url: json.data[i].fromURL
+                                    src: json.data[i].thumbURL,
+                                    url: json.data[i].thumbURL
                                 });
                             }
                         }

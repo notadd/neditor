@@ -1,25 +1,25 @@
 {
     "name": "neditor",
     "title": "neditor",
-    "description": "UEditor富文本web编辑器",
+    "description": "Neditor富文本web编辑器",
     "version": "2.0.0",
-    "homepage": "http://ueditor.baidu.com/",
+    "homepage": "https://github.com/notadd/neditor",
     "author": {
-        "name": "f-cube @ FEX",
-        "url": "http://fex.baidu.com"
+        "name": "Notadd",
+        "url": "http://www.notadd.com"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/fex-team/ueditor.git"
+        "url": "https://github.com/notadd/neditor.git"
     },
     "keywords": [
-        "ueditor",
+        "neditor",
         "web editor",
         "javascript",
         "rich editor"
     ],
     "bugs": {
-        "url": "https://github.com/fex-team/ueditor/issues"
+        "url": "https://github.com/notadd/neditor/issues"
     },
     "dependencies": {
         "grunt": "~0.4.1",
@@ -36,10 +36,6 @@
         "grunt-cli": "^1.2.0"
     },
     "scripts": {
-        "build": "grunt neditor",
-        "build-php": "npm run build -- --server=php",
-        "build-jsp": "npm run build -- --server=jsp",
-        "build-net": "npm run build -- --server=net",
-        "build-asp": "npm run build -- --server=asp"
+        "build": "grunt neditor"
     }
 }

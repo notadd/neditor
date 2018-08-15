@@ -2542,7 +2542,7 @@
                     me.owner.trigger( 'error', 'Q_TYPE_DENIED', file );
                     return;
                 }
-    
+                console.log(11111,file)
                 me.queue.append( file );
                 me.owner.trigger( 'fileQueued', file );
                 return file;

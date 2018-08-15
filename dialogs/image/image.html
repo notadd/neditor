@@ -9,7 +9,7 @@
     <script type="text/javascript" src="../../third-party/jquery-1.10.2.min.js"></script>
 
     <!-- webuploader -->
-    <script src="../../third-party/webuploader/webuploader.min.js"></script>
+    <script src="../../third-party/webuploader/webuploader.js"></script>
     <link rel="stylesheet" type="text/css" href="../../third-party/webuploader/webuploader.css">
 
     <!-- image dialog -->
@@ -22,8 +22,8 @@
         <div id="tabhead" class="tabhead">
             <span class="tab" data-content-id="remote"><var id="lang_tab_remote"></var></span>
             <span class="tab focus" data-content-id="upload"><var id="lang_tab_upload"></var></span>
-            <span class="tab" data-content-id="online"><var id="lang_tab_online"></var></span>
-            <!--<span class="tab" data-content-id="search"><var id="lang_tab_search"></var></span>-->
+            <!-- <span class="tab" data-content-id="online"><var id="lang_tab_online"></var></span> -->
+            <span class="tab" data-content-id="search"><var id="lang_tab_search"></var></span>
         </div>
         <div class="alignBar">
             <label class="algnLabel"><var id="lang_input_align"></var></label>
@@ -104,20 +104,25 @@
                 <div class="searchBar">
                     <input id="searchTxt" class="searchTxt text" type="text" />
                     <select id="searchType" class="searchType">
-                        <option value="&s=4&z=0"></option>
-                        <option value="&s=1&z=19"></option>
-                        <option value="&s=2&z=0"></option>
-                        <option value="&s=3&z=0"></option>
+                        <option value="&lm=-1&st=-1&face=0&s="></option>
+                        <option value="&lm=-1&st=-1&face=0&s=3"></option>
+                        <option value="&lm=-1&st=-1&face=1&s="></option>
+                        <option value="&lm=-1&st=1&face=0&s="></option>
+                        <option value="&lm=-1&st=2&face=0&s="></option>
+                        <option value="&lm=6&st=-1&face=0&s="></option>
+                        <option value="&lm=7&st=-1&face=0&s="></option>
                     </select>
                     <input id="searchReset" type="button"  />
                     <input id="searchBtn" type="button"  />
                 </div>
                 <div id="searchList" class="searchList"><ul id="searchListUl"></ul></div>
+                <div class="pagination">每页显示 <input type="number" id="pageNum" class="text num" value="50"/> 条</div>
             </div>
 
         </div>
     </div>
     <script type="text/javascript" src="image.js"></script>
+    <script type="text/javascript" src="../../third-party/browser-md5-file.min.js"></script>
 
 </body>
 </html>

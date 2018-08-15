@@ -270,7 +270,7 @@ UE.I18N['zh-cn'] = {
             'lang_imgLoading':"　图片加载中……",
             'lang_start_upload':"开始上传",
             'lock':{'title':"锁定宽高比例"}, //属性
-            'searchType':{'title':"图片类型", 'options':["新闻", "壁纸", "表情", "头像"]}, //select的option
+            'searchType':{'title':"图片类型", 'options':["全部类型", "头像图片", "面部特写", "卡通画", "简笔画", "动态图片", "静态图片"]}, //select的option
             'searchTxt':{'value':"请输入搜索关键词"},
             'searchBtn':{'value':"百度一下"},
             'searchReset':{'value':"清空搜索"},
@@ -368,7 +368,7 @@ UE.I18N['zh-cn'] = {
         'numError':"请输入正确的数值，如123,400",
         'floatLeft':"左浮动",
         'floatRight':"右浮动",
-        '"default"':"默认",
+        'default':"默认",
         'block':"独占一行",
         'urlError':"输入的视频地址有误，请检查后再试！",
         'loading':" &nbsp;视频加载中，请等待……",

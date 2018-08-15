@@ -975,7 +975,7 @@
           editor.options.labelMap[name] ||
             editor.getLang("labelMap." + name) ||
             "",
-        onclick: function() {},
+        onclick: function() {alert("你大爷")},
         theme: editor.options.theme,
         showText: false
       });

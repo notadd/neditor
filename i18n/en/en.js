@@ -270,7 +270,7 @@ UE.I18N['en'] = {
             'lang_imgLoading':"Loading...",
             'lang_start_upload':"Start Upload",
             'lock':{'title':"Lock rate"},
-            'searchType':{'title':"ImageType", 'options':["News", "Wallpaper", "emotions", "photo"]},
+            'searchType':{'title':"ImageType", 'options':["All", "Avatar", "Facial", "Cartoon", "StickFigure", "GIF", "StaticImage"]},
             'searchTxt':{'value':"Enter the search keyword!"},
             'searchBtn':{'value':"Search"},
             'searchReset':{'value':"Clear"},

@@ -246,7 +246,7 @@
     me.setOpt(Editor.defaultOptions(me));
 
     /* 尝试异步加载后台配置 */
-    me.loadServerConfig();
+    //me.loadServerConfig();
 
     if (!utils.isEmptyObject(UE.I18N)) {
       //修改默认的语言类型
@@ -1676,8 +1676,7 @@
       var actionName = this.getOpt(action) || action,
         imageUrl = this.getOpt("imageUrl"),
         serverUrl = this.getOpt("serverUrl");
-
-      if (!serverUrl && imageUrl) {
+      /* if (!serverUrl && imageUrl) {
         serverUrl = imageUrl.replace(/^(.*[\/]).+([\.].+)$/, "$1controller$2");
       }
 
@@ -1687,6 +1686,13 @@
           (serverUrl.indexOf("?") == -1 ? "?" : "&") +
           "action=" +
           (actionName || "");
+        return utils.formatUrl(serverUrl);
+      } else {
+        return "";
+      } */
+
+      if (serverUrl) {
+        serverUrl = serverUrl + "?";
         return utils.formatUrl(serverUrl);
       } else {
         return "";

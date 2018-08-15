@@ -1219,7 +1219,14 @@ var utils = (UE.utils = {
         }
       };
     }
-  })()
+  })(),
+  renderTplstr: function(tpl, data) {
+    return tpl.replace(/\$\{\s*(\w*?)\s*\}/g, function (match, variable) {
+        if (data.hasOwnProperty(variable)) {
+            return data[variable];
+        }
+    });
+  }
 });
 /**
  * 判断给定的对象是否是字符串
