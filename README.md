@@ -10,7 +10,8 @@
 
 ### 关于 HTTPS
 
-ueditor 是不支持 https 的，我们也做了不少修改，由于百度表情，音乐不支持https 接口，所以使用了 [又拍云CDN](https://console.upyun.com/register/?invite=r17EYO3BW) 给大家提供服务，（希望大家能够从此链接注册认证，延长CDN使用时间）
+使用了 [又拍云CDN](https://console.upyun.com/register/?invite=r17EYO3BW) 服务，支持跨域 和 https。
+
 如果有需要，也可将下面域名改成自己的。
 ```
 imgbaidu.b0.upaiyun.com
