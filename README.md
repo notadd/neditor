@@ -107,8 +107,6 @@ QQ 群： 321735506
 
 [issue](http://github.com/notadd/neditor/issues)
 
-[论坛交流](https://bbs.notadd.com/category/13 "Neditor 论坛")
-
 ## 捐赠
 
 
