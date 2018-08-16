@@ -118,15 +118,15 @@ QQ 群： 321735506
 
 ### 2.0
 
-[ ] 将上传封装为 service ，支持非 GraphQL 接口。
-[ ] 细节样式修改(美化)
+- [ ] 将上传封装为 service ，支持非 GraphQL 接口。
+- [ ] 细节样式修改(美化)
 
 ### 3.0
 
-[ ] 使用 Typescript 重构
-[ ] 草稿箱功能与离线保存
-[ ] service worker 特性
-[ ] 实现 2.0 的大部分功能
+- [ ] 使用 Typescript 重构
+- [ ] 草稿箱功能与离线保存
+- [ ] service worker 特性
+- [ ] 实现 2.0 的大部分功能
 
 ## 其他项目：Notadd
 
