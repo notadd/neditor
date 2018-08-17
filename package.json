@@ -2,7 +2,7 @@
     "name": "@notadd/neditor",
     "title": "neditor",
     "description": "Neditor富文本web编辑器",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "homepage": "https://github.com/notadd/neditor",
     "author": {
         "name": "Notadd",
@@ -24,6 +24,7 @@
     "dependencies": {
     },
     "devDependencies": {
+        "gh-pages": "^1.2.0",
         "grunt": "~0.4.1",
         "grunt-cli": "^1.2.0",
         "grunt-contrib-clean": "~0.5.0",
@@ -35,6 +36,7 @@
         "grunt-transcoding": "~0.1.1"
     },
     "scripts": {
-        "build": "grunt neditor"
+        "build": "grunt neditor",
+        "deploy": "gh-pages -d dist"
     }
 }

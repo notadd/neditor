@@ -145,7 +145,8 @@
                 uploader,
                 actionUrl = editor.getActionUrl(editor.getOpt('fileActionName')),
                 fileMaxSize = editor.getOpt('fileMaxSize'),
-                acceptExtensions = (editor.getOpt('fileAllowFiles') || []).join('').replace(/\./g, ',').replace(/^[,]/, '');;
+                acceptExtensions = (editor.getOpt('fileAllowFiles') || 
+                    [".txt",".doc",".docs",".xls",".xlsx",".ppt",".odt",".ott",".fodt",".uot",".xml",".dot",".htm",".html",".rtf",".docm",".zip",".rar",".tar",".7z",".tar.gz",".tar.bz",".tar.xz"]).join('').replace(/\./g, ',').replace(/^[,]/, '');;
 
             if (!WebUploader.Uploader.support()) {
                 $('#filePickerReady').after($('<div>').html(lang.errorNotSupport)).hide();
@@ -439,6 +440,9 @@
             }
 
             uploader.on('fileQueued', function (file) {
+                /* 选择文件后设置上传相关的url和自定义参数 */
+                editor.getOpt("fileUploadService")(_this, editor).setUploadData(file);
+
                 if (file.ext && acceptExtensions.indexOf(file.ext.toLowerCase()) != -1 && file.size <= fileMaxSize) {
                     fileCount++;
                     fileSize += file.size;
@@ -475,10 +479,8 @@
                         setState('confirm', files);
                         break;
                     case 'startUpload':
-                        /* 添加额外的GET参数 */
-                        var params = utils.serializeParam(editor.queryCommandValue('serverparam')) || '',
-                            url = utils.formatUrl(actionUrl + (actionUrl.indexOf('?') == -1 ? '?':'&') + 'encode=utf-8&' + params);
-                        uploader.option('server', url);
+                        /* 设置Uploader配置项 */
+                        editor.getOpt("fileUploadService")(_this, editor).setUploaderOptions(uploader);
                         setState('uploading', files);
                         break;
                     case 'stopUpload':
@@ -487,11 +489,9 @@
                 }
             });
 
-            uploader.on('uploadBeforeSend', function (file, data, header) {
+            uploader.on('uploadBeforeSend', function (object, data, headers) {
                 //这里可以通过data对象添加POST参数
-                if (actionUrl.toLowerCase().indexOf('jsp') != -1) {
-                    header['X_Requested_With'] = 'XMLHttpRequest';
-                }
+                editor.getOpt("fileUploadService")(_this, editor).setFormData(object, data, headers);
             });
 
             uploader.on('uploadProgress', function (file, percentage) {
@@ -503,16 +503,14 @@
                 updateTotalProgress();
             });
 
-            uploader.on('uploadSuccess', function (file, ret) {
+            uploader.on('uploadSuccess', function (file, res) {
                 var $file = $('#' + file.id);
                 try {
-                    var responseText = (ret._raw || ret),
-                        json = utils.str2json(responseText);
-                    if (json.state == 'SUCCESS') {
-                        _this.fileList.push(json);
+                    if (editor.getOpt("fileUploadService")(_this, editor).getResponseSuccess(res)) {
+                        _this.fileList.push(res);
                         $file.append('<span class="success"></span>');
                     } else {
-                        $file.find('.error').text(json.state).show();
+                        $file.find('.error').text(res.message).show();
                     }
                 } catch (e) {
                     $file.find('.error').text(lang.errorServerUpload).show();
@@ -556,10 +554,11 @@
         },
         getInsertList: function () {
             var i, link, data, list = [],
-                prefix = editor.getOpt('fileUrlPrefix');
+                prefix = editor.getOpt('fileUrlPrefix'),
+                fileSrcField = editor.getOpt("fileUploadService")(this, editor).fileSrcField || 'url';;
             for (i = 0; i < this.fileList.length; i++) {
                 data = this.fileList[i];
-                link = data.url;
+                link = data[fileSrcField];
                 list.push({
                     title: data.original || link.substr(link.lastIndexOf('/') + 1),
                     url: prefix + link

@@ -369,7 +369,7 @@
                     mimeTypes: 'image/jpeg,image/png,image/svg,image/webp,image/gif'
                 },
                 swf: '../../third-party/webuploader/Uploader.swf',
-                //server: actionUrl,
+                server: actionUrl,
                 fileVal: editor.getOpt('imageFieldName'),
                 duplicate: true,
                 fileSingleSizeLimit: imageMaxSize,    // 默认 2 M
@@ -640,7 +640,9 @@
             }
 
             uploader.on('fileQueued', function (file) {
-                _this.addFormData(actionUrl, file);
+                /* 选择文件后设置上传相关的url和自定义参数 */
+                editor.getOpt("imageUploadService")(_this, editor).setUploadData(file);
+
                 fileCount++;
                 fileSize += file.size;
 
@@ -674,8 +676,8 @@
                         setState('confirm', files);
                         break;
                     case 'startUpload':
-                        /* 添加额外的GET参数 */
-                        uploader.option('server', _this.uploadInfo.url);
+                        /* 设置Uploader配置项 */
+                        editor.getOpt("imageUploadService")(_this, editor).setUploaderOptions(uploader);
                         setState('uploading', files);
                         break;
                     case 'stopUpload':
@@ -684,12 +686,9 @@
                 }
             });
 
-            uploader.on('uploadBeforeSend', function (file, data, header) {
+            uploader.on('uploadBeforeSend', function (object, data, headers) {
                 //这里可以通过data对象添加POST参数
-                if (file.file.formData) {
-                    data.policy = file.file.formData.policy;
-                    data.authorization = file.file.formData.authorization;
-                }
+                editor.getOpt("imageUploadService")(_this, editor).setFormData(object, data, headers);
             });
 
             uploader.on('uploadProgress', function (file, percentage) {
@@ -704,7 +703,7 @@
             uploader.on('uploadSuccess', function (file, res) {
                 var $file = $('#' + file.id);
                 try {
-                    if (res.code == 200) {
+                    if (editor.getOpt("imageUploadService")(_this, editor).getResponseSuccess(res)) {
                         _this.imageList.push(res);
                         $file.append('<span class="success"></span>');
                     } else {
@@ -761,40 +760,18 @@
         getInsertList: function () {
             var i, data, list = [],
                 align = getAlign(),
-                prefix = editor.getOpt('imageUrlPrefix');
+                prefix = editor.getOpt('imageUrlPrefix'),
+                imageSrcField = editor.getOpt("imageUploadService")(this, editor).imageSrcField || 'url';
             for (i = 0; i < this.imageList.length; i++) {
                 data = this.imageList[i];
                 list.push({
-                    src: prefix + data.url,
-                    _src: prefix + data.url,
+                    src: prefix + data[imageSrcField],
+                    _src: prefix + data[imageSrcField],
                     alt: data.original,
                     floatStyle: align
                 });
             }
             return list;
-        },
-        /* 添加formData参数 */
-        addFormData: function(url, file) {
-            var _this = this;
-            
-            browserMD5File(file.raw, function (err, md5) {
-                $.post(url, {
-                    query: utils.renderTplstr(editor.getOpt("uploadGql"), {
-                        bucketName: editor.getOpt('bucketName'),
-                        md5: md5,
-                        contentName: file.name
-                    })
-                })
-                .then(function(res) {
-                    _this.uploadInfo = res.data.uploadProcess;
-                    if (_this.uploadInfo.code == 200) {
-                        file.formData = {
-                            policy: _this.uploadInfo.form.policy,
-                            authorization: _this.uploadInfo.form.authorization
-                        };
-                    }
-                });
-            });
         }
     };
 
