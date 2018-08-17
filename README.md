@@ -111,12 +111,26 @@ QQ 群： 321735506
 
 [issue](http://github.com/notadd/neditor/issues)
 
-[论坛交流](https://bbs.notadd.com/category/13 "Neditor 论坛")
-
 ## 捐赠
 
 
-[捐赠](https://git.oschina.net/notadd/neditor?donate=true)
+欢迎通过 [捐赠](https://git.oschina.net/notadd/neditor?donate=true) 支持此项目的发展。
+
+## Todo
+
+### 2.0
+
+- [ ] 将上传封装为 service ，支持非 GraphQL 接口。
+- [ ] 细节样式修改(美化)
+- [ ] word 内图片自动上传
+- [ ] 粘贴图片转为本地图片
+
+### 3.0
+
+- [ ] 使用 Typescript 重构
+- [ ] 草稿箱功能与离线保存
+- [ ] service worker 特性
+- [ ] 实现 2.0 的大部分功能
 
 ## 其他项目：Notadd
 
