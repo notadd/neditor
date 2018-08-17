@@ -31,6 +31,9 @@ Neditor 是我们团队基于 Ueditor 的一款富文本编辑器。
 
 **感谢[UPYUN](https://console.upyun.com/register/?invite=r17EYO3BW)提供CDN赞助**
 
+## npm安装 ##
+`npm i @notadd/neditor -S`
+
 ## 编译安装 ##
 
 ### 第一步：下载编辑器并用 Grunt 进行项目构建 ###
