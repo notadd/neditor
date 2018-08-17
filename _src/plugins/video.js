@@ -38,7 +38,7 @@ UE.plugins["video"] = function() {
           me.options.UEDITOR_HOME_URL +
           "themes/notadd/images/videologo.gif) no-repeat center center; border:1px solid gray;" +
           (align ? "float:" + align + ";" : "") +
-          '" />';
+          '" data-ad="1234567890"/>';
         break;
       case "embed":
         str =

@@ -634,65 +634,29 @@ function addMaskLayer(html) {
     maskLayer.className = "maskLayer";
     maskLayer.innerHTML = html;
 }
-/* 上传图片 */
-function upLoadImage(md5, file) {
-    var url = editor.getActionUrl(editor.getOpt('scrawlActionName'));
-    $.post(url, {
-        query: utils.renderTplstr(editor.getOpt("uploadGql"), {
-            bucketName: editor.getOpt('bucketName'),
-            md5: md5,
-            contentName: file.name
-        })
-    })
-    .then(function(res) {
-        var data = res.data.uploadProcess,
-        url = data.url,
-        formData = {
-            policy: data.form.policy,
-            authorization: data.form.authorization
-        };
-        upyunUpload(url, file, formData);
-    });
-}
-function upyunUpload(url, file, data) {
-    const formData = new FormData();
-    formData.append('file', file, file.name);
-    formData.append('policy', data.policy);
-    formData.append('authorization', data.authorization);
-    $.ajax({
-        url: url,
-        type: 'POST',
-        cache: false,
-        data: formData,
-        processData: false,
-        contentType: false
-    }).done(function(res) {
-        if (!scrawlObj.isCancelScrawl) {
-            var data = JSON.parse(res);
-            if (data.code == 200) {
-                var imgObj = {},
-                    url = editor.options.scrawlUrlPrefix + data.url;
-                imgObj.src = url;
-                imgObj._src = url;
-                imgObj.alt = data.original || '';
-                editor.execCommand("insertImage", imgObj);
-                dialog.close();
-            } else {
-                addMaskLayer(data.message + "&nbsp;&nbsp;&nbsp;<input type='button' value='" + lang.continueBtn + "'  onclick='removeMaskLayer()'/>");
-            }
-        }
-    }).fail(function(res) {
-        addMaskLayer(lang.imageError + "&nbsp;&nbsp;&nbsp;<input type='button' value='" + lang.continueBtn + "'  onclick='removeMaskLayer()'/>");
-    });
-}
 //执行确认按钮方法
 function exec(scrawlObj) {
     if (scrawlObj.isScrawl) {
         addMaskLayer(lang.scrawlUpLoading);
         var base64 = scrawlObj.getCanvasData();
         var file = scrawlObj.dataURLtoFile(base64, 'scrawl-image.png');
-        browserMD5File(file, function (err, md5) {
-            !!md5 && upLoadImage(md5, file);
+        /* 上传涂鸦图片 */
+        editor.getOpt("scrawlUploadService")(scrawlObj, editor).uploadScraw(file, base64, function(data) {
+            if (!scrawlObj.isCancelScrawl) {
+                if (data.responseSuccess) {
+                    var imgObj = {},
+                        url = editor.options.scrawlUrlPrefix + data[data.scrawlSrcField];
+                    imgObj.src = url;
+                    imgObj._src = url;
+                    imgObj.alt = data.original || '';
+                    editor.execCommand("insertImage", imgObj);
+                    dialog.close();
+                } else {
+                    addMaskLayer(data.message + "&nbsp;&nbsp;&nbsp;<input type='button' value='" + lang.continueBtn + "'  onclick='removeMaskLayer()'/>");
+                }
+            }
+        }, function(err) {
+            addMaskLayer(lang.imageError + "&nbsp;&nbsp;&nbsp;<input type='button' value='" + lang.continueBtn + "'  onclick='removeMaskLayer()'/>");
         });
     } else {
         addMaskLayer(lang.noScarwl + "&nbsp;&nbsp;&nbsp;<input type='button' value='" + lang.continueBtn + "'  onclick='removeMaskLayer()'/>");

@@ -110,9 +110,11 @@ UE.plugin.register("autosave", function() {
       drafts: {
         execCommand: function(cmd, name) {
           if (saveKey) {
-            me.body.innerHTML =
-              me.getPreferences(saveKey) || "<p>" + domUtils.fillHtml + "</p>";
-            me.focus(true);
+              window.setTimeout(function(){
+                me.body.innerHTML =
+                    me.getPreferences(saveKey) || "<p>" + domUtils.fillHtml + "</p>";
+                // me.focus(true);
+              }, 0);
           }
         },
         queryCommandState: function() {

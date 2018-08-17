@@ -43,7 +43,7 @@ npm run build
 
 ### 第二步：在浏览器打开 index.html ###
 
-进入到目录 dist/utf8-php , 使用浏览器打开文件 index.html 。
+进入到目录 `dist` , 使用浏览器打开文件 `index.html` 。
 
 如果看到了下面这样的编辑器，恭喜你，初次部署成功！
 
@@ -59,7 +59,11 @@ var ue = UE.getEditor('container', {
 });
 ```
 
-配置项也可以通过 neditor.config.js 文件修改，具体的配置方法请看[前端配置项说明](http://fex.baidu.com/ueditor/#start-config1.4 前端配置项说明.md)
+配置项也可以通过 `neditor.config.js` 文件修改，具体的配置方法请看[前端配置项说明](http://fex.baidu.com/ueditor/#start-config1.4 前端配置项说明.md)
+
+### 编辑器图片、视频、涂鸦、附件上传service
+
+编辑器上传逻辑单独在 `neditor.service.js` 文件配置，具体的配置方法见注释
 
 ### 设置和读取编辑器的内容
 

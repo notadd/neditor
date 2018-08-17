@@ -71,7 +71,7 @@
         $G("frameborder").checked = (iframe.getAttribute("frameborder") == "1") ? true : false;
         $G("align").value = iframe.align ? iframe.align : "";
     }
-    function queding(){
+    function setIframe(){
         var  url = $G("url").value.replace(/^\s*|\s*$/ig,""),
                 width = $G("width").value,
                 height = $G("height").value,
@@ -101,11 +101,11 @@
         editor._iframe = null;
         dialog.close();
     }
-    dialog.onok = queding;
+    dialog.onok = setIframe;
     $G("url").onkeydown = function(evt){
         evt = evt || event;
         if(evt.keyCode == 13){
-            queding();
+            setIframe();
         }
     };
     $focus($G( "url" ));

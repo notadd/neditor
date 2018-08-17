@@ -137,7 +137,9 @@ module.exports = function (grunt) {
                         "themes/notadd/fonts/**",
                         "dialogs/**",
                         "i18n/**",
-                        "third-party/**"
+                        "third-party/**",
+                        "README.md",
+                        "package.json"
                     ],
                     dest: disDir
                 }]
@@ -185,20 +187,11 @@ module.exports = function (grunt) {
                         to: packageJson.name + ".all.min.js"
                     }
                 ]
-            },
-            gbkasp: {
-                src: [disDir + "asp/*.asp"],
-                overwrite: true,
-                replacements: [{
-                    from: /65001/gi,
-                    to: "936"
-                }]
             }
         },
         clean: {
             build: {
                 src: [
-                    disDir + "jsp/src",
                     disDir + "*/upload",
                     disDir + ".DS_Store",
                     disDir + "**/.DS_Store",
@@ -237,11 +230,30 @@ module.exports = function (grunt) {
         //config修改
         updateConfigFile();
 
+        //service
+        updateServiceFile();
+
         grunt.task.run(tasks);
     });
 
     function updateConfigFile() {
         var filename = "neditor.config.js",
+            file = grunt.file.read(filename);
+
+            if (encode == "gbk") {
+                file = file.replace(/utf-8/gi, "gbk");
+            }
+
+        //写入到dist
+        if (grunt.file.write(disDir + filename, file)) {
+            grunt.log.writeln("config file update success");
+        } else {
+            grunt.log.warn("config file update error");
+        }
+    }
+
+    function updateServiceFile() {
+        var filename = "neditor.service.js",
             file = grunt.file.read(filename);
 
             if (encode == "gbk") {

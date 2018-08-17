@@ -30,16 +30,14 @@
     // 服务器统一请求接口路径
     //serverUrl: window.NEDITOR_UPLOAD || URL + "php/controller.php",
     serverUrl: "",
-    /* 上传之前获取授权 */
-    uploadGql: "",
-    /* upyun空间名 */
-    bucketName: "",
-    imageActionName: "image",
-    scrawlActionName: "scrawl",
-    videoActionName: "video",
+    imageActionName: "uploadimage",
+    scrawlActionName: "uploadscrawl",
+    videoActionName: "uploadvideo",
+    fileActionName: "uploadfile",
     imageUrlPrefix: "",
     scrawlUrlPrefix: "",
     videoUrlPrefix: "",
+    fileUrlPrefix: "",
     catcherLocalDomain: "",
     //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的重新定义
     toolbars: [
@@ -385,7 +383,7 @@
 
     //autoHeightEnabled
     // 是否自动长高,默认true
-    //,autoHeightEnabled:true
+    ,autoHeightEnabled:false
 
     //scaleEnabled
     //是否可以拉伸长高,默认true(当开启时，自动长高失效)
