@@ -34,7 +34,10 @@ module.exports = function (grunt) {
                 return src;
             }
         },
-        packageJson = grunt.file.readJSON("package.json"),
+        packageJson = {
+            name: "neditor",
+            version: grunt.file.readJSON("package.json").version
+        },
         encode = grunt.option("encode") || "utf8",
         disDir = "dist/",
         banner =
