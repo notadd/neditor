@@ -1,7 +1,7 @@
 /*!
  * neditor
- * version: 2.1.2
- * build: Fri Aug 17 2018 12:58:06 GMT+0800 (CST)
+ * version: 2.1.3
+ * build: Thu Aug 23 2018 10:30:25 GMT+0800 (CST)
  */
 
 (function(){
@@ -31955,7 +31955,7 @@ UE.ui = baidu.editor.ui = {};
           editor.options.labelMap[name] ||
             editor.getLang("labelMap." + name) ||
             "",
-        onclick: function() {alert("你大爷")},
+        onclick: function() {},
         theme: editor.options.theme,
         showText: false
       });
