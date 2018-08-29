@@ -6,7 +6,8 @@
  */
 UE.Editor.prototype._bkGetActionUrl = UE.Editor.prototype.getActionUrl;
 UE.Editor.prototype.getActionUrl = function(action) {
-    if (action == 'uploadimage' || action == 'uploadscrawl' || action == 'uploadimage') {
+    /* 按config中的xxxActionName返回对应的接口地址 */
+    if (action == 'uploadimage' || action == 'uploadscrawl') {
         return 'http://a.b.com/upload.php';
     } else if (action == 'uploadvideo') {
         return 'http://a.b.com/video.php';
@@ -137,7 +138,7 @@ window.UEDITOR_CONFIG['scrawlUploadService'] = function(context, editor) {
          * 上传接口返回的response成功状态条件 {Boolean} (比如: res.code == 200)
          * res.responseSuccess = res.code == 200;
          * 
-         * 指定上传接口返回的response中视频路径的字段，默认为 url 
+         * 指定上传接口返回的response中涂鸦图片路径的字段，默认为 url 
          * res.videoSrcField = 'url';
          */
         uploadScraw: function(file, base64, success, fail) {
@@ -147,7 +148,7 @@ window.UEDITOR_CONFIG['scrawlUploadService'] = function(context, editor) {
 
 /**
  * 附件上传service
- * @param {Object} context UploadFile对象 视频上传上下文
+ * @param {Object} context UploadFile对象 附件上传上下文
  * @param {Object} editor  编辑器对象
  * @returns fileUploadService 对象
  */
@@ -190,7 +191,7 @@ window.UEDITOR_CONFIG['fileUploadService'] = function(context, editor) {
         getResponseSuccess: function(res) {
             return res.code == 200;
         },
-        /* 指定上传接口返回的response中视频路径的字段，默认为 url */
+        /* 指定上传接口返回的response中附件路径的字段，默认为 url */
         fileSrcField: 'url'
     }
 };
