@@ -293,7 +293,7 @@
             width = $G('upload_width').value || 420,
             height = $G('upload_height').value || 280,
             align = findFocus("upload_alignment","name") || 'none',
-            videoSrcField = editor.getOpt("imageUploadService")(this, editor).videoSrcField || 'url';;
+            videoSrcField = editor.getOpt("videoUploadService")(this, editor).videoSrcField || 'url';;
         for(var key in uploadVideoList) {
             var file = uploadVideoList[key];
             videoObjs.push({
