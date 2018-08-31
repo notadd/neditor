@@ -82,9 +82,7 @@ ue.ready(function(){
     ue.setContent('hello');
     //获取html内容，返回: <p>hello</p>
     var html = ue.getContent();
-    //获取纯文本内容，返回: hello​
-27
-**感谢[UPYUN](https://console.upyun.com/register/?invite=r17EYO3BW)提供CDN赞助**
+    //获取纯文本内容，返回: hello
     var txt = ue.getContentTxt();
 });
 ```
