@@ -23,20 +23,17 @@ Neditor 是我们团队基于 Ueditor 的一款富文本编辑器。
 
 ![image](https://www.notadd.com/src/neditor.webp)
 
+## 第一步：下载编辑器
 
-## 完整安装包 （无需编译） ##
+### 方式一：完整安装包 （推荐）
 
-* [Next](https://www.notadd.com/download/neditor/Neditor-next-master.tar.xz)
+* [Neditor.tar.xz](https://www.notadd.com/download/neditor/Neditor-next-master.tar.xz)
 
+### 方式二： npm安装
 
-**感谢[UPYUN](https://console.upyun.com/register/?invite=r17EYO3BW)提供CDN赞助**
-
-## npm安装 ##
 `npm i @notadd/neditor -S`
 
-## 编译安装 ##
-
-### 第一步：下载编辑器并用 Grunt 进行项目构建 ###
+### 方式三：编译安装 ##
 
 ```shell
 git clone 仓库地址
@@ -79,7 +76,9 @@ ue.ready(function(){
     ue.setContent('hello');
     //获取html内容，返回: <p>hello</p>
     var html = ue.getContent();
-    //获取纯文本内容，返回: hello
+    //获取纯文本内容，返回: hello​
+27
+**感谢[UPYUN](https://console.upyun.com/register/?invite=r17EYO3BW)提供CDN赞助**
     var txt = ue.getContentTxt();
 });
 ```
