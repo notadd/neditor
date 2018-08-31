@@ -25,15 +25,15 @@ Neditor 是我们团队基于 Ueditor 的一款富文本编辑器。
 
 ## 第一步：下载编辑器
 
-### 方式一：完整安装包 （推荐）
+**方式一：完整安装包 （推荐）**
 
 * [Neditor.tar.xz](https://www.notadd.com/download/neditor/Neditor-next-master.tar.xz)
 
-### 方式二： npm安装
+**方式二： npm安装**
 
 `npm i @notadd/neditor -S`
 
-### 方式三：编译安装 ##
+**方式三：编译安装**
 
 ```shell
 git clone 仓库地址
