@@ -49,6 +49,12 @@ npm run build
 
 ![部署成功](https://www.notadd.com/src/neditor-demo.webp)
 
+## 相关版本
+
+[Angular 版 Neditor](https://github.com/notadd/ngx-neditor)
+
+其他版本待添加
+
 ### 自定义的参数
 
 编辑器有很多可自定义的参数项，在实例化的时候可以传入给编辑器：
@@ -96,8 +102,6 @@ Neditor github 地址：[http://github.com/notadd/neditor](http://github.com/not
 Ueditor 官网：[http://ueditor.baidu.com](http://ueditor.baidu.com "ueditor 官网")
 
 Ueditor API 文档：[http://ueditor.baidu.com/doc](http://ueditor.baidu.com/doc "ueditor API 文档")
-
-Ueditor github 地址：[http://github.com/fex-team/ueditor](http://github.com/fex-team/ueditor "ueditor github 地址")
 
 
 
