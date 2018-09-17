@@ -1,7 +1,8 @@
 
 sudo: false
 
-language: node_js
+language: node_js:
+    - 8
 
 matrix:
     fast_finish: true
