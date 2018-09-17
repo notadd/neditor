@@ -36,7 +36,7 @@ Neditor 是我们团队基于 Ueditor 的一款富文本编辑器。
 **方式三：编译安装**
 
 ```shell
-git clone 仓库地址
+git clone https://github.com/notadd/neditor.git
 npm install
 npm run build
 ```
