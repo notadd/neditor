@@ -78,7 +78,7 @@ UE.plugins["table"] = function() {
     defaultCols: 5,
     defaultRows: 5,
     tdvalign: "top",
-    cursorpath: me.options.UEDITOR_HOME_URL + "themes/default/images/cursor_",
+    cursorpath: me.options.UEDITOR_HOME_URL + "themes/" + me.options.theme + "/images/cursor_",
     tableDragable: false,
     classList: [
       "ue-table-interlace-color-single",

@@ -1,7 +1,9 @@
 
-sudo: false
-
 language: node_js
+sudo: false
+dist: trusty
+node_js:
+  - '10.9.0'
 
 matrix:
     fast_finish: true
@@ -11,7 +13,9 @@ matrix:
 install:    
     - npm install
     - npm run build
-    - tar -cvf neditor.tar --exclude=.git dist
+    - cd dist
+    - tar -cvf neditor.tar ./
+    # - tar -cvf neditor.tar --exclude=.git dist
     - xz -z9 neditor.tar
 
 script:
