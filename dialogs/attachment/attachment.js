@@ -147,7 +147,7 @@
                 fileMaxSize = editor.getOpt('fileMaxSize'),
                 acceptExtensions = (editor.getOpt('fileAllowFiles') || 
                     [".txt",".doc",".docs",".xls",".xlsx",".ppt",".odt",".ott",".fodt",".uot",".xml",".dot",".htm",".html",".rtf",".docm",".zip",".rar",".tar",".7z",".tar.gz",".tar.bz",".tar.xz"]).join('').replace(/\./g, ',').replace(/^[,]/, '');;
-
+                console.log(acceptExtensions);
             if (!WebUploader.Uploader.support()) {
                 $('#filePickerReady').after($('<div>').html(lang.errorNotSupport)).hide();
                 return;

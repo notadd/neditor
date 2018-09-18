@@ -62,7 +62,7 @@ var ue = UE.getEditor('container', {
 });
 ```
 
-配置项也可以通过 `neditor.config.js` 文件修改，具体的配置方法请看[前端配置项说明](http://fex.baidu.com/ueditor/#start-config1.4 前端配置项说明.md)
+配置项也可以通过 `neditor.config.js` 文件修改，具体的配置方法请看 [前端配置项说明](http://fex.baidu.com/ueditor/#start-config1.4 前端配置项说明.md)、[后端配置项说明](http://fex.baidu.com/ueditor/#server-config)
 
 ### 编辑器图片、视频、涂鸦、附件上传service
 
