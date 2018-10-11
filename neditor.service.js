@@ -54,14 +54,16 @@ window.UEDITOR_CONFIG['imageUploadService'] = function(context, editor) {
         },
         /**
          * 触发uploadSuccess事件时执行
-         * 当文件上传成功时触发
+         * 当文件上传成功时触发，可以在这里修改上传接口返回的response对象
          * @param {Object} res 上传接口返回的response
          * @returns {Boolean} 上传接口返回的response成功状态条件 (比如: res.code == 200)
          */
         getResponseSuccess: function(res) {
             return res.code == 200;
         },
-        /* 指定上传接口返回的response中图片路径的字段，默认为 url */
+        /* 指定上传接口返回的response中图片路径的字段，默认为 url
+         * 如果图片路径字段不是res的属性，可以写成 对象.属性 的方式，例如：data.url 
+         * */
         imageSrcField: 'url'
     }
 };
@@ -104,14 +106,16 @@ window.UEDITOR_CONFIG['videoUploadService'] = function(context, editor) {
         },
         /**
          * 触发uploadSuccess事件时执行
-         * 当文件上传成功时触发
+         * 当文件上传成功时触发，可以在这里修改上传接口返回的response对象
          * @param {Object} res 上传接口返回的response
          * @returns {Boolean} 上传接口返回的response成功状态条件 (比如: res.code == 200)
          */
         getResponseSuccess: function(res) {
             return res.code == 200;
         },
-        /* 指定上传接口返回的response中视频路径的字段，默认为 url */
+        /* 指定上传接口返回的response中视频路径的字段，默认为 url
+         * 如果视频路径字段不是res的属性，可以写成 对象.属性 的方式，例如：data.url 
+         * */
         videoSrcField: 'url'
     }
 };
@@ -132,6 +136,7 @@ window.UEDITOR_CONFIG['scrawlUploadService'] = function(context, editor) {
          * @param {Function} success 上传成功回调函数,回传上传成功的response对象
          * @param {Function} fail 上传失败回调函数,回传上传失败的response对象
          */
+
         /**
          * 上传成功的response对象必须为以下两个属性赋值
          * 
@@ -142,6 +147,32 @@ window.UEDITOR_CONFIG['scrawlUploadService'] = function(context, editor) {
          * res.videoSrcField = 'url';
          */
         uploadScraw: function(file, base64, success, fail) {
+
+            /* 模拟上传操作 */
+            var formData = new FormData();
+            formData.append('file', file, file.name);
+
+            $.ajax({
+                url: editor.getActionUrl(editor.getOpt('scrawlActionName')),
+                type: 'POST',
+                data: formData
+            }).done(function(res) {
+                var res = JSON.parse(res);
+                
+                /* 上传接口返回的response成功状态条件 (比如: res.code == 200) */
+                res.responseSuccess = res.code == 200;
+
+                /* 指定上传接口返回的response中涂鸦图片路径的字段，默认为 url 
+                 * 如果涂鸦图片路径字段不是res的属性，可以写成 对象.属性 的方式，例如：data.url
+                 */
+                res.scrawlSrcField = 'url';
+
+                /* 上传成功 */
+                success.call(context, res);
+            }).fail(function(err) {
+                /* 上传失败 */
+                fail.call(context, err);
+            });
         }
     }
 }
@@ -184,14 +215,16 @@ window.UEDITOR_CONFIG['fileUploadService'] = function(context, editor) {
         },
         /**
          * 触发uploadSuccess事件时执行
-         * 当文件上传成功时触发
+         * 当文件上传成功时触发，可以在这里修改上传接口返回的response对象
          * @param {Object} res 上传接口返回的response
          * @returns {Boolean} 上传接口返回的response成功状态条件 (比如: res.code == 200)
          */
         getResponseSuccess: function(res) {
             return res.code == 200;
         },
-        /* 指定上传接口返回的response中附件路径的字段，默认为 url */
+        /* 指定上传接口返回的response中附件路径的字段，默认为 url
+         * 如果附件路径字段不是res的属性，可以写成 对象.属性 的方式，例如：data.url 
+         * */
         fileSrcField: 'url'
     }
 };

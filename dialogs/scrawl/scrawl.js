@@ -645,9 +645,27 @@ function exec(scrawlObj) {
             if (!scrawlObj.isCancelScrawl) {
                 if (data.responseSuccess) {
                     var imgObj = {},
-                        url = editor.options.scrawlUrlPrefix + data[data.scrawlSrcField];
-                    imgObj.src = url;
-                    imgObj._src = url;
+                        srcField = data.scrawlSrcField || 'url',
+                        src = '',
+                        srcFieldKeys = srcField.split('.'),
+                        prefix = editor.options.scrawlUrlPrefix;
+
+                    if(srcFieldKeys.length > 1) {
+                        function setSrc(obj, keys, index) {
+                            obj = obj[keys[index]];
+                            if (index < keys.length - 1) {
+                                setSrc(obj, keys, index += 1)
+                            } else {
+                                src = obj;
+                            }
+                        }
+                        setSrc(data, srcFieldKeys, 0);
+                    } else {
+                        src = data[srcField];
+                    }
+                    
+                    imgObj.src = prefix + src;
+                    imgObj._src = prefix + src;
                     imgObj.alt = data.original || '';
                     editor.execCommand("insertImage", imgObj);
                     dialog.close();

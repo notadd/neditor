@@ -294,10 +294,29 @@
             height = $G('upload_height').value || 280,
             align = findFocus("upload_alignment","name") || 'none',
             videoSrcField = editor.getOpt("videoUploadService")(this, editor).videoSrcField || 'url';
+            videoSrc = '',
+            videoSrcFieldKeys = videoSrcField.split('.');
+
         for(var key in uploadVideoList) {
             var file = uploadVideoList[key];
+
+            if(videoSrcFieldKeys.length > 1) {
+                function setVideoSrc(obj, keys, index) {
+                    obj = obj[keys[index]];
+                    if (index < keys.length - 1) {
+                        setVideoSrc(obj, keys, index += 1)
+                    } else {
+                        videoSrc = obj;
+                    }
+                }
+
+                setVideoSrc(file, videoSrcFieldKeys, 0);
+            } else {
+                videoSrc = file[videoSrcField];
+            }
+
             videoObjs.push({
-                url: prefix + file[videoSrcField],
+                url: prefix + videoSrc,
                 width:width,
                 height:height,
                 align:align
@@ -711,7 +730,6 @@
                         break;
                     case 'startUpload':
                         /* 设置Uploader配置项 */
-                        console.log(uploader)
                         editor.getOpt("videoUploadService")(_this, editor).setUploaderOptions(uploader);
                         setState('uploading', files);
                         break;

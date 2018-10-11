@@ -111,6 +111,8 @@ Ueditor 文档：[http://fex.baidu.com/ueditor/](http://fex.baidu.com/ueditor/)
 
 ## 联系我们 ##
 
+Neditor官方交流群：257753500
+
 QQ 群： 321735506
 
 [issue](http://github.com/notadd/neditor/issues)

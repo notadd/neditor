@@ -761,12 +761,31 @@
             var i, data, list = [],
                 align = getAlign(),
                 prefix = editor.getOpt('imageUrlPrefix'),
-                imageSrcField = editor.getOpt("imageUploadService")(this, editor).imageSrcField || 'url';
+                imageSrcField = editor.getOpt("imageUploadService")(this, editor).imageSrcField || 'url',
+                imageSrc = '',
+                imageSrcFieldKeys = imageSrcField.split('.');
+
             for (i = 0; i < this.imageList.length; i++) {
                 data = this.imageList[i];
+                
+                if(imageSrcFieldKeys.length > 1) {
+                    function setImageSrc(obj, keys, index) {
+                        obj = obj[keys[index]];
+                        if (index < keys.length - 1) {
+                            setImageSrc(obj, keys, index += 1)
+                        } else {
+                            imageSrc = obj;
+                        }
+                    }
+    
+                    setImageSrc(data, imageSrcFieldKeys, 0);
+                } else {
+                    imageSrc = data[imageSrcField];
+                }
+                
                 list.push({
-                    src: prefix + data[imageSrcField],
-                    _src: prefix + data[imageSrcField],
+                    src: prefix + imageSrc,
+                    _src: prefix + imageSrc,
                     alt: data.original,
                     floatStyle: align
                 });
