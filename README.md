@@ -6,7 +6,7 @@
 
 ## 新版发布
 
-2.1 发布，此次版本移除了后端相关代码，纯 ajax 提交，请配置 `neditor.config.js` ，支持各种后端或者云存储。
+2.1 发布，此次版本移除了后端相关代码，纯 ajax 提交，请配置 `neditor.config.js` `neditor.service.js`，支持各种后端或者云存储。
 
 ### 关于 HTTPS
 
