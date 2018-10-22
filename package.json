@@ -21,9 +21,9 @@
     "bugs": {
         "url": "https://github.com/notadd/neditor/issues"
     },
-    "dependencies": {
-    },
+    "dependencies": {},
     "devDependencies": {
+        "conventional-changelog-cli": "^2.0.5",
         "gh-pages": "^1.2.0",
         "grunt": "~0.4.1",
         "grunt-cli": "^1.2.0",
@@ -38,6 +38,7 @@
     "scripts": {
         "build": "grunt neditor",
         "publish": "cd dist && npm publish --access public",
-        "deploy": "gh-pages -d dist"
+        "deploy": "gh-pages -d dist",
+        "changelog": "rm -rf CHANGELOG.md && conventional-changelog -p angular -r 4 -i CHANGELOG.md -s"
     }
 }
