@@ -1,27 +1,38 @@
-
-language: node_js
 sudo: false
-dist: trusty
+branches:
+  except:
+    - gh-pages
+language: nodejs
 node_js:
-  - '10.9.0'
-
-matrix:
-    fast_finish: true
-    include:
-        - node_js: node
-
-install:    
+    - 8
+    - 10
+install:
     - npm install
-    - npm run build
-    - cd dist
-    - tar -cvf neditor.tar ./
-    # - tar -cvf neditor.tar --exclude=.git dist
-    - xz -z9 neditor.tar
-
 script:
-    - sh -c "curl -T neditor.tar.xz http://v0.api.upyun.com/notadd/download/neditor/Neditor-next-master.tar.xz -u "$UPYUN" -v;  fi"
-    
+    - npm run build
 notifications:
-    webhooks:
-        - https://hook.bearychat.com/=bwA22/travis/52fa443470377f35e5a3d068b8d2d5ca
-        - https://hook.bearychat.com/=bwA7K/travis/3c04d191a6066d3e178ab8d93643e708
+    - https://hook.bearychat.com/=bwA22/travis/52fa443470377f35e5a3d068b8d2d5ca
+    - https://hook.bearychat.com/=bwA7K/travis/3c04d191a6066d3e178ab8d93643e708
+jobs:
+    include:
+        - stage: Build
+          node_js: 10
+          name: Upload dist to CDN
+          script:
+            - npm run build
+            - cd dist
+            - tar -cvf neditor.tar ./ && xz -z9 neditor.tar
+            - sh -c "curl -T neditor.tar.xz http://v0.api.upyun.com/notadd/download/neditor/Neditor-next-master.tar.xz -u "$UPYUN" -v;  fi"
+deploy:
+    provider: pages
+    repo: notadd/neditor
+    skip-cleanup: true
+    github-token: $GITHUB_PUBLISH_TOKEN
+    keep-history: true
+    local-dir: dist
+    target-branch: gh-pages
+    name: Notadd Bot
+    verbose: true
+    on:
+        repo: notadd/neditor
+        branch: master
