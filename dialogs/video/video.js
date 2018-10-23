@@ -293,11 +293,30 @@
             width = $G('upload_width').value || 420,
             height = $G('upload_height').value || 280,
             align = findFocus("upload_alignment","name") || 'none',
-            videoSrcField = editor.getOpt("videoUploadService")(this, editor).videoSrcField || 'url';;
+            videoSrcField = editor.getOpt("videoUploadService")(this, editor).videoSrcField || 'url';
+            videoSrc = '',
+            videoSrcFieldKeys = videoSrcField.split('.');
+
         for(var key in uploadVideoList) {
             var file = uploadVideoList[key];
+
+            if(videoSrcFieldKeys.length > 1) {
+                function setVideoSrc(obj, keys, index) {
+                    obj = obj[keys[index]];
+                    if (index < keys.length - 1) {
+                        setVideoSrc(obj, keys, index += 1)
+                    } else {
+                        videoSrc = obj;
+                    }
+                }
+
+                setVideoSrc(file, videoSrcFieldKeys, 0);
+            } else {
+                videoSrc = file[videoSrcField];
+            }
+
             videoObjs.push({
-                url: prefix + file[videoSrcField],
+                url: prefix + videoSrc,
                 width:width,
                 height:height,
                 align:align
@@ -738,11 +757,7 @@
                 var $file = $('#' + file.id);
                 try {
                     if (editor.getOpt("videoUploadService")(_this, editor).getResponseSuccess(res)) {
-                        uploadVideoList.push({
-                            'url': res.url,
-                            'type': res.mimetype,
-                            'original':res.original || ''
-                        });
+                        uploadVideoList.push(res);
                         $file.append('<span class="success"></span>');
                     } else {
                         $file.find('.error').text(res.message).show();

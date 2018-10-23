@@ -146,8 +146,7 @@
                 actionUrl = editor.getActionUrl(editor.getOpt('fileActionName')),
                 fileMaxSize = editor.getOpt('fileMaxSize'),
                 acceptExtensions = (editor.getOpt('fileAllowFiles') || 
-                    [".txt",".doc",".docs",".xls",".xlsx",".ppt",".odt",".ott",".fodt",".uot",".xml",".dot",".htm",".html",".rtf",".docm",".zip",".rar",".tar",".7z",".tar.gz",".tar.bz",".tar.xz"]).join('').replace(/\./g, ',').replace(/^[,]/, '');;
-
+                    [".txt",".doc",".docs",".xls",".xlsx",".ppt",".pdf",".odt",".ott",".fodt",".uot",".xml",".dot",".htm",".html",".rtf",".docm",".zip",".rar",".tar",".7z",".tar.gz",".tar.bz",".tar.xz"]).join('').replace(/\./g, ',').replace(/^[,]/, '');;
             if (!WebUploader.Uploader.support()) {
                 $('#filePickerReady').after($('<div>').html(lang.errorNotSupport)).hide();
                 return;
@@ -555,10 +554,27 @@
         getInsertList: function () {
             var i, link, data, list = [],
                 prefix = editor.getOpt('fileUrlPrefix'),
-                fileSrcField = editor.getOpt("fileUploadService")(this, editor).fileSrcField || 'url';;
+                fileSrcField = editor.getOpt("fileUploadService")(this, editor).fileSrcField || 'url',
+                fileSrc = '',
+                fileSrcFieldKeys = fileSrcField.split('.');
+
             for (i = 0; i < this.fileList.length; i++) {
                 data = this.fileList[i];
-                link = data[fileSrcField];
+                if(fileSrcFieldKeys.length > 1) {
+                    function setFileSrc(obj, keys, index) {
+                        obj = obj[keys[index]];
+                        if (index < keys.length - 1) {
+                            setFileSrc(obj, keys, index += 1)
+                        } else {
+                            fileSrc = obj;
+                        }
+                    }
+    
+                    setFileSrc(data, fileSrcFieldKeys, 0);
+                } else {
+                    fileSrc = data[fileSrcField];
+                }
+                link = fileSrc;
                 list.push({
                     title: data.original || link.substr(link.lastIndexOf('/') + 1),
                     url: prefix + link

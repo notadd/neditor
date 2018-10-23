@@ -6,7 +6,7 @@
 
 ## 新版发布
 
-2.1 发布，此次版本移除了后端相关代码，纯 ajax 提交，请配置 `neditor.config.js` ，支持各种后端或者云存储。
+2.1 发布，此次版本移除了后端相关代码，纯 ajax 提交，请配置 `neditor.config.js` `neditor.service.js`，支持各种后端或者云存储。
 
 ### 关于 HTTPS
 
@@ -23,23 +23,20 @@ Neditor 是我们团队基于 Ueditor 的一款富文本编辑器。
 
 ![image](https://www.notadd.com/src/neditor.webp)
 
+## 第一步：下载编辑器
 
-## 完整安装包 （无需编译） ##
+**方式一：完整安装包 （推荐）**
 
-* [Next](https://www.notadd.com/download/neditor/Neditor-next-master.tar.xz)
+* [Neditor.tar.xz](https://www.notadd.com/download/neditor/Neditor-next-master.tar.xz)
 
+**方式二： npm安装**
 
-**感谢[UPYUN](https://console.upyun.com/register/?invite=r17EYO3BW)提供CDN赞助**
-
-## npm安装 ##
 `npm i @notadd/neditor -S`
 
-## 编译安装 ##
-
-### 第一步：下载编辑器并用 Grunt 进行项目构建 ###
+**方式三：编译安装**
 
 ```shell
-git clone 仓库地址
+git clone https://github.com/notadd/neditor.git
 npm install
 npm run build
 ```
@@ -52,6 +49,12 @@ npm run build
 
 ![部署成功](https://www.notadd.com/src/neditor-demo.webp)
 
+## 相关版本
+
+[Angular 版 Neditor](https://github.com/notadd/ngx-neditor)
+
+其他版本待添加
+
 ### 自定义的参数
 
 编辑器有很多可自定义的参数项，在实例化的时候可以传入给编辑器：
@@ -62,7 +65,7 @@ var ue = UE.getEditor('container', {
 });
 ```
 
-配置项也可以通过 `neditor.config.js` 文件修改，具体的配置方法请看[前端配置项说明](http://fex.baidu.com/ueditor/#start-config1.4 前端配置项说明.md)
+配置项也可以通过 `neditor.config.js` 文件修改，具体的配置方法请看 [前端配置项说明](http://fex.baidu.com/ueditor/#start-config1.4 前端配置项说明.md)、[后端配置项说明](http://fex.baidu.com/ueditor/#server-config)
 
 ### 编辑器图片、视频、涂鸦、附件上传service
 
@@ -98,8 +101,6 @@ Ueditor 官网：[http://ueditor.baidu.com](http://ueditor.baidu.com "ueditor �
 
 Ueditor API 文档：[http://ueditor.baidu.com/doc](http://ueditor.baidu.com/doc "ueditor API 文档")
 
-Ueditor github 地址：[http://github.com/fex-team/ueditor](http://github.com/fex-team/ueditor "ueditor github 地址")
-
 
 
 ## 详细文档
@@ -109,6 +110,8 @@ Ueditor 文档：[http://fex.baidu.com/ueditor/](http://fex.baidu.com/ueditor/)
 注: 对IE8以下版本不再承诺兼容
 
 ## 联系我们 ##
+
+Neditor官方交流群：257753500
 
 QQ 群： 321735506
 

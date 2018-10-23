@@ -2,7 +2,7 @@
     "name": "@notadd/neditor",
     "title": "neditor",
     "description": "Neditor富文本web编辑器",
-    "version": "2.1.4",
+    "version": "2.1.6",
     "homepage": "https://github.com/notadd/neditor",
     "author": {
         "name": "Notadd",
@@ -21,9 +21,9 @@
     "bugs": {
         "url": "https://github.com/notadd/neditor/issues"
     },
-    "dependencies": {
-    },
+    "dependencies": {},
     "devDependencies": {
+        "conventional-changelog-cli": "^2.0.5",
         "gh-pages": "^1.2.0",
         "grunt": "~0.4.1",
         "grunt-cli": "^1.2.0",
@@ -37,6 +37,8 @@
     },
     "scripts": {
         "build": "grunt neditor",
-        "deploy": "gh-pages -d dist"
+        "publish": "cd dist && npm publish --access public",
+        "deploy": "gh-pages -d dist",
+        "changelog": "rm -rf CHANGELOG.md && conventional-changelog -p angular -r 4 -i CHANGELOG.md -s"
     }
 }

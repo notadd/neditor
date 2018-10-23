@@ -1,7 +1,7 @@
 /*!
  * neditor
- * version: 2.1.4
- * build: Thu Aug 30 2018 15:11:39 GMT+0800 (CST)
+ * version: 2.1.6
+ * build: Tue Oct 23 2018 19:30:57 GMT+0000 (UTC)
  */
 
 (function(){
@@ -22289,7 +22289,7 @@ UE.plugins["table"] = function() {
     defaultCols: 5,
     defaultRows: 5,
     tdvalign: "top",
-    cursorpath: me.options.UEDITOR_HOME_URL + "themes/default/images/cursor_",
+    cursorpath: me.options.UEDITOR_HOME_URL + "themes/" + me.options.theme + "/images/cursor_",
     tableDragable: false,
     classList: [
       "ue-table-interlace-color-single",

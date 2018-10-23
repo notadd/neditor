@@ -214,7 +214,7 @@
     _display:inline;
     display: inline-block;
     height: 20px;
-    background: url("../../themes/default/images/lock.gif") -13px -13px no-repeat;
+    background: url("../../themes/notadd/images/lock.gif") -13px -13px no-repeat;
     vertical-align: middle;
 }
 #remote #preview{
