@@ -145,7 +145,8 @@ https://github.com/notadd/notadd
 
  ## 感谢提供赞助：
  
-![logo](https://www.notadd.com/src/ucloud_logo.svg)
+ 
+ <a href="https://www.ucloud.cn/site/active/gift.html?ytag=notadd"><img src="https://www.notadd.com/src/ucloud_logo.svg" width="110" /></a> &nbsp;
 
 **UCloud 云服务器限时优惠 — Notadd 项目用户福利**
 
