@@ -1,7 +1,7 @@
 /*!
  * neditor parse
  * version: 2.1.6
- * build: Mon Nov 19 2018 06:20:40 GMT+0000 (UTC)
+ * build: Mon Nov 19 2018 06:45:38 GMT+0000 (UTC)
  */
 
 (function(){
