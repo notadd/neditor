@@ -118,10 +118,31 @@
             height = $G("videoHeight"),
             url=$G('videoUrl').value,
             align = findFocus("videoFloat","name");
-        if(!url) return false;
+						
+				var newurl = convert_url(url);
+				if (newurl.startsWith("<embed>")) {
+					var arr = newurl.split(" ");
+					for (var i=0; i>arr.length; i++) {
+						if (arr[i].startsWith("src")) {
+							newurl = arr[i].replace("src=", "");
+						}
+						if (arr[i].startsWith("width")) {
+							if (!width) {
+								width = arr[i].replace("width=", "");
+							}
+						}
+						if (arr[i].startsWith("height")) {
+							if (!height) {
+								height = arr[i].replace("height=", "");
+							}
+						}
+					}
+				}
+				
+        if(!newurl) return false;
         if ( !checkNum( [width, height] ) ) return false;
         editor.execCommand('insertvideo', {
-            url: convert_url(url),
+            url: newurl,
             width: width.value,
             height: height.value,
             align: align
@@ -179,7 +200,6 @@
             .replace(/v\.qq\.com\/cover\/[\w]+\/[\w]+\/([\w]+)\.html/i, "static.video.qq.com/TPout.swf?vid=$1")
             .replace(/v\.qq\.com\/.+[\?\&]vid=([^&]+).*$/i, "static.video.qq.com/TPout.swf?vid=$1")
             .replace(/my\.tv\.sohu\.com\/[\w]+\/[\d]+\/([\d]+)\.shtml.*$/i, "share.vrs.sohu.com/my/v.swf&id=$1");
-
         return url;
     }
 
@@ -266,57 +286,34 @@
      * @param url
      */
     function createPreviewVideo(url){
-        if ( !url )return;
+        if ( !url ) return;
 
-        var conUrl = convert_url(url);
-
-        $G("preview").innerHTML = '<div class="previewMsg"><span>'+lang.urlError+'</span></div>'+
-        // '<embed class="previewVideo" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"' +
-        //     ' src="' + conUrl + '"' +
-        //     ' width="' + 420  + '"' +
-        //     ' height="' + 280  + '"' +
-        //     ' wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" >' +
-        // '</embed>';
-        '<video class="previewVideo"' +
-        ' src="' + conUrl + '"' +
-        ' width="' + 420  + '"' +
-        ' height="' + 280  + '"' +
-        ' play="true" loop="false" data-setup="{}" controls="controls" preload="auto">' +
-        '</video>';
+				if (url.startsWith("http") && url.indexOf(".mp4") > 0) {
+					$G("preview").innerHTML = '<div class="previewMsg"><span>'+lang.urlError+'</span></div>'+
+					'<video class="previewVideo"' +
+					' src="' + url + '"' +
+					' width="' + 420  + '"' +
+					' height="' + 280  + '"' +
+					' play="true" loop="false" data-setup="{}" controls="controls" preload="auto">' +
+					'</video>';
+				}
+				if (url.startsWith("<embed>")) {
+					$G("preview").innerHTML = '<div class="previewMsg"><span>'+lang.urlError+'</span></div>'+url;
+				}
     }
 
 
     /* 插入上传视频 */
     function insertUpload(){
         var videoObjs=[],
-            prefix = editor.getOpt('videoUrlPrefix'),
-            width = $G('upload_width').value || 420,
-            height = $G('upload_height').value || 280,
-            align = findFocus("upload_alignment","name") || 'none',
-            videoSrcField = editor.getOpt("videoUploadService")(this, editor).videoSrcField || 'url';
-            videoSrc = '',
-            videoSrcFieldKeys = videoSrcField.split('.');
-
+            uploadDir = editor.getOpt('videoUrlPrefix'),
+            width = parseInt($G('upload_width').value, 10) || 420,
+            height = parseInt($G('upload_height').value, 10) || 280,
+            align = findFocus("upload_alignment","name") || 'none';
         for(var key in uploadVideoList) {
             var file = uploadVideoList[key];
-
-            if(videoSrcFieldKeys.length > 1) {
-                function setVideoSrc(obj, keys, index) {
-                    obj = obj[keys[index]];
-                    if (index < keys.length - 1) {
-                        setVideoSrc(obj, keys, index += 1)
-                    } else {
-                        videoSrc = obj;
-                    }
-                }
-
-                setVideoSrc(file, videoSrcFieldKeys, 0);
-            } else {
-                videoSrc = file[videoSrcField];
-            }
-
             videoObjs.push({
-                url: prefix + videoSrc,
+                url: uploadDir + file.url,
                 width:width,
                 height:height,
                 align:align
@@ -334,16 +331,16 @@
 
     /*初始化上传标签*/
     function initUpload(){
-        uploadFile = new UploadVideo('queueList');
+        uploadFile = new UploadFile('queueList');
     }
 
 
     /* 上传附件 */
-    function UploadVideo(target) {
+    function UploadFile(target) {
         this.$wrap = target.constructor == String ? $('#' + target) : $(target);
         this.init();
     }
-    UploadVideo.prototype = {
+    UploadFile.prototype = {
         init: function () {
             this.fileList = [];
             this.initContainer();
@@ -400,7 +397,7 @@
                 uploader,
                 actionUrl = editor.getActionUrl(editor.getOpt('videoActionName')),
                 fileMaxSize = editor.getOpt('videoMaxSize'),
-                acceptExtensions = (editor.getOpt('videoAllowFiles') || [".mp4", ".webm", ".flv", ".ogg", ".f4v"]).join('').replace(/\./g, ',').replace(/^[,]/, '');;
+                acceptExtensions = (editor.getOpt('videoAllowFiles') || []).join('').replace(/\./g, ',').replace(/^[,]/, '');;
 
             if (!WebUploader.Uploader.support()) {
                 $('#filePickerReady').after($('<div>').html(lang.errorNotSupport)).hide();
@@ -694,9 +691,6 @@
             }
 
             uploader.on('fileQueued', function (file) {
-                /* 选择文件后设置上传相关的url和自定义参数 */
-                editor.getOpt("videoUploadService")(_this, editor).setUploadData(file);
-
                 fileCount++;
                 fileSize += file.size;
 
@@ -729,8 +723,10 @@
                         setState('confirm', files);
                         break;
                     case 'startUpload':
-                        /* 设置Uploader配置项 */
-                        editor.getOpt("videoUploadService")(_this, editor).setUploaderOptions(uploader);
+                        /* 添加额外的GET参数 */
+                        var params = utils.serializeParam(editor.queryCommandValue('serverparam')) || '',
+                            url = utils.formatUrl(actionUrl + (actionUrl.indexOf('?') == -1 ? '?':'&') + 'encode=utf-8&' + params);
+                        uploader.option('server', url);
                         setState('uploading', files);
                         break;
                     case 'stopUpload':
@@ -739,9 +735,9 @@
                 }
             });
 
-            uploader.on('uploadBeforeSend', function (object, data, headers) {
+            uploader.on('uploadBeforeSend', function (file, data, header) {
                 //这里可以通过data对象添加POST参数
-                editor.getOpt("videoUploadService")(_this, editor).setFormData(object, data, headers);
+                header['X_Requested_With'] = 'XMLHttpRequest';
             });
 
             uploader.on('uploadProgress', function (file, percentage) {
@@ -753,14 +749,20 @@
                 updateTotalProgress();
             });
 
-            uploader.on('uploadSuccess', function (file, res) {
+            uploader.on('uploadSuccess', function (file, ret) {
                 var $file = $('#' + file.id);
                 try {
-                    if (editor.getOpt("videoUploadService")(_this, editor).getResponseSuccess(res)) {
-                        uploadVideoList.push(res);
+                    var responseText = (ret._raw || ret),
+                        json = utils.str2json(responseText);
+                    if (json.state == 'SUCCESS') {
+                        uploadVideoList.push({
+                            'url': json.url,
+                            'type': json.type,
+                            'original':json.original
+                        });
                         $file.append('<span class="success"></span>');
                     } else {
-                        $file.find('.error').text(res.message).show();
+                        $file.find('.error').text(json.state).show();
                     }
                 } catch (e) {
                     $file.find('.error').text(lang.errorServerUpload).show();
@@ -783,13 +785,9 @@
                 }
 
                 if (state === 'ready') {
-                    window.setTimeout(function() {
-                        uploader.upload();
-                    }, 500);
+                    uploader.upload();
                 } else if (state === 'paused') {
-                    window.setTimeout(function() {
-                        uploader.upload();
-                    }, 500);
+                    uploader.upload();
                 } else if (state === 'uploading') {
                     uploader.stop();
                 }
