@@ -1,7 +1,7 @@
 /*!
  * neditor
  * version: 2.1.6
- * build: Thu Nov 29 2018 09:38:10 GMT+0000 (UTC)
+ * build: Sat Dec 01 2018 14:25:08 GMT+0000 (UTC)
  */
 
 (function(){
@@ -3807,14 +3807,18 @@ var domUtils = (dom.domUtils = {
     try {
       var value =
         domUtils.getStyle(element, styleName) ||
-        (window.getComputedStyle
+        browser.webkit && styleName === 'text-decoration'
           ? domUtils
               .getWindow(element)
-              .getComputedStyle(element, "")
-              .getPropertyValue(styleName)
-          : (element.currentStyle || element.style)[
-              utils.cssStyleToDomStyle(styleName)
-            ]);
+              .getComputedStyle(element)['webkitTextDecorationsInEffect']
+          : (window.getComputedStyle
+              ? domUtils
+                  .getWindow(element)
+                  .getComputedStyle(element, "")
+                  .getPropertyValue(styleName)
+              : (element.currentStyle || element.style)[
+                  utils.cssStyleToDomStyle(styleName)
+                ]);
     } catch (e) {
       return "";
     }
@@ -19525,7 +19529,7 @@ UE.plugins["autofloat"] = function() {
       toolbarBox = me.ui.getDom("toolbarbox");
       orgTop = getPosition(toolbarBox).top;
       bakCssText = toolbarBox.style.cssText;
-      placeHolder.style.height = toolbarBox.offsetHeight + "px";
+      placeHolder.style.height = me.ui.getDom("iframeholder").offsetHeight + "px";
       if (LteIE6) {
         fixIE6FixedPos();
       }
