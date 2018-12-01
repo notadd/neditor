@@ -13,8 +13,6 @@
 该项目需要您的支持， [捐赠](https://gitee.com/notadd/neditor?donate=true)  以支持此项目的发展。
 
 
-![image](https://www.notadd.com/src/neditor.webp)
-
 ## 第一步：下载编辑器
 
 **方式一：完整安装包 （推荐）**
@@ -40,6 +38,11 @@ npm run build
 如果看到了下面这样的编辑器，恭喜你，初次部署成功！
 
 ![部署成功](https://www.notadd.com/src/neditor-demo.webp)
+
+## 技术支持
+
+该项目基于 MIT 协议开源，任何组织/企业以及个人都可以免费使用（保留版权）。
+如果您需要额外商业技术支持或者定制编辑器，请联系QQ：1256985886
 
 ## 相关版本
 
