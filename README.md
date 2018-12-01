@@ -8,16 +8,11 @@
 
 2.1 发布，此次版本移除了后端相关代码，纯 ajax 提交，请配置 `neditor.config.js` `neditor.service.js`，支持各种后端或者云存储。
 
-### 关于 HTTPS
+## 捐赠
 
-使用了 [又拍云CDN](https://console.upyun.com/register/?invite=r17EYO3BW) 服务，支持跨域 和 https。
+[捐赠](https://gitee.com/notadd/neditor?donate=true)  支持此项目的发展。
 
-如果有需要，也可将下面域名改成自己的。
-```
-imgbaidu.b0.upaiyun.com
-tingapi.b0.upaiyun.com
-```
-Neditor 是我们团队基于 Ueditor 的一款富文本编辑器。
+Neditor 是基于 Ueditor 的一款富文本编辑器。
 不论从功能还是从其它各方面来讲， Ueditor 都是一款无以替代的编辑器产品。
 只是已经不符合现代化样式的需求，于是我们修改它的样式，实现了这样的效果：
 
@@ -101,13 +96,22 @@ Ueditor 官网：[http://ueditor.baidu.com](http://ueditor.baidu.com "ueditor �
 
 Ueditor API 文档：[http://ueditor.baidu.com/doc](http://ueditor.baidu.com/doc "ueditor API 文档")
 
-
-
 ## 详细文档
 
 Ueditor 文档：[http://fex.baidu.com/ueditor/](http://fex.baidu.com/ueditor/)
 
 注: 对IE8以下版本不再承诺兼容
+
+
+### 关于 HTTPS
+
+使用了 [又拍云CDN](https://console.upyun.com/register/?invite=r17EYO3BW) 服务，支持跨域 和 https。
+
+如果有需要，也可将下面域名改成自己的。
+```
+imgbaidu.b0.upaiyun.com
+tingapi.b0.upaiyun.com
+```
 
 ## 联系我们 ##
 
@@ -117,10 +121,7 @@ QQ 群： 321735506
 
 [issue](http://github.com/notadd/neditor/issues)
 
-## 捐赠
 
-
-欢迎通过 [捐赠](https://git.oschina.net/notadd/neditor?donate=true) 支持此项目的发展。
 
 ## Todo
 
