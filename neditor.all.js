@@ -1,7 +1,7 @@
 /*!
  * neditor
  * version: 2.1.6
- * build: Sat Dec 01 2018 14:25:08 GMT+0000 (UTC)
+ * build: Sat Dec 01 2018 14:27:40 GMT+0000 (UTC)
  */
 
 (function(){
@@ -16265,7 +16265,10 @@ UE.plugins["paste"] = function() {
     domUtils.on(me.body, "cut", function() {
       var range = me.selection.getRange();
       if (!range.collapsed && me.undoManger) {
-        me.undoManger.save();
+        if (me.undoManger.list.length < 1) me.undoManger.save();
+        setTimeout(function() {
+          me.undoManger.save();
+        });
       }
     });
 
