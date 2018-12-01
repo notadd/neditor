@@ -10,11 +10,8 @@
 
 ## 捐赠
 
-[捐赠](https://gitee.com/notadd/neditor?donate=true)  支持此项目的发展。
+该项目需要您的支持， [捐赠](https://gitee.com/notadd/neditor?donate=true)  以支持此项目的发展。
 
-Neditor 是基于 Ueditor 的一款富文本编辑器。
-不论从功能还是从其它各方面来讲， Ueditor 都是一款无以替代的编辑器产品。
-只是已经不符合现代化样式的需求，于是我们修改它的样式，实现了这样的效果：
 
 ![image](https://www.notadd.com/src/neditor.webp)
 
