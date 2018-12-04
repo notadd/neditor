@@ -39,14 +39,18 @@ npm run build
 
 ![部署成功](https://www.notadd.com/src/neditor-demo.webp)
 
+## 相关版本
+
+[Angular 版 Neditor](https://github.com/notadd/ngx-neditor)    
+
+[Vue 版 Neditor](https://github.com/caiya/vue-neditor-wrap)   【第三方维护】
+
 ## 技术支持
 
 该项目基于 MIT 协议开源，任何组织/企业以及个人都可以免费使用（保留版权）。    
 如果您需要额外商业技术支持或者定制编辑器，请联系 QQ：1256985886
 
-## 相关版本
 
-[Angular 版 Neditor](https://github.com/notadd/ngx-neditor)
 
 其他版本待添加
 
