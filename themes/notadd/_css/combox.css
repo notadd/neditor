@@ -11,7 +11,7 @@
 
 .edui-notadd .edui-toolbar .edui-combox-body .edui-arrow::after {
     height: 25px;
-
+    line-height: 24px;
     font-family:"edui-notadd" !important;
     font-size: 26px;
     font-style:normal;
