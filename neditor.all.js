@@ -1,7 +1,7 @@
 /*!
  * neditor
  * version: 2.1.6
- * build: Fri Dec 07 2018 11:40:46 GMT+0000 (UTC)
+ * build: Mon Dec 10 2018 04:24:52 GMT+0000 (UTC)
  */
 
 (function(){
@@ -13833,16 +13833,16 @@ UE.plugins["selectall"] = function() {
  * ```
  */
 
-UE.plugins["paragraph"] = function() {
+UE.plugins["paragraph"] = function () {
   var me = this,
     block = domUtils.isBlockElm,
     notExchange = ["TD", "LI", "PRE"],
-    doParagraph = function(range, style, attrs, sourceCmdName) {
+    doParagraph = function (range, style, attrs, sourceCmdName) {
       var bookmark = range.createBookmark(),
-        filterFn = function(node) {
+        filterFn = function (node) {
           return node.nodeType == 1
             ? node.tagName.toLowerCase() != "br" &&
-                !domUtils.isBookmarkNode(node)
+            !domUtils.isBookmarkNode(node)
             : !domUtils.isWhitespace(node);
         },
         para;
@@ -13863,7 +13863,7 @@ UE.plugins["paragraph"] = function() {
           tmpRange.setStartBefore(current);
           while (current && current !== bookmark2.end && !block(current)) {
             tmpNode = current;
-            current = domUtils.getNextDomNode(current, false, null, function(
+            current = domUtils.getNextDomNode(current, false, null, function (
               node
             ) {
               return !block(node);
@@ -13917,7 +13917,7 @@ UE.plugins["paragraph"] = function() {
                 (para.style.padding = parent.style.padding);
             }
 
-            //trace:1706 选择的就是h1-6要删除
+            //trace:1706 选择的就是h1-6要删除 
             if (
               attrs &&
               /h\d/i.test(parent.tagName) &&
@@ -13931,12 +13931,13 @@ UE.plugins["paragraph"] = function() {
               ) {
                 parent.style.cssText = attrs.style;
               }
-              domUtils.remove(para.parentNode, true);
+              domUtils.remove(para, true);
               para = parent;
             } else {
               domUtils.remove(para.parentNode, true);
             }
           }
+
           if (utils.indexOf(notExchange, parent.tagName) != -1) {
             current = parent;
           } else {
@@ -13960,7 +13961,7 @@ UE.plugins["paragraph"] = function() {
     h6: ""
   });
   me.commands["paragraph"] = {
-    execCommand: function(cmdName, style, attrs, sourceCmdName) {
+    execCommand: function (cmdName, style, attrs, sourceCmdName) {
       var range = this.selection.getRange();
       //闭合时单独处理
       if (range.collapsed) {
@@ -14009,7 +14010,7 @@ UE.plugins["paragraph"] = function() {
 
       return true;
     },
-    queryCommandValue: function() {
+    queryCommandValue: function () {
       var node = domUtils.filterNodeList(
         this.selection.getStartElementPath(),
         "p h1 h2 h3 h4 h5 h6"
