@@ -31,16 +31,16 @@
  * ```
  */
 
-UE.plugins["paragraph"] = function() {
+UE.plugins["paragraph"] = function () {
   var me = this,
     block = domUtils.isBlockElm,
     notExchange = ["TD", "LI", "PRE"],
-    doParagraph = function(range, style, attrs, sourceCmdName) {
+    doParagraph = function (range, style, attrs, sourceCmdName) {
       var bookmark = range.createBookmark(),
-        filterFn = function(node) {
+        filterFn = function (node) {
           return node.nodeType == 1
             ? node.tagName.toLowerCase() != "br" &&
-                !domUtils.isBookmarkNode(node)
+            !domUtils.isBookmarkNode(node)
             : !domUtils.isWhitespace(node);
         },
         para;
@@ -61,7 +61,7 @@ UE.plugins["paragraph"] = function() {
           tmpRange.setStartBefore(current);
           while (current && current !== bookmark2.end && !block(current)) {
             tmpNode = current;
-            current = domUtils.getNextDomNode(current, false, null, function(
+            current = domUtils.getNextDomNode(current, false, null, function (
               node
             ) {
               return !block(node);
@@ -117,24 +117,24 @@ UE.plugins["paragraph"] = function() {
 
             //trace:1706 选择的就是h1-6要删除 
             if (
-                attrs &&
-                /h\d/i.test(parent.tagName) &&
-                !/h\d/i.test(para.tagName)
+              attrs &&
+              /h\d/i.test(parent.tagName) &&
+              !/h\d/i.test(para.tagName)
             ) {
-                domUtils.setAttributes(parent, attrs);
-                if (
-                    sourceCmdName && 
-                    sourceCmdName == "customstyle" && 
-                    attrs.style
-                ) {
-                    parent.style.cssText = attrs.style;
-                }
-                domUtils.remove(para, true);
-                para = parent;
+              domUtils.setAttributes(parent, attrs);
+              if (
+                sourceCmdName &&
+                sourceCmdName == "customstyle" &&
+                attrs.style
+              ) {
+                parent.style.cssText = attrs.style;
+              }
+              domUtils.remove(para, true);
+              para = parent;
             } else {
-                domUtils.remove(para.parentNode, true);
+              domUtils.remove(para.parentNode, true);
             }
-            }
+          }
 
           if (utils.indexOf(notExchange, parent.tagName) != -1) {
             current = parent;
@@ -159,7 +159,7 @@ UE.plugins["paragraph"] = function() {
     h6: ""
   });
   me.commands["paragraph"] = {
-    execCommand: function(cmdName, style, attrs, sourceCmdName) {
+    execCommand: function (cmdName, style, attrs, sourceCmdName) {
       var range = this.selection.getRange();
       //闭合时单独处理
       if (range.collapsed) {
@@ -208,7 +208,7 @@ UE.plugins["paragraph"] = function() {
 
       return true;
     },
-    queryCommandValue: function() {
+    queryCommandValue: function () {
       var node = domUtils.filterNodeList(
         this.selection.getStartElementPath(),
         "p h1 h2 h3 h4 h5 h6"
