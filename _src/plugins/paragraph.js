@@ -115,7 +115,6 @@ UE.plugins["paragraph"] = function() {
                 (para.style.padding = parent.style.padding);
             }
 
-            domUtils.remove(para, true);
             //trace:1706 选择的就是h1-6要删除 
             if (
                 attrs &&
