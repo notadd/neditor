@@ -115,26 +115,28 @@ UE.plugins["paragraph"] = function() {
                 (para.style.padding = parent.style.padding);
             }
 
-            //trace:1706 选择的就是h1-6要删除
+            domUtils.remove(para, true);
+            //trace:1706 选择的就是h1-6要删除 
             if (
-              attrs &&
-              /h\d/i.test(parent.tagName) &&
-              !/h\d/i.test(para.tagName)
+                attrs &&
+                /h\d/i.test(parent.tagName) &&
+                !/h\d/i.test(para.tagName)
             ) {
-              domUtils.setAttributes(parent, attrs);
-              if (
-                sourceCmdName &&
-                sourceCmdName == "customstyle" &&
-                attrs.style
-              ) {
-                parent.style.cssText = attrs.style;
-              }
-              domUtils.remove(para.parentNode, true);
-              para = parent;
+                domUtils.setAttributes(parent, attrs);
+                if (
+                    sourceCmdName && 
+                    sourceCmdName == "customstyle" && 
+                    attrs.style
+                ) {
+                    parent.style.cssText = attrs.style;
+                }
+                domUtils.remove(para, true);
+                para = parent;
             } else {
-              domUtils.remove(para.parentNode, true);
+                domUtils.remove(para.parentNode, true);
             }
-          }
+            }
+
           if (utils.indexOf(notExchange, parent.tagName) != -1) {
             current = parent;
           } else {
