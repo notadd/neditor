@@ -1,7 +1,7 @@
 /*!
  * neditor
- * version: 2.1.9
- * build: Sat Dec 29 2018 08:30:34 GMT+0000 (UTC)
+ * version: 2.1.13
+ * build: Sat Dec 29 2018 09:04:03 GMT+0000 (UTC)
  */
 
 (function(){
@@ -3805,20 +3805,10 @@ var domUtils = (dom.domUtils = {
       return result + "px";
     }
     try {
-      var value =
-        domUtils.getStyle(element, styleName) ||
-        browser.webkit && styleName === 'text-decoration'
-          ? domUtils
-              .getWindow(element)
-              .getComputedStyle(element)['webkitTextDecorationsInEffect']
-          : (window.getComputedStyle
-              ? domUtils
-                  .getWindow(element)
-                  .getComputedStyle(element, "")
-                  .getPropertyValue(styleName)
-              : (element.currentStyle || element.style)[
-                  utils.cssStyleToDomStyle(styleName)
-                ]);
+        var value = domUtils.getStyle(element, styleName) ||
+            (window.getComputedStyle 
+                ? domUtils.getWindow(element).getComputedStyle(element, "").getPropertyValue(styleName)
+                : (element.currentStyle || element.style)[utils.cssStyleToDomStyle(styleName)]);
     } catch (e) {
       return "";
     }
