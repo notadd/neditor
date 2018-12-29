@@ -1,7 +1,7 @@
 /*!
  * neditor
  * version: 2.1.13
- * build: Sat Dec 29 2018 17:03:39 GMT+0800 (CST)
+ * build: Sat Dec 29 2018 09:49:22 GMT+0000 (UTC)
  */
 
 (function(){
