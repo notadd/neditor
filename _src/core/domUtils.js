@@ -1620,20 +1620,10 @@ var domUtils = (dom.domUtils = {
       return result + "px";
     }
     try {
-      var value =
-        domUtils.getStyle(element, styleName) ||
-        browser.webkit && styleName === 'text-decoration'
-          ? domUtils
-              .getWindow(element)
-              .getComputedStyle(element)['webkitTextDecorationsInEffect']
-          : (window.getComputedStyle
-              ? domUtils
-                  .getWindow(element)
-                  .getComputedStyle(element, "")
-                  .getPropertyValue(styleName)
-              : (element.currentStyle || element.style)[
-                  utils.cssStyleToDomStyle(styleName)
-                ]);
+        var value = domUtils.getStyle(element, styleName) ||
+            (window.getComputedStyle 
+                ? domUtils.getWindow(element).getComputedStyle(element, "").getPropertyValue(styleName)
+                : (element.currentStyle || element.style)[utils.cssStyleToDomStyle(styleName)]);
     } catch (e) {
       return "";
     }
