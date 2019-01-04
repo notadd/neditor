@@ -1,7 +1,7 @@
 /*!
  * neditor
  * version: 2.1.13
- * build: Sat Dec 29 2018 09:49:22 GMT+0000 (UTC)
+ * build: Fri Jan 04 2019 08:54:36 GMT+0000 (UTC)
  */
 
 (function(){
@@ -16454,7 +16454,7 @@ UE.plugins["list"] = function() {
       dot: ""
     },
     listDefaultPaddingLeft: "30",
-    listiconpath: "http://bs.baidu.com/listicon/",
+    listiconpath: me.options.UEDITOR_HOME_URL + "themes/ueditor-list/",
     maxListLevel: -1, //-1不限制
     disablePInList: false
   });
