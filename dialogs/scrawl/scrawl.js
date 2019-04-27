@@ -645,24 +645,24 @@ function exec(scrawlObj) {
             if (!scrawlObj.isCancelScrawl) {
                 if (data.responseSuccess) {
                     var imgObj = {},
-                        srcField = data.scrawlSrcField || 'url',
+//                         srcField = data.scrawlSrcField || 'url',
                         src = '',
-                        srcFieldKeys = srcField.split('.'),
+//                         srcFieldKeys = srcField.split('.'),
                         prefix = editor.options.scrawlUrlPrefix;
 
-                    if(srcFieldKeys.length > 1) {
-                        function setSrc(obj, keys, index) {
-                            obj = obj[keys[index]];
-                            if (index < keys.length - 1) {
-                                setSrc(obj, keys, index += 1)
-                            } else {
-                                src = obj;
-                            }
-                        }
-                        setSrc(data, srcFieldKeys, 0);
-                    } else {
-                        src = data[srcField];
-                    }
+//                     if(srcFieldKeys.length > 1) {
+//                         function setSrc(obj, keys, index) {
+//                             obj = obj[keys[index]];
+//                             if (index < keys.length - 1) {
+//                                 setSrc(obj, keys, index += 1)
+//                             } else {
+//                                 src = obj;
+//                             }
+//                         }
+//                         setSrc(data, srcFieldKeys, 0);
+//                     } else {
+//                         src = data[srcField];
+//                     }
                     
                     imgObj.src = prefix + src;
                     imgObj._src = prefix + src;
