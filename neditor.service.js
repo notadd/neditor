@@ -155,6 +155,10 @@ window.UEDITOR_CONFIG['scrawlUploadService'] = function(context, editor) {
             $.ajax({
                 url: editor.getActionUrl(editor.getOpt('scrawlActionName')),
                 type: 'POST',
+                //ajax2.0可以不用设置请求头，但是jq帮我们自动设置了，这样的话需要我们自己取消掉
+                contentType: false,
+                //取消帮我们格式化数据，是什么就是什么
+                processData: false,
                 data: formData
             }).done(function(res) {
                 var res = JSON.parse(res);

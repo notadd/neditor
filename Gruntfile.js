@@ -138,6 +138,7 @@ module.exports = function (grunt) {
                         "themes/notadd/dialogbase.css",
                         "themes/notadd/images/**",
                         "themes/notadd/fonts/**",
+			"themes/ueditor-list/**",
                         "dialogs/**",
                         "i18n/**",
                         "third-party/**",

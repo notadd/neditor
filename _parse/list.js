@@ -14,7 +14,7 @@ UE.parse.register("list", function(utils) {
   utils.extend(this, {
     liiconpath : utils.removeLastbs(this.rootPath) + '/themes/ueditor-list/',
     listDefaultPaddingLeft: "20"
-  });
+  },true);
 
   var root = this.root,
     ols = root.getElementsByTagName("ol"),
