@@ -188,6 +188,11 @@
     }
     function convert_url(url){
         if ( !url ) return '';
+		//去掉多余参数，否则可能导致插入后无法播放
+		var arr = url.split('?');
+        if (arr && arr.length > 1) {
+            url = arr[0];
+        }
         url = utils.trim(url)
             .replace(/v\.youku\.com\/v_show\/id_([\w\-=]+)\.html/i, 'player.youku.com/player.php/sid/$1/v.swf')
             .replace(/(www\.)?youtube\.com\/watch\?v=([\w\-]+)/i, "www.youtube.com/v/$2")
