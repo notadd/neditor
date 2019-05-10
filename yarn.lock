@@ -245,7 +245,7 @@ conventional-changelog-atom@^2.0.0:
   dependencies:
     q "^1.5.1"
 
-conventional-changelog-cli@^2.0.5:
+conventional-changelog-cli@2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/conventional-changelog-cli/-/conventional-changelog-cli-2.0.5.tgz#37c2477ea43522a5f63e52ad977d8c9e1f863211"
   integrity sha512-StqCVo10g194UhyLIhg+M/tTVu6YjGnON/IiQ9Ty/h+dgi9obYAkknwpmmgGJMQ3P3vNRljuZBupz0N2tpdxXg==
@@ -562,7 +562,7 @@ getobject@~0.1.0:
   resolved "https://registry.yarnpkg.com/getobject/-/getobject-0.1.0.tgz#047a449789fa160d018f5486ed91320b6ec7885c"
   integrity sha1-BHpEl4n6Fg0Bj1SG7ZEyC27HiFw=
 
-gh-pages@^1.2.0:
+gh-pages@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/gh-pages/-/gh-pages-1.2.0.tgz#1acb92801078f7c038a167f447221d1496ccfbee"
   integrity sha512-cGLYAvxtlQ1iTwAS4g7FreZPXoE/g62Fsxln2mmR19mgs4zZI+XJ+wVVUhBFCF/0+Nmvbq+abyTWue1m1BSnmg==
@@ -670,7 +670,7 @@ graceful-fs@~1.2.0:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-1.2.3.tgz#15a4806a57547cb2d2dbf27f42e89a8c3451b364"
   integrity sha1-FaSAaldUfLLS2/J/QuiajDRRs2Q=
 
-grunt-cli@^1.2.0:
+grunt-cli@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/grunt-cli/-/grunt-cli-1.2.0.tgz#562b119ebb069ddb464ace2845501be97b35b6a8"
   integrity sha1-VisRnrsGndtGSs4oRVAb6Xs1tqg=
@@ -680,24 +680,24 @@ grunt-cli@^1.2.0:
     nopt "~3.0.6"
     resolve "~1.1.0"
 
-grunt-contrib-clean@~0.5.0:
+grunt-contrib-clean@0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/grunt-contrib-clean/-/grunt-contrib-clean-0.5.0.tgz#f53dfdee0849b1c7b40e9ebbba69f48c4c6079c5"
   integrity sha1-9T397ghJsce0Dp67umn0jExgecU=
   dependencies:
     rimraf "~2.2.1"
 
-grunt-contrib-concat@~0.3.0:
+grunt-contrib-concat@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/grunt-contrib-concat/-/grunt-contrib-concat-0.3.0.tgz#48fa0d4336d29b653ad8225a6bd6f856b4483e32"
   integrity sha1-SPoNQzbSm2U62CJaa9b4VrRIPjI=
 
-grunt-contrib-copy@~0.4.0:
+grunt-contrib-copy@0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/grunt-contrib-copy/-/grunt-contrib-copy-0.4.1.tgz#f0753b40ae21bb706daefb0b299e03cdf5fa9d6e"
   integrity sha1-8HU7QK4hu3BtrvsLKZ4DzfX6nW4=
 
-grunt-contrib-cssmin@~0.6.0:
+grunt-contrib-cssmin@0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/grunt-contrib-cssmin/-/grunt-contrib-cssmin-0.6.2.tgz#2804dc0e81f98e8a54d61eee84a1d3fe1a3af8e2"
   integrity sha1-KATcDoH5jopU1h7uhKHT/ho6+OI=
@@ -705,7 +705,7 @@ grunt-contrib-cssmin@~0.6.0:
     clean-css "~1.1.1"
     grunt-lib-contrib "~0.6.0"
 
-grunt-contrib-uglify@^1.0.1:
+grunt-contrib-uglify@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/grunt-contrib-uglify/-/grunt-contrib-uglify-1.0.2.tgz#ae67a46f9153edd4cb11813a55eb69c70d7db2fb"
   integrity sha1-rmekb5FT7dTLEYE6Vetpxw19svs=
@@ -761,12 +761,12 @@ grunt-lib-contrib@~0.6.0:
   dependencies:
     zlib-browserify "0.0.1"
 
-grunt-text-replace@~0.3.9:
+grunt-text-replace@0.3.12:
   version "0.3.12"
   resolved "https://registry.yarnpkg.com/grunt-text-replace/-/grunt-text-replace-0.3.12.tgz#8bc10689a3e09b80f184d7dd4d42a3d609cf58a5"
   integrity sha1-i8EGiaPgm4DxhNfdTUKj1gnPWKU=
 
-grunt-transcoding@~0.1.1:
+grunt-transcoding@0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/grunt-transcoding/-/grunt-transcoding-0.1.3.tgz#f84b2df5c600a2ca91f9ab150198cd80c2b3a7f3"
   integrity sha1-+Est9cYAosqR+asVAZjNgMKzp/M=
@@ -774,7 +774,7 @@ grunt-transcoding@~0.1.1:
     grunt "~0.4.1"
     iconv-lite "~0.2.11"
 
-grunt@~0.4.1:
+grunt@0.4.5, grunt@~0.4.1:
   version "0.4.5"
   resolved "https://registry.yarnpkg.com/grunt/-/grunt-0.4.5.tgz#56937cd5194324adff6d207631832a9d6ba4e7f0"
   integrity sha1-VpN81RlDJK3/bSB2MYMqnWuk5/A=
