@@ -23,7 +23,7 @@
     },
     "dependencies": {},
     "devDependencies": {
-        "conventional-changelog-cli": "2.0.5",
+        "conventional-changelog-cli": "2.0.21",
         "gh-pages": "1.2.0",
         "grunt": "0.4.5",
         "grunt-cli": "1.2.0",
