@@ -1071,10 +1071,10 @@ grunt-lib-contrib@~0.6.0:
   dependencies:
     zlib-browserify "0.0.1"
 
-grunt-text-replace@0.3.12:
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/grunt-text-replace/-/grunt-text-replace-0.3.12.tgz#8bc10689a3e09b80f184d7dd4d42a3d609cf58a5"
-  integrity sha1-i8EGiaPgm4DxhNfdTUKj1gnPWKU=
+grunt-text-replace@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/grunt-text-replace/-/grunt-text-replace-0.4.0.tgz#db9d9ce59e2fe49da277e9dbc195c3e11cfb16c2"
+  integrity sha1-252c5Z4v5J2id+nbwZXD4Rz7FsI=
 
 grunt-transcoding@0.1.3:
   version "0.1.3"
