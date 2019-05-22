@@ -317,11 +317,29 @@
             width = $G('upload_width').value || 420,
             height = $G('upload_height').value || 280,
             align = findFocus("upload_alignment","name") || 'none',
-            videoSrcField = editor.getOpt("imageUploadService")(this, editor).videoSrcField || 'url';;
+            videoSrcField = editor.getOpt("imageUploadService")(this, editor).videoSrcField || 'url',
+            videoSrc = '',
+            videoSrcFieldKeys = videoSrcField.split('.');
         for(var key in uploadVideoList) {
             var file = uploadVideoList[key];
+
+            if(videoSrcFieldKeys.length > 1) {
+                function setVideoSrc(obj, keys, index) {
+                    obj = obj[keys[index]];
+                    if (index < keys.length - 1) {
+                        setVideoSrc(obj, keys, index += 1)
+                    } else {
+                        videoSrc = obj;
+                    }
+                }
+
+                setVideoSrc(file, videoSrcFieldKeys, 0);
+            } else {
+                videoSrc = file[videoSrcField];
+            }
+
             videoObjs.push({
-                url: prefix + file[videoSrcField],
+                url: prefix + videoSrc,
                 width:width,
                 height:height,
                 align:align
@@ -343,7 +361,7 @@
     }
 
 
-    /* 上传附件 */
+    /* 上传视频 */
     function UploadVideo(target) {
         this.$wrap = target.constructor == String ? $('#' + target) : $(target);
         this.init();

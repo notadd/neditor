@@ -645,10 +645,25 @@ function exec(scrawlObj) {
             if (!scrawlObj.isCancelScrawl) {
                 if (data.responseSuccess) {
                     var imgObj = {},
-					//图片上传结果地址，包括文件名
-                    src = data.scrawlSrcField,
-//                  //修正前缀，配置中可配置
-                    prefix = editor.options.scrawlUrlPrefix;
+                        srcField = data.scrawlSrcField || 'url',
+                        src = '',
+                        srcFieldKeys = srcField.split('.'),
+                        prefix = editor.options.scrawlUrlPrefix;
+                    
+                    if(srcFieldKeys.length > 1) {
+                        function setSrc(obj, keys, index) {
+                            obj = obj[keys[index]];
+                            if (index < keys.length - 1) {
+                                setSrc(obj, keys, index += 1)
+                            } else {
+                                src = obj;
+                            }
+                        }
+                        setSrc(data, srcFieldKeys, 0);
+                    } else {
+                        src = data[srcField];
+                    }
+                    
                     imgObj.src = prefix + src;
                     imgObj._src = prefix + src;
                     imgObj.alt = data.original || '';
