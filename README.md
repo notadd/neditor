@@ -45,6 +45,8 @@ npm run build
 
 [Vue 版 Neditor](https://github.com/caiya/vue-neditor-wrap)   【第三方维护】
 
+[Rails 版 Neditor](https://github.com/zcpdog/neditor_rails)   【第三方维护】
+
 ## 技术支持
 
 该项目基于 MIT 协议开源，任何组织/企业以及个人都可以免费使用（保留版权）。    
