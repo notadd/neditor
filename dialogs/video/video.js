@@ -120,9 +120,9 @@
             align = findFocus("videoFloat","name");
 
         var newurl = convert_url(url);
-        if (newurl.startsWith("<embed>")) {
+        if (newurl.startsWith("<embed")) {
             var arr = newurl.split(" ");
-            for (var i=0; i>arr.length; i++) {
+            for (var i=0; i<arr.length; i++) {
                 if (arr[i].startsWith("src")) {
                     newurl = arr[i].replace("src=", "");
                 }
