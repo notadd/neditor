@@ -2,7 +2,7 @@
     "name": "@notadd/neditor",
     "title": "neditor",
     "description": "Neditor富文本web编辑器",
-    "version": "2.1.17",
+    "version": "2.1.19",
     "homepage": "https://github.com/notadd/neditor",
     "author": {
         "name": "Notadd",
@@ -23,17 +23,17 @@
     },
     "dependencies": {},
     "devDependencies": {
-        "conventional-changelog-cli": "^2.0.5",
-        "gh-pages": "^1.2.0",
-        "grunt": "~0.4.1",
-        "grunt-cli": "^1.2.0",
-        "grunt-contrib-clean": "~0.5.0",
-        "grunt-contrib-concat": "~0.3.0",
-        "grunt-contrib-copy": "~0.4.0",
-        "grunt-contrib-cssmin": "~0.6.0",
-        "grunt-contrib-uglify": "^1.0.1",
-        "grunt-text-replace": "~0.3.9",
-        "grunt-transcoding": "~0.1.1"
+        "conventional-changelog-cli": "2.0.21",
+        "gh-pages": "2.0.1",
+        "grunt": "0.4.5",
+        "grunt-cli": "1.3.2",
+        "grunt-contrib-clean": "0.7.0",
+        "grunt-contrib-concat": "1.0.1",
+        "grunt-contrib-copy": "0.4.1",
+        "grunt-contrib-cssmin": "0.6.2",
+        "grunt-contrib-uglify": "1.0.2",
+        "grunt-text-replace": "0.4.0",
+        "grunt-transcoding": "0.1.3"
     },
     "scripts": {
         "build": "grunt neditor",
