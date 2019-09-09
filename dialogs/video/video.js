@@ -780,11 +780,7 @@
                 var $file = $('#' + file.id);
                 try {
                     if (editor.getOpt("videoUploadService")(_this, editor).getResponseSuccess(res)) {
-                        uploadVideoList.push({
-                            'url': res.url,
-                            'type': res.mimetype,
-                            'original':res.original || ''
-                        });
+                        uploadVideoList.push(res);
                         $file.append('<span class="success"></span>');
                     } else {
                         $file.find('.error').text(res.message).show();
