@@ -145,8 +145,8 @@
                 uploader,
                 actionUrl = editor.getActionUrl(editor.getOpt('fileActionName')),
                 fileMaxSize = editor.getOpt('fileMaxSize'),
-                acceptExtensions = (editor.getOpt('fileAllowFiles') || 
-                    [".txt",".doc",".docs",".xls",".xlsx",".ppt",".pdf",".odt",".ott",".fodt",".uot",".xml",".dot",".htm",".html",".rtf",".docm",".zip",".rar",".tar",".7z",".tar.gz",".tar.bz",".tar.xz"]).join('').replace(/\./g, ',').replace(/^[,]/, '');;
+                acceptExtensions = (editor.getOpt('fileAllowFiles') ||
+                    [".txt",".doc",".docx",".xls",".xlsx",".ppt",".pdf",".odt",".ott",".fodt",".uot",".xml",".dot",".htm",".html",".rtf",".docm",".zip",".rar",".tar",".7z",".tar.gz",".tar.bz",".tar.xz"]).join('').replace(/\./g, ',').replace(/^[,]/, '');;
             if (!WebUploader.Uploader.support()) {
                 $('#filePickerReady').after($('<div>').html(lang.errorNotSupport)).hide();
                 return;
@@ -569,7 +569,7 @@
                             fileSrc = obj;
                         }
                     }
-    
+
                     setFileSrc(data, fileSrcFieldKeys, 0);
                 } else {
                     fileSrc = data[fileSrcField];
