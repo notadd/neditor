@@ -33,12 +33,14 @@
         "grunt-contrib-cssmin": "0.6.2",
         "grunt-contrib-uglify": "1.0.2",
         "grunt-text-replace": "0.4.0",
-        "grunt-transcoding": "0.1.3"
+        "grunt-transcoding": "0.1.3",
+        "serve": "^11.2.0"
     },
     "scripts": {
         "build": "grunt neditor",
         "publish": "cd dist && npm publish --access public",
         "deploy": "gh-pages -d dist",
-        "changelog": "rm -rf CHANGELOG.md && conventional-changelog -p angular -r 4 -i CHANGELOG.md -s"
+        "changelog": "rm -rf CHANGELOG.md && conventional-changelog -p angular -r 4 -i CHANGELOG.md -s",
+        "serve": "serve ./dist"
     }
 }

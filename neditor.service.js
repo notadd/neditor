@@ -6,11 +6,11 @@
  */
 UE.Editor.prototype._bkGetActionUrl = UE.Editor.prototype.getActionUrl;
 UE.Editor.prototype.getActionUrl = function(action) {
-    /* 按config中的xxxActionName返回对应的接口地址 */
+    /* 按config中的xxxActionName返回对应的接口地址，这里用了 http://httpbin.org 的测试地址 */
     if (action == 'uploadimage' || action == 'uploadscrawl') {
-        return 'http://a.b.com/upload.php';
+        return 'http://httpbin.org/post';
     } else if (action == 'uploadvideo') {
-        return 'http://a.b.com/video.php';
+        return 'http://httpbin.org/post';
     } else {
         return this._bkGetActionUrl.call(this, action);
     }
@@ -24,7 +24,7 @@ UE.Editor.prototype.getActionUrl = function(action) {
  */
 window.UEDITOR_CONFIG['imageUploadService'] = function(context, editor) {
     return {
-        /** 
+        /**
          * 触发fileQueued事件时执行
          * 当文件被加入队列以后触发，用来设置上传相关的数据 (比如: url和自定义参数)
          * @param {Object} file 当前选择的文件对象
@@ -62,7 +62,7 @@ window.UEDITOR_CONFIG['imageUploadService'] = function(context, editor) {
             return res.code == 200;
         },
         /* 指定上传接口返回的response中图片路径的字段，默认为 url
-         * 如果图片路径字段不是res的属性，可以写成 对象.属性 的方式，例如：data.url 
+         * 如果图片路径字段不是res的属性，可以写成 对象.属性 的方式，例如：data.url
          * */
         imageSrcField: 'url'
     }
@@ -76,7 +76,7 @@ window.UEDITOR_CONFIG['imageUploadService'] = function(context, editor) {
  */
 window.UEDITOR_CONFIG['videoUploadService'] = function(context, editor) {
     return {
-        /** 
+        /**
          * 触发fileQueued事件时执行
          * 当文件被加入队列以后触发，用来设置上传相关的数据 (比如: url和自定义参数)
          * @param {Object} file 当前选择的文件对象
@@ -114,7 +114,7 @@ window.UEDITOR_CONFIG['videoUploadService'] = function(context, editor) {
             return res.code == 200;
         },
         /* 指定上传接口返回的response中视频路径的字段，默认为 url
-         * 如果视频路径字段不是res的属性，可以写成 对象.属性 的方式，例如：data.url 
+         * 如果视频路径字段不是res的属性，可以写成 对象.属性 的方式，例如：data.url
          * */
         videoSrcField: 'url'
     }
@@ -139,11 +139,11 @@ window.UEDITOR_CONFIG['scrawlUploadService'] = function(context, editor) {
 
         /**
          * 上传成功的response对象必须为以下两个属性赋值
-         * 
+         *
          * 上传接口返回的response成功状态条件 {Boolean} (比如: res.code == 200)
          * res.responseSuccess = res.code == 200;
-         * 
-         * 指定上传接口返回的response中涂鸦图片路径的字段，默认为 url 
+         *
+         * 指定上传接口返回的response中涂鸦图片路径的字段，默认为 url
          * res.videoSrcField = 'url';
          */
         uploadScraw: function(file, base64, success, fail) {
@@ -162,11 +162,11 @@ window.UEDITOR_CONFIG['scrawlUploadService'] = function(context, editor) {
                 data: formData
             }).done(function(res) {
                 var res = JSON.parse(res);
-                
+
                 /* 上传接口返回的response成功状态条件 (比如: res.code == 200) */
                 res.responseSuccess = res.code == 200;
 
-                /* 指定上传接口返回的response中涂鸦图片路径的字段，默认为 url 
+                /* 指定上传接口返回的response中涂鸦图片路径的字段，默认为 url
                  * 如果涂鸦图片路径字段不是res的属性，可以写成 对象.属性 的方式，例如：data.url
                  */
                 res.scrawlSrcField = 'url';
@@ -189,7 +189,7 @@ window.UEDITOR_CONFIG['scrawlUploadService'] = function(context, editor) {
  */
 window.UEDITOR_CONFIG['fileUploadService'] = function(context, editor) {
     return {
-        /** 
+        /**
          * 触发fileQueued事件时执行
          * 当文件被加入队列以后触发，用来设置上传相关的数据 (比如: url和自定义参数)
          * @param {Object} file 当前选择的文件对象
@@ -227,7 +227,7 @@ window.UEDITOR_CONFIG['fileUploadService'] = function(context, editor) {
             return res.code == 200;
         },
         /* 指定上传接口返回的response中附件路径的字段，默认为 url
-         * 如果附件路径字段不是res的属性，可以写成 对象.属性 的方式，例如：data.url 
+         * 如果附件路径字段不是res的属性，可以写成 对象.属性 的方式，例如：data.url
          * */
         fileSrcField: 'url'
     }

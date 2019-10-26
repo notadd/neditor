@@ -36,6 +36,8 @@ UE.plugin.register("autoupload", function() {
       });
     };
 
+    var uploadService = me.getOpt(filetype+"UploadService")(this, me);
+
     if (filetype == "image") {
       loadingHtml =
         '<img class="loadingclass" id="' +
@@ -45,7 +47,27 @@ UE.plugin.register("autoupload", function() {
         me.options.theme +
         '/images/spacer.gif">';
       successHandler = function(data) {
-        var link = urlPrefix + data.url,
+
+        var imageSrcField = uploadService.imageSrcField || 'url',
+          imageSrc = '',
+          imageSrcFieldKeys = imageSrcField.split('.');
+
+        if(imageSrcFieldKeys.length > 1) {
+          function setImageSrc(obj, keys, index) {
+            obj = obj[keys[index]];
+            if (index < keys.length - 1) {
+              setImageSrc(obj, keys, index += 1)
+            } else {
+              imageSrc = obj;
+            }
+          }
+
+          setImageSrc(data, imageSrcFieldKeys, 0);
+        } else {
+          imageSrc = data[imageSrcField];
+        }
+
+        var link = urlPrefix + imageSrc,
           loader = me.document.getElementById(loadingId);
         if (loader) {
           domUtils.removeClasses(loader, "loadingclass");
@@ -101,6 +123,11 @@ UE.plugin.register("autoupload", function() {
       return;
     }
 
+    var postData = {}, postHeaders = {};
+    postData = uploadService.setFormData(file, postData, postHeaders);
+
+
+
     /* 创建Ajax并提交 */
     var xhr = new XMLHttpRequest(),
       fd = new FormData(),
@@ -115,15 +142,27 @@ UE.plugin.register("autoupload", function() {
       file.name || "blob." + file.type.substr("image/".length)
     );
     fd.append("type", "ajax");
+    if(postData) {
+      for(var _key in postData) {
+        fd.append(_key, postData[_key])
+      }
+    }
+
     xhr.open("post", url, true);
     xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+    if(postHeaders) {
+      for(var _key in postHeaders) {
+        xhr.setRequestHeader(_key, postHeaders[_key])
+      }
+    }
+
     xhr.addEventListener("load", function(e) {
       try {
         var json = new Function("return " + utils.trim(e.target.response))();
-        if (json.state == "SUCCESS" && json.url) {
+        if (uploadService.getResponseSuccess()) {
           successHandler(json);
         } else {
-          errorHandler(json.state);
+          errorHandler(json.state||json.msg||json.message||me.getLang("autoupload.loadError"));
         }
       } catch (er) {
         errorHandler(me.getLang("autoupload.loadError"));
