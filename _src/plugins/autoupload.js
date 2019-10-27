@@ -159,7 +159,7 @@ UE.plugin.register("autoupload", function() {
     xhr.addEventListener("load", function(e) {
       try {
         var json = new Function("return " + utils.trim(e.target.response))();
-        if (uploadService.getResponseSuccess()) {
+        if (uploadService.getResponseSuccess(json)) {
           successHandler(json);
         } else {
           errorHandler(json.state||json.msg||json.message||me.getLang("autoupload.loadError"));
