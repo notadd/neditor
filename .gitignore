@@ -196,4 +196,3 @@ pip-log.txt
 /*.bak.*
 
 # Package Lock
-package-lock.json
