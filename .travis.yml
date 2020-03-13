@@ -23,7 +23,7 @@ deploy:
     skip-cleanup: true
     github-token: $GITHUB_PUBLISH_TOKEN
     keep-history: true
-    local-dir: /
+    local-dir: ./
     target-branch: gh-pages
     name: Notadd Bot
     verbose: true
