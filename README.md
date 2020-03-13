@@ -17,7 +17,7 @@
 
 **方式一：完整安装包 （推荐）**
 
-* [Neditor.tar.xz](https://www.notadd.com/download/neditor/Neditor-next-master.tar.xz)
+* [Neditor.tar.xz](https://github.com/notadd/neditor/raw/gh-pages/neditor.tar.xz)
 
 **方式二： npm安装**
 

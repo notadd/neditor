@@ -1,7 +1,7 @@
 /*!
  * neditor parse
  * version: 2.1.20
- * build: Fri Mar 13 2020 02:04:33 GMT+0000 (Coordinated Universal Time)
+ * build: Fri Mar 13 2020 02:06:34 GMT+0000 (Coordinated Universal Time)
  */
 
 (function(){
