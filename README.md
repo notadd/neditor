@@ -162,9 +162,4 @@ https://github.com/notadd/notadd
  
  <a href="https://www.ucloud.cn/site/active/gift.html?ytag=notadd"><img src="https://www.notadd.com/src/ucloud_logo.svg" width="150" /></a> &nbsp;
 
-**UCloud 云服务器限时优惠 — Notadd 项目用户福利**
-
-[【基础型】1核2G 1M带宽 50GB SSD数据盘 低至250元/年](https://www.ucloud.cn/site/active/gift.html?ytag=notadd )    
-
-[【标准型】2核4G 1M带宽 50GB SSD数据盘 低至550元/年](https://www.ucloud.cn/site/active/gift.html?ytag=notadd )
 
