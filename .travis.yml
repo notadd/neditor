@@ -4,12 +4,9 @@ branches:
     - master
 language: nodejs
 node_js:
-    - 10
+    - lts
 install:
     - npm install
-notifications:
-    - https://hook.bearychat.com/=bwA22/travis/52fa443470377f35e5a3d068b8d2d5ca
-    - https://hook.bearychat.com/=bwA7K/travis/3c04d191a6066d3e178ab8d93643e708
 jobs:
     include:
         - stage: Build
@@ -26,7 +23,7 @@ deploy:
     skip-cleanup: true
     github-token: $GITHUB_PUBLISH_TOKEN
     keep-history: true
-    local-dir: dist
+    local-dir: /
     target-branch: gh-pages
     name: Notadd Bot
     verbose: true
