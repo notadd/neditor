@@ -15,15 +15,15 @@ jobs:
             - npm run build
             - cd dist
             - tar -cvf neditor.tar ./ && xz -z9 neditor.tar
-            - sh -c "curl -T neditor.tar.xz http://v0.api.upyun.com/notadd/download/neditor/Neditor-next-master.tar.xz -u "$UPYUN" -v;  fi"
-            - echo "demo.neditor.notadd.com" > CNAME
+            #- sh -c "curl -T neditor.tar.xz http://v0.api.upyun.com/notadd/download/neditor/Neditor-next-master.tar.xz -u "$UPYUN" -v;  fi"
+            #- echo "demo.neditor.notadd.com" > CNAME
 deploy:
     provider: pages
     repo: notadd/neditor
     skip-cleanup: true
     github-token: $GITHUB_PUBLISH_TOKEN
     keep-history: true
-    local-dir: ./
+    local-dir: ./dist
     target-branch: gh-pages
     name: Notadd Bot
     verbose: true
