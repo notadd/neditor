@@ -6,13 +6,13 @@ language: nodejs
 node_js:
     - 12
 install:
-    - npm install
+    - yarn
 jobs:
     include:
         - stage: Build
           name: Upload dist to CDN
           script:
-            - npm run build
+            - yarn build
             - cd dist
             - tar -cvf neditor.tar ./ && xz -z9 neditor.tar
             #- sh -c "curl -T neditor.tar.xz http://v0.api.upyun.com/notadd/download/neditor/Neditor-next-master.tar.xz -u "$UPYUN" -v;  fi"
