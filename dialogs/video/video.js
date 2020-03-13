@@ -138,7 +138,7 @@
                 }
             }
         }
-            
+
         if(!newurl) return false;
 
         if ( !checkNum( [width, height] ) ) return false;
@@ -188,6 +188,11 @@
     }
     function convert_url(url){
         if ( !url ) return '';
+		//去掉多余参数，否则可能导致插入后无法播放
+		var arr = url.split('?');
+        if (arr && arr.length > 1) {
+            url = arr[0];
+        }
         url = utils.trim(url)
             .replace(/v\.youku\.com\/v_show\/id_([\w\-=]+)\.html/i, 'player.youku.com/player.php/sid/$1/v.swf')
             .replace(/(www\.)?youtube\.com\/watch\?v=([\w\-]+)/i, "www.youtube.com/v/$2")
@@ -312,11 +317,29 @@
             width = $G('upload_width').value || 420,
             height = $G('upload_height').value || 280,
             align = findFocus("upload_alignment","name") || 'none',
-            videoSrcField = editor.getOpt("imageUploadService")(this, editor).videoSrcField || 'url';;
+            videoSrcField = editor.getOpt("videoUploadService")(this, editor).videoSrcField || 'url',
+            videoSrc = '',
+            videoSrcFieldKeys = videoSrcField.split('.');
         for(var key in uploadVideoList) {
             var file = uploadVideoList[key];
+
+            if(videoSrcFieldKeys.length > 1) {
+                function setVideoSrc(obj, keys, index) {
+                    obj = obj[keys[index]];
+                    if (index < keys.length - 1) {
+                        setVideoSrc(obj, keys, index += 1)
+                    } else {
+                        videoSrc = obj;
+                    }
+                }
+
+                setVideoSrc(file, videoSrcFieldKeys, 0);
+            } else {
+                videoSrc = file[videoSrcField];
+            }
+
             videoObjs.push({
-                url: prefix + file[videoSrcField],
+                url: prefix + videoSrc,
                 width:width,
                 height:height,
                 align:align
@@ -338,7 +361,7 @@
     }
 
 
-    /* 上传附件 */
+    /* 上传视频 */
     function UploadVideo(target) {
         this.$wrap = target.constructor == String ? $('#' + target) : $(target);
         this.init();
@@ -757,11 +780,7 @@
                 var $file = $('#' + file.id);
                 try {
                     if (editor.getOpt("videoUploadService")(_this, editor).getResponseSuccess(res)) {
-                        uploadVideoList.push({
-                            'url': res.url,
-                            'type': res.mimetype,
-                            'original':res.original || ''
-                        });
+                        uploadVideoList.push(res);
                         $file.append('<span class="success"></span>');
                     } else {
                         $file.find('.error').text(res.message).show();

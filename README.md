@@ -17,7 +17,7 @@
 
 **方式一：完整安装包 （推荐）**
 
-* [Neditor.tar.xz](https://www.notadd.com/download/neditor/Neditor-next-master.tar.xz)
+* [Neditor.tar.xz](https://github.com/notadd/neditor/raw/gh-pages/neditor.tar.xz)
 
 **方式二： npm安装**
 
@@ -44,6 +44,8 @@ npm run build
 [Angular 版 Neditor](https://github.com/notadd/ngx-neditor)    
 
 [Vue 版 Neditor](https://github.com/caiya/vue-neditor-wrap)   【第三方维护】
+
+[Rails 版 Neditor](https://github.com/zcpdog/neditor_rails)   【第三方维护】
 
 ## 技术支持
 
@@ -160,9 +162,4 @@ https://github.com/notadd/notadd
  
  <a href="https://www.ucloud.cn/site/active/gift.html?ytag=notadd"><img src="https://www.notadd.com/src/ucloud_logo.svg" width="150" /></a> &nbsp;
 
-**UCloud 云服务器限时优惠 — Notadd 项目用户福利**
-
-[【基础型】1核2G 1M带宽 50GB SSD数据盘 低至250元/年](https://www.ucloud.cn/site/active/gift.html?ytag=notadd )    
-
-[【标准型】2核4G 1M带宽 50GB SSD数据盘 低至550元/年](https://www.ucloud.cn/site/active/gift.html?ytag=notadd )
 
