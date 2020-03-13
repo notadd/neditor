@@ -4,7 +4,7 @@ branches:
     - master
 language: nodejs
 node_js:
-    - lts
+    - 12
 install:
     - npm install
 jobs:
