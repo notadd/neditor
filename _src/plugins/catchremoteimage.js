@@ -10,10 +10,11 @@ UE.plugins["catchremoteimage"] = function() {
     ajax = UE.ajax;
 
   /* 设置默认值 */
-  if (me.options.catchRemoteImageEnable === false) return;
   me.setOpt({
     catchRemoteImageEnable: false
   });
+
+  if (me.options.catchRemoteImageEnable === false) return;
 
   me.addListener("afterpaste", function() {
     me.fireEvent("catchRemoteImage");
