@@ -1,7 +1,7 @@
 /*!
  * neditor
  * version: 2.1.20
- * build: Fri Mar 13 2020 02:43:57 GMT+0000 (Coordinated Universal Time)
+ * build: Wed Apr 29 2020 08:07:52 GMT+0000 (Coordinated Universal Time)
  */
 
 (function(){
@@ -25815,10 +25815,11 @@ UE.plugins["catchremoteimage"] = function() {
     ajax = UE.ajax;
 
   /* 设置默认值 */
-  if (me.options.catchRemoteImageEnable === false) return;
   me.setOpt({
     catchRemoteImageEnable: false
   });
+
+  if (me.options.catchRemoteImageEnable === false) return;
 
   me.addListener("afterpaste", function() {
     me.fireEvent("catchRemoteImage");
