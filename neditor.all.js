@@ -1,7 +1,7 @@
 /*!
  * neditor
  * version: 2.1.20
- * build: Wed Apr 29 2020 08:07:52 GMT+0000 (Coordinated Universal Time)
+ * build: Thu Apr 30 2020 09:57:44 GMT+0000 (Coordinated Universal Time)
  */
 
 (function(){
@@ -29213,6 +29213,12 @@ UE.ui = baidu.editor.ui = {};
         (opt["textAlign"] && opt["textAlign"] == "right" ? "checked" : "") +
         ">" +
         me.getLang("justifyright") +
+        '<input type="radio" name="' +
+        textAlignInputName +
+        '" value="justify" ' +
+        (opt["textAlign"] && opt["textAlign"] == "justify" ? "checked" : "") +
+        ">" +
+        me.getLang("justifyjustify") +
         "</td>" +
         "</tr>" +
         "<tr>" +
