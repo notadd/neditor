@@ -72,6 +72,12 @@
         (opt["textAlign"] && opt["textAlign"] == "right" ? "checked" : "") +
         ">" +
         me.getLang("justifyright") +
+        '<input type="radio" name="' +
+        textAlignInputName +
+        '" value="justify" ' +
+        (opt["textAlign"] && opt["textAlign"] == "justify" ? "checked" : "") +
+        ">" +
+        me.getLang("justifyjustify") +
         "</td>" +
         "</tr>" +
         "<tr>" +

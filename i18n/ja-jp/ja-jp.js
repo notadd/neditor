@@ -200,6 +200,7 @@ UE.I18N['ja-jp'] = {
     'justifyleft':'左揃え',
     'justifyright':'右揃え',
     'justifycenter':'中央揃え',
+    'justifyjustify':'両端揃え',
     'justify':'デフォルト',
     'clear':'クリア',
     'anchorMsg':'アンカー',
@@ -556,7 +557,7 @@ UE.I18N['ja-jp'] = {
             'lang_input_target':'新しいウィンドウで開きますか：'
         },
         'validLink':'リンクを選択する場合のみ、有効',
-        'httpPrompt':'ご入力いただいたハイパーリンクにはhttpなどのプロトコル名が含まれておらず、デフォルトはhttp://を追加します' 
+        'httpPrompt':'ご入力いただいたハイパーリンクにはhttpなどのプロトコル名が含まれておらず、デフォルトはhttp://を追加します'
     },
     'map':{
         'static':{
