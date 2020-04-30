@@ -206,6 +206,7 @@ UE.I18N['en'] = {
     'justifyleft':'Justify Left',
     'justifyright':'Justify Right',
     'justifycenter':'Justify Center',
+    'justifyjustify':'Default',
     'justify':'Default',
     'clear':'Clear',
     'anchorMsg':'Anchor',

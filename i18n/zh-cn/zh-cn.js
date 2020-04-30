@@ -205,6 +205,7 @@ UE.I18N['zh-cn'] = {
     'justifyleft':'左对齐',
     'justifyright':'右对齐',
     'justifycenter':'居中',
+    'justifyjustify':'两端对齐',
     'justify':'默认',
     'clear':'清除',
     'anchorMsg':'锚点',
