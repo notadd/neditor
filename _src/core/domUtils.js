@@ -1206,7 +1206,7 @@ var domUtils = (dom.domUtils = {
             continue;
           }
         }
-        ci.style.cssText = node.style.cssText + ";" + ci.style.cssText;
+        ci.style.cssText = ci.style.cssText + ';' + node.style.cssText;
         if (attrs) {
           var style = attrs.style;
           if (style) {
